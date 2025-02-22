@@ -2956,98 +2956,224 @@ var _home = require("./Pages/Home");
 var _homeDefault = parcelHelpers.interopDefault(_home);
 var _about = require("./Pages/About");
 var _aboutDefault = parcelHelpers.interopDefault(_about);
+var _vanList = require("./Pages/Vans/VanList");
+var _vanListDefault = parcelHelpers.interopDefault(_vanList);
+var _vanDetails = require("./Pages/Vans/VanDetails");
+var _vanDetailsDefault = parcelHelpers.interopDefault(_vanDetails);
+var _layout = require("./components/Layout");
+var _layoutDefault = parcelHelpers.interopDefault(_layout);
+var _dashBoard = require("./Pages/Host/DashBoard");
+var _dashBoardDefault = parcelHelpers.interopDefault(_dashBoard);
+var _income = require("./Pages/Host/Income");
+var _incomeDefault = parcelHelpers.interopDefault(_income);
+var _reviews = require("./Pages/Host/Reviews");
+var _reviewsDefault = parcelHelpers.interopDefault(_reviews);
+var _hostLayout = require("./components/HostLayout");
+var _hostLayoutDefault = parcelHelpers.interopDefault(_hostLayout);
+var _server = require("./server");
+var _hostVans = require("./components/HostVans");
+var _hostVansDefault = parcelHelpers.interopDefault(_hostVans);
+var _hostVanDetail = require("./components/HostVanDetail");
+var _hostVanDetailDefault = parcelHelpers.interopDefault(_hostVanDetail);
+var _hostVanDetailDescription = require("./components/HostVanDetail_Description");
+var _hostVanDetailDescriptionDefault = parcelHelpers.interopDefault(_hostVanDetailDescription);
+var _hostVanDetailPhotos = require("./components/HostVanDetail_Photos");
+var _hostVanDetailPhotosDefault = parcelHelpers.interopDefault(_hostVanDetailPhotos);
+var _hostVanDetailPricing = require("./components/HostVanDetail_Pricing");
+var _hostVanDetailPricingDefault = parcelHelpers.interopDefault(_hostVanDetailPricing);
 const root = (0, _clientDefault.default).createRoot(document.getElementById("root"));
 function App() {
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouter.BrowserRouter), {
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("header", {
-                className: "flex w-full bg-[#FFF7ED] p-9 justify-between",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouter.Link), {
-                        className: "text-2xl font-extrabold",
-                        to: "/",
-                        children: "#VANLIFE"
-                    }, void 0, false, {
-                        fileName: "index.jsx",
-                        lineNumber: 18,
-                        columnNumber: 8
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("nav", {
-                        className: "space-x-3",
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouter.Link), {
-                                className: "text-[#4D4D4D] text-xl",
-                                to: "/about",
-                                children: "Vans"
-                            }, void 0, false, {
-                                fileName: "index.jsx",
-                                lineNumber: 22,
-                                columnNumber: 10
-                            }, this),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouter.Link), {
-                                className: "text-[#4D4D4D] text-xl",
-                                to: "/about",
-                                children: "About"
-                            }, void 0, false, {
-                                fileName: "index.jsx",
-                                lineNumber: 23,
-                                columnNumber: 10
-                            }, this)
-                        ]
-                    }, void 0, true, {
-                        fileName: "index.jsx",
-                        lineNumber: 21,
-                        columnNumber: 8
-                    }, this)
-                ]
-            }, void 0, true, {
-                fileName: "index.jsx",
-                lineNumber: 17,
-                columnNumber: 6
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouter.Routes), {
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouter.Routes), {
+            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouter.Route), {
+                path: "/",
+                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _layoutDefault.default), {}, void 0, false, {
+                    fileName: "index.jsx",
+                    lineNumber: 26,
+                    columnNumber: 34
+                }, void 0),
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouter.Route), {
-                        path: "/",
+                        index: true,
                         element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _homeDefault.default), {}, void 0, false, {
                             fileName: "index.jsx",
-                            lineNumber: 28,
+                            lineNumber: 27,
                             columnNumber: 33
                         }, void 0)
                     }, void 0, false, {
                         fileName: "index.jsx",
-                        lineNumber: 28,
-                        columnNumber: 8
+                        lineNumber: 27,
+                        columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouter.Route), {
-                        path: "/About",
+                        path: "About",
                         element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _aboutDefault.default), {}, void 0, false, {
                             fileName: "index.jsx",
+                            lineNumber: 28,
+                            columnNumber: 40
+                        }, void 0)
+                    }, void 0, false, {
+                        fileName: "index.jsx",
+                        lineNumber: 28,
+                        columnNumber: 11
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouter.Route), {
+                        path: "vans",
+                        element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _vanListDefault.default), {}, void 0, false, {
+                            fileName: "index.jsx",
                             lineNumber: 29,
-                            columnNumber: 38
+                            columnNumber: 39
                         }, void 0)
                     }, void 0, false, {
                         fileName: "index.jsx",
                         lineNumber: 29,
-                        columnNumber: 8
+                        columnNumber: 11
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouter.Route), {
+                        path: "vans/:id",
+                        element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _vanDetailsDefault.default), {}, void 0, false, {
+                            fileName: "index.jsx",
+                            lineNumber: 30,
+                            columnNumber: 43
+                        }, void 0)
+                    }, void 0, false, {
+                        fileName: "index.jsx",
+                        lineNumber: 30,
+                        columnNumber: 11
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouter.Route), {
+                        path: "host",
+                        element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _hostLayoutDefault.default), {}, void 0, false, {
+                            fileName: "index.jsx",
+                            lineNumber: 32,
+                            columnNumber: 39
+                        }, void 0),
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouter.Route), {
+                                index: true,
+                                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _dashBoardDefault.default), {}, void 0, false, {
+                                    fileName: "index.jsx",
+                                    lineNumber: 33,
+                                    columnNumber: 35
+                                }, void 0)
+                            }, void 0, false, {
+                                fileName: "index.jsx",
+                                lineNumber: 33,
+                                columnNumber: 13
+                            }, this),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouter.Route), {
+                                path: "income",
+                                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _incomeDefault.default), {}, void 0, false, {
+                                    fileName: "index.jsx",
+                                    lineNumber: 34,
+                                    columnNumber: 43
+                                }, void 0)
+                            }, void 0, false, {
+                                fileName: "index.jsx",
+                                lineNumber: 34,
+                                columnNumber: 13
+                            }, this),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouter.Route), {
+                                path: "reviews",
+                                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reviewsDefault.default), {}, void 0, false, {
+                                    fileName: "index.jsx",
+                                    lineNumber: 35,
+                                    columnNumber: 44
+                                }, void 0)
+                            }, void 0, false, {
+                                fileName: "index.jsx",
+                                lineNumber: 35,
+                                columnNumber: 13
+                            }, this),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouter.Route), {
+                                path: "vans",
+                                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _hostVansDefault.default), {}, void 0, false, {
+                                    fileName: "index.jsx",
+                                    lineNumber: 36,
+                                    columnNumber: 41
+                                }, void 0)
+                            }, void 0, false, {
+                                fileName: "index.jsx",
+                                lineNumber: 36,
+                                columnNumber: 13
+                            }, this),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouter.Route), {
+                                path: "vans/:id",
+                                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _hostVanDetailDefault.default), {}, void 0, false, {
+                                    fileName: "index.jsx",
+                                    lineNumber: 37,
+                                    columnNumber: 45
+                                }, void 0),
+                                children: [
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouter.Route), {
+                                        index: true,
+                                        element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _hostVanDetailDescriptionDefault.default), {}, void 0, false, {
+                                            fileName: "index.jsx",
+                                            lineNumber: 38,
+                                            columnNumber: 35
+                                        }, void 0)
+                                    }, void 0, false, {
+                                        fileName: "index.jsx",
+                                        lineNumber: 38,
+                                        columnNumber: 13
+                                    }, this),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouter.Route), {
+                                        path: "pricing",
+                                        element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _hostVanDetailPricingDefault.default), {}, void 0, false, {
+                                            fileName: "index.jsx",
+                                            lineNumber: 39,
+                                            columnNumber: 44
+                                        }, void 0)
+                                    }, void 0, false, {
+                                        fileName: "index.jsx",
+                                        lineNumber: 39,
+                                        columnNumber: 13
+                                    }, this),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouter.Route), {
+                                        path: "photo",
+                                        element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _hostVanDetailPhotosDefault.default), {}, void 0, false, {
+                                            fileName: "index.jsx",
+                                            lineNumber: 40,
+                                            columnNumber: 42
+                                        }, void 0)
+                                    }, void 0, false, {
+                                        fileName: "index.jsx",
+                                        lineNumber: 40,
+                                        columnNumber: 13
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "index.jsx",
+                                lineNumber: 37,
+                                columnNumber: 13
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "index.jsx",
+                        lineNumber: 32,
+                        columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "index.jsx",
-                lineNumber: 27,
-                columnNumber: 6
+                lineNumber: 26,
+                columnNumber: 9
             }, this)
-        ]
-    }, void 0, true, {
+        }, void 0, false, {
+            fileName: "index.jsx",
+            lineNumber: 25,
+            columnNumber: 7
+        }, this)
+    }, void 0, false, {
         fileName: "index.jsx",
-        lineNumber: 16,
-        columnNumber: 4
+        lineNumber: 24,
+        columnNumber: 5
     }, this);
 }
 _c = App;
 root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(App, {}, void 0, false, {
     fileName: "index.jsx",
-    lineNumber: 39,
+    lineNumber: 49,
     columnNumber: 13
 }, undefined));
 var _c;
@@ -3058,7 +3184,7 @@ $RefreshReg$(_c, "App");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom/client":"lOjBx","react-router":"dXVwI","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./Pages/Home":"bNuWn","./Pages/About":"l59wL"}],"iTorj":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom/client":"lOjBx","react-router":"dXVwI","./Pages/Home":"bNuWn","./Pages/About":"l59wL","./Pages/Vans/VanList":"cBqv1","./Pages/Vans/VanDetails":"39POi","./components/Layout":"ho09O","./Pages/Host/DashBoard":"44u0J","./Pages/Host/Income":"dnFPh","./Pages/Host/Reviews":"8OOpB","./components/HostLayout":"lnmck","./server":"6lo7H","./components/HostVans":"i0mk9","./components/HostVanDetail":"1So5t","./components/HostVanDetail_Description":"k8oIQ","./components/HostVanDetail_Photos":"ad4Ac","./components/HostVanDetail_Pricing":"5E0xc","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"iTorj":[function(require,module,exports,__globalThis) {
 'use strict';
 module.exports = require("ee51401569654d91");
 
@@ -27669,6 +27795,121 @@ exports.export = function(dest, destName, get) {
     });
 };
 
+},{}],"bNuWn":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$c0cb = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$c0cb.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "default", ()=>Home);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _reactRouter = require("react-router");
+var _image1Png = require("../assets/images/image1.png");
+var _image1PngDefault = parcelHelpers.interopDefault(_image1Png);
+function Home() {
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "container",
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            className: "flex flex-col justify-center items-center m-4 space-y-3",
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                    className: "w-full",
+                    src: (0, _image1PngDefault.default),
+                    alt: ""
+                }, void 0, false, {
+                    fileName: "Pages/Home.jsx",
+                    lineNumber: 9,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                    className: "text-4xl font-bold",
+                    children: "You got the travel plan we got the travel vans"
+                }, void 0, false, {
+                    fileName: "Pages/Home.jsx",
+                    lineNumber: 10,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                    className: "text-md text-gray-600",
+                    children: "Add adventure to your life by joining the #vanlife movement. Rent the perfect van to make your perfect road trip"
+                }, void 0, false, {
+                    fileName: "Pages/Home.jsx",
+                    lineNumber: 13,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouter.Link), {
+                    className: "bg-[#FF8C38] text-center rounded-lg px-3 py-2 text-white w-full",
+                    to: "vans",
+                    children: "Find your van"
+                }, void 0, false, {
+                    fileName: "Pages/Home.jsx",
+                    lineNumber: 17,
+                    columnNumber: 9
+                }, this)
+            ]
+        }, void 0, true, {
+            fileName: "Pages/Home.jsx",
+            lineNumber: 8,
+            columnNumber: 7
+        }, this)
+    }, void 0, false, {
+        fileName: "Pages/Home.jsx",
+        lineNumber: 7,
+        columnNumber: 5
+    }, this);
+}
+_c = Home;
+var _c;
+$RefreshReg$(_c, "Home");
+
+  $parcel$ReactRefreshHelpers$c0cb.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router":"dXVwI","../assets/images/image1.png":"lKVKq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"lKVKq":[function(require,module,exports,__globalThis) {
+module.exports = require("33f731dac502eae9").getBundleURL('avzPb') + "image1.2d5fe65b.png" + "?" + Date.now();
+
+},{"33f731dac502eae9":"lgJ39"}],"lgJ39":[function(require,module,exports,__globalThis) {
+"use strict";
+var bundleURL = {};
+function getBundleURLCached(id) {
+    var value = bundleURL[id];
+    if (!value) {
+        value = getBundleURL();
+        bundleURL[id] = value;
+    }
+    return value;
+}
+function getBundleURL() {
+    try {
+        throw new Error();
+    } catch (err) {
+        var matches = ('' + err.stack).match(/(https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/[^)\n]+/g);
+        if (matches) // The first two stack frames will be this function and getBundleURLCached.
+        // Use the 3rd one, which will be a runtime in the original bundle.
+        return getBaseURL(matches[2]);
+    }
+    return '/';
+}
+function getBaseURL(url) {
+    return ('' + url).replace(/^((?:https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/.+)\/[^/]+$/, '$1') + '/';
+}
+// TODO: Replace uses with `new URL(url).origin` when ie11 is no longer supported.
+function getOrigin(url) {
+    var matches = ('' + url).match(/(https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/[^/]+/);
+    if (!matches) throw new Error('Origin not found');
+    return matches[0];
+}
+exports.getBundleURL = getBundleURLCached;
+exports.getBaseURL = getBaseURL;
+exports.getOrigin = getOrigin;
+
 },{}],"km3Ru":[function(require,module,exports,__globalThis) {
 "use strict";
 var Refresh = require("7422ead32dcc1e6b");
@@ -27814,131 +28055,6 @@ function registerExportsForReactRefresh(module1) {
 },{"7422ead32dcc1e6b":"786KC","630b62916b1ae0e7":"4SQxb"}],"4SQxb":[function(require,module,exports,__globalThis) {
 module.exports = JSON.parse("{\"name\":\"react-refresh\",\"description\":\"React is a JavaScript library for building user interfaces.\",\"keywords\":[\"react\"],\"version\":\"0.14.2\",\"homepage\":\"https://reactjs.org/\",\"bugs\":\"https://github.com/facebook/react/issues\",\"license\":\"MIT\",\"files\":[\"LICENSE\",\"README.md\",\"babel.js\",\"runtime.js\",\"cjs/\",\"umd/\"],\"main\":\"runtime.js\",\"exports\":{\".\":\"./runtime.js\",\"./runtime\":\"./runtime.js\",\"./babel\":\"./babel.js\",\"./package.json\":\"./package.json\"},\"repository\":{\"type\":\"git\",\"url\":\"https://github.com/facebook/react.git\",\"directory\":\"packages/react\"},\"engines\":{\"node\":\">=0.10.0\"},\"devDependencies\":{\"react-16-8\":\"npm:react@16.8.0\",\"react-dom-16-8\":\"npm:react-dom@16.8.0\",\"scheduler-0-13\":\"npm:scheduler@0.13.0\"}}");
 
-},{}],"bNuWn":[function(require,module,exports,__globalThis) {
-var $parcel$ReactRefreshHelpers$c0cb = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$c0cb.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "default", ()=>Home);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _reactRouter = require("react-router");
-var _image1Png = require("../assets/images/image1.png");
-var _image1PngDefault = parcelHelpers.interopDefault(_image1Png);
-function Home() {
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "container",
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "flex flex-col justify-center items-center m-4 space-y-3",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                        className: "w-full",
-                        src: (0, _image1PngDefault.default),
-                        alt: ""
-                    }, void 0, false, {
-                        fileName: "Pages/Home.jsx",
-                        lineNumber: 9,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                        className: "text-4xl font-bold",
-                        children: "You got the travel plan we got the travel vans"
-                    }, void 0, false, {
-                        fileName: "Pages/Home.jsx",
-                        lineNumber: 10,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                        className: "text-md text-gray-600",
-                        children: "Add adventure to your life by joining the #vanlife movement. Rent the perfect van to make your perfect road trip"
-                    }, void 0, false, {
-                        fileName: "Pages/Home.jsx",
-                        lineNumber: 13,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouter.Link), {
-                        className: "bg-[#FF8C38] text-center rounded-lg px-3 py-2 text-white w-full",
-                        to: "vans",
-                        children: "Find your van"
-                    }, void 0, false, {
-                        fileName: "Pages/Home.jsx",
-                        lineNumber: 17,
-                        columnNumber: 9
-                    }, this)
-                ]
-            }, void 0, true, {
-                fileName: "Pages/Home.jsx",
-                lineNumber: 8,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("footer", {
-                className: "bg-gray-800 text-center p-3 text-[#AAAAAA]",
-                children: "\xa9 2022 #VanLife"
-            }, void 0, false, {
-                fileName: "Pages/Home.jsx",
-                lineNumber: 24,
-                columnNumber: 7
-            }, this)
-        ]
-    }, void 0, true, {
-        fileName: "Pages/Home.jsx",
-        lineNumber: 7,
-        columnNumber: 5
-    }, this);
-}
-_c = Home;
-var _c;
-$RefreshReg$(_c, "Home");
-
-  $parcel$ReactRefreshHelpers$c0cb.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router":"dXVwI","../assets/images/image1.png":"lKVKq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"lKVKq":[function(require,module,exports,__globalThis) {
-module.exports = require("33f731dac502eae9").getBundleURL('avzPb') + "image1.2d5fe65b.png" + "?" + Date.now();
-
-},{"33f731dac502eae9":"lgJ39"}],"lgJ39":[function(require,module,exports,__globalThis) {
-"use strict";
-var bundleURL = {};
-function getBundleURLCached(id) {
-    var value = bundleURL[id];
-    if (!value) {
-        value = getBundleURL();
-        bundleURL[id] = value;
-    }
-    return value;
-}
-function getBundleURL() {
-    try {
-        throw new Error();
-    } catch (err) {
-        var matches = ('' + err.stack).match(/(https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/[^)\n]+/g);
-        if (matches) // The first two stack frames will be this function and getBundleURLCached.
-        // Use the 3rd one, which will be a runtime in the original bundle.
-        return getBaseURL(matches[2]);
-    }
-    return '/';
-}
-function getBaseURL(url) {
-    return ('' + url).replace(/^((?:https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/.+)\/[^/]+$/, '$1') + '/';
-}
-// TODO: Replace uses with `new URL(url).origin` when ie11 is no longer supported.
-function getOrigin(url) {
-    var matches = ('' + url).match(/(https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/[^/]+/);
-    if (!matches) throw new Error('Origin not found');
-    return matches[0];
-}
-exports.getBundleURL = getBundleURLCached;
-exports.getBaseURL = getBaseURL;
-exports.getOrigin = getOrigin;
-
 },{}],"l59wL":[function(require,module,exports,__globalThis) {
 var $parcel$ReactRefreshHelpers$f52f = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
@@ -27958,124 +28074,114 @@ var _image2PngDefault = parcelHelpers.interopDefault(_image2Png);
 function About() {
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "container",
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                            src: (0, _image2PngDefault.default),
-                            alt: ""
-                        }, void 0, false, {
-                            fileName: "Pages/About.jsx",
-                            lineNumber: 10,
-                            columnNumber: 13
-                        }, this)
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                        src: (0, _image2PngDefault.default),
+                        alt: ""
                     }, void 0, false, {
                         fileName: "Pages/About.jsx",
-                        lineNumber: 9,
-                        columnNumber: 11
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "m-3 p-2 space-y-5",
+                        lineNumber: 10,
+                        columnNumber: 13
+                    }, this)
+                }, void 0, false, {
+                    fileName: "Pages/About.jsx",
+                    lineNumber: 9,
+                    columnNumber: 11
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "m-3 p-2 space-y-5",
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                            className: "text-2xl font-bold",
+                            children: "Don\u2019t squeeze in a sedan when you could relax in a van."
+                        }, void 0, false, {
+                            fileName: "Pages/About.jsx",
+                            lineNumber: 14,
+                            columnNumber: 13
+                        }, this),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                            className: "text-sm",
+                            children: [
+                                "Our mission is to enliven your road trip with the perfect travel van rental. Our vans are recertified before each trip to ensure your travel plans can go off without a hitch. (Hitch costs extra \uD83D\uDE09)",
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
+                                    fileName: "Pages/About.jsx",
+                                    lineNumber: 22,
+                                    columnNumber: 15
+                                }, this),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
+                                    fileName: "Pages/About.jsx",
+                                    lineNumber: 23,
+                                    columnNumber: 15
+                                }, this),
+                                " Our team is full of vanlife enthusiasts who know firsthand the magic of touring the world on 4 wheels."
+                            ]
+                        }, void 0, true, {
+                            fileName: "Pages/About.jsx",
+                            lineNumber: 17,
+                            columnNumber: 13
+                        }, this)
+                    ]
+                }, void 0, true, {
+                    fileName: "Pages/About.jsx",
+                    lineNumber: 13,
+                    columnNumber: 11
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "bg-[#FFCC8D] font-bold m-3 p-4 w-[400px] h-[158px] rounded-md",
                         children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                                className: "text-2xl font-bold",
-                                children: "Don\u2019t squeeze in a sedan when you could relax in a van."
-                            }, void 0, false, {
-                                fileName: "Pages/About.jsx",
-                                lineNumber: 14,
-                                columnNumber: 13
-                            }, this),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                                className: "text-sm",
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "mb-6",
                                 children: [
-                                    "Our mission is to enliven your road trip with the perfect travel van rental. Our vans are recertified before each trip to ensure your travel plans can go off without a hitch. (Hitch costs extra \uD83D\uDE09)",
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                        children: "Your destination is waiting"
+                                    }, void 0, false, {
                                         fileName: "Pages/About.jsx",
-                                        lineNumber: 22,
-                                        columnNumber: 15
+                                        lineNumber: 31,
+                                        columnNumber: 17
                                     }, this),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                        children: "Your van is ready"
+                                    }, void 0, false, {
                                         fileName: "Pages/About.jsx",
-                                        lineNumber: 23,
-                                        columnNumber: 15
-                                    }, this),
-                                    " Our team is full of vanlife enthusiasts who know firsthand the magic of touring the world on 4 wheels."
+                                        lineNumber: 32,
+                                        columnNumber: 17
+                                    }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "Pages/About.jsx",
-                                lineNumber: 17,
-                                columnNumber: 13
+                                lineNumber: 30,
+                                columnNumber: 15
+                            }, this),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouter.Link), {
+                                className: "bg-black text-white px-2 py-2 rounded-lg",
+                                to: "vans",
+                                children: "Explore our vans"
+                            }, void 0, false, {
+                                fileName: "Pages/About.jsx",
+                                lineNumber: 34,
+                                columnNumber: 17
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "Pages/About.jsx",
-                        lineNumber: 13,
-                        columnNumber: 11
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            className: "bg-[#FFCC8D] font-bold m-3 p-4 w-[400px] h-[158px] rounded-md",
-                            children: [
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                    className: "mb-6",
-                                    children: [
-                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                                            children: "Your destination is waiting"
-                                        }, void 0, false, {
-                                            fileName: "Pages/About.jsx",
-                                            lineNumber: 31,
-                                            columnNumber: 17
-                                        }, this),
-                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                                            children: "Your van is ready"
-                                        }, void 0, false, {
-                                            fileName: "Pages/About.jsx",
-                                            lineNumber: 32,
-                                            columnNumber: 17
-                                        }, this)
-                                    ]
-                                }, void 0, true, {
-                                    fileName: "Pages/About.jsx",
-                                    lineNumber: 30,
-                                    columnNumber: 15
-                                }, this),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouter.Link), {
-                                    className: "bg-black text-white px-2 py-2 rounded-lg",
-                                    to: "vans",
-                                    children: "Explore our vans"
-                                }, void 0, false, {
-                                    fileName: "Pages/About.jsx",
-                                    lineNumber: 34,
-                                    columnNumber: 17
-                                }, this)
-                            ]
-                        }, void 0, true, {
-                            fileName: "Pages/About.jsx",
-                            lineNumber: 29,
-                            columnNumber: 13
-                        }, this)
-                    }, void 0, false, {
-                        fileName: "Pages/About.jsx",
-                        lineNumber: 28,
-                        columnNumber: 11
+                        lineNumber: 29,
+                        columnNumber: 13
                     }, this)
-                ]
-            }, void 0, true, {
-                fileName: "Pages/About.jsx",
-                lineNumber: 8,
-                columnNumber: 9
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("footer", {
-                className: "bg-gray-800 text-center p-3 text-[#AAAAAA]",
-                children: "\xa9 2022 #VanLife"
-            }, void 0, false, {
-                fileName: "Pages/About.jsx",
-                lineNumber: 39,
-                columnNumber: 9
-            }, this)
-        ]
-    }, void 0, true, {
+                }, void 0, false, {
+                    fileName: "Pages/About.jsx",
+                    lineNumber: 28,
+                    columnNumber: 11
+                }, this)
+            ]
+        }, void 0, true, {
+            fileName: "Pages/About.jsx",
+            lineNumber: 8,
+            columnNumber: 9
+        }, this)
+    }, void 0, false, {
         fileName: "Pages/About.jsx",
         lineNumber: 7,
         columnNumber: 7
@@ -28093,6 +28199,14791 @@ $RefreshReg$(_c, "About");
 },{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router":"dXVwI","../assets/images/image2.png":"7bu8L","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"7bu8L":[function(require,module,exports,__globalThis) {
 module.exports = require("16400d91203bfba9").getBundleURL('avzPb') + "image2.4e987d24.png" + "?" + Date.now();
 
-},{"16400d91203bfba9":"lgJ39"}]},["aQL8O","5faqK","g9R30"], "g9R30", "parcelRequire94c2")
+},{"16400d91203bfba9":"lgJ39"}],"cBqv1":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$c6b2 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$c6b2.prelude(module);
+
+try {
+// import React ,{useState ,useEffect} from "react";
+// import Van from "../components/van";
+// export default function VanList(){
+//    const[originalVans ,setOriginalVans] = useState([]);
+//    const[filterVans ,setFilterVans] = useState([]);
+//    const[IsSelected ,setIsSelected] = useState(false);
+//     useEffect(()=>{
+//       async function getVanList(){
+//         try {
+//           const response = await fetch("/api/vans");
+//           const data = await response.json();
+//           console.log(data.vans);
+//           setOriginalVans(data.vans);
+//           setFilterVans(data.vans);
+//         } catch (error) {
+//         }
+//       }
+//       getVanList();
+//     },[])
+//     const filterType = (givenType) =>{
+//       const filteredVans = originalVans.filter(van => van.type.toLowerCase() === givenType.toLowerCase());
+//       setFilterVans(filteredVans);
+//     }
+//     return (
+//       <div className="container bg-[#FFF7ED]">
+//         <div className="VanContainer">
+//           <div className="FilterContainer">
+//             <div className="p-4">
+//               <h2 className="font-bold text-3xl">Explore our van options</h2>
+//             </div>
+//             <div className="flex justify-between p-4 items-center">
+//               <div className="space-x-2">
+//                 <button onClick={() => {
+//                   filterType('Simple')
+//                   setIsSelected(!IsSelected);
+//                   }} className={`FilterButton px-2 py-2 bg-[#FFEAD0] rounded-sm ${IsSelected ? 'bg-red-400' : ''}`}>Simple</button>
+//                 <button onClick={() => {
+//                   filterType('Rugged')
+//                   setIsSelected(!IsSelected);
+//                 }} className={`FilterButton px-2 py-2 bg-[#FFEAD0] rounded-sm ${IsSelected ? 'bg-red-400' : ''}`}>Rugged</button>
+//                 <button onClick={() => {
+//                   filterType('Luxury')
+//                   setIsSelected(!IsSelected)
+//                 }} className={`FilterButton px-2 py-2 bg-[#FFEAD0] rounded-sm ${IsSelected ? 'bg-red-400' : ''}`}>Luxury</button>
+//               </div>
+//               <p onClick={()=>{
+//                setFilterVans(originalVans)
+//               }} className="clearBtn bg-red-600 text-white px-1.5 py-1.5 rounded-sm">Clear Filters</p>
+//             </div>
+//           </div>
+//           <div className="VanListContainer p-3 grid grid-cols-2 gap-4">
+//             {
+//              filterVans.map((van)=>(
+//               <Van key={van.id} {...van}/>
+//              ))
+//             }
+//           </div>
+//         </div>
+//       </div>
+//     );
+// }
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "default", ()=>VanList);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _van = require("../../components/van");
+var _vanDefault = parcelHelpers.interopDefault(_van);
+var _s = $RefreshSig$();
+function VanList() {
+    _s();
+    const [originalVans, setOriginalVans] = (0, _react.useState)([]);
+    const [filterVans, setFilterVans] = (0, _react.useState)([]);
+    const [selectedFilter, setSelectedFilter] = (0, _react.useState)(""); // Track the selected filter
+    (0, _react.useEffect)(()=>{
+        async function getVanList() {
+            try {
+                const response = await fetch("/api/vans");
+                const data = await response.json();
+                console.log(data.vans);
+                setOriginalVans(data.vans);
+                setFilterVans(data.vans);
+            } catch (error) {
+                console.error("Failed to fetch vans", error);
+            }
+        }
+        getVanList();
+    }, []);
+    const filterType = (givenType)=>{
+        if (selectedFilter === givenType) {
+            // If the same filter is clicked again, reset
+            setSelectedFilter("");
+            setFilterVans(originalVans);
+        } else {
+            // Otherwise, apply the filter
+            const filteredVans = originalVans.filter((van)=>van.type.toLowerCase() === givenType.toLowerCase());
+            setFilterVans(filteredVans);
+            setSelectedFilter(givenType);
+        }
+    };
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "container bg-[#FFF7ED]",
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            className: "VanContainer",
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "FilterContainer",
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "p-4",
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                                className: "font-bold text-3xl",
+                                children: "Explore our van options"
+                            }, void 0, false, {
+                                fileName: "Pages/Vans/VanList.jsx",
+                                lineNumber: 118,
+                                columnNumber: 13
+                            }, this)
+                        }, void 0, false, {
+                            fileName: "Pages/Vans/VanList.jsx",
+                            lineNumber: 117,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "flex justify-between p-4 items-center",
+                            children: [
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    className: "space-x-2",
+                                    children: [
+                                        "Simple",
+                                        "Rugged",
+                                        "Luxury"
+                                    ].map((type)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                            onClick: ()=>filterType(type),
+                                            className: `FilterButton px-2 py-2 rounded-sm transition ${selectedFilter === type ? "bg-black text-white" // Selected: Black background, White text
+                                             : "bg-[#FFEAD0] text-black" // Default: Light background, Black text
+                                            }`,
+                                            children: type
+                                        }, type, false, {
+                                            fileName: "Pages/Vans/VanList.jsx",
+                                            lineNumber: 123,
+                                            columnNumber: 17
+                                        }, this))
+                                }, void 0, false, {
+                                    fileName: "Pages/Vans/VanList.jsx",
+                                    lineNumber: 121,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                    onClick: ()=>{
+                                        setFilterVans(originalVans);
+                                        setSelectedFilter(""); // Reset selected filter
+                                    },
+                                    className: "clearBtn bg-red-600 text-white px-1.5 py-1.5 rounded-sm cursor-pointer",
+                                    children: "Clear Filters"
+                                }, void 0, false, {
+                                    fileName: "Pages/Vans/VanList.jsx",
+                                    lineNumber: 136,
+                                    columnNumber: 13
+                                }, this)
+                            ]
+                        }, void 0, true, {
+                            fileName: "Pages/Vans/VanList.jsx",
+                            lineNumber: 120,
+                            columnNumber: 11
+                        }, this)
+                    ]
+                }, void 0, true, {
+                    fileName: "Pages/Vans/VanList.jsx",
+                    lineNumber: 116,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "VanListContainer p-3 grid grid-cols-2 gap-4",
+                    children: filterVans.map((van)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _vanDefault.default), {
+                            ...van
+                        }, van.id, false, {
+                            fileName: "Pages/Vans/VanList.jsx",
+                            lineNumber: 150,
+                            columnNumber: 13
+                        }, this))
+                }, void 0, false, {
+                    fileName: "Pages/Vans/VanList.jsx",
+                    lineNumber: 148,
+                    columnNumber: 9
+                }, this)
+            ]
+        }, void 0, true, {
+            fileName: "Pages/Vans/VanList.jsx",
+            lineNumber: 115,
+            columnNumber: 7
+        }, this)
+    }, void 0, false, {
+        fileName: "Pages/Vans/VanList.jsx",
+        lineNumber: 114,
+        columnNumber: 5
+    }, this);
+}
+_s(VanList, "XPVtPxQ8rxsHGZhHRcps0KIeaRI=");
+_c = VanList;
+var _c;
+$RefreshReg$(_c, "VanList");
+
+  $parcel$ReactRefreshHelpers$c6b2.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../../components/van":"iZXA0","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"iZXA0":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$56b6 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$56b6.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "default", ()=>Van);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _reactRouter = require("react-router");
+function Van({ id, imageUrl, name, price, type }) {
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "container",
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouter.Link), {
+            to: `/vans/${id}`,
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "imageContainer",
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                        src: imageUrl,
+                        alt: "Van Picture"
+                    }, void 0, false, {
+                        fileName: "components/van.jsx",
+                        lineNumber: 9,
+                        columnNumber: 13
+                    }, this)
+                }, void 0, false, {
+                    fileName: "components/van.jsx",
+                    lineNumber: 8,
+                    columnNumber: 11
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "vanDetailsContainer space-x-2",
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                            className: "font-bold mb-2",
+                            children: name
+                        }, void 0, false, {
+                            fileName: "components/van.jsx",
+                            lineNumber: 12,
+                            columnNumber: 13
+                        }, this),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                            className: "font-bold text-lg",
+                            children: [
+                                `$${price}`,
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                    className: "font-thin text-sm",
+                                    children: `/day`
+                                }, void 0, false, {
+                                    fileName: "components/van.jsx",
+                                    lineNumber: 15,
+                                    columnNumber: 15
+                                }, this)
+                            ]
+                        }, void 0, true, {
+                            fileName: "components/van.jsx",
+                            lineNumber: 13,
+                            columnNumber: 13
+                        }, this)
+                    ]
+                }, void 0, true, {
+                    fileName: "components/van.jsx",
+                    lineNumber: 11,
+                    columnNumber: 11
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "mb-3",
+                    children: type === "simple" ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: "text-[#ffffff] mt-2 bg-amber-600 px-2 py-1 rounded-sm",
+                        children: "Simple"
+                    }, void 0, false, {
+                        fileName: "components/van.jsx",
+                        lineNumber: 21,
+                        columnNumber: 15
+                    }, this) : type === "rugged" ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: "bg-emerald-700 text-white mt-2 px-2 py-1 rounded-sm",
+                        children: "Rugged"
+                    }, void 0, false, {
+                        fileName: "components/van.jsx",
+                        lineNumber: 25,
+                        columnNumber: 15
+                    }, this) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: "bg-black text-white mt-2 px-2 py-1 rounded-sm",
+                        children: "Luxury"
+                    }, void 0, false, {
+                        fileName: "components/van.jsx",
+                        lineNumber: 29,
+                        columnNumber: 15
+                    }, this)
+                }, void 0, false, {
+                    fileName: "components/van.jsx",
+                    lineNumber: 19,
+                    columnNumber: 11
+                }, this)
+            ]
+        }, void 0, true, {
+            fileName: "components/van.jsx",
+            lineNumber: 7,
+            columnNumber: 9
+        }, this)
+    }, void 0, false, {
+        fileName: "components/van.jsx",
+        lineNumber: 6,
+        columnNumber: 7
+    }, this);
+}
+_c = Van;
+var _c;
+$RefreshReg$(_c, "Van");
+
+  $parcel$ReactRefreshHelpers$56b6.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react-router":"dXVwI","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"39POi":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$c7a6 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$c7a6.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "default", ()=>VanDetails);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _reactRouter = require("react-router");
+var _s = $RefreshSig$();
+function VanDetails() {
+    _s();
+    const { id } = (0, _reactRouter.useParams)();
+    const [van, setVan] = (0, _react.useState)({});
+    (0, _react.useEffect)(()=>{
+        async function getVanDetails() {
+            try {
+                const response = await fetch(`/api/vans/${id}`);
+                const data = await response.json();
+                setVan(data);
+            } catch (error) {
+                console.error('Failed to fetch vans details', error);
+            }
+        }
+        getVanDetails();
+    }, [
+        id
+    ]);
+    const vanImage = van?.imageUrl;
+    const vanType = van?.type;
+    const vanName = van?.name;
+    const vanRent = `$${van?.price}`;
+    const vanDescription = van?.description;
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "vanDetailsContainer",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "goBackContainer p-3",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouter.Link), {
+                    to: "/vans",
+                    children: [
+                        " ",
+                        "\u2190 ",
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                            children: "Back to all vans"
+                        }, void 0, false, {
+                            fileName: "Pages/Vans/VanDetails.jsx",
+                            lineNumber: 38,
+                            columnNumber: 20
+                        }, this)
+                    ]
+                }, void 0, true, {
+                    fileName: "Pages/Vans/VanDetails.jsx",
+                    lineNumber: 36,
+                    columnNumber: 11
+                }, this)
+            }, void 0, false, {
+                fileName: "Pages/Vans/VanDetails.jsx",
+                lineNumber: 35,
+                columnNumber: 9
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "p-3 m-2",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                    className: "rounded-lg",
+                    src: vanImage,
+                    alt: ""
+                }, void 0, false, {
+                    fileName: "Pages/Vans/VanDetails.jsx",
+                    lineNumber: 43,
+                    columnNumber: 11
+                }, this)
+            }, void 0, false, {
+                fileName: "Pages/Vans/VanDetails.jsx",
+                lineNumber: 42,
+                columnNumber: 9
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "p-3 m-3",
+                children: vanType === "simple" ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                    className: "text-[#ffffff] mt-2 bg-amber-600 px-2 py-1 rounded-sm",
+                    children: "Simple"
+                }, void 0, false, {
+                    fileName: "Pages/Vans/VanDetails.jsx",
+                    lineNumber: 48,
+                    columnNumber: 13
+                }, this) : vanType === "rugged" ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                    className: "bg-emerald-700 text-white mt-2 px-2 py-1 rounded-sm",
+                    children: "Rugged"
+                }, void 0, false, {
+                    fileName: "Pages/Vans/VanDetails.jsx",
+                    lineNumber: 52,
+                    columnNumber: 13
+                }, this) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                    className: "bg-black text-white mt-2 px-2 py-1 rounded-sm",
+                    children: "Luxury"
+                }, void 0, false, {
+                    fileName: "Pages/Vans/VanDetails.jsx",
+                    lineNumber: 56,
+                    columnNumber: 13
+                }, this)
+            }, void 0, false, {
+                fileName: "Pages/Vans/VanDetails.jsx",
+                lineNumber: 46,
+                columnNumber: 9
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "space-y-6 p-4",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                        className: "font-bold text-2xl",
+                        children: vanName
+                    }, void 0, false, {
+                        fileName: "Pages/Vans/VanDetails.jsx",
+                        lineNumber: 63,
+                        columnNumber: 11
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                        className: "font-bold text-lg",
+                        children: [
+                            vanRent,
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                className: "font-thin",
+                                children: `/day`
+                            }, void 0, false, {
+                                fileName: "Pages/Vans/VanDetails.jsx",
+                                lineNumber: 66,
+                                columnNumber: 13
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "Pages/Vans/VanDetails.jsx",
+                        lineNumber: 64,
+                        columnNumber: 11
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                        className: "text-sm",
+                        children: vanDescription
+                    }, void 0, false, {
+                        fileName: "Pages/Vans/VanDetails.jsx",
+                        lineNumber: 68,
+                        columnNumber: 11
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouter.Link), {
+                        className: "bg-[#FF8C38] text-center rounded-lg px-3 py-2 text-white w-full block",
+                        children: "Rent this van"
+                    }, void 0, false, {
+                        fileName: "Pages/Vans/VanDetails.jsx",
+                        lineNumber: 69,
+                        columnNumber: 11
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "Pages/Vans/VanDetails.jsx",
+                lineNumber: 62,
+                columnNumber: 9
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "Pages/Vans/VanDetails.jsx",
+        lineNumber: 34,
+        columnNumber: 7
+    }, this);
+}
+_s(VanDetails, "dweg5SI0eROS3bLTRlgEqBRSRCc=", false, function() {
+    return [
+        (0, _reactRouter.useParams)
+    ];
+});
+_c = VanDetails;
+var _c;
+$RefreshReg$(_c, "VanDetails");
+
+  $parcel$ReactRefreshHelpers$c7a6.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router":"dXVwI","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"ho09O":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$2a0f = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$2a0f.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "default", ()=>Layout);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _reactRouter = require("react-router");
+var _header = require("./Header");
+var _headerDefault = parcelHelpers.interopDefault(_header);
+var _footer = require("./Footer");
+var _footerDefault = parcelHelpers.interopDefault(_footer);
+function Layout() {
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _headerDefault.default), {}, void 0, false, {
+                fileName: "components/Layout.jsx",
+                lineNumber: 10,
+                columnNumber: 9
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouter.Outlet), {}, void 0, false, {
+                fileName: "components/Layout.jsx",
+                lineNumber: 11,
+                columnNumber: 9
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _footerDefault.default), {}, void 0, false, {
+                fileName: "components/Layout.jsx",
+                lineNumber: 12,
+                columnNumber: 9
+            }, this)
+        ]
+    }, void 0, true);
+}
+_c = Layout;
+var _c;
+$RefreshReg$(_c, "Layout");
+
+  $parcel$ReactRefreshHelpers$2a0f.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router":"dXVwI","./Header":"6nmoh","./Footer":"6QIYt","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"6nmoh":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$6433 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$6433.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "default", ()=>Header);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _reactRouter = require("react-router");
+function Header() {
+    const activeClass = `font-bold text-xl underline text-orange-500`;
+    return(// <header className="flex w-full bg-[#FFF7ED] p-9 justify-between">
+    //   <Link className="text-2xl font-extrabold" to="/">
+    //     #VANLIFE
+    //   </Link>
+    //   <nav className="space-x-3">
+    //     <NavLink className="nav-link text-[#4D4D4D] text-xl" to="/vans">
+    //       Vans
+    //     </NavLink>
+    //     <NavLink className="nav-link text-[#4D4D4D] text-xl" to="/host">
+    //       Hosts
+    //     </NavLink>
+    //     <NavLink className="nav-link text-[#4D4D4D] text-xl" to="/about">
+    //       About
+    //     </NavLink>
+    //   </nav>
+    // </header>
+    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("header", {
+        className: "flex bg-[#FFF7ED] p-4 justify-between items-center",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouter.Link), {
+                className: "text-xl font-extrabold",
+                to: "/",
+                children: "#VANLIFE"
+            }, void 0, false, {
+                fileName: "components/Header.jsx",
+                lineNumber: 25,
+                columnNumber: 9
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouter.NavLink), {
+                to: "/vans",
+                className: ({ isActive })=>isActive ? activeClass : null,
+                children: "Vans"
+            }, void 0, false, {
+                fileName: "components/Header.jsx",
+                lineNumber: 41,
+                columnNumber: 9
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouter.NavLink), {
+                to: "/host",
+                className: ({ isActive })=>isActive ? activeClass : null,
+                children: "Hosts"
+            }, void 0, false, {
+                fileName: "components/Header.jsx",
+                lineNumber: 48,
+                columnNumber: 9
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouter.NavLink), {
+                to: "/about",
+                className: ({ isActive })=>isActive ? activeClass : null,
+                children: "About"
+            }, void 0, false, {
+                fileName: "components/Header.jsx",
+                lineNumber: 55,
+                columnNumber: 9
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "components/Header.jsx",
+        lineNumber: 24,
+        columnNumber: 7
+    }, this));
+}
+_c = Header;
+var _c;
+$RefreshReg$(_c, "Header");
+
+  $parcel$ReactRefreshHelpers$6433.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react-router":"dXVwI","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"6QIYt":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$fe51 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$fe51.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "default", ()=>Footer);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+function Footer() {
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("footer", {
+        className: "bg-gray-800 text-center p-3 text-[#AAAAAA]",
+        children: "\xa9 2022 #VanLife"
+    }, void 0, false, {
+        fileName: "components/Footer.jsx",
+        lineNumber: 3,
+        columnNumber: 7
+    }, this);
+}
+_c = Footer;
+var _c;
+$RefreshReg$(_c, "Footer");
+
+  $parcel$ReactRefreshHelpers$fe51.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"44u0J":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$3e1f = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$3e1f.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "default", ()=>DashBoard);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _reactRouter = require("react-router");
+function DashBoard() {
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+        children: "Host Dashboard here"
+    }, void 0, false, {
+        fileName: "Pages/Host/DashBoard.jsx",
+        lineNumber: 5,
+        columnNumber: 9
+    }, this);
+}
+_c = DashBoard;
+var _c;
+$RefreshReg$(_c, "DashBoard");
+
+  $parcel$ReactRefreshHelpers$3e1f.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react-router":"dXVwI","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"dnFPh":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$4b82 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$4b82.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "default", ()=>Income);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+function Income() {
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+        children: "Host Income  here"
+    }, void 0, false, {
+        fileName: "Pages/Host/Income.jsx",
+        lineNumber: 2,
+        columnNumber: 10
+    }, this);
+}
+_c = Income;
+var _c;
+$RefreshReg$(_c, "Income");
+
+  $parcel$ReactRefreshHelpers$4b82.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"8OOpB":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$3101 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$3101.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "default", ()=>Reviews);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+function Reviews() {
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+        children: "Host Reviews here"
+    }, void 0, false, {
+        fileName: "Pages/Host/Reviews.jsx",
+        lineNumber: 2,
+        columnNumber: 10
+    }, this);
+}
+_c = Reviews;
+var _c;
+$RefreshReg$(_c, "Reviews");
+
+  $parcel$ReactRefreshHelpers$3101.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"lnmck":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$e59d = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$e59d.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "default", ()=>HostLayout);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _reactRouter = require("react-router");
+function HostLayout() {
+    const activeClass = "font-bold underline text-red-500"; // Define a CSS class for active styles
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("nav", {
+                className: "space-x-4 m-3 p-3",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouter.NavLink), {
+                        to: "/host",
+                        end: true,
+                        className: ({ isActive })=>isActive ? activeClass : "",
+                        children: "Dashboard"
+                    }, void 0, false, {
+                        fileName: "components/HostLayout.jsx",
+                        lineNumber: 53,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouter.NavLink), {
+                        to: "vans",
+                        className: ({ isActive })=>isActive ? activeClass : "",
+                        children: "Vans"
+                    }, void 0, false, {
+                        fileName: "components/HostLayout.jsx",
+                        lineNumber: 62,
+                        columnNumber: 10
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouter.NavLink), {
+                        to: "income",
+                        end: true,
+                        className: ({ isActive })=>isActive ? activeClass : "",
+                        children: "Income"
+                    }, void 0, false, {
+                        fileName: "components/HostLayout.jsx",
+                        lineNumber: 69,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouter.NavLink), {
+                        to: "reviews",
+                        end: true,
+                        className: ({ isActive })=>isActive ? activeClass : "",
+                        children: "Reviews"
+                    }, void 0, false, {
+                        fileName: "components/HostLayout.jsx",
+                        lineNumber: 78,
+                        columnNumber: 9
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "components/HostLayout.jsx",
+                lineNumber: 52,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouter.Outlet), {}, void 0, false, {
+                fileName: "components/HostLayout.jsx",
+                lineNumber: 86,
+                columnNumber: 7
+            }, this)
+        ]
+    }, void 0, true);
+}
+_c = HostLayout;
+var _c;
+$RefreshReg$(_c, "HostLayout");
+
+  $parcel$ReactRefreshHelpers$e59d.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react-router":"dXVwI","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"6lo7H":[function(require,module,exports,__globalThis) {
+var _miragejs = require("miragejs");
+(0, _miragejs.createServer)({
+    models: {
+        vans: (0, _miragejs.Model)
+    },
+    seeds (server) {
+        server.create("van", {
+            id: "1",
+            name: "Modest Explorer",
+            price: 60,
+            description: "The Modest Explorer is a van designed to get you out of the house and into nature. This beauty is equipped with solar panels, a composting toilet, a water tank and kitchenette. The idea is that you can pack up your home and escape for a weekend or even longer!",
+            imageUrl: "https://assets.scrimba.com/advanced-react/react-router/modest-explorer.png",
+            type: "simple",
+            hostId: "123"
+        });
+        server.create("van", {
+            id: "2",
+            name: "Beach Bum",
+            price: 80,
+            description: "Beach Bum is a van inspired by surfers and travelers. It was created to be a portable home away from home, but with some cool features in it you won't find in an ordinary camper.",
+            imageUrl: "https://assets.scrimba.com/advanced-react/react-router/beach-bum.png",
+            type: "rugged",
+            hostId: "123"
+        });
+        server.create("van", {
+            id: "3",
+            name: "Reliable Red",
+            price: 100,
+            description: "Reliable Red is a van that was made for travelling. The inside is comfortable and cozy, with plenty of space to stretch out in. There's a small kitchen, so you can cook if you need to. You'll feel like home as soon as you step out of it.",
+            imageUrl: "https://assets.scrimba.com/advanced-react/react-router/reliable-red.png",
+            type: "luxury",
+            hostId: "456"
+        });
+        server.create("van", {
+            id: "4",
+            name: "Dreamfinder",
+            price: 65,
+            description: "Dreamfinder is the perfect van to travel in and experience. With a ceiling height of 2.1m, you can stand up in this van and there is great head room. The floor is a beautiful glass-reinforced plastic (GRP) which is easy to clean and very hard wearing. A large rear window and large side windows make it really light inside and keep it well ventilated.",
+            imageUrl: "https://assets.scrimba.com/advanced-react/react-router/dreamfinder.png",
+            type: "simple",
+            hostId: "789"
+        });
+        server.create("van", {
+            id: "5",
+            name: "The Cruiser",
+            price: 120,
+            description: "The Cruiser is a van for those who love to travel in comfort and luxury. With its many windows, spacious interior and ample storage space, the Cruiser offers a beautiful view wherever you go.",
+            imageUrl: "https://assets.scrimba.com/advanced-react/react-router/the-cruiser.png",
+            type: "luxury",
+            hostId: "789"
+        });
+        server.create("van", {
+            id: "6",
+            name: "Green Wonder",
+            price: 70,
+            description: "With this van, you can take your travel life to the next level. The Green Wonder is a sustainable vehicle that's perfect for people who are looking for a stylish, eco-friendly mode of transport that can go anywhere.",
+            imageUrl: "https://assets.scrimba.com/advanced-react/react-router/green-wonder.png",
+            type: "rugged",
+            hostId: "123"
+        });
+    },
+    routes () {
+        this.namespace = "api";
+        this.get("/vans", (schema, request)=>{
+            return schema.vans.all();
+        });
+        this.get("/vans/:id", (schema, request)=>{
+            const id = request.params.id;
+            return schema.vans.find(id);
+        });
+        this.get("/host/vans", (schema, request)=>{
+            return schema.vans.where({
+                hostId: "123"
+            });
+        });
+        this.get("/host/vans/:id", (schema, request)=>{
+            const id = request.params.id;
+            return schema.vans.where({
+                id,
+                hostId: "123"
+            });
+        });
+    }
+});
+
+},{"miragejs":"jafA9"}],"jafA9":[function(require,module,exports,__globalThis) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "ActiveModelSerializer", ()=>ActiveModelSerializer);
+parcelHelpers.export(exports, "Collection", ()=>Collection);
+parcelHelpers.export(exports, "Factory", ()=>Factory);
+parcelHelpers.export(exports, "IdentityManager", ()=>IdentityManager);
+parcelHelpers.export(exports, "JSONAPISerializer", ()=>JSONAPISerializer);
+parcelHelpers.export(exports, "Model", ()=>Model);
+parcelHelpers.export(exports, "PretenderInterceptor", ()=>PretenderConfig);
+parcelHelpers.export(exports, "Response", ()=>Response);
+parcelHelpers.export(exports, "RestSerializer", ()=>restSerializer);
+parcelHelpers.export(exports, "Serializer", ()=>Serializer);
+parcelHelpers.export(exports, "Server", ()=>Server);
+parcelHelpers.export(exports, "_Db", ()=>Db);
+parcelHelpers.export(exports, "_DbCollection", ()=>DbCollection);
+parcelHelpers.export(exports, "_RouteHandler", ()=>RouteHandler);
+parcelHelpers.export(exports, "_SerializerRegistry", ()=>SerializerRegistry);
+parcelHelpers.export(exports, "_assert", ()=>assert);
+parcelHelpers.export(exports, "_ormAssociationsAssociation", ()=>Association);
+parcelHelpers.export(exports, "_ormAssociationsBelongsTo", ()=>BelongsTo);
+parcelHelpers.export(exports, "_ormAssociationsHasMany", ()=>HasMany);
+parcelHelpers.export(exports, "_ormPolymorphicCollection", ()=>PolymorphicCollection);
+parcelHelpers.export(exports, "_ormSchema", ()=>Schema);
+parcelHelpers.export(exports, "_routeHandlersBase", ()=>BaseRouteHandler);
+parcelHelpers.export(exports, "_routeHandlersFunction", ()=>FunctionRouteHandler);
+parcelHelpers.export(exports, "_routeHandlersObject", ()=>ObjectRouteHandler);
+parcelHelpers.export(exports, "_routeHandlersShorthandsBase", ()=>BaseShorthandRouteHandler);
+parcelHelpers.export(exports, "_routeHandlersShorthandsDelete", ()=>DeleteShorthandRouteHandler);
+parcelHelpers.export(exports, "_routeHandlersShorthandsGet", ()=>GetShorthandRouteHandler);
+parcelHelpers.export(exports, "_routeHandlersShorthandsHead", ()=>HeadShorthandRouteHandler);
+parcelHelpers.export(exports, "_routeHandlersShorthandsPost", ()=>PostShorthandRouteHandler);
+parcelHelpers.export(exports, "_routeHandlersShorthandsPut", ()=>PutShorthandRouteHandler);
+parcelHelpers.export(exports, "_utilsExtend", ()=>extend);
+parcelHelpers.export(exports, "_utilsInflectorCamelize", ()=>camelize);
+parcelHelpers.export(exports, "_utilsInflectorCapitalize", ()=>capitalize);
+parcelHelpers.export(exports, "_utilsInflectorDasherize", ()=>dasherize);
+parcelHelpers.export(exports, "_utilsInflectorUnderscore", ()=>underscore);
+parcelHelpers.export(exports, "_utilsIsAssociation", ()=>isAssociation);
+parcelHelpers.export(exports, "_utilsReferenceSort", ()=>referenceSort);
+parcelHelpers.export(exports, "_utilsUuid", ()=>uuid);
+parcelHelpers.export(exports, "association", ()=>association);
+parcelHelpers.export(exports, "belongsTo", ()=>belongsTo);
+parcelHelpers.export(exports, "createServer", ()=>createServer);
+parcelHelpers.export(exports, "default", ()=>index);
+parcelHelpers.export(exports, "hasMany", ()=>hasMany);
+parcelHelpers.export(exports, "trait", ()=>trait);
+var _isPlainObject = require("lodash/isPlainObject");
+var _isPlainObjectDefault = parcelHelpers.interopDefault(_isPlainObject);
+var _isFunction = require("lodash/isFunction");
+var _isFunctionDefault = parcelHelpers.interopDefault(_isFunction);
+var _mapValues = require("lodash/mapValues");
+var _mapValuesDefault = parcelHelpers.interopDefault(_mapValues);
+var _uniq = require("lodash/uniq");
+var _uniqDefault = parcelHelpers.interopDefault(_uniq);
+var _flatten = require("lodash/flatten");
+var _flattenDefault = parcelHelpers.interopDefault(_flatten);
+var _inflected = require("inflected");
+var _lowerFirst = require("lodash/lowerFirst");
+var _lowerFirstDefault = parcelHelpers.interopDefault(_lowerFirst);
+var _isEqual = require("lodash/isEqual");
+var _isEqualDefault = parcelHelpers.interopDefault(_isEqual);
+var _map = require("lodash/map");
+var _mapDefault = parcelHelpers.interopDefault(_map);
+var _cloneDeep = require("lodash/cloneDeep");
+var _cloneDeepDefault = parcelHelpers.interopDefault(_cloneDeep);
+var _invokeMap = require("lodash/invokeMap");
+var _invokeMapDefault = parcelHelpers.interopDefault(_invokeMap);
+var _compact = require("lodash/compact");
+var _compactDefault = parcelHelpers.interopDefault(_compact);
+var _has = require("lodash/has");
+var _hasDefault = parcelHelpers.interopDefault(_has);
+var _values = require("lodash/values");
+var _valuesDefault = parcelHelpers.interopDefault(_values);
+var _isEmpty = require("lodash/isEmpty");
+var _isEmptyDefault = parcelHelpers.interopDefault(_isEmpty);
+var _get = require("lodash/get");
+var _getDefault = parcelHelpers.interopDefault(_get);
+var _uniqBy = require("lodash/uniqBy");
+var _uniqByDefault = parcelHelpers.interopDefault(_uniqBy);
+var _forIn = require("lodash/forIn");
+var _forInDefault = parcelHelpers.interopDefault(_forIn);
+var _pick = require("lodash/pick");
+var _pickDefault = parcelHelpers.interopDefault(_pick);
+var _assign = require("lodash/assign");
+var _assignDefault = parcelHelpers.interopDefault(_assign);
+var _find = require("lodash/find");
+var _findDefault = parcelHelpers.interopDefault(_find);
+var _isInteger = require("lodash/isInteger");
+var _isIntegerDefault = parcelHelpers.interopDefault(_isInteger);
+var _before = require("@miragejs/pretender-node-polyfill/before");
+var _pretender = require("pretender");
+var _pretenderDefault = parcelHelpers.interopDefault(_pretender);
+var _after = require("@miragejs/pretender-node-polyfill/after");
+function ownKeys(object, enumerableOnly) {
+    var keys = Object.keys(object);
+    if (Object.getOwnPropertySymbols) {
+        var symbols = Object.getOwnPropertySymbols(object);
+        if (enumerableOnly) symbols = symbols.filter(function(sym) {
+            return Object.getOwnPropertyDescriptor(object, sym).enumerable;
+        });
+        keys.push.apply(keys, symbols);
+    }
+    return keys;
+}
+function _objectSpread2(target) {
+    for(var i = 1; i < arguments.length; i++){
+        var source = arguments[i] != null ? arguments[i] : {};
+        if (i % 2) ownKeys(Object(source), true).forEach(function(key) {
+            _defineProperty(target, key, source[key]);
+        });
+        else if (Object.getOwnPropertyDescriptors) Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));
+        else ownKeys(Object(source)).forEach(function(key) {
+            Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
+        });
+    }
+    return target;
+}
+function _typeof(obj) {
+    "@babel/helpers - typeof";
+    if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") _typeof = function(obj) {
+        return typeof obj;
+    };
+    else _typeof = function(obj) {
+        return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
+    };
+    return _typeof(obj);
+}
+function _classCallCheck(instance, Constructor) {
+    if (!(instance instanceof Constructor)) throw new TypeError("Cannot call a class as a function");
+}
+function _defineProperties(target, props) {
+    for(var i = 0; i < props.length; i++){
+        var descriptor = props[i];
+        descriptor.enumerable = descriptor.enumerable || false;
+        descriptor.configurable = true;
+        if ("value" in descriptor) descriptor.writable = true;
+        Object.defineProperty(target, descriptor.key, descriptor);
+    }
+}
+function _createClass(Constructor, protoProps, staticProps) {
+    if (protoProps) _defineProperties(Constructor.prototype, protoProps);
+    if (staticProps) _defineProperties(Constructor, staticProps);
+    return Constructor;
+}
+function _defineProperty(obj, key, value) {
+    if (key in obj) Object.defineProperty(obj, key, {
+        value: value,
+        enumerable: true,
+        configurable: true,
+        writable: true
+    });
+    else obj[key] = value;
+    return obj;
+}
+function _inherits(subClass, superClass) {
+    if (typeof superClass !== "function" && superClass !== null) throw new TypeError("Super expression must either be null or a function");
+    subClass.prototype = Object.create(superClass && superClass.prototype, {
+        constructor: {
+            value: subClass,
+            writable: true,
+            configurable: true
+        }
+    });
+    if (superClass) _setPrototypeOf(subClass, superClass);
+}
+function _getPrototypeOf(o) {
+    _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {
+        return o.__proto__ || Object.getPrototypeOf(o);
+    };
+    return _getPrototypeOf(o);
+}
+function _setPrototypeOf(o, p) {
+    _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) {
+        o.__proto__ = p;
+        return o;
+    };
+    return _setPrototypeOf(o, p);
+}
+function _isNativeReflectConstruct() {
+    if (typeof Reflect === "undefined" || !Reflect.construct) return false;
+    if (Reflect.construct.sham) return false;
+    if (typeof Proxy === "function") return true;
+    try {
+        Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function() {}));
+        return true;
+    } catch (e) {
+        return false;
+    }
+}
+function _construct(Parent, args, Class) {
+    if (_isNativeReflectConstruct()) _construct = Reflect.construct;
+    else _construct = function _construct(Parent, args, Class) {
+        var a = [
+            null
+        ];
+        a.push.apply(a, args);
+        var Constructor = Function.bind.apply(Parent, a);
+        var instance = new Constructor();
+        if (Class) _setPrototypeOf(instance, Class.prototype);
+        return instance;
+    };
+    return _construct.apply(null, arguments);
+}
+function _assertThisInitialized(self) {
+    if (self === void 0) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+    return self;
+}
+function _possibleConstructorReturn(self, call) {
+    if (call && (typeof call === "object" || typeof call === "function")) return call;
+    else if (call !== void 0) throw new TypeError("Derived constructors may only return object or undefined");
+    return _assertThisInitialized(self);
+}
+function _createSuper(Derived) {
+    var hasNativeReflectConstruct = _isNativeReflectConstruct();
+    return function _createSuperInternal() {
+        var Super = _getPrototypeOf(Derived), result;
+        if (hasNativeReflectConstruct) {
+            var NewTarget = _getPrototypeOf(this).constructor;
+            result = Reflect.construct(Super, arguments, NewTarget);
+        } else result = Super.apply(this, arguments);
+        return _possibleConstructorReturn(this, result);
+    };
+}
+function _slicedToArray(arr, i) {
+    return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest();
+}
+function _toArray(arr) {
+    return _arrayWithHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableRest();
+}
+function _toConsumableArray(arr) {
+    return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread();
+}
+function _arrayWithoutHoles(arr) {
+    if (Array.isArray(arr)) return _arrayLikeToArray(arr);
+}
+function _arrayWithHoles(arr) {
+    if (Array.isArray(arr)) return arr;
+}
+function _iterableToArray(iter) {
+    if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter);
+}
+function _iterableToArrayLimit(arr, i) {
+    var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"];
+    if (_i == null) return;
+    var _arr = [];
+    var _n = true;
+    var _d = false;
+    var _s, _e;
+    try {
+        for(_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true){
+            _arr.push(_s.value);
+            if (i && _arr.length === i) break;
+        }
+    } catch (err) {
+        _d = true;
+        _e = err;
+    } finally{
+        try {
+            if (!_n && _i["return"] != null) _i["return"]();
+        } finally{
+            if (_d) throw _e;
+        }
+    }
+    return _arr;
+}
+function _unsupportedIterableToArray(o, minLen) {
+    if (!o) return;
+    if (typeof o === "string") return _arrayLikeToArray(o, minLen);
+    var n = Object.prototype.toString.call(o).slice(8, -1);
+    if (n === "Object" && o.constructor) n = o.constructor.name;
+    if (n === "Map" || n === "Set") return Array.from(o);
+    if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);
+}
+function _arrayLikeToArray(arr, len) {
+    if (len == null || len > arr.length) len = arr.length;
+    for(var i = 0, arr2 = new Array(len); i < len; i++)arr2[i] = arr[i];
+    return arr2;
+}
+function _nonIterableSpread() {
+    throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+}
+function _nonIterableRest() {
+    throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+}
+// jscs:disable disallowVar, requireArrayDestructuring
+/**
+  @hide
+*/ function referenceSort(edges) {
+    var nodes = (0, _uniqDefault.default)((0, _flattenDefault.default)(edges));
+    var cursor = nodes.length;
+    var sorted = new Array(cursor);
+    var visited = {};
+    var i = cursor;
+    var visit = function visit(node, i, predecessors) {
+        if (predecessors.indexOf(node) >= 0) throw new Error("Cyclic dependency in properties ".concat(JSON.stringify(predecessors)));
+        if (visited[i]) return;
+        else visited[i] = true;
+        var outgoing = edges.filter(function(edge) {
+            return edge && edge[0] === node;
+        });
+        i = outgoing.length;
+        if (i) {
+            var preds = predecessors.concat(node);
+            do {
+                var pair = outgoing[--i];
+                var child = pair[1];
+                if (child) visit(child, nodes.indexOf(child), preds);
+            }while (i);
+        }
+        sorted[--cursor] = node;
+    };
+    while(i--)if (!visited[i]) visit(nodes[i], i, []);
+    return sorted.reverse();
+}
+var Factory = function Factory() {
+    this.build = function(sequence) {
+        var _this = this;
+        var object = {};
+        var topLevelAttrs = Object.assign({}, this.attrs);
+        delete topLevelAttrs.afterCreate;
+        Object.keys(topLevelAttrs).forEach(function(attr) {
+            if (Factory.isTrait.call(_this, attr)) delete topLevelAttrs[attr];
+        });
+        var keys = sortAttrs(topLevelAttrs, sequence);
+        keys.forEach(function(key) {
+            var buildAttrs, _buildSingleValue;
+            buildAttrs = function buildAttrs(attrs) {
+                return (0, _mapValuesDefault.default)(attrs, _buildSingleValue);
+            };
+            _buildSingleValue = function buildSingleValue(value) {
+                if (Array.isArray(value)) return value.map(_buildSingleValue);
+                else if ((0, _isPlainObjectDefault.default)(value)) return buildAttrs(value);
+                else if ((0, _isFunctionDefault.default)(value)) return value.call(topLevelAttrs, sequence);
+                else return value;
+            };
+            var value = topLevelAttrs[key];
+            if ((0, _isFunctionDefault.default)(value)) object[key] = value.call(object, sequence);
+            else object[key] = _buildSingleValue(value);
+        });
+        return object;
+    };
+};
+Factory.extend = function(attrs) {
+    // Merge the new attributes with existing ones. If conflict, new ones win.
+    var newAttrs = Object.assign({}, this.attrs, attrs);
+    var Subclass = function Subclass() {
+        this.attrs = newAttrs;
+        Factory.call(this);
+    }; // Copy extend
+    Subclass.extend = Factory.extend;
+    Subclass.extractAfterCreateCallbacks = Factory.extractAfterCreateCallbacks;
+    Subclass.isTrait = Factory.isTrait; // Store a reference on the class for future subclasses
+    Subclass.attrs = newAttrs;
+    return Subclass;
+};
+Factory.extractAfterCreateCallbacks = function() {
+    var _this2 = this;
+    var _ref = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {}, traits = _ref.traits;
+    var afterCreateCallbacks = [];
+    var attrs = this.attrs || {};
+    var traitCandidates;
+    if (attrs.afterCreate) afterCreateCallbacks.push(attrs.afterCreate);
+    if (Array.isArray(traits)) traitCandidates = traits;
+    else traitCandidates = Object.keys(attrs);
+    traitCandidates.filter(function(attr) {
+        return _this2.isTrait(attr) && attrs[attr].extension.afterCreate;
+    }).forEach(function(attr) {
+        afterCreateCallbacks.push(attrs[attr].extension.afterCreate);
+    });
+    return afterCreateCallbacks;
+};
+Factory.isTrait = function(attrName) {
+    var attrs = this.attrs;
+    return (0, _isPlainObjectDefault.default)(attrs[attrName]) && attrs[attrName].__isTrait__ === true;
+};
+function sortAttrs(attrs, sequence) {
+    var Temp = function Temp() {};
+    var obj = new Temp();
+    var refs = [];
+    var property;
+    Object.keys(attrs).forEach(function(key) {
+        var value;
+        Object.defineProperty(obj.constructor.prototype, key, {
+            get: function get() {
+                refs.push([
+                    property,
+                    key
+                ]);
+                return value;
+            },
+            set: function set(newValue) {
+                value = newValue;
+            },
+            enumerable: false,
+            configurable: true
+        });
+    });
+    Object.keys(attrs).forEach(function(key) {
+        var value = attrs[key];
+        if (typeof value !== "function") obj[key] = value;
+    });
+    Object.keys(attrs).forEach(function(key) {
+        var value = attrs[key];
+        property = key;
+        if (typeof value === "function") obj[key] = value.call(obj, sequence);
+        refs.push([
+            key
+        ]);
+    });
+    return referenceSort(refs);
+}
+function isNumber(n) {
+    return (+n).toString() === n.toString();
+}
+/**
+  By default Mirage uses autoincrementing numbers starting with `1` as IDs for records. This can be customized by implementing one or more IdentityManagers for your application.
+
+  An IdentityManager is a class that's responsible for generating unique identifiers. You can define a custom identity manager for your entire application, as well as on a per-model basis.
+
+  A custom IdentityManager must implement these methods:
+
+  - `fetch`, which must return an identifier not yet used
+  - `set`, which is called with an `id` of a record being insert into Mirage's database
+  - `reset`, which should reset database to initial state
+
+  Check out the advanced guide on Mocking UUIDs to see a complete example of a custom IdentityManager.
+
+  @class IdentityManager
+  @constructor
+  @public
+*/ var IdentityManager = /*#__PURE__*/ function() {
+    function IdentityManager() {
+        _classCallCheck(this, IdentityManager);
+        this._nextId = 1;
+        this._ids = {};
+    }
+    /**
+    @method get
+    @hide
+    @private
+  */ _createClass(IdentityManager, [
+        {
+            key: "get",
+            value: function get() {
+                return this._nextId;
+            }
+        },
+        {
+            key: "set",
+            value: function set(uniqueIdentifier) {
+                if (this._ids[uniqueIdentifier]) throw new Error("Attempting to use the ID ".concat(uniqueIdentifier, ", but it's already been used"));
+                if (isNumber(uniqueIdentifier) && +uniqueIdentifier >= this._nextId) this._nextId = +uniqueIdentifier + 1;
+                this._ids[uniqueIdentifier] = true;
+            }
+        },
+        {
+            key: "inc",
+            value: function inc() {
+                var nextValue = this.get() + 1;
+                this._nextId = nextValue;
+                return nextValue;
+            }
+        },
+        {
+            key: "fetch",
+            value: function fetch() {
+                var id = this.get();
+                this._ids[id] = true;
+                this.inc();
+                return id.toString();
+            }
+        },
+        {
+            key: "reset",
+            value: function reset() {
+                this._nextId = 1;
+                this._ids = {};
+            }
+        }
+    ]);
+    return IdentityManager;
+}();
+/**
+  @hide
+*/ var association = function association() {
+    var __isAssociation__ = true;
+    for(var _len = arguments.length, traitsAndOverrides = new Array(_len), _key = 0; _key < _len; _key++)traitsAndOverrides[_key] = arguments[_key];
+    return {
+        __isAssociation__: __isAssociation__,
+        traitsAndOverrides: traitsAndOverrides
+    };
+};
+var trait = function trait(extension) {
+    var __isTrait__ = true;
+    return {
+        extension: extension,
+        __isTrait__: __isTrait__
+    };
+};
+var warn = console.warn; // eslint-disable-line no-console
+/**
+  You can use this class when you want more control over your route handlers response.
+
+  Pass the `code`, `headers` and `data` into the constructor and return an instance from any route handler.
+
+  ```js
+  import { Response } from 'miragejs';
+
+  this.get('/users', () => {
+    return new Response(400, { some: 'header' }, { errors: [ 'name cannot be blank'] });
+  });
+  ```
+*/ var Response = /*#__PURE__*/ function() {
+    function Response(code) {
+        var headers = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+        var data = arguments.length > 2 ? arguments[2] : undefined;
+        _classCallCheck(this, Response);
+        this.code = code;
+        this.headers = headers; // Default data for "undefined 204" responses to empty string (no content)
+        if (code === 204) {
+            if (data !== undefined && data !== "") warn("Mirage: One of your route handlers is returning a custom\n          204 Response that has data, but this is a violation of the HTTP spec\n          and could lead to unexpected behavior. 204 responses should have no\n          content (an empty string) as their body.");
+            else this.data = "";
+             // Default data for "empty untyped" responses to empty JSON object
+        } else if ((data === undefined || data === "") && !Object.prototype.hasOwnProperty.call(this.headers, "Content-Type")) this.data = {};
+        else this.data = data;
+         // Default "untyped" responses to application/json
+        if (code !== 204 && !Object.prototype.hasOwnProperty.call(this.headers, "Content-Type")) this.headers["Content-Type"] = "application/json";
+    }
+    _createClass(Response, [
+        {
+            key: "toRackResponse",
+            value: function toRackResponse() {
+                return [
+                    this.code,
+                    this.headers,
+                    this.data
+                ];
+            }
+        }
+    ]);
+    return Response;
+}();
+var camelizeCache = {};
+var dasherizeCache = {};
+var underscoreCache = {};
+var capitalizeCache = {};
+/**
+ * @param {String} word
+ * @hide
+ */ function camelize(word) {
+    if (typeof camelizeCache[word] !== "string") {
+        var camelizedWord = (0, _inflected.camelize)(underscore(word), false);
+        /*
+     The `ember-inflector` package's version of camelize lower-cases the first
+     word after a slash, e.g.
+          camelize('my-things/nice-watch'); // 'myThings/niceWatch'
+      The `inflected` package doesn't, so we make that change here to not break
+     existing functionality. (This affects the name of the schema collections.)
+    */ var camelized = camelizedWord.split("/").map((0, _lowerFirstDefault.default)).join("/");
+        camelizeCache[word] = camelized;
+    }
+    return camelizeCache[word];
+}
+/**
+ * @param {String} word
+ * @hide
+ */ function dasherize(word) {
+    if (typeof dasherizeCache[word] !== "string") {
+        var dasherized = (0, _inflected.dasherize)(underscore(word));
+        dasherizeCache[word] = dasherized;
+    }
+    return dasherizeCache[word];
+}
+function underscore(word) {
+    if (typeof underscoreCache[word] !== "string") {
+        var underscored = (0, _inflected.underscore)(word);
+        underscoreCache[word] = underscored;
+    }
+    return underscoreCache[word];
+}
+function capitalize(word) {
+    if (typeof capitalizeCache[word] !== "string") {
+        var capitalized = (0, _inflected.capitalize)(word);
+        capitalizeCache[word] = capitalized;
+    }
+    return capitalizeCache[word];
+}
+/**
+  @hide
+*/ function isAssociation(object) {
+    return (0, _isPlainObjectDefault.default)(object) && object.__isAssociation__ === true;
+}
+/* eslint no-console: 0 */ var errorProps = [
+    "description",
+    "fileName",
+    "lineNumber",
+    "message",
+    "name",
+    "number",
+    "stack"
+];
+/**
+  @hide
+*/ function assert(bool, text) {
+    if (typeof bool === "string" && !text) // console.error(`Mirage: ${bool}`);
+    throw new MirageError(bool);
+    if (!bool) // console.error(`Mirage: ${text}`);
+    throw new MirageError(text.replace(/^ +/gm, "") || "Assertion failed");
+}
+/**
+  @public
+  @hide
+  Copied from ember-metal/error
+*/ function MirageError(message, stack) {
+    var tmp = Error(message);
+    if (stack) tmp.stack = stack;
+    for(var idx = 0; idx < errorProps.length; idx++){
+        var prop = errorProps[idx];
+        if ([
+            "description",
+            "message",
+            "stack"
+        ].indexOf(prop) > -1) this[prop] = "Mirage: ".concat(tmp[prop]);
+        else this[prop] = tmp[prop];
+    }
+}
+MirageError.prototype = Object.create(Error.prototype);
+/**
+  Associations represent relationships between your Models.
+
+  The `hasMany` and `belongsTo` helpers are how you actually define relationships:
+  
+  ```js
+  import { createServer, Model, hasMany, belongsTo }
+
+  createServer({
+    models: {
+      user: Model.extend({
+        comments: hasMany()
+      }),
+      comments: Model.extend({
+        user: belongsTo()
+      })
+    }
+  })
+  ```
+
+  View [the Relationships](https://miragejs.com/docs/main-concepts/relationships/) guide to learn more about setting up relationships.
+
+  Each usage of the helper registers an Association (either a `HasMany` association or `BelongsTo` association) with your server's `Schema`. You can access these associations using either the `schema.associationsFor()` method, or the `associations` property on individual model instances.
+
+  You can then introspect the associations to do things like dynamically build up your JSON response in your serializers.
+
+  @class Association
+  @constructor
+  @public
+*/ var Association = /*#__PURE__*/ function() {
+    function Association(modelName, opts) {
+        _classCallCheck(this, Association);
+        /**
+      The modelName of the associated model.
+       For example, given this configuration
+      
+      ```js
+      createServer({
+        models: {
+          user: Model,
+          comment: Model.extend({
+            user: belongsTo()
+          })
+        }
+      })
+      ```
+       the association's `modelName` would be `user`.
+       Note that an association's `modelName` and the `name` can be different. This is because Mirage supports multiple relationships of the same type:
+       ```js
+      createServer({
+        models: {
+          user: Model,
+          comment: Model.extend({
+            author: belongsTo('user'),
+            reviewer: belongsTo('user')
+          })
+        }
+      })
+      ```
+       For both these relationships, the `modelName` is `user`, but the first association has a `name` of `author` while the second has a `name` of `reviewer`.
+       @property
+      @type {String}
+      @public
+    */ this.modelName = undefined; // hack to add ESDOC info. Any better way?
+        if (_typeof(modelName) === "object") {
+            // Received opts only
+            this.modelName = undefined;
+            this.opts = modelName;
+        } else {
+            // The modelName of the association. (Might not be passed in - set later
+            // by schema).
+            this.modelName = modelName ? dasherize(modelName) : "";
+            this.opts = opts || {};
+        }
+        /**
+      The name of the association, which comes from the property name that was used to define it.
+       For example, given this server definition
+      
+      ```js
+      createServer({
+        models: {
+          user: Model,
+          comment: Model.extend({
+            author: belongsTo('user')
+          })
+        }
+      })
+      ```
+       the association's `name` would be `author`.
+      
+      The name is used by Mirage to define foreign keys on the model (`comment.authorId` in this case), among other things.
+       @property
+      @type {String}
+      @public
+    */ this.name = ""; // The modelName that owns this association
+        this.ownerModelName = "";
+    }
+    /**
+     A setter for schema, since we don't have a reference at constuction time.
+      @method setSchema
+     @public
+     @hide
+  */ _createClass(Association, [
+        {
+            key: "setSchema",
+            value: function setSchema(schema) {
+                this.schema = schema;
+            }
+        },
+        {
+            key: "isReflexive",
+            value: function isReflexive() {
+                var isExplicitReflexive = !!(this.modelName === this.ownerModelName && this.opts.inverse);
+                var isImplicitReflexive = !!(this.opts.inverse === undefined && this.ownerModelName === this.modelName);
+                return isExplicitReflexive || isImplicitReflexive;
+            }
+        },
+        {
+            key: "isPolymorphic",
+            get: function get() {
+                return this.opts.polymorphic;
+            }
+        },
+        {
+            key: "type",
+            get: function get() {
+                throw new Error("Subclasses of Association must implement a getter for type");
+            }
+        },
+        {
+            key: "foreignKey",
+            get: function get() {
+                return this.getForeignKey();
+            }
+        },
+        {
+            key: "identifier",
+            get: function get() {
+                throw new Error("Subclasses of Association must implement a getter for identifier");
+            }
+        }
+    ]);
+    return Association;
+}();
+var identifierCache$1 = {};
+/**
+ * The belongsTo association adds a fk to the owner of the association
+ *
+ * @class BelongsTo
+ * @extends Association
+ * @constructor
+ * @public
+ * @hide
+ */ var BelongsTo = /*#__PURE__*/ function(_Association) {
+    _inherits(BelongsTo, _Association);
+    var _super = _createSuper(BelongsTo);
+    function BelongsTo() {
+        _classCallCheck(this, BelongsTo);
+        return _super.apply(this, arguments);
+    }
+    _createClass(BelongsTo, [
+        {
+            key: "identifier",
+            get: function get() {
+                if (typeof identifierCache$1[this.name] !== "string") {
+                    var identifier = "".concat(camelize(this.name), "Id");
+                    identifierCache$1[this.name] = identifier;
+                }
+                return identifierCache$1[this.name];
+            }
+        },
+        {
+            key: "type",
+            get: function get() {
+                return "belongsTo";
+            }
+        },
+        {
+            key: "getForeignKeyArray",
+            value: function getForeignKeyArray() {
+                return [
+                    camelize(this.ownerModelName),
+                    this.getForeignKey()
+                ];
+            }
+        },
+        {
+            key: "getForeignKey",
+            value: function getForeignKey() {
+                // we reuse identifierCache because it's the same logic as get identifier
+                if (typeof identifierCache$1[this.name] !== "string") {
+                    var foreignKey = "".concat(camelize(this.name), "Id");
+                    identifierCache$1[this.name] = foreignKey;
+                }
+                return identifierCache$1[this.name];
+            }
+        },
+        {
+            key: "addMethodsToModelClass",
+            value: function addMethodsToModelClass(ModelClass, key) {
+                var modelPrototype = ModelClass.prototype;
+                var association = this;
+                var foreignKey = this.getForeignKey();
+                var associationHash = _defineProperty({}, key, this);
+                modelPrototype.belongsToAssociations = Object.assign(modelPrototype.belongsToAssociations, associationHash); // update belongsToAssociationFks
+                Object.keys(modelPrototype.belongsToAssociations).forEach(function(key) {
+                    var value = modelPrototype.belongsToAssociations[key];
+                    modelPrototype.belongsToAssociationFks[value.getForeignKey()] = value;
+                }); // Add to target's dependent associations array
+                this.schema.addDependentAssociation(this, this.modelName); // TODO: look how this is used. Are these necessary, seems like they could be gotten from the above?
+                // Or we could use a single data structure to store this information?
+                modelPrototype.associationKeys.add(key);
+                modelPrototype.associationIdKeys.add(foreignKey);
+                Object.defineProperty(modelPrototype, foreignKey, {
+                    /*
+          object.parentId
+            - returns the associated parent's id
+        */ get: function get() {
+                        this._tempAssociations = this._tempAssociations || {};
+                        var tempParent = this._tempAssociations[key];
+                        var id;
+                        if (tempParent === null) id = null;
+                        else {
+                            if (association.isPolymorphic) {
+                                if (tempParent) id = {
+                                    id: tempParent.id,
+                                    type: tempParent.modelName
+                                };
+                                else id = this.attrs[foreignKey];
+                            } else if (tempParent) id = tempParent.id;
+                            else id = this.attrs[foreignKey];
+                        }
+                        return id;
+                    },
+                    /*
+          object.parentId = (parentId)
+            - sets the associated parent via id
+        */ set: function set(id) {
+                        var tempParent;
+                        if (id === null) tempParent = null;
+                        else if (id !== undefined) {
+                            if (association.isPolymorphic) {
+                                assert(_typeof(id) === "object", "You're setting an ID on the polymorphic association '".concat(association.name, "' but you didn't pass in an object. Polymorphic IDs need to be in the form { type, id }."));
+                                tempParent = association.schema[association.schema.toCollectionName(id.type)].find(id.id);
+                            } else {
+                                tempParent = association.schema[association.schema.toCollectionName(association.modelName)].find(id);
+                                assert(tempParent, "Couldn't find ".concat(association.modelName, " with id = ").concat(id));
+                            }
+                        }
+                        this[key] = tempParent;
+                    }
+                });
+                Object.defineProperty(modelPrototype, key, {
+                    /*
+          object.parent
+            - returns the associated parent
+        */ get: function get() {
+                        this._tempAssociations = this._tempAssociations || {};
+                        var tempParent = this._tempAssociations[key];
+                        var foreignKeyId = this[foreignKey];
+                        var model = null;
+                        if (tempParent) model = tempParent;
+                        else if (foreignKeyId !== null) {
+                            if (association.isPolymorphic) model = association.schema[association.schema.toCollectionName(foreignKeyId.type)].find(foreignKeyId.id);
+                            else model = association.schema[association.schema.toCollectionName(association.modelName)].find(foreignKeyId);
+                        }
+                        return model;
+                    },
+                    /*
+          object.parent = (parentModel)
+            - sets the associated parent via model
+           I want to jot some notes about hasInverseFor. There used to be an
+          association.inverse() check, but adding polymorphic associations
+          complicated this. `comment.commentable`, you can't easily check for an
+          inverse since `comments: hasMany()` could be on any model.
+           Instead of making it very complex and looking for an inverse on the
+          association in isoaltion, it was much simpler to ask the model being
+          passed in if it had an inverse for the setting model and with its
+          association.
+        */ set: function set(model) {
+                        this._tempAssociations = this._tempAssociations || {};
+                        this._tempAssociations[key] = model;
+                        if (model && model.hasInverseFor(association)) {
+                            var inverse = model.inverseFor(association);
+                            model.associate(this, inverse);
+                        }
+                    }
+                });
+                /*
+        object.newParent
+          - creates a new unsaved associated parent
+         TODO: document polymorphic
+      */ modelPrototype["new".concat(capitalize(key))] = function() {
+                    var modelName, attrs;
+                    if (association.isPolymorphic) {
+                        modelName = arguments.length <= 0 ? undefined : arguments[0];
+                        attrs = arguments.length <= 1 ? undefined : arguments[1];
+                    } else {
+                        modelName = association.modelName;
+                        attrs = arguments.length <= 0 ? undefined : arguments[0];
+                    }
+                    var parent = association.schema[association.schema.toCollectionName(modelName)]["new"](attrs);
+                    this[key] = parent;
+                    return parent;
+                };
+                /*
+        object.createParent
+          - creates a new saved associated parent, and immediately persists both models
+         TODO: document polymorphic
+      */ modelPrototype["create".concat(capitalize(key))] = function() {
+                    var modelName, attrs;
+                    if (association.isPolymorphic) {
+                        modelName = arguments.length <= 0 ? undefined : arguments[0];
+                        attrs = arguments.length <= 1 ? undefined : arguments[1];
+                    } else {
+                        modelName = association.modelName;
+                        attrs = arguments.length <= 0 ? undefined : arguments[0];
+                    }
+                    var parent = association.schema[association.schema.toCollectionName(modelName)].create(attrs);
+                    this[key] = parent;
+                    this.save();
+                    return parent.reload();
+                };
+            }
+        },
+        {
+            key: "disassociateAllDependentsFromTarget",
+            value: function disassociateAllDependentsFromTarget(model) {
+                var _this = this;
+                var owner = this.ownerModelName;
+                var fk;
+                if (this.isPolymorphic) fk = {
+                    type: model.modelName,
+                    id: model.id
+                };
+                else fk = model.id;
+                var dependents = this.schema[this.schema.toCollectionName(owner)].where(function(potentialOwner) {
+                    var id = potentialOwner[_this.getForeignKey()];
+                    if (!id) return false;
+                    if (_typeof(id) === "object") return id.type === fk.type && id.id === fk.id;
+                    else return id === fk;
+                });
+                dependents.models.forEach(function(dependent) {
+                    dependent.disassociate(model, _this);
+                    dependent.save();
+                });
+            }
+        }
+    ]);
+    return BelongsTo;
+}(Association);
+function duplicate(data) {
+    if (Array.isArray(data)) return data.map(duplicate);
+    else return Object.assign({}, data);
+}
+/**
+  Mirage's `Db` has many `DbCollections`, which are equivalent to tables from traditional databases. They store specific types of data, for example `users` and `posts`.
+
+  `DbCollections` have names, like `users`, which you use to access the collection from the `Db` object.
+
+  Suppose you had a `user` model defined, and the following data had been inserted into your database (either through factories or fixtures):
+
+  ```js
+  export default [
+    { id: 1, name: 'Zelda' },
+    { id: 2, name: 'Link' }
+  ];
+  ```
+
+  Then `db.contacts` would return this array.
+
+  @class DbCollection
+  @constructor
+  @public
+ */ var DbCollection = /*#__PURE__*/ function() {
+    function DbCollection(name, initialData, IdentityManager) {
+        _classCallCheck(this, DbCollection);
+        this.name = name;
+        this._records = [];
+        this.identityManager = new IdentityManager();
+        if (initialData) this.insert(initialData);
+    }
+    /**
+   * Returns a copy of the data, to prevent inadvertent data manipulation.
+   * @method all
+   * @public
+   * @hide
+   */ _createClass(DbCollection, [
+        {
+            key: "all",
+            value: function all() {
+                return duplicate(this._records);
+            }
+        },
+        {
+            key: "insert",
+            value: function insert(data) {
+                var _this = this;
+                if (!Array.isArray(data)) return this._insertRecord(data);
+                else return (0, _mapDefault.default)(data, function(attrs) {
+                    return _this._insertRecord(attrs);
+                });
+            }
+        },
+        {
+            key: "find",
+            value: function find(ids) {
+                if (Array.isArray(ids)) {
+                    var records = this._findRecords(ids).filter(Boolean).map(duplicate); // Return a copy
+                    return records;
+                } else {
+                    var record = this._findRecord(ids);
+                    if (!record) return null;
+                     // Return a copy
+                    return duplicate(record);
+                }
+            }
+        },
+        {
+            key: "findBy",
+            value: function findBy(query) {
+                var record = this._findRecordBy(query);
+                if (!record) return null;
+                 // Return a copy
+                return duplicate(record);
+            }
+        },
+        {
+            key: "where",
+            value: function where(query) {
+                return this._findRecordsWhere(query).map(duplicate);
+            }
+        },
+        {
+            key: "firstOrCreate",
+            value: function firstOrCreate(query) {
+                var attributesForCreate = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+                var queryResult = this.where(query);
+                var _queryResult = _slicedToArray(queryResult, 1), record = _queryResult[0];
+                if (record) return record;
+                else {
+                    var mergedAttributes = Object.assign(attributesForCreate, query);
+                    var createdRecord = this.insert(mergedAttributes);
+                    return createdRecord;
+                }
+            }
+        },
+        {
+            key: "update",
+            value: function update(target, attrs) {
+                var _this2 = this;
+                var records;
+                if (typeof attrs === "undefined") {
+                    attrs = target;
+                    var changedRecords = [];
+                    this._records.forEach(function(record) {
+                        var oldRecord = Object.assign({}, record);
+                        _this2._updateRecord(record, attrs);
+                        if (!(0, _isEqualDefault.default)(oldRecord, record)) changedRecords.push(record);
+                    });
+                    return changedRecords;
+                } else if (typeof target === "number" || typeof target === "string") {
+                    var id = target;
+                    var record = this._findRecord(id);
+                    this._updateRecord(record, attrs);
+                    return record;
+                } else if (Array.isArray(target)) {
+                    var ids = target;
+                    records = this._findRecords(ids);
+                    records.forEach(function(record) {
+                        _this2._updateRecord(record, attrs);
+                    });
+                    return records;
+                } else if (_typeof(target) === "object") {
+                    var query = target;
+                    records = this._findRecordsWhere(query);
+                    records.forEach(function(record) {
+                        _this2._updateRecord(record, attrs);
+                    });
+                    return records;
+                }
+            }
+        },
+        {
+            key: "remove",
+            value: function remove(target) {
+                var _this3 = this;
+                var records;
+                if (typeof target === "undefined") {
+                    this._records = [];
+                    this.identityManager.reset();
+                } else if (typeof target === "number" || typeof target === "string") {
+                    var record = this._findRecord(target);
+                    var index = this._records.indexOf(record);
+                    this._records.splice(index, 1);
+                } else if (Array.isArray(target)) {
+                    records = this._findRecords(target);
+                    records.forEach(function(record) {
+                        var index = _this3._records.indexOf(record);
+                        _this3._records.splice(index, 1);
+                    });
+                } else if (_typeof(target) === "object") {
+                    records = this._findRecordsWhere(target);
+                    records.forEach(function(record) {
+                        var index = _this3._records.indexOf(record);
+                        _this3._records.splice(index, 1);
+                    });
+                }
+            }
+        },
+        {
+            key: "_findRecord",
+            value: function _findRecord(id) {
+                id = id.toString();
+                return this._records.find(function(obj) {
+                    return obj.id === id;
+                });
+            }
+        },
+        {
+            key: "_findRecordBy",
+            value: function _findRecordBy(query) {
+                return this._findRecordsWhere(query)[0];
+            }
+        },
+        {
+            key: "_findRecords",
+            value: function _findRecords(ids) {
+                return ids.map(this._findRecord, this);
+            }
+        },
+        {
+            key: "_findRecordsWhere",
+            value: function _findRecordsWhere(query) {
+                var records = this._records;
+                function defaultQueryFunction(record) {
+                    var keys = Object.keys(query);
+                    return keys.every(function(key) {
+                        return String(record[key]) === String(query[key]);
+                    });
+                }
+                var queryFunction = _typeof(query) === "object" ? defaultQueryFunction : query;
+                return records.filter(queryFunction);
+            }
+        },
+        {
+            key: "_insertRecord",
+            value: function _insertRecord(data) {
+                var attrs = duplicate(data);
+                if (attrs && (attrs.id === undefined || attrs.id === null)) attrs.id = this.identityManager.fetch(attrs);
+                else {
+                    attrs.id = attrs.id.toString();
+                    this.identityManager.set(attrs.id);
+                }
+                this._records.push(attrs);
+                return duplicate(attrs);
+            }
+        },
+        {
+            key: "_updateRecord",
+            value: function _updateRecord(record, attrs) {
+                var targetId = attrs && Object.prototype.hasOwnProperty.call(attrs, "id") ? attrs.id.toString() : null;
+                var currentId = record.id;
+                if (targetId && currentId !== targetId) throw new Error("Updating the ID of a record is not permitted");
+                for(var attr in attrs){
+                    if (attr === "id") continue;
+                    record[attr] = attrs[attr];
+                }
+            }
+        }
+    ]);
+    return DbCollection;
+}();
+/**
+  Your Mirage server has a database which you can interact with in your route handlers. You’ll typically use models to interact with your database data, but you can always reach into the db directly in the event you want more control.
+
+  Access the db from your route handlers via `schema.db`.
+
+  You can access individual DbCollections by using `schema.db.name`:
+
+  ```js
+  schema.db.users  // would return, e.g., [ { id: 1, name: 'Yehuda' }, { id: 2, name: 'Tom '} ]
+  ```
+
+  @class Db
+  @constructor
+  @public
+ */ var Db = /*#__PURE__*/ function() {
+    function Db(initialData, identityManagers) {
+        _classCallCheck(this, Db);
+        this._collections = [];
+        this.registerIdentityManagers(identityManagers);
+        if (initialData) this.loadData(initialData);
+    }
+    /**
+    Loads an object of data into Mirage's database.
+     The keys of the object correspond to the DbCollections, and the values are arrays of records.
+     ```js
+    server.db.loadData({
+      users: [
+        { name: 'Yehuda' },
+        { name: 'Tom' }
+      ]
+    });
+    ```
+     As with `db.collection.insert`, IDs will automatically be created for records that don't have them.
+     @method loadData
+    @param {Object} data - Data to load
+    @public
+   */ _createClass(Db, [
+        {
+            key: "loadData",
+            value: function loadData(data) {
+                for(var key in data)this.createCollection(key, (0, _cloneDeepDefault.default)(data[key]));
+            }
+        },
+        {
+            key: "dump",
+            value: function dump() {
+                return this._collections.reduce(function(data, collection) {
+                    data[collection.name] = collection.all();
+                    return data;
+                }, {});
+            }
+        },
+        {
+            key: "createCollection",
+            value: function createCollection(name, initialData) {
+                if (!this[name]) {
+                    var _IdentityManager = this.identityManagerFor(name);
+                    var newCollection = new DbCollection(name, initialData, _IdentityManager); // Public API has a convenient array interface. It comes at the cost of
+                    // returning a copy of all records to avoid accidental mutations.
+                    Object.defineProperty(this, name, {
+                        get: function get() {
+                            var recordsCopy = newCollection.all();
+                            [
+                                "insert",
+                                "find",
+                                "findBy",
+                                "where",
+                                "update",
+                                "remove",
+                                "firstOrCreate"
+                            ].forEach(function(method) {
+                                recordsCopy[method] = function() {
+                                    return newCollection[method].apply(newCollection, arguments);
+                                };
+                            });
+                            return recordsCopy;
+                        }
+                    }); // Private API does not have the array interface. This means internally, only
+                    // db-collection methods can be used. This is so records aren't copied redundantly
+                    // internally, which leads to accidental O(n^2) operations (e.g., createList).
+                    Object.defineProperty(this, "_".concat(name), {
+                        get: function get() {
+                            var recordsCopy = [];
+                            [
+                                "insert",
+                                "find",
+                                "findBy",
+                                "where",
+                                "update",
+                                "remove",
+                                "firstOrCreate"
+                            ].forEach(function(method) {
+                                recordsCopy[method] = function() {
+                                    return newCollection[method].apply(newCollection, arguments);
+                                };
+                            });
+                            return recordsCopy;
+                        }
+                    });
+                    this._collections.push(newCollection);
+                } else if (initialData) this[name].insert(initialData);
+                return this;
+            }
+        },
+        {
+            key: "createCollections",
+            value: function createCollections() {
+                var _this = this;
+                for(var _len = arguments.length, collections = new Array(_len), _key = 0; _key < _len; _key++)collections[_key] = arguments[_key];
+                collections.forEach(function(c) {
+                    return _this.createCollection(c);
+                });
+            }
+        },
+        {
+            key: "emptyData",
+            value: function emptyData() {
+                this._collections.forEach(function(c) {
+                    return c.remove();
+                });
+            }
+        },
+        {
+            key: "identityManagerFor",
+            value: function identityManagerFor(name) {
+                return this._identityManagers[this._container.inflector.singularize(name)] || this._identityManagers.application || IdentityManager;
+            }
+        },
+        {
+            key: "registerIdentityManagers",
+            value: function registerIdentityManagers(identityManagers) {
+                this._identityManagers = identityManagers || {};
+            }
+        }
+    ]);
+    return Db;
+}();
+/**
+  Collections represent arrays of models. They are returned by a hasMany association, or by one of the ModelClass query methods:
+
+  ```js
+  let posts = user.blogPosts;
+  let posts = schema.blogPosts.all();
+  let posts = schema.blogPosts.find([1, 2, 4]);
+  let posts = schema.blogPosts.where({ published: true });
+  ```
+
+  Note that there is also a `PolymorphicCollection` class that is identical to `Collection`, except it can contain a heterogeneous array of models. Thus, it has no `modelName` property. This lets serializers and other parts of the system interact with it differently.
+
+  @class Collection
+  @constructor
+  @public
+*/ var Collection = /*#__PURE__*/ function() {
+    function Collection(modelName) {
+        var models = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : [];
+        _classCallCheck(this, Collection);
+        assert(modelName && typeof modelName === "string", "You must pass a `modelName` into a Collection");
+        /**
+      The dasherized model name this Collection represents.
+       ```js
+      let posts = user.blogPosts;
+       posts.modelName; // "blog-post"
+      ```
+       The model name is separate from the actual models, since Collections can be empty.
+       @property modelName
+      @type {String}
+      @public
+    */ this.modelName = modelName;
+        /**
+      The underlying plain JavaScript array of Models in this Collection.
+       ```js
+      posts.models // [ post:1, post:2, ... ]
+      ```
+       While Collections have many array-ish methods like `filter` and `sort`, it
+      can be useful to work with the plain array if you want to work with methods
+      like `map`, or use the `[]` accessor.
+       For example, in testing you might want to assert against a model from the
+      collection:
+       ```js
+      let newPost = user.posts.models[0].title;
+       assert.equal(newPost, "My first post");
+      ```
+       @property models
+      @type {Array}
+      @public
+    */ this.models = models;
+    }
+    /**
+    The number of models in the collection.
+     ```js
+    user.posts.length; // 2
+    ```
+     @property length
+    @type {Integer}
+    @public
+  */ _createClass(Collection, [
+        {
+            key: "length",
+            get: function get() {
+                return this.models.length;
+            }
+        },
+        {
+            key: "update",
+            value: function update() {
+                for(var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++)args[_key] = arguments[_key];
+                (0, _invokeMapDefault.default).apply(void 0, [
+                    this.models,
+                    "update"
+                ].concat(args));
+                return this;
+            }
+        },
+        {
+            key: "save",
+            value: function save() {
+                (0, _invokeMapDefault.default)(this.models, "save");
+                return this;
+            }
+        },
+        {
+            key: "reload",
+            value: function reload() {
+                (0, _invokeMapDefault.default)(this.models, "reload");
+                return this;
+            }
+        },
+        {
+            key: "destroy",
+            value: function destroy() {
+                (0, _invokeMapDefault.default)(this.models, "destroy");
+                return this;
+            }
+        },
+        {
+            key: "add",
+            value: function add(model) {
+                this.models.push(model);
+                return this;
+            }
+        },
+        {
+            key: "remove",
+            value: function remove(model) {
+                var match = this.models.find(function(m) {
+                    return m.toString() === model.toString();
+                });
+                if (match) {
+                    var i = this.models.indexOf(match);
+                    this.models.splice(i, 1);
+                }
+                return this;
+            }
+        },
+        {
+            key: "includes",
+            value: function includes(model) {
+                return this.models.some(function(m) {
+                    return m.toString() === model.toString();
+                });
+            }
+        },
+        {
+            key: "filter",
+            value: function filter(f) {
+                var filteredModels = this.models.filter(f);
+                return new Collection(this.modelName, filteredModels);
+            }
+        },
+        {
+            key: "sort",
+            value: function sort(f) {
+                var sortedModels = this.models.concat().sort(f);
+                return new Collection(this.modelName, sortedModels);
+            }
+        },
+        {
+            key: "slice",
+            value: function slice() {
+                var _this$models;
+                var slicedModels = (_this$models = this.models).slice.apply(_this$models, arguments);
+                return new Collection(this.modelName, slicedModels);
+            }
+        },
+        {
+            key: "mergeCollection",
+            value: function mergeCollection(collection) {
+                this.models = this.models.concat(collection.models);
+                return this;
+            }
+        },
+        {
+            key: "toString",
+            value: function toString() {
+                return "collection:".concat(this.modelName, "(").concat(this.models.map(function(m) {
+                    return m.id;
+                }).join(","), ")");
+            }
+        }
+    ]);
+    return Collection;
+}();
+/**
+ * An array of models, returned from one of the schema query
+ * methods (all, find, where). Knows how to update and destroy its models.
+ *
+ * Identical to Collection except it can contain a heterogeneous array of
+ * models. Thus, it has no `modelName` property. This lets serializers and
+ * other parts of the system interact with it differently.
+ *
+ * @class PolymorphicCollection
+ * @constructor
+ * @public
+ * @hide
+ */ var PolymorphicCollection = /*#__PURE__*/ function() {
+    function PolymorphicCollection() {
+        var models = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
+        _classCallCheck(this, PolymorphicCollection);
+        this.models = models;
+    }
+    /**
+   * Number of models in the collection.
+   *
+   * @property length
+   * @type Number
+   * @public
+   */ _createClass(PolymorphicCollection, [
+        {
+            key: "length",
+            get: function get() {
+                return this.models.length;
+            }
+        },
+        {
+            key: "update",
+            value: function update() {
+                for(var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++)args[_key] = arguments[_key];
+                (0, _invokeMapDefault.default).apply(void 0, [
+                    this.models,
+                    "update"
+                ].concat(args));
+                return this;
+            }
+        },
+        {
+            key: "destroy",
+            value: function destroy() {
+                (0, _invokeMapDefault.default)(this.models, "destroy");
+                return this;
+            }
+        },
+        {
+            key: "save",
+            value: function save() {
+                (0, _invokeMapDefault.default)(this.models, "save");
+                return this;
+            }
+        },
+        {
+            key: "reload",
+            value: function reload() {
+                (0, _invokeMapDefault.default)(this.models, "reload");
+                return this;
+            }
+        },
+        {
+            key: "add",
+            value: function add(model) {
+                this.models.push(model);
+                return this;
+            }
+        },
+        {
+            key: "remove",
+            value: function remove(model) {
+                var match = this.models.find(function(m) {
+                    return (0, _isEqualDefault.default)(m.attrs, model.attrs);
+                });
+                if (match) {
+                    var i = this.models.indexOf(match);
+                    this.models.splice(i, 1);
+                }
+                return this;
+            }
+        },
+        {
+            key: "includes",
+            value: function includes(model) {
+                return this.models.some(function(m) {
+                    return (0, _isEqualDefault.default)(m.attrs, model.attrs);
+                });
+            }
+        },
+        {
+            key: "filter",
+            value: function filter(f) {
+                var filteredModels = this.models.filter(f);
+                return new PolymorphicCollection(filteredModels);
+            }
+        },
+        {
+            key: "sort",
+            value: function sort(f) {
+                var sortedModels = this.models.concat().sort(f);
+                return new PolymorphicCollection(sortedModels);
+            }
+        },
+        {
+            key: "slice",
+            value: function slice() {
+                var _this$models;
+                var slicedModels = (_this$models = this.models).slice.apply(_this$models, arguments);
+                return new PolymorphicCollection(slicedModels);
+            }
+        },
+        {
+            key: "mergeCollection",
+            value: function mergeCollection(collection) {
+                this.models = this.models.concat(collection.models);
+                return this;
+            }
+        },
+        {
+            key: "toString",
+            value: function toString() {
+                return "collection:".concat(this.modelName, "(").concat(this.models.map(function(m) {
+                    return m.id;
+                }).join(","), ")");
+            }
+        }
+    ]);
+    return PolymorphicCollection;
+}();
+var identifierCache = {};
+/**
+ * @class HasMany
+ * @extends Association
+ * @constructor
+ * @public
+ * @hide
+ */ var HasMany = /*#__PURE__*/ function(_Association) {
+    _inherits(HasMany, _Association);
+    var _super = _createSuper(HasMany);
+    function HasMany() {
+        _classCallCheck(this, HasMany);
+        return _super.apply(this, arguments);
+    }
+    _createClass(HasMany, [
+        {
+            key: "identifier",
+            get: function get() {
+                if (typeof identifierCache[this.name] !== "string") {
+                    var identifier = "".concat(camelize(this._container.inflector.singularize(this.name)), "Ids");
+                    identifierCache[this.name] = identifier;
+                }
+                return identifierCache[this.name];
+            }
+        },
+        {
+            key: "type",
+            get: function get() {
+                return "hasMany";
+            }
+        },
+        {
+            key: "getForeignKeyArray",
+            value: function getForeignKeyArray() {
+                return [
+                    camelize(this.ownerModelName),
+                    this.getForeignKey()
+                ];
+            }
+        },
+        {
+            key: "getForeignKey",
+            value: function getForeignKey() {
+                // we reuse identifierCache because it's the same logic as get identifier
+                if (typeof identifierCache[this.name] !== "string") {
+                    var foreignKey = "".concat(this._container.inflector.singularize(camelize(this.name)), "Ids");
+                    identifierCache[this.name] = foreignKey;
+                }
+                return identifierCache[this.name];
+            }
+        },
+        {
+            key: "addMethodsToModelClass",
+            value: function addMethodsToModelClass(ModelClass, key) {
+                var modelPrototype = ModelClass.prototype;
+                var association = this;
+                var foreignKey = this.getForeignKey();
+                var associationHash = _defineProperty({}, key, this);
+                modelPrototype.hasManyAssociations = Object.assign(modelPrototype.hasManyAssociations, associationHash); // update hasManyAssociationFks
+                Object.keys(modelPrototype.hasManyAssociations).forEach(function(key) {
+                    var value = modelPrototype.hasManyAssociations[key];
+                    modelPrototype.hasManyAssociationFks[value.getForeignKey()] = value;
+                }); // Add to target's dependent associations array
+                this.schema.addDependentAssociation(this, this.modelName); // TODO: look how this is used. Are these necessary, seems like they could be gotten from the above?
+                // Or we could use a single data structure to store this information?
+                modelPrototype.associationKeys.add(key);
+                modelPrototype.associationIdKeys.add(foreignKey);
+                Object.defineProperty(modelPrototype, foreignKey, {
+                    /*
+          object.childrenIds
+            - returns an array of the associated children's ids
+        */ get: function get() {
+                        this._tempAssociations = this._tempAssociations || {};
+                        var tempChildren = this._tempAssociations[key];
+                        var ids = [];
+                        if (tempChildren) {
+                            if (association.isPolymorphic) ids = tempChildren.models.map(function(model) {
+                                return {
+                                    type: model.modelName,
+                                    id: model.id
+                                };
+                            });
+                            else ids = tempChildren.models.map(function(model) {
+                                return model.id;
+                            });
+                        } else ids = this.attrs[foreignKey] || [];
+                        return ids;
+                    },
+                    /*
+          object.childrenIds = ([childrenIds...])
+            - sets the associated children (via id)
+        */ set: function set(ids) {
+                        var tempChildren;
+                        if (ids === null) tempChildren = [];
+                        else if (ids !== undefined) {
+                            assert(Array.isArray(ids), "You must pass an array in when setting ".concat(foreignKey, " on ").concat(this));
+                            if (association.isPolymorphic) {
+                                assert(ids.every(function(el) {
+                                    return _typeof(el) === "object" && _typeof(el.type) !== undefined && _typeof(el.id) !== undefined;
+                                }), "You must pass in an array of polymorphic identifiers (objects of shape { type, id }) when setting ".concat(foreignKey, " on ").concat(this));
+                                var models = ids.map(function(_ref) {
+                                    var type = _ref.type, id = _ref.id;
+                                    return association.schema[association.schema.toCollectionName(type)].find(id);
+                                });
+                                tempChildren = new PolymorphicCollection(models);
+                            } else tempChildren = association.schema[association.schema.toCollectionName(association.modelName)].find(ids);
+                        }
+                        this[key] = tempChildren;
+                    }
+                });
+                Object.defineProperty(modelPrototype, key, {
+                    /*
+          object.children
+            - returns an array of associated children
+        */ get: function get() {
+                        this._tempAssociations = this._tempAssociations || {};
+                        var collection = null;
+                        if (this._tempAssociations[key]) collection = this._tempAssociations[key];
+                        else {
+                            if (association.isPolymorphic) {
+                                if (this[foreignKey]) {
+                                    var polymorphicIds = this[foreignKey];
+                                    var models = polymorphicIds.map(function(_ref2) {
+                                        var type = _ref2.type, id = _ref2.id;
+                                        return association.schema[association.schema.toCollectionName(type)].find(id);
+                                    });
+                                    collection = new PolymorphicCollection(models);
+                                } else collection = new PolymorphicCollection(association.modelName);
+                            } else if (this[foreignKey]) collection = association.schema[association.schema.toCollectionName(association.modelName)].find(this[foreignKey]);
+                            else collection = new Collection(association.modelName);
+                            this._tempAssociations[key] = collection;
+                        }
+                        return collection;
+                    },
+                    /*
+          object.children = [model1, model2, ...]
+            - sets the associated children (via array of models or Collection)
+        */ set: function set(models) {
+                        var _this = this;
+                        if (models instanceof Collection || models instanceof PolymorphicCollection) models = models.models;
+                        models = models ? (0, _compactDefault.default)(models) : [];
+                        this._tempAssociations = this._tempAssociations || {};
+                        var collection;
+                        if (association.isPolymorphic) collection = new PolymorphicCollection(models);
+                        else collection = new Collection(association.modelName, models);
+                        this._tempAssociations[key] = collection;
+                        models.forEach(function(model) {
+                            if (model.hasInverseFor(association)) {
+                                var inverse = model.inverseFor(association);
+                                model.associate(_this, inverse);
+                            }
+                        });
+                    }
+                });
+                /*
+        object.newChild
+          - creates a new unsaved associated child
+      */ modelPrototype["new".concat(capitalize(camelize(this._container.inflector.singularize(association.name))))] = function() {
+                    var modelName, attrs;
+                    if (association.isPolymorphic) {
+                        modelName = arguments.length <= 0 ? undefined : arguments[0];
+                        attrs = arguments.length <= 1 ? undefined : arguments[1];
+                    } else {
+                        modelName = association.modelName;
+                        attrs = arguments.length <= 0 ? undefined : arguments[0];
+                    }
+                    var child = association.schema[association.schema.toCollectionName(modelName)]["new"](attrs);
+                    var children = this[key].models;
+                    children.push(child);
+                    this[key] = children;
+                    return child;
+                };
+                /*
+        object.createChild
+          - creates a new saved associated child, and immediately persists both models
+         TODO: forgot why this[key].add(child) doesn't work, most likely
+        because these external APIs trigger saving cascades. Should probably
+        have an internal method like this[key]._add.
+      */ modelPrototype["create".concat(capitalize(camelize(this._container.inflector.singularize(association.name))))] = function() {
+                    var modelName, attrs;
+                    if (association.isPolymorphic) {
+                        modelName = arguments.length <= 0 ? undefined : arguments[0];
+                        attrs = arguments.length <= 1 ? undefined : arguments[1];
+                    } else {
+                        modelName = association.modelName;
+                        attrs = arguments.length <= 0 ? undefined : arguments[0];
+                    }
+                    var child = association.schema[association.schema.toCollectionName(modelName)].create(attrs);
+                    var children = this[key].models;
+                    children.push(child);
+                    this[key] = children;
+                    this.save();
+                    return child.reload();
+                };
+            }
+        },
+        {
+            key: "disassociateAllDependentsFromTarget",
+            value: function disassociateAllDependentsFromTarget(model) {
+                var _this2 = this;
+                var owner = this.ownerModelName;
+                var fk;
+                if (this.isPolymorphic) fk = {
+                    type: model.modelName,
+                    id: model.id
+                };
+                else fk = model.id;
+                var dependents = this.schema[this.schema.toCollectionName(owner)].where(function(potentialOwner) {
+                    var currentIds = potentialOwner[_this2.getForeignKey()]; // Need this check because currentIds could be null
+                    return currentIds && currentIds.find(function(id) {
+                        if (_typeof(id) === "object") return id.type === fk.type && id.id === fk.id;
+                        else return id === fk;
+                    });
+                });
+                dependents.models.forEach(function(dependent) {
+                    dependent.disassociate(model, _this2);
+                    dependent.save();
+                });
+            }
+        }
+    ]);
+    return HasMany;
+}(Association);
+var pathModelClassCache = {};
+/**
+  @hide
+*/ var BaseRouteHandler = /*#__PURE__*/ function() {
+    function BaseRouteHandler() {
+        _classCallCheck(this, BaseRouteHandler);
+    }
+    _createClass(BaseRouteHandler, [
+        {
+            key: "getModelClassFromPath",
+            value: function getModelClassFromPath(fullPath) {
+                if (!fullPath) return;
+                if (typeof pathModelClassCache[fullPath] !== "string") {
+                    var path = fullPath.split("/");
+                    var lastPath;
+                    for(var i = path.length - 1; i >= 0; i--){
+                        var segment = path[i];
+                        if (segment.length && segment[0] !== ":") {
+                            lastPath = segment;
+                            break;
+                        }
+                    }
+                    pathModelClassCache[fullPath] = dasherize(camelize(this._container.inflector.singularize(lastPath)));
+                }
+                return pathModelClassCache[fullPath];
+            }
+        },
+        {
+            key: "_getIdForRequest",
+            value: function _getIdForRequest(request, jsonApiDoc) {
+                var id;
+                if (request && request.params && request.params.id) id = request.params.id;
+                else if (jsonApiDoc && jsonApiDoc.data && jsonApiDoc.data.id) id = jsonApiDoc.data.id;
+                return id;
+            }
+        },
+        {
+            key: "_getJsonApiDocForRequest",
+            value: function _getJsonApiDocForRequest(request, modelName) {
+                var body;
+                if (request && request.requestBody) body = JSON.parse(request.requestBody);
+                return this.serializerOrRegistry.normalize(body, modelName);
+            }
+        },
+        {
+            key: "_getAttrsForRequest",
+            value: function _getAttrsForRequest(request, modelName) {
+                var _this = this;
+                var json = this._getJsonApiDocForRequest(request, modelName);
+                var id = this._getIdForRequest(request, json);
+                var attrs = {};
+                assert(json.data && (json.data.attributes || json.data.type || json.data.relationships), "You're using a shorthand or #normalizedRequestAttrs, but your serializer's normalize function did not return a valid JSON:API document. Consult the docs for the normalize hook on the Serializer class.");
+                if (json.data.attributes) attrs = Object.keys(json.data.attributes).reduce(function(sum, key) {
+                    sum[camelize(key)] = json.data.attributes[key];
+                    return sum;
+                }, {});
+                if (json.data.relationships) Object.keys(json.data.relationships).forEach(function(relationshipName) {
+                    var relationship = json.data.relationships[relationshipName];
+                    var modelClass = _this.schema.modelClassFor(modelName);
+                    var association = modelClass.associationFor(camelize(relationshipName));
+                    var valueForRelationship;
+                    assert(association, "You're passing the relationship '".concat(relationshipName, "' to the '").concat(modelName, "' model via a ").concat(request.method, " to '").concat(request.url, "', but you did not define the '").concat(relationshipName, "' association on the '").concat(modelName, "' model."));
+                    if (association.isPolymorphic) valueForRelationship = relationship.data;
+                    else if (association instanceof HasMany) valueForRelationship = relationship.data && relationship.data.map(function(rel) {
+                        return rel.id;
+                    });
+                    else valueForRelationship = relationship.data && relationship.data.id;
+                    attrs[association.identifier] = valueForRelationship;
+                }, {});
+                if (id) attrs.id = id;
+                return attrs;
+            }
+        },
+        {
+            key: "_getAttrsForFormRequest",
+            value: function _getAttrsForFormRequest(_ref) {
+                var requestBody = _ref.requestBody;
+                var attrs;
+                var urlEncodedParts = [];
+                assert(requestBody && typeof requestBody === "string", "You're using the helper method #normalizedFormData, but the request body is empty or not a valid url encoded string.");
+                urlEncodedParts = requestBody.split("&");
+                attrs = urlEncodedParts.reduce(function(a, urlEncodedPart) {
+                    var _urlEncodedPart$split = urlEncodedPart.split("="), _urlEncodedPart$split2 = _slicedToArray(_urlEncodedPart$split, 2), key = _urlEncodedPart$split2[0], value = _urlEncodedPart$split2[1];
+                    a[key] = decodeURIComponent(value.replace(/\+/g, " "));
+                    return a;
+                }, {});
+                return attrs;
+            }
+        }
+    ]);
+    return BaseRouteHandler;
+}();
+/**
+ * @hide
+ */ var FunctionRouteHandler = /*#__PURE__*/ function(_BaseRouteHandler) {
+    _inherits(FunctionRouteHandler, _BaseRouteHandler);
+    var _super = _createSuper(FunctionRouteHandler);
+    function FunctionRouteHandler(schema, serializerOrRegistry, userFunction, path, server) {
+        var _this;
+        _classCallCheck(this, FunctionRouteHandler);
+        _this = _super.call(this, server);
+        _this.schema = schema;
+        _this.serializerOrRegistry = serializerOrRegistry;
+        _this.userFunction = userFunction;
+        _this.path = path;
+        return _this;
+    }
+    _createClass(FunctionRouteHandler, [
+        {
+            key: "handle",
+            value: function handle(request) {
+                return this.userFunction(this.schema, request);
+            }
+        },
+        {
+            key: "setRequest",
+            value: function setRequest(request) {
+                this.request = request;
+            }
+        },
+        {
+            key: "serialize",
+            value: function serialize(response, serializerType) {
+                var serializer;
+                if (serializerType) serializer = this.serializerOrRegistry.serializerFor(serializerType, {
+                    explicit: true
+                });
+                else serializer = this.serializerOrRegistry;
+                return serializer.serialize(response, this.request);
+            }
+        },
+        {
+            key: "normalizedRequestAttrs",
+            value: function normalizedRequestAttrs() {
+                var modelName = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
+                var path = this.path, request = this.request, requestHeaders = this.request.requestHeaders;
+                var attrs;
+                var lowerCaseHeaders = {};
+                for(var header in requestHeaders)lowerCaseHeaders[header.toLowerCase()] = requestHeaders[header];
+                if (/x-www-form-urlencoded/.test(lowerCaseHeaders["content-type"])) attrs = this._getAttrsForFormRequest(request);
+                else {
+                    if (modelName) assert(dasherize(modelName) === modelName, "You called normalizedRequestAttrs('".concat(modelName, "'), but normalizedRequestAttrs was intended to be used with the dasherized version of the model type. Please change this to normalizedRequestAttrs('").concat(dasherize(modelName), "')."));
+                    else modelName = this.getModelClassFromPath(path);
+                    assert(this.schema.hasModelForModelName(modelName), "You're using a shorthand or the #normalizedRequestAttrs helper but the detected model of '".concat(modelName, "' does not exist. You might need to pass in the correct modelName as the first argument to #normalizedRequestAttrs."));
+                    attrs = this._getAttrsForRequest(request, modelName);
+                }
+                return attrs;
+            }
+        }
+    ]);
+    return FunctionRouteHandler;
+}(BaseRouteHandler);
+/**
+ * @hide
+ */ var ObjectRouteHandler = /*#__PURE__*/ function() {
+    function ObjectRouteHandler(schema, serializerOrRegistry, object) {
+        _classCallCheck(this, ObjectRouteHandler);
+        this.schema = schema;
+        this.serializerOrRegistry = serializerOrRegistry;
+        this.object = object;
+    }
+    _createClass(ObjectRouteHandler, [
+        {
+            key: "handle",
+            value: function handle() {
+                return this.object;
+            }
+        }
+    ]);
+    return ObjectRouteHandler;
+}();
+/**
+  @hide
+*/ var BaseShorthandRouteHandler = /*#__PURE__*/ function(_BaseRouteHandler) {
+    _inherits(BaseShorthandRouteHandler, _BaseRouteHandler);
+    var _super = _createSuper(BaseShorthandRouteHandler);
+    function BaseShorthandRouteHandler(schema, serializerOrRegistry, shorthand, path) {
+        var _this;
+        var options = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : {};
+        _classCallCheck(this, BaseShorthandRouteHandler);
+        _this = _super.call(this);
+        shorthand = shorthand || _this.getModelClassFromPath(path);
+        _this.schema = schema;
+        _this.serializerOrRegistry = serializerOrRegistry;
+        _this.shorthand = shorthand;
+        _this.options = options;
+        var type = Array.isArray(shorthand) ? "array" : _typeof(shorthand);
+        if (type === "string") {
+            var modelClass = _this.schema[_this.schema.toCollectionName(shorthand)];
+            _this.handle = function(request) {
+                return _this.handleStringShorthand(request, modelClass);
+            };
+        } else if (type === "array") {
+            var modelClasses = shorthand.map(function(modelName) {
+                return _this.schema[_this.schema.toCollectionName(modelName)];
+            });
+            _this.handle = function(request) {
+                return _this.handleArrayShorthand(request, modelClasses);
+            };
+        }
+        return _this;
+    } // handleStringShorthand() {
+    //
+    // }
+    //
+    // handleArrayShorthand() {
+    //
+    // }
+    return BaseShorthandRouteHandler;
+}(BaseRouteHandler);
+/**
+ * @hide
+ */ var GetShorthandRouteHandler = /*#__PURE__*/ function(_BaseShorthandRouteHa) {
+    _inherits(GetShorthandRouteHandler, _BaseShorthandRouteHa);
+    var _super = _createSuper(GetShorthandRouteHandler);
+    function GetShorthandRouteHandler() {
+        _classCallCheck(this, GetShorthandRouteHandler);
+        return _super.apply(this, arguments);
+    }
+    _createClass(GetShorthandRouteHandler, [
+        {
+            key: "handleStringShorthand",
+            value: /*
+      Retrieve a model/collection from the db.
+       Examples:
+        this.get('/contacts', 'contact');
+        this.get('/contacts/:id', 'contact');
+    */ function handleStringShorthand(request, modelClass) {
+                var modelName = this.shorthand;
+                var camelizedModelName = camelize(modelName);
+                assert(modelClass, "The route handler for ".concat(request.url, " is trying to access the ").concat(camelizedModelName, " model, but that model doesn't exist."));
+                var id = this._getIdForRequest(request);
+                if (id) {
+                    var model = modelClass.find(id);
+                    if (!model) return new Response(404);
+                    else return model;
+                } else if (this.options.coalesce) {
+                    var ids = this.serializerOrRegistry.getCoalescedIds(request, camelizedModelName);
+                    if (ids) return modelClass.find(ids);
+                }
+                return modelClass.all();
+            }
+        },
+        {
+            key: "handleArrayShorthand",
+            value: function handleArrayShorthand(request, modelClasses) {
+                var keys = this.shorthand;
+                var id = this._getIdForRequest(request);
+                /*
+      If the first key is singular and we have an id param in
+      the request, we're dealing with the version of the shorthand
+      that has a parent model and several has-many relationships.
+      We throw an error, because the serializer is the appropriate
+      place for this now.
+      */ assert(!id || this._container.inflector.singularize(keys[0]) !== keys[0], "It looks like you're using the \"Single record with\n      related records\" version of the array shorthand, in addition to opting\n      in to the model layer. This shorthand was made when there was no\n      serializer layer. Now that you're using models, please ensure your\n      relationships are defined, and create a serializer for the parent\n      model, adding the relationships there.");
+                return modelClasses.map(function(modelClass) {
+                    return modelClass.all();
+                });
+            }
+        }
+    ]);
+    return GetShorthandRouteHandler;
+}(BaseShorthandRouteHandler);
+/**
+ * @hide
+ */ var PostShorthandRouteHandler = /*#__PURE__*/ function(_BaseShorthandRouteHa) {
+    _inherits(PostShorthandRouteHandler, _BaseShorthandRouteHa);
+    var _super = _createSuper(PostShorthandRouteHandler);
+    function PostShorthandRouteHandler() {
+        _classCallCheck(this, PostShorthandRouteHandler);
+        return _super.apply(this, arguments);
+    }
+    _createClass(PostShorthandRouteHandler, [
+        {
+            key: "handleStringShorthand",
+            value: /*
+      Push a new model of type *camelizedModelName* to the db.
+       For example, this will push a 'user':
+        this.post('/contacts', 'user');
+    */ function handleStringShorthand(request, modelClass) {
+                var modelName = this.shorthand;
+                var camelizedModelName = camelize(modelName);
+                assert(modelClass, "The route handler for ".concat(request.url, " is trying to access the ").concat(camelizedModelName, " model, but that model doesn't exist."));
+                var attrs = this._getAttrsForRequest(request, modelClass.camelizedModelName);
+                return modelClass.create(attrs);
+            }
+        }
+    ]);
+    return PostShorthandRouteHandler;
+}(BaseShorthandRouteHandler);
+/**
+ * @hide
+ */ var PutShorthandRouteHandler = /*#__PURE__*/ function(_BaseShorthandRouteHa) {
+    _inherits(PutShorthandRouteHandler, _BaseShorthandRouteHa);
+    var _super = _createSuper(PutShorthandRouteHandler);
+    function PutShorthandRouteHandler() {
+        _classCallCheck(this, PutShorthandRouteHandler);
+        return _super.apply(this, arguments);
+    }
+    _createClass(PutShorthandRouteHandler, [
+        {
+            key: "handleStringShorthand",
+            value: /*
+      Update an object from the db, specifying the type.
+         this.put('/contacts/:id', 'user');
+    */ function handleStringShorthand(request, modelClass) {
+                var modelName = this.shorthand;
+                var camelizedModelName = camelize(modelName);
+                assert(modelClass, "The route handler for ".concat(request.url, " is trying to access the ").concat(camelizedModelName, " model, but that model doesn't exist."));
+                var id = this._getIdForRequest(request);
+                var model = modelClass.find(id);
+                if (!model) return new Response(404);
+                var attrs = this._getAttrsForRequest(request, modelClass.camelizedModelName);
+                return model.update(attrs);
+            }
+        }
+    ]);
+    return PutShorthandRouteHandler;
+}(BaseShorthandRouteHandler);
+/**
+ * @hide
+ */ var DeleteShorthandRouteHandler = /*#__PURE__*/ function(_BaseShorthandRouteHa) {
+    _inherits(DeleteShorthandRouteHandler, _BaseShorthandRouteHa);
+    var _super = _createSuper(DeleteShorthandRouteHandler);
+    function DeleteShorthandRouteHandler() {
+        _classCallCheck(this, DeleteShorthandRouteHandler);
+        return _super.apply(this, arguments);
+    }
+    _createClass(DeleteShorthandRouteHandler, [
+        {
+            key: "handleStringShorthand",
+            value: /*
+      Remove the model from the db of type *camelizedModelName*.
+       This would remove the user with id :id:
+        Ex: this.del('/contacts/:id', 'user');
+    */ function handleStringShorthand(request, modelClass) {
+                var modelName = this.shorthand;
+                var camelizedModelName = camelize(modelName);
+                assert(modelClass, "The route handler for ".concat(request.url, " is trying to access the ").concat(camelizedModelName, " model, but that model doesn't exist."));
+                var id = this._getIdForRequest(request);
+                var model = modelClass.find(id);
+                if (!model) return new Response(404);
+                model.destroy();
+            }
+        },
+        {
+            key: "handleArrayShorthand",
+            value: function handleArrayShorthand(request, modelClasses) {
+                var _this = this;
+                var id = this._getIdForRequest(request);
+                var parent = modelClasses[0].find(id);
+                var childTypes = modelClasses.slice(1).map(function(modelClass) {
+                    return _this._container.inflector.pluralize(modelClass.camelizedModelName);
+                }); // Delete related children
+                childTypes.forEach(function(type) {
+                    return parent[type].destroy();
+                });
+                parent.destroy();
+            }
+        }
+    ]);
+    return DeleteShorthandRouteHandler;
+}(BaseShorthandRouteHandler);
+/**
+ * @hide
+ */ var HeadShorthandRouteHandler = /*#__PURE__*/ function(_BaseShorthandRouteHa) {
+    _inherits(HeadShorthandRouteHandler, _BaseShorthandRouteHa);
+    var _super = _createSuper(HeadShorthandRouteHandler);
+    function HeadShorthandRouteHandler() {
+        _classCallCheck(this, HeadShorthandRouteHandler);
+        return _super.apply(this, arguments);
+    }
+    _createClass(HeadShorthandRouteHandler, [
+        {
+            key: "handleStringShorthand",
+            value: /*
+      Retrieve a model/collection from the db.
+       Examples:
+        this.head('/contacts', 'contact');
+        this.head('/contacts/:id', 'contact');
+    */ function handleStringShorthand(request, modelClass) {
+                var modelName = this.shorthand;
+                var camelizedModelName = camelize(modelName);
+                assert(modelClass, "The route handler for ".concat(request.url, " is trying to access the ").concat(camelizedModelName, " model, but that model doesn't exist."));
+                var id = this._getIdForRequest(request);
+                if (id) {
+                    var model = modelClass.find(id);
+                    if (!model) return new Response(404);
+                    else return new Response(204);
+                } else if (this.options.coalesce && request.queryParams && request.queryParams.ids) {
+                    var _model = modelClass.find(request.queryParams.ids);
+                    if (!_model) return new Response(404);
+                    else return new Response(204);
+                } else return new Response(204);
+            }
+        }
+    ]);
+    return HeadShorthandRouteHandler;
+}(BaseShorthandRouteHandler);
+var DEFAULT_CODES = {
+    get: 200,
+    put: 204,
+    post: 201,
+    "delete": 204
+};
+function createHandler(_ref) {
+    var verb = _ref.verb, schema = _ref.schema, serializerOrRegistry = _ref.serializerOrRegistry, path = _ref.path, rawHandler = _ref.rawHandler, options = _ref.options, middleware = _ref.middleware;
+    var handler;
+    var args = [
+        schema,
+        serializerOrRegistry,
+        rawHandler,
+        path,
+        options,
+        middleware
+    ];
+    var type = _typeof(rawHandler);
+    if (type === "function") handler = _construct(FunctionRouteHandler, args);
+    else if (type === "object" && rawHandler) handler = _construct(ObjectRouteHandler, args);
+    else if (verb === "get") handler = _construct(GetShorthandRouteHandler, args);
+    else if (verb === "post") handler = _construct(PostShorthandRouteHandler, args);
+    else if (verb === "put" || verb === "patch") handler = _construct(PutShorthandRouteHandler, args);
+    else if (verb === "delete") handler = _construct(DeleteShorthandRouteHandler, args);
+    else if (verb === "head") handler = _construct(HeadShorthandRouteHandler, args);
+    return handler;
+}
+/**
+ * @hide
+ */ var RouteHandler = /*#__PURE__*/ function() {
+    function RouteHandler(_ref2) {
+        var schema = _ref2.schema, verb = _ref2.verb, rawHandler = _ref2.rawHandler, customizedCode = _ref2.customizedCode, options = _ref2.options, path = _ref2.path, serializerOrRegistry = _ref2.serializerOrRegistry, middleware = _ref2.middleware;
+        _classCallCheck(this, RouteHandler);
+        this.verb = verb;
+        this.customizedCode = customizedCode;
+        this.serializerOrRegistry = serializerOrRegistry;
+        this.middleware = middleware || [];
+        this.handler = createHandler({
+            verb: verb,
+            schema: schema,
+            path: path,
+            serializerOrRegistry: serializerOrRegistry,
+            rawHandler: rawHandler,
+            options: options
+        });
+    }
+    _createClass(RouteHandler, [
+        {
+            key: "handle",
+            value: function handle(request) {
+                var _this = this;
+                return this._getMirageResponseForRequest(request, this.middleware).then(function(mirageResponse) {
+                    return _this.serialize(mirageResponse, request);
+                }).then(function(serializedMirageResponse) {
+                    return serializedMirageResponse.toRackResponse();
+                });
+            }
+        },
+        {
+            key: "_getMirageResponseForRequest",
+            value: function _getMirageResponseForRequest(request) {
+                var _this2 = this;
+                var middleware = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : [];
+                var result;
+                try {
+                    /*
+         We need to do this for the #serialize convenience method. Probably is
+         a better way.
+        */ if (this.handler instanceof FunctionRouteHandler) this.handler.setRequest(request);
+                    result = this.handleWithMiddleware(request, [].concat(_toConsumableArray(middleware), [
+                        function(_, req) {
+                            return _this2.handler.handle(req);
+                        }
+                    ]));
+                } catch (e) {
+                    if (e instanceof MirageError) result = new Response(500, {}, e);
+                    else {
+                        var message = e.message || e;
+                        result = new Response(500, {}, {
+                            message: message,
+                            stack: "Mirage: Your ".concat(request.method, " handler for the url ").concat(request.url, " threw an error:\n\n").concat(e.stack || e)
+                        });
+                    }
+                }
+                return this._toMirageResponse(result);
+            }
+        },
+        {
+            key: "handleWithMiddleware",
+            value: function handleWithMiddleware(request, middleware) {
+                var _this3 = this;
+                var _middleware = _toArray(middleware), current = _middleware[0], remaining = _middleware.slice(1);
+                return current(this.schema, request, function() {
+                    var req = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : request;
+                    return _this3.handleWithMiddleware(req, remaining);
+                });
+            }
+        },
+        {
+            key: "_toMirageResponse",
+            value: function _toMirageResponse(result) {
+                var _this4 = this;
+                var mirageResponse;
+                return new Promise(function(resolve, reject) {
+                    Promise.resolve(result).then(function(response) {
+                        if (response instanceof Response) mirageResponse = result;
+                        else {
+                            var code = _this4._getCodeForResponse(response);
+                            mirageResponse = new Response(code, {}, response);
+                        }
+                        resolve(mirageResponse);
+                    })["catch"](reject);
+                });
+            }
+        },
+        {
+            key: "_getCodeForResponse",
+            value: function _getCodeForResponse(response) {
+                var code;
+                if (this.customizedCode) code = this.customizedCode;
+                else {
+                    code = DEFAULT_CODES[this.verb]; // Returning any data for a 204 is invalid
+                    if (code === 204 && response !== undefined && response !== "") code = 200;
+                }
+                return code;
+            }
+        },
+        {
+            key: "serialize",
+            value: function serialize(mirageResponse, request) {
+                mirageResponse.data = this.serializerOrRegistry.serialize(mirageResponse.data, request);
+                return mirageResponse;
+            }
+        }
+    ]);
+    return RouteHandler;
+}();
+/**
+  @hide
+*/ function extend(protoProps, staticProps) {
+    var Child = /*#__PURE__*/ function(_this) {
+        _inherits(Child, _this);
+        var _super = _createSuper(Child);
+        function Child() {
+            var _this2;
+            _classCallCheck(this, Child);
+            for(var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++)args[_key] = arguments[_key];
+            _this2 = _super.call.apply(_super, [
+                this
+            ].concat(args)); // The constructor function for the new subclass is optionally defined by you
+            // in your `extend` definition
+            if (protoProps && (0, _hasDefault.default)(protoProps, "constructor")) {
+                var _protoProps$construct;
+                (_protoProps$construct = protoProps.constructor).call.apply(_protoProps$construct, [
+                    _assertThisInitialized(_this2)
+                ].concat(args));
+            }
+            return _this2;
+        }
+        return Child;
+    }(this); // Add static properties to the constructor function, if supplied.
+    Object.assign(Child, this, staticProps); // Add prototype properties (instance properties) to the subclass,
+    // if supplied.
+    if (protoProps) Object.assign(Child.prototype, protoProps);
+    return Child;
+}
+/**
+  Models wrap your database, and allow you to define relationships.
+
+  **Class vs. instance methods**
+
+  The methods documented below apply to _instances_ of models, but you'll typically use the `Schema` to access the model _class_, which can be used to find or create instances.
+
+  You can find the Class methods documented under the `Schema` API docs.
+
+  **Accessing properties and relationships**
+
+  You can access properites (fields) and relationships directly off of models.
+
+  ```js
+  user.name;    // 'Sam'
+  user.team;    // Team model
+  user.teamId;  // Team id (foreign key)
+  ```
+
+  Mirage Models are schemaless in their attributes, but their relationship schema is known.
+
+  For example,
+
+  ```js
+  let user = schema.users.create();
+  user.attrs  // { }
+  user.name   // undefined
+
+  let user = schema.users.create({ name: 'Sam' });
+  user.attrs  // { name: 'Sam' }
+  user.name   // 'Sam'
+  ```
+
+  However, if a `user` has a `posts` relationships defined,
+
+  ```js
+  let user = schema.users.create();
+  user.posts  // returns an empty Posts Collection
+  ```
+
+  @class Model
+  @constructor
+  @public
+ */ var Model = /*#__PURE__*/ function() {
+    // TODO: schema and modelName now set statically at registration, need to remove
+    /*
+    Notes:
+   - We need to pass in modelName, because models are created with
+    .extend and anonymous functions, so you cannot use
+    reflection to find the name of the constructor.
+  */ function Model(schema, modelName, attrs, fks) {
+        var _this = this;
+        _classCallCheck(this, Model);
+        assert(schema, "A model requires a schema");
+        assert(modelName, "A model requires a modelName");
+        this._schema = schema;
+        this.modelName = modelName;
+        this.fks = fks || [];
+        /**
+      Returns the attributes of your model.
+       ```js
+      let post = schema.blogPosts.find(1);
+      post.attrs; // {id: 1, title: 'Lorem Ipsum', publishedAt: '2012-01-01 10:00:00'}
+      ```
+       Note that you can also access individual attributes directly off a model, e.g. `post.title`.
+       @property attrs
+      @public
+    */ this.attrs = {};
+        attrs = attrs || {}; // Ensure fks are there
+        this.fks.forEach(function(fk) {
+            _this.attrs[fk] = attrs[fk] !== undefined ? attrs[fk] : null;
+        });
+        Object.keys(attrs).forEach(function(name) {
+            var value = attrs[name];
+            _this._validateAttr(name, value);
+            _this._setupAttr(name, value);
+            _this._setupRelationship(name, value);
+        });
+        return this;
+    }
+    /**
+    Create or saves the model.
+     ```js
+    let post = blogPosts.new({ title: 'Lorem ipsum' });
+    post.id; // null
+     post.save();
+    post.id; // 1
+     post.title = 'Hipster ipsum'; // db has not been updated
+    post.save();                  // ...now the db is updated
+    ```
+     @method save
+    @return this
+    @public
+   */ _createClass(Model, [
+        {
+            key: "save",
+            value: function save() {
+                var collection = this._schema.toInternalCollectionName(this.modelName);
+                if (this.isNew()) {
+                    // Update the attrs with the db response
+                    this.attrs = this._schema.db[collection].insert(this.attrs); // Ensure the id getter/setter is set
+                    this._definePlainAttribute("id");
+                } else {
+                    this._schema.isSaving[this.toString()] = true;
+                    this._schema.db[collection].update(this.attrs.id, this.attrs);
+                }
+                this._saveAssociations();
+                this._schema.isSaving[this.toString()] = false;
+                return this;
+            }
+        },
+        {
+            key: "update",
+            value: function update(key, val) {
+                var attrs;
+                if (key == null) return this;
+                if (_typeof(key) === "object") attrs = key;
+                else (attrs = {})[key] = val;
+                Object.keys(attrs).forEach(function(attr) {
+                    if (!this.associationKeys.has(attr) && !this.associationIdKeys.has(attr)) this._definePlainAttribute(attr);
+                    this[attr] = attrs[attr];
+                }, this);
+                this.save();
+                return this;
+            }
+        },
+        {
+            key: "destroy",
+            value: function destroy() {
+                if (this.isSaved()) {
+                    this._disassociateFromDependents();
+                    var collection = this._schema.toInternalCollectionName(this.modelName);
+                    this._schema.db[collection].remove(this.attrs.id);
+                }
+            }
+        },
+        {
+            key: "isNew",
+            value: function isNew() {
+                var hasDbRecord = false;
+                var hasId = this.attrs.id !== undefined && this.attrs.id !== null;
+                if (hasId) {
+                    var collectionName = this._schema.toInternalCollectionName(this.modelName);
+                    var record = this._schema.db[collectionName].find(this.attrs.id);
+                    if (record) hasDbRecord = true;
+                }
+                return !hasDbRecord;
+            }
+        },
+        {
+            key: "isSaved",
+            value: function isSaved() {
+                return !this.isNew();
+            }
+        },
+        {
+            key: "reload",
+            value: function reload() {
+                if (this.id) {
+                    var collection = this._schema.toInternalCollectionName(this.modelName);
+                    var attrs = this._schema.db[collection].find(this.id);
+                    Object.keys(attrs).filter(function(attr) {
+                        return attr !== "id";
+                    }).forEach(function(attr) {
+                        this.attrs[attr] = attrs[attr];
+                    }, this);
+                } // Clear temp associations
+                this._tempAssociations = {};
+                return this;
+            }
+        },
+        {
+            key: "toJSON",
+            value: function toJSON() {
+                return _objectSpread2({}, this.attrs);
+            }
+        },
+        {
+            key: "associations",
+            get: function get() {
+                return this._schema.associationsFor(this.modelName);
+            }
+        },
+        {
+            key: "associationFor",
+            value: function associationFor(key) {
+                return this.associations[key];
+            }
+        },
+        {
+            key: "inverseFor",
+            value: function inverseFor(association) {
+                return this._explicitInverseFor(association) || this._implicitInverseFor(association);
+            }
+        },
+        {
+            key: "_explicitInverseFor",
+            value: function _explicitInverseFor(association) {
+                this._checkForMultipleExplicitInverses(association);
+                var associations = this._schema.associationsFor(this.modelName);
+                var inverse = association.opts.inverse;
+                var candidate = inverse ? associations[inverse] : null;
+                var matchingPolymorphic = candidate && candidate.isPolymorphic;
+                var matchingInverse = candidate && candidate.modelName === association.ownerModelName;
+                var candidateInverse = candidate && candidate.opts.inverse;
+                if (candidateInverse && candidate.opts.inverse !== association.name) assert(false, "You specified an inverse of ".concat(inverse, " for ").concat(association.name, ", but it does not match ").concat(candidate.modelName, " ").concat(candidate.name, "'s inverse"));
+                return matchingPolymorphic || matchingInverse ? candidate : null;
+            }
+        },
+        {
+            key: "_checkForMultipleExplicitInverses",
+            value: function _checkForMultipleExplicitInverses(association) {
+                var associations = this._schema.associationsFor(this.modelName);
+                var matchingExplicitInverses = Object.keys(associations).filter(function(key) {
+                    var candidate = associations[key];
+                    var modelMatches = association.ownerModelName === candidate.modelName;
+                    var inverseKeyMatches = association.name === candidate.opts.inverse;
+                    return modelMatches && inverseKeyMatches;
+                });
+                assert(matchingExplicitInverses.length <= 1, "The ".concat(this.modelName, " model has defined multiple explicit inverse associations for the ").concat(association.ownerModelName, ".").concat(association.name, " association."));
+            }
+        },
+        {
+            key: "_implicitInverseFor",
+            value: function _implicitInverseFor(association) {
+                var _this2 = this;
+                var associations = this._schema.associationsFor(this.modelName);
+                var modelName = association.ownerModelName;
+                return (0, _valuesDefault.default)(associations).filter(function(candidate) {
+                    return candidate.modelName === modelName;
+                }).reduce(function(inverse, candidate) {
+                    var candidateInverse = candidate.opts.inverse;
+                    var candidateIsImplicitInverse = candidateInverse === undefined;
+                    var candidateIsExplicitInverse = candidateInverse === association.name;
+                    var candidateMatches = candidateIsImplicitInverse || candidateIsExplicitInverse;
+                    if (candidateMatches) {
+                        // Need to move this check to compile-time init
+                        assert(!inverse, "The ".concat(_this2.modelName, " model has multiple possible inverse associations for the ").concat(association.ownerModelName, ".").concat(association.name, " association."));
+                        inverse = candidate;
+                    }
+                    return inverse;
+                }, null);
+            }
+        },
+        {
+            key: "hasInverseFor",
+            value: function hasInverseFor(association) {
+                return !!this.inverseFor(association);
+            }
+        },
+        {
+            key: "alreadyAssociatedWith",
+            value: function alreadyAssociatedWith(model, association) {
+                var associatedModelOrCollection = this[association.name];
+                if (associatedModelOrCollection && model) {
+                    if (associatedModelOrCollection instanceof Model) {
+                        if (associatedModelOrCollection.isSaved() && model.isSaved()) return associatedModelOrCollection.toString() === model.toString();
+                        else return associatedModelOrCollection === model;
+                    } else return associatedModelOrCollection.includes(model);
+                }
+            }
+        },
+        {
+            key: "associate",
+            value: function associate(model, association) {
+                if (this.alreadyAssociatedWith(model, association)) return;
+                var name = association.name;
+                if (association instanceof HasMany) {
+                    if (!this[name].includes(model)) this[name].add(model);
+                } else this[name] = model;
+            }
+        },
+        {
+            key: "disassociate",
+            value: function disassociate(model, association) {
+                var fk = association.getForeignKey();
+                if (association instanceof HasMany) {
+                    var i;
+                    if (association.isPolymorphic) {
+                        var found = this[fk].find(function(_ref) {
+                            var type = _ref.type, id = _ref.id;
+                            return type === model.modelName && id === model.id;
+                        });
+                        i = found && this[fk].indexOf(found);
+                    } else i = this[fk].map(function(key) {
+                        return key.toString();
+                    }).indexOf(model.id.toString());
+                    if (i > -1) this.attrs[fk].splice(i, 1);
+                } else this.attrs[fk] = null;
+            }
+        },
+        {
+            key: "isSaving",
+            get: function get() {
+                return this._schema.isSaving[this.toString()];
+            } // Private
+        },
+        {
+            key: "_setupAttr",
+            value: function _setupAttr(attr, value) {
+                var isAssociation = this.associationKeys.has(attr) || this.associationIdKeys.has(attr);
+                if (!isAssociation) {
+                    this.attrs[attr] = value; // define plain getter/setters for non-association keys
+                    this._definePlainAttribute(attr);
+                }
+            }
+        },
+        {
+            key: "_definePlainAttribute",
+            value: function _definePlainAttribute(attr) {
+                // Ensure the property hasn't already been defined
+                var existingProperty = Object.getOwnPropertyDescriptor(this, attr);
+                if (existingProperty && existingProperty.get) return;
+                 // Ensure the attribute is on the attrs hash
+                if (!Object.prototype.hasOwnProperty.call(this.attrs, attr)) this.attrs[attr] = null;
+                 // Define the getter/setter
+                Object.defineProperty(this, attr, {
+                    get: function get() {
+                        return this.attrs[attr];
+                    },
+                    set: function set(val) {
+                        this.attrs[attr] = val;
+                    }
+                });
+            }
+        },
+        {
+            key: "_setupRelationship",
+            value: function _setupRelationship(attr, value) {
+                var isFk = this.associationIdKeys.has(attr) || this.fks.includes(attr);
+                var isAssociation = this.associationKeys.has(attr);
+                if (isFk) {
+                    if (value !== undefined && value !== null) this._validateForeignKeyExistsInDatabase(attr, value);
+                    this.attrs[attr] = value;
+                }
+                if (isAssociation) this[attr] = value;
+            }
+        },
+        {
+            key: "_validateAttr",
+            value: function _validateAttr(key, value) {
+                if (this.associationKeys.has(key)) {
+                    var association = this.associationFor(key);
+                    var isNull = value === null;
+                    if (association instanceof HasMany) {
+                        var isCollection = value instanceof Collection || value instanceof PolymorphicCollection;
+                        var isArrayOfModels = Array.isArray(value) && value.every(function(item) {
+                            return item instanceof Model;
+                        });
+                        assert(isCollection || isArrayOfModels || isNull, "You're trying to create a ".concat(this.modelName, " model and you passed in \"").concat(value, "\" under the ").concat(key, " key, but that key is a HasMany relationship. You must pass in a Collection, PolymorphicCollection, array of Models, or null."));
+                    } else if (association instanceof BelongsTo) assert(value instanceof Model || isNull, "You're trying to create a ".concat(this.modelName, " model and you passed in \"").concat(value, "\" under the ").concat(key, " key, but that key is a BelongsTo relationship. You must pass in a Model or null."));
+                }
+                if (this.associationIdKeys.has(key)) {
+                    if (key.endsWith("Ids")) {
+                        var isArray = Array.isArray(value);
+                        var _isNull = value === null;
+                        assert(isArray || _isNull, "You're trying to create a ".concat(this.modelName, " model and you passed in \"").concat(value, "\" under the ").concat(key, " key, but that key is a foreign key for a HasMany relationship. You must pass in an array of ids or null."));
+                    }
+                }
+                var isModelOrCollection = value instanceof Model || value instanceof Collection || value instanceof PolymorphicCollection;
+                var _isArrayOfModels = Array.isArray(value) && value.length && value.every(function(item) {
+                    return item instanceof Model;
+                });
+                if (isModelOrCollection || _isArrayOfModels) {
+                    var modelOrCollection = value;
+                    assert(this.associationKeys.has(key), "You're trying to create a ".concat(this.modelName, " model and you passed in a ").concat(modelOrCollection.toString(), " under the ").concat(key, " key, but you haven't defined that key as an association on your model."));
+                }
+            }
+        },
+        {
+            key: "_validateForeignKeyExistsInDatabase",
+            value: function _validateForeignKeyExistsInDatabase(foreignKeyName, foreignKeys) {
+                var _this3 = this;
+                if (Array.isArray(foreignKeys)) {
+                    var association = this.hasManyAssociationFks[foreignKeyName];
+                    var found;
+                    if (association.isPolymorphic) {
+                        found = foreignKeys.map(function(_ref2) {
+                            var type = _ref2.type, id = _ref2.id;
+                            return _this3._schema.db[_this3._schema.toInternalCollectionName(type)].find(id);
+                        });
+                        found = (0, _compactDefault.default)(found);
+                    } else found = this._schema.db[this._schema.toInternalCollectionName(association.modelName)].find(foreignKeys);
+                    var foreignKeyLabel = association.isPolymorphic ? foreignKeys.map(function(fk) {
+                        return "".concat(fk.type, ":").concat(fk.id);
+                    }).join(",") : foreignKeys;
+                    assert(found.length === foreignKeys.length, "You're instantiating a ".concat(this.modelName, " that has a ").concat(foreignKeyName, " of ").concat(foreignKeyLabel, ", but some of those records don't exist in the database."));
+                } else {
+                    var _association = this.belongsToAssociationFks[foreignKeyName];
+                    var _found;
+                    if (_association.isPolymorphic) _found = this._schema.db[this._schema.toInternalCollectionName(foreignKeys.type)].find(foreignKeys.id);
+                    else _found = this._schema.db[this._schema.toInternalCollectionName(_association.modelName)].find(foreignKeys);
+                    var _foreignKeyLabel = _association.isPolymorphic ? "".concat(foreignKeys.type, ":").concat(foreignKeys.id) : foreignKeys;
+                    assert(_found, "You're instantiating a ".concat(this.modelName, " that has a ").concat(foreignKeyName, " of ").concat(_foreignKeyLabel, ", but that record doesn't exist in the database."));
+                }
+            }
+        },
+        {
+            key: "_saveAssociations",
+            value: function _saveAssociations() {
+                this._saveBelongsToAssociations();
+                this._saveHasManyAssociations();
+            }
+        },
+        {
+            key: "_saveBelongsToAssociations",
+            value: function _saveBelongsToAssociations() {
+                var _this4 = this;
+                (0, _valuesDefault.default)(this.belongsToAssociations).forEach(function(association) {
+                    _this4._disassociateFromOldInverses(association);
+                    _this4._saveNewAssociates(association);
+                    _this4._associateWithNewInverses(association);
+                });
+            }
+        },
+        {
+            key: "_saveHasManyAssociations",
+            value: function _saveHasManyAssociations() {
+                var _this5 = this;
+                (0, _valuesDefault.default)(this.hasManyAssociations).forEach(function(association) {
+                    _this5._disassociateFromOldInverses(association);
+                    _this5._saveNewAssociates(association);
+                    _this5._associateWithNewInverses(association);
+                });
+            }
+        },
+        {
+            key: "_disassociateFromOldInverses",
+            value: function _disassociateFromOldInverses(association) {
+                if (association instanceof HasMany) this._disassociateFromHasManyInverses(association);
+                else if (association instanceof BelongsTo) this._disassociateFromBelongsToInverse(association);
+            } // Disassociate currently persisted models that are no longer associated
+        },
+        {
+            key: "_disassociateFromHasManyInverses",
+            value: function _disassociateFromHasManyInverses(association) {
+                var _this6 = this;
+                var fk = association.getForeignKey();
+                var tempAssociation = this._tempAssociations && this._tempAssociations[association.name];
+                var associateIds = this.attrs[fk];
+                if (tempAssociation && associateIds) {
+                    var models;
+                    if (association.isPolymorphic) models = associateIds.map(function(_ref3) {
+                        var type = _ref3.type, id = _ref3.id;
+                        return _this6._schema[_this6._schema.toCollectionName(type)].find(id);
+                    });
+                    else // TODO: prob should initialize hasMany fks with []
+                    models = this._schema[this._schema.toCollectionName(association.modelName)].find(associateIds || []).models;
+                    models.filter(function(associate) {
+                        return !associate.isSaving && // filter out models that will still be associated
+                        !tempAssociation.includes(associate) && associate.hasInverseFor(association);
+                    }).forEach(function(associate) {
+                        var inverse = associate.inverseFor(association);
+                        associate.disassociate(_this6, inverse);
+                        associate.save();
+                    });
+                }
+            }
+        },
+        {
+            key: "_disassociateFromBelongsToInverse",
+            value: function _disassociateFromBelongsToInverse(association) {
+                var fk = association.getForeignKey();
+                var tempAssociation = this._tempAssociations && this._tempAssociations[association.name];
+                var associateId = this.attrs[fk];
+                if (tempAssociation !== undefined && associateId) {
+                    var associate;
+                    if (association.isPolymorphic) associate = this._schema[this._schema.toCollectionName(associateId.type)].find(associateId.id);
+                    else associate = this._schema[this._schema.toCollectionName(association.modelName)].find(associateId);
+                    if (associate.hasInverseFor(association)) {
+                        var inverse = associate.inverseFor(association);
+                        associate.disassociate(this, inverse);
+                        associate._updateInDb(associate.attrs);
+                    }
+                }
+            } // Find all other models that depend on me and update their foreign keys
+        },
+        {
+            key: "_disassociateFromDependents",
+            value: function _disassociateFromDependents() {
+                var _this7 = this;
+                this._schema.dependentAssociationsFor(this.modelName).forEach(function(association) {
+                    association.disassociateAllDependentsFromTarget(_this7);
+                });
+            }
+        },
+        {
+            key: "_saveNewAssociates",
+            value: function _saveNewAssociates(association) {
+                var fk = association.getForeignKey();
+                var tempAssociate = this._tempAssociations && this._tempAssociations[association.name];
+                if (tempAssociate !== undefined) {
+                    this.__isSavingNewChildren = true;
+                    delete this._tempAssociations[association.name];
+                    if (tempAssociate instanceof Collection) {
+                        tempAssociate.models.filter(function(model) {
+                            return !model.isSaving;
+                        }).forEach(function(child) {
+                            child.save();
+                        });
+                        this._updateInDb(_defineProperty({}, fk, tempAssociate.models.map(function(child) {
+                            return child.id;
+                        })));
+                    } else if (tempAssociate instanceof PolymorphicCollection) {
+                        tempAssociate.models.filter(function(model) {
+                            return !model.isSaving;
+                        }).forEach(function(child) {
+                            child.save();
+                        });
+                        this._updateInDb(_defineProperty({}, fk, tempAssociate.models.map(function(child) {
+                            return {
+                                type: child.modelName,
+                                id: child.id
+                            };
+                        })));
+                    } else {
+                        // Clearing the association
+                        if (tempAssociate === null) this._updateInDb(_defineProperty({}, fk, null)); // Self-referential
+                        else if (this.equals(tempAssociate)) this._updateInDb(_defineProperty({}, fk, this.id)); // Non-self-referential
+                        else if (!tempAssociate.isSaving) {
+                            // Save the tempAssociate and update the local reference
+                            tempAssociate.save();
+                            this._syncTempAssociations(tempAssociate);
+                            var fkValue;
+                            if (association.isPolymorphic) fkValue = {
+                                id: tempAssociate.id,
+                                type: tempAssociate.modelName
+                            };
+                            else fkValue = tempAssociate.id;
+                            this._updateInDb(_defineProperty({}, fk, fkValue));
+                        }
+                    }
+                    this.__isSavingNewChildren = false;
+                }
+            }
+        },
+        {
+            key: "_associateWithNewInverses",
+            value: function _associateWithNewInverses(association) {
+                var _this8 = this;
+                if (!this.__isSavingNewChildren) {
+                    var modelOrCollection = this[association.name];
+                    if (modelOrCollection instanceof Model) this._associateModelWithInverse(modelOrCollection, association);
+                    else if (modelOrCollection instanceof Collection || modelOrCollection instanceof PolymorphicCollection) modelOrCollection.models.forEach(function(model) {
+                        _this8._associateModelWithInverse(model, association);
+                    });
+                    delete this._tempAssociations[association.name];
+                }
+            }
+        },
+        {
+            key: "_associateModelWithInverse",
+            value: function _associateModelWithInverse(model, association) {
+                var _this9 = this;
+                if (model.hasInverseFor(association)) {
+                    var inverse = model.inverseFor(association);
+                    var inverseFk = inverse.getForeignKey();
+                    var ownerId = this.id;
+                    if (inverse instanceof BelongsTo) {
+                        var newId;
+                        if (inverse.isPolymorphic) newId = {
+                            type: this.modelName,
+                            id: ownerId
+                        };
+                        else newId = ownerId;
+                        this._schema.db[this._schema.toInternalCollectionName(model.modelName)].update(model.id, _defineProperty({}, inverseFk, newId));
+                    } else {
+                        var inverseCollection = this._schema.db[this._schema.toInternalCollectionName(model.modelName)];
+                        var currentIdsForInverse = inverseCollection.find(model.id)[inverse.getForeignKey()] || [];
+                        var newIdsForInverse = Object.assign([], currentIdsForInverse);
+                        var _newId, alreadyAssociatedWith;
+                        if (inverse.isPolymorphic) {
+                            _newId = {
+                                type: this.modelName,
+                                id: ownerId
+                            };
+                            alreadyAssociatedWith = newIdsForInverse.some(function(key) {
+                                return key.type == _this9.modelName && key.id == ownerId;
+                            });
+                        } else {
+                            _newId = ownerId;
+                            alreadyAssociatedWith = newIdsForInverse.includes(ownerId);
+                        }
+                        if (!alreadyAssociatedWith) newIdsForInverse.push(_newId);
+                        inverseCollection.update(model.id, _defineProperty({}, inverseFk, newIdsForInverse));
+                    }
+                }
+            } // Used to update data directly, since #save and #update can retrigger saves,
+        },
+        {
+            key: "_updateInDb",
+            value: function _updateInDb(attrs) {
+                this.attrs = this._schema.db[this._schema.toInternalCollectionName(this.modelName)].update(this.attrs.id, attrs);
+            }
+        },
+        {
+            key: "_syncTempAssociations",
+            value: function _syncTempAssociations(tempAssociate) {
+                var _this10 = this;
+                Object.keys(this._tempAssociations).forEach(function(key) {
+                    if (_this10._tempAssociations[key] && _this10._tempAssociations[key].toString() === tempAssociate.toString()) _this10._tempAssociations[key] = tempAssociate;
+                });
+            }
+        },
+        {
+            key: "toString",
+            value: function toString() {
+                var idLabel = this.id ? "(".concat(this.id, ")") : "";
+                return "model:".concat(this.modelName).concat(idLabel);
+            }
+        },
+        {
+            key: "equals",
+            value: function equals(model) {
+                return this.toString() === model.toString();
+            }
+        }
+    ]);
+    return Model;
+}();
+Model.extend = extend;
+Model.findBelongsToAssociation = function(associationType) {
+    return this.prototype.belongsToAssociations[associationType];
+};
+/**
+  Serializers are responsible for formatting your route handler's response.
+
+  The application serializer will apply to every response. To make specific customizations, define per-model serializers.
+
+  ```js
+  import { createServer, RestSerializer } from 'miragejs';
+
+  createServer({
+    serializers: {
+      application: RestSerializer,
+      user: RestSerializer.extend({
+        // user-specific customizations
+      })
+    }
+  })
+  ```
+
+  Any Model or Collection returned from a route handler will pass through the serializer layer. Highest priority will be given to a model-specific serializer, then the application serializer, then the default serializer.
+
+  Mirage ships with three named serializers:
+
+  - **JSONAPISerializer**, to simulate JSON:API compliant API servers:
+
+    ```js
+    import { createServer, JSONAPISerializer } from 'miragejs';
+
+    createServer({
+      serializers: {
+        application: JSONAPISerializer
+      }
+    })
+    ```
+
+  - **ActiveModelSerializer**, to mock Rails APIs that use AMS-style responses:
+
+    ```js
+    import { createServer, ActiveModelSerializer } from 'miragejs';
+
+    createServer({
+      serializers: {
+        application: ActiveModelSerializer
+      }
+    })
+    ```
+
+  - **RestSerializer**, a good starting point for many generic REST APIs:
+
+    ```js
+    import { createServer, RestSerializer } from 'miragejs';
+
+    createServer({
+      serializers: {
+        application: RestSerializer
+      }
+    })
+    ```
+
+  Additionally, Mirage has a basic Serializer class which you can customize using the hooks documented below:
+
+  ```js
+  import { createServer, Serializer } from 'miragejs';
+
+  createServer({
+    serializers: {
+      application: Serializer
+    }
+  })
+  ```
+
+  When writing model-specific serializers, remember to extend from your application serializer so shared logic is used by your model-specific classes:
+
+  ```js
+  import { createServer, Serializer } from 'miragejs';
+
+  const ApplicationSerializer = Serializer.extend()
+
+  createServer({
+    serializers: {
+      application: ApplicationSerializer,
+      blogPost: ApplicationSerializer.extend({
+        include: ['comments']
+      })
+    }
+  })
+  ```
+
+  @class Serializer
+  @constructor
+  @public
+*/ var Serializer = /*#__PURE__*/ function() {
+    function Serializer(registry, type) {
+        var _this = this;
+        var request = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
+        _classCallCheck(this, Serializer);
+        this.registry = registry;
+        this.type = type;
+        this.request = request;
+        /**
+      Use this property on a model serializer to whitelist attributes that will be used in your JSON payload.
+       For example, if you had a `blog-post` model in your database that looked like
+       ```
+      {
+        id: 1,
+        title: 'Lorem ipsum',
+        createdAt: '2014-01-01 10:00:00',
+        updatedAt: '2014-01-03 11:42:12'
+      }
+      ```
+       and you just wanted `id` and `title`, you could write
+       ```js
+      Serializer.extend({
+        attrs: ['id', 'title']
+      });
+      ```
+       and the payload would look like
+       ```
+      {
+        id: 1,
+        title: 'Lorem ipsum'
+      }
+      ```
+       @property attrs
+      @public
+    */ this.attrs = this.attrs || undefined; // this is just here so I can add the doc comment. Better way?
+        /**
+      Use this property on a model serializer to specify related models you'd like to include in your JSON payload. (These can be considered default server-side includes.)
+       For example, if you had an `author` with many `blog-post`s and you wanted to sideload these, specify so in the `include` key:
+       ```js
+      createServer({
+        models: {
+          author: Model.extend({
+            blogPosts: hasMany()
+          })
+        },
+        serializers: {
+          author: Serializer.extend({
+            include: ['blogPosts']
+          });
+        }
+      })
+      ```
+       Now a response to a request for an author would look like this:
+       ```
+      GET /authors/1
+       {
+        author: {
+          id: 1,
+          name: 'Link',
+          blogPostIds: [1, 2]
+        },
+        blogPosts: [
+          {id: 1, authorId: 1, title: 'Lorem'},
+          {id: 2, authorId: 1, title: 'Ipsum'}
+        ]
+      }
+      ```
+       You can also define `include` as a function so it can be determined dynamically.
+      
+      For example, you could conditionally include a relationship based on an `include` query parameter:
+       ```js
+      // Include blog posts for a GET to /authors/1?include=blogPosts
+      
+      Serializer.extend({
+        include: function(request) {
+          if (request.queryParams.include === "blogPosts") {
+            return ['blogPosts'];
+          } else {
+            return [];
+          }
+        }
+      });
+      ```
+       **Query param includes for JSONAPISerializer**
+       The JSONAPISerializer supports the use of `include` query parameter to return compound documents out of the box.
+       For example, if your app makes the following request
+       ```
+      GET /api/authors?include=blogPosts
+      ```
+       the `JSONAPISerializer` will inspect the query params of the request, see that the blogPosts relationship is present, and then proceed as if this relationship was specified directly in the include: [] array on the serializer itself.
+       Note that, in accordance with the spec, Mirage gives precedence to an ?include query param over a default include: [] array that you might have specified directly on the serializer. Default includes will still be in effect, however, if a request does not have an ?include query param.
+       Also note that default includes specified with the `include: []` array can only take a single model; they cannot take dot-separated paths to nested relationships.
+       If you'd like to set a default dot-separated (nested) include path for a resource, you have to do it at the route level by setting a default value for `request.queryParams`:
+       ```js
+      this.get('/users', function(schema, request) => {
+        request.queryParams = request.queryParams || {};
+        if (!request.queryParams.include) {
+          request.queryParams.include = 'blog-posts.comments';
+        }
+         // rest of route handler logic
+      });
+      ```
+       @property include
+      @public
+    */ this.include = this.include || []; // this is just here so I can add the doc comment. Better way?
+        /**
+      Set whether your JSON response should have a root key in it.
+       *Doesn't apply to JSONAPISerializer.*
+       Defaults to true, so a request for an author looks like:
+       ```
+      GET /authors/1
+       {
+        author: {
+          id: 1,
+          name: 'Link'
+        }
+      }
+      ```
+       Setting `root` to false disables this:
+       ```js
+      Serializer.extend({
+        root: false
+      });
+      ```
+       Now the response looks like:
+       ```
+      GET /authors/1
+       {
+        id: 1,
+        name: 'Link'
+      }
+      ```
+       @property root
+      @public
+    */ this.root = this.root || undefined; // this is just here so I can add the doc comment. Better way?
+        /**
+      Set whether related models should be embedded or sideloaded.
+       *Doesn't apply to JSONAPISerializer.*
+       By default this false, so relationships are sideloaded:
+       ```
+      GET /authors/1
+       {
+        author: {
+          id: 1,
+          name: 'Link',
+          blogPostIds: [1, 2]
+        },
+        blogPosts: [
+          { id: 1, authorId: 1, title: 'Lorem' },
+          { id: 2, authorId: 1, title: 'Ipsum' }
+        ]
+      }
+      ```
+       Setting `embed` to true will embed all related records:
+       ```js
+      Serializer.extend({
+        embed: true
+      });
+      ```
+       Now the response looks like:
+       ```
+      GET /authors/1
+       {
+        author: {
+          id: 1,
+          name: 'Link',
+          blogPosts: [
+            { id: 1, authorId: 1, title: 'Lorem' },
+            { id: 2, authorId: 1, title: 'Ipsum' }
+          ]
+        }
+      }
+      ```
+       You can also define `embed` as a function so it can be determined dynamically.
+    */ this.embed = this.embed || undefined; // this is just here so I can add the doc comment. Better way?
+        this._embedFn = (0, _isFunctionDefault.default)(this.embed) ? this.embed : function() {
+            return !!_this.embed;
+        };
+        /**
+      Use this to define how your serializer handles serializing relationship keys. It can take one of three values:
+       - `included`, which is the default, will serialize the ids of a relationship if that relationship is included (sideloaded) along with the model or collection in the response
+      - `always` will always serialize the ids of all relationships for the model or collection in the response
+      - `never` will never serialize the ids of relationships for the model or collection in the response
+       @property serializeIds
+      @public
+    */ this.serializeIds = this.serializeIds || undefined; // this is just here so I can add the doc comment. Better way?
+        /**
+      Primary Key name of the model
+       Defaults to 'id', so a request for an author looks like:
+       ```
+      GET /authors/1
+       {
+        author: {
+          id: 1,
+          name: 'Link'
+        }
+      }
+      ```
+       Setting `primaryKey` to 'authorId changes this:
+       ```js
+      Serializer.extend({
+        primaryKey: 'authorId'
+      });
+      ```
+       Now the response looks like:
+       ```
+      GET /authors/1
+       {
+        author: {
+          authorId: 1,
+          name: 'Link'
+        }
+      }
+      ```
+       @property primaryKey
+      @public
+    */ this.primaryKey = this.primaryKey || undefined; // this is just here so I can add the doc comment. Better way?
+    }
+    /**
+    Override this method to implement your own custom serialize function. *response* is whatever was returned from your route handler, and *request* is the Pretender request object.
+     Returns a plain JavaScript object or array, which Mirage uses as the response data to your app's XHR request.
+     You can also override this method, call super, and manipulate the data before Mirage responds with it. This is a great place to add metadata, or for one-off operations that don't fit neatly into any of Mirage's other abstractions:
+     ```js
+    serialize(object, request) {
+      // This is how to call super, as Mirage borrows [Backbone's implementation of extend](http://backbonejs.org/#Model-extend)
+      let json = Serializer.prototype.serialize.apply(this, arguments);
+       // Add metadata, sort parts of the response, etc.
+       return json;
+    }
+    ```
+     @param primaryResource
+    @param request
+    @return { Object } the json response
+   */ _createClass(Serializer, [
+        {
+            key: "serialize",
+            value: function serialize(primaryResource) {
+                this.primaryResource = primaryResource;
+                return this.buildPayload(primaryResource);
+            }
+        },
+        {
+            key: "normalize",
+            value: function normalize(json) {
+                return json;
+            }
+        },
+        {
+            key: "buildPayload",
+            value: function buildPayload(primaryResource, toInclude, didSerialize, json) {
+                if (!primaryResource && (0, _isEmptyDefault.default)(toInclude)) return json;
+                else if (primaryResource) {
+                    var _this$getHashForPrima = this.getHashForPrimaryResource(primaryResource), _this$getHashForPrima2 = _slicedToArray(_this$getHashForPrima, 2), resourceHash = _this$getHashForPrima2[0], newIncludes = _this$getHashForPrima2[1];
+                    var newDidSerialize = this.isCollection(primaryResource) ? primaryResource.models : [
+                        primaryResource
+                    ];
+                    return this.buildPayload(undefined, newIncludes, newDidSerialize, resourceHash);
+                } else {
+                    var nextIncludedResource = toInclude.shift();
+                    var _this$getHashForInclu = this.getHashForIncludedResource(nextIncludedResource), _this$getHashForInclu2 = _slicedToArray(_this$getHashForInclu, 2), _resourceHash = _this$getHashForInclu2[0], _newIncludes = _this$getHashForInclu2[1];
+                    var newToInclude = _newIncludes.filter(function(resource) {
+                        return !didSerialize.map(function(m) {
+                            return m.toString();
+                        }).includes(resource.toString());
+                    }).concat(toInclude);
+                    var _newDidSerialize = (this.isCollection(nextIncludedResource) ? nextIncludedResource.models : [
+                        nextIncludedResource
+                    ]).concat(didSerialize);
+                    var newJson = this.mergePayloads(json, _resourceHash);
+                    return this.buildPayload(undefined, newToInclude, _newDidSerialize, newJson);
+                }
+            }
+        },
+        {
+            key: "getHashForPrimaryResource",
+            value: function getHashForPrimaryResource(resource) {
+                var _this$getHashForResou = this.getHashForResource(resource), _this$getHashForResou2 = _slicedToArray(_this$getHashForResou, 2), hash = _this$getHashForResou2[0], addToIncludes = _this$getHashForResou2[1];
+                var hashWithRoot;
+                if (this.root) {
+                    assert(!(resource instanceof PolymorphicCollection), "The base Serializer class cannot serialize a top-level PolymorphicCollection when root is true, since PolymorphicCollections have no type.");
+                    var serializer = this.serializerFor(resource.modelName);
+                    var rootKey = serializer.keyForResource(resource);
+                    hashWithRoot = _defineProperty({}, rootKey, hash);
+                } else hashWithRoot = hash;
+                return [
+                    hashWithRoot,
+                    addToIncludes
+                ];
+            }
+        },
+        {
+            key: "getHashForIncludedResource",
+            value: function getHashForIncludedResource(resource) {
+                var hashWithRoot, addToIncludes;
+                if (resource instanceof PolymorphicCollection) {
+                    hashWithRoot = {};
+                    addToIncludes = resource.models;
+                } else {
+                    var serializer = this.serializerFor(resource.modelName);
+                    var _serializer$getHashFo = serializer.getHashForResource(resource), _serializer$getHashFo2 = _slicedToArray(_serializer$getHashFo, 2), hash = _serializer$getHashFo2[0], newModels = _serializer$getHashFo2[1]; // Included resources always have a root, and are always pushed to an array.
+                    var rootKey = serializer.keyForRelationship(resource.modelName);
+                    hashWithRoot = Array.isArray(hash) ? _defineProperty({}, rootKey, hash) : _defineProperty({}, rootKey, [
+                        hash
+                    ]);
+                    addToIncludes = newModels;
+                }
+                return [
+                    hashWithRoot,
+                    addToIncludes
+                ];
+            }
+        },
+        {
+            key: "getHashForResource",
+            value: function getHashForResource(resource) {
+                var _this2 = this;
+                var removeForeignKeys = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
+                var didSerialize = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
+                var lookupSerializer = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : false;
+                var serializer = this;
+                var hash; // PolymorphicCollection lacks a modelName, but is dealt with in the map
+                // by looking up the serializer on a per-model basis
+                if (lookupSerializer && resource.modelName) serializer = this.serializerFor(resource.modelName);
+                if (this.isModel(resource)) hash = serializer._hashForModel(resource, removeForeignKeys, didSerialize);
+                else hash = resource.models.map(function(m) {
+                    var modelSerializer = serializer;
+                    if (!modelSerializer) // Can't get here if lookupSerializer is false, so look it up
+                    modelSerializer = _this2.serializerFor(m.modelName);
+                    return modelSerializer._hashForModel(m, removeForeignKeys, didSerialize);
+                });
+                var addToIncludes = (0, _uniqByDefault.default)((0, _compactDefault.default)((0, _flattenDefault.default)(serializer.getKeysForIncluded().map(function(key) {
+                    if (_this2.isCollection(resource)) return resource.models.map(function(m) {
+                        return m[key];
+                    });
+                    else return resource[key];
+                }))), function(m) {
+                    return m.toString();
+                });
+                return [
+                    hash,
+                    addToIncludes
+                ];
+            }
+        },
+        {
+            key: "mergePayloads",
+            value: function mergePayloads(json, resourceHash) {
+                var newJson;
+                var _Object$keys = Object.keys(resourceHash), _Object$keys2 = _slicedToArray(_Object$keys, 1), resourceHashKey = _Object$keys2[0];
+                if (json[resourceHashKey]) {
+                    newJson = json;
+                    newJson[resourceHashKey] = json[resourceHashKey].concat(resourceHash[resourceHashKey]);
+                } else newJson = Object.assign(json, resourceHash);
+                return newJson;
+            }
+        },
+        {
+            key: "keyForResource",
+            value: function keyForResource(resource) {
+                var modelName = resource.modelName;
+                return this.isModel(resource) ? this.keyForModel(modelName) : this.keyForCollection(modelName);
+            }
+        },
+        {
+            key: "keyForModel",
+            value: function keyForModel(modelName) {
+                return camelize(modelName);
+            }
+        },
+        {
+            key: "keyForCollection",
+            value: function keyForCollection(modelName) {
+                return this._container.inflector.pluralize(this.keyForModel(modelName));
+            }
+        },
+        {
+            key: "_hashForModel",
+            value: function _hashForModel(model, removeForeignKeys) {
+                var _this3 = this;
+                var didSerialize = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
+                var attrs = this._attrsForModel(model);
+                if (removeForeignKeys) model.fks.forEach(function(fk) {
+                    delete attrs[fk];
+                });
+                if (this.embed) {
+                    var newDidSerialize = Object.assign({}, didSerialize);
+                    newDidSerialize[model.modelName] = newDidSerialize[model.modelName] || {};
+                    newDidSerialize[model.modelName][model.id] = true;
+                    this.getKeysForEmbedded().forEach(function(key) {
+                        var associatedResource = model[key];
+                        if (associatedResource && !(0, _getDefault.default)(newDidSerialize, "".concat(associatedResource.modelName, ".").concat(associatedResource.id))) {
+                            var _this3$getHashForReso = _this3.getHashForResource(associatedResource, true, newDidSerialize, true), _this3$getHashForReso2 = _slicedToArray(_this3$getHashForReso, 1), associatedResourceHash = _this3$getHashForReso2[0];
+                            var formattedKey = _this3.keyForEmbeddedRelationship(key);
+                            attrs[formattedKey] = associatedResourceHash;
+                            if (_this3.isModel(associatedResource)) {
+                                var fk = "".concat(camelize(key), "Id");
+                                delete attrs[fk];
+                            }
+                        }
+                    });
+                }
+                return this._maybeAddAssociationIds(model, attrs);
+            }
+        },
+        {
+            key: "_attrsForModel",
+            value: function _attrsForModel(model) {
+                var attrs = {};
+                if (this.attrs) attrs = this.attrs.reduce(function(memo, attr) {
+                    memo[attr] = model[attr];
+                    return memo;
+                }, {});
+                else attrs = Object.assign(attrs, model.attrs);
+                 // Remove fks
+                model.fks.forEach(function(key) {
+                    return delete attrs[key];
+                });
+                return this._formatAttributeKeys(attrs);
+            }
+        },
+        {
+            key: "_maybeAddAssociationIds",
+            value: function _maybeAddAssociationIds(model, attrs) {
+                var _this4 = this;
+                var newHash = Object.assign({}, attrs);
+                if (this.serializeIds === "always") _toConsumableArray(model.associationKeys).filter(function(key) {
+                    return !_this4._embedFn(key);
+                }).forEach(function(key) {
+                    var resource = model[key];
+                    var association = model.associationFor(key);
+                    if (_this4.isCollection(resource)) {
+                        var formattedKey = _this4.keyForRelationshipIds(key);
+                        newHash[formattedKey] = model["".concat(_this4._container.inflector.singularize(key), "Ids")];
+                    } else if (_this4.isModel(resource) && association.isPolymorphic) {
+                        var formattedTypeKey = _this4.keyForPolymorphicForeignKeyType(key);
+                        var formattedIdKey = _this4.keyForPolymorphicForeignKeyId(key);
+                        newHash[formattedTypeKey] = model["".concat(key, "Id")].type;
+                        newHash[formattedIdKey] = model["".concat(key, "Id")].id;
+                    } else if (resource) {
+                        var _formattedKey = _this4.keyForForeignKey(key);
+                        newHash[_formattedKey] = model["".concat(key, "Id")];
+                    }
+                });
+                else if (this.serializeIds === "included") this.getKeysForIncluded().forEach(function(key) {
+                    var resource = model[key];
+                    var association = model.associationFor(key);
+                    if (_this4.isCollection(resource)) {
+                        var formattedKey = _this4.keyForRelationshipIds(key);
+                        newHash[formattedKey] = model["".concat(_this4._container.inflector.singularize(key), "Ids")];
+                    } else if (_this4.isModel(resource) && association.isPolymorphic) {
+                        var formattedTypeKey = _this4.keyForPolymorphicForeignKeyType(key);
+                        var formattedIdKey = _this4.keyForPolymorphicForeignKeyId(key);
+                        newHash[formattedTypeKey] = model["".concat(key, "Id")].type;
+                        newHash[formattedIdKey] = model["".concat(key, "Id")].id;
+                    } else if (_this4.isModel(resource)) {
+                        var _formattedKey2 = _this4.keyForForeignKey(key);
+                        newHash[_formattedKey2] = model["".concat(key, "Id")];
+                    }
+                });
+                return newHash;
+            }
+        },
+        {
+            key: "keyForAttribute",
+            value: function keyForAttribute(attr) {
+                if (attr === "id") return this.keyForId();
+                return attr;
+            }
+        },
+        {
+            key: "keyForRelationship",
+            value: function keyForRelationship(modelName) {
+                return camelize(this._container.inflector.pluralize(modelName));
+            }
+        },
+        {
+            key: "keyForEmbeddedRelationship",
+            value: function keyForEmbeddedRelationship(attributeName) {
+                return camelize(attributeName);
+            }
+        },
+        {
+            key: "keyForRelationshipIds",
+            value: function keyForRelationshipIds(relationshipName) {
+                return "".concat(this._container.inflector.singularize(camelize(relationshipName)), "Ids");
+            }
+        },
+        {
+            key: "keyForForeignKey",
+            value: function keyForForeignKey(relationshipName) {
+                return "".concat(camelize(relationshipName), "Id");
+            }
+        },
+        {
+            key: "keyForPolymorphicForeignKeyId",
+            value: function keyForPolymorphicForeignKeyId(relationshipName) {
+                return "".concat(camelize(relationshipName), "Id");
+            }
+        },
+        {
+            key: "keyForPolymorphicForeignKeyType",
+            value: function keyForPolymorphicForeignKeyType(relationshipName) {
+                return "".concat(camelize(relationshipName), "Type");
+            }
+        },
+        {
+            key: "isModel",
+            value: function isModel(object) {
+                return object instanceof Model;
+            }
+        },
+        {
+            key: "isCollection",
+            value: function isCollection(object) {
+                return object instanceof Collection || object instanceof PolymorphicCollection;
+            }
+        },
+        {
+            key: "isModelOrCollection",
+            value: function isModelOrCollection(object) {
+                return this.isModel(object) || this.isCollection(object);
+            }
+        },
+        {
+            key: "serializerFor",
+            value: function serializerFor(type) {
+                return this.registry.serializerFor(type);
+            }
+        },
+        {
+            key: "getAssociationKeys",
+            value: function getAssociationKeys() {
+                return (0, _isFunctionDefault.default)(this.include) ? this.include(this.request, this.primaryResource) : this.include;
+            }
+        },
+        {
+            key: "getKeysForEmbedded",
+            value: function getKeysForEmbedded() {
+                var _this5 = this;
+                return this.getAssociationKeys().filter(function(k) {
+                    return _this5._embedFn(k);
+                });
+            }
+        },
+        {
+            key: "getKeysForIncluded",
+            value: function getKeysForIncluded() {
+                var _this6 = this;
+                return this.getAssociationKeys().filter(function(k) {
+                    return !_this6._embedFn(k);
+                });
+            }
+        },
+        {
+            key: "schema",
+            get: function get() {
+                return this.registry.schema;
+            }
+        },
+        {
+            key: "keyForId",
+            value: function keyForId() {
+                return this.primaryKey;
+            }
+        },
+        {
+            key: "valueForId",
+            value: function valueForId(value) {
+                return value;
+            }
+        },
+        {
+            key: "_formatAttributeKeys",
+            value: function _formatAttributeKeys(attrs) {
+                var formattedAttrs = {};
+                for(var key in attrs){
+                    var formattedValue = attrs[key];
+                    if (key === "id") formattedValue = this.valueForId(formattedValue);
+                    var formattedKey = this.keyForAttribute(key);
+                    formattedAttrs[formattedKey] = formattedValue;
+                }
+                return formattedAttrs;
+            }
+        },
+        {
+            key: "getCoalescedIds",
+            value: function getCoalescedIds() {}
+        }
+    ]);
+    return Serializer;
+}(); // Defaults
+Serializer.prototype.include = [];
+Serializer.prototype.root = true;
+Serializer.prototype.embed = false;
+Serializer.prototype.primaryKey = "id";
+Serializer.prototype.serializeIds = "included"; // can be 'included', 'always', or 'never'
+Serializer.extend = extend;
+/**
+  The JSONAPISerializer. Subclass of Serializer.
+
+  @class JSONAPISerializer
+  @constructor
+  @public
+ */ var JSONAPISerializer = /*#__PURE__*/ function(_Serializer) {
+    _inherits(JSONAPISerializer, _Serializer);
+    var _super = _createSuper(JSONAPISerializer);
+    function JSONAPISerializer() {
+        var _this;
+        _classCallCheck(this, JSONAPISerializer);
+        _this = _super.apply(this, arguments);
+        /**
+      By default, JSON:API's linkage data is only added for relationships that are being included in the current request.
+       That means given an `author` model with a `posts` relationship, a GET request to /authors/1 would return a JSON:API document with an empty `relationships` hash:
+       ```js
+      {
+        data: {
+          type: 'authors',
+          id: '1',
+          attributes: { ... }
+        }
+      }
+      ```
+       but a request to GET /authors/1?include=posts would have linkage data added (in addition to the included resources):
+       ```js
+      {
+        data: {
+          type: 'authors',
+          id: '1',
+          attributes: { ... },
+          relationships: {
+            data: [
+              { type: 'posts', id: '1' },
+              { type: 'posts', id: '2' },
+              { type: 'posts', id: '3' }
+            ]
+          }
+        },
+        included: [ ... ]
+      }
+      ```
+       To add the linkage data for all relationships, you could set `alwaysIncludeLinkageData` to `true`:
+       ```js
+      JSONAPISerializer.extend({
+        alwaysIncludeLinkageData: true
+      });
+      ```
+       Then, a GET to /authors/1 would respond with
+       ```js
+      {
+        data: {
+          type: 'authors',
+          id: '1',
+          attributes: { ... },
+          relationships: {
+            posts: {
+              data: [
+                { type: 'posts', id: '1' },
+                { type: 'posts', id: '2' },
+                { type: 'posts', id: '3' }
+              ]
+            }
+          }
+        }
+      }
+      ```
+       even though the related `posts` are not included in the same document.
+       You can also use the `links` method (on the Serializer base class) to add relationship links (which will always be added regardless of the relationship is being included document), or you could use `shouldIncludeLinkageData` for more granular control.
+       For more background on the behavior of this API, see [this blog post](http://www.ember-cli-mirage.com/blog/changing-mirages-default-linkage-data-behavior-1475).
+       @property alwaysIncludeLinkageData
+      @type {Boolean}
+      @public
+    */ _this.alwaysIncludeLinkageData = _this.alwaysIncludeLinkageData || undefined; // this is just here so I can add the doc comment. Better way?
+        return _this;
+    } // Don't think this is used?
+    _createClass(JSONAPISerializer, [
+        {
+            key: "keyForModel",
+            value: function keyForModel(modelName) {
+                return dasherize(modelName);
+            } // Don't think this is used?
+        },
+        {
+            key: "keyForCollection",
+            value: function keyForCollection(modelName) {
+                return dasherize(modelName);
+            }
+        },
+        {
+            key: "keyForAttribute",
+            value: function keyForAttribute(attr) {
+                return dasherize(attr);
+            }
+        },
+        {
+            key: "keyForRelationship",
+            value: function keyForRelationship(key) {
+                return dasherize(key);
+            }
+        },
+        {
+            key: "links",
+            value: function links() {}
+        },
+        {
+            key: "getHashForPrimaryResource",
+            value: function getHashForPrimaryResource(resource) {
+                this._createRequestedIncludesGraph(resource);
+                var resourceHash = this.getHashForResource(resource);
+                var hashWithRoot = {
+                    data: resourceHash
+                };
+                var addToIncludes = this.getAddToIncludesForResource(resource);
+                return [
+                    hashWithRoot,
+                    addToIncludes
+                ];
+            }
+        },
+        {
+            key: "getHashForIncludedResource",
+            value: function getHashForIncludedResource(resource) {
+                var serializer = this.serializerFor(resource.modelName);
+                var hash = serializer.getHashForResource(resource);
+                var hashWithRoot = {
+                    included: this.isModel(resource) ? [
+                        hash
+                    ] : hash
+                };
+                var addToIncludes = [];
+                if (!this.hasQueryParamIncludes()) addToIncludes = this.getAddToIncludesForResource(resource);
+                return [
+                    hashWithRoot,
+                    addToIncludes
+                ];
+            }
+        },
+        {
+            key: "getHashForResource",
+            value: function getHashForResource(resource) {
+                var _this2 = this;
+                var hash;
+                if (this.isModel(resource)) hash = this.getResourceObjectForModel(resource);
+                else hash = resource.models.map(function(m) {
+                    return _this2.getResourceObjectForModel(m);
+                });
+                return hash;
+            }
+        },
+        {
+            key: "getAddToIncludesForResource",
+            value: function getAddToIncludesForResource(resource) {
+                var relationshipPaths;
+                if (this.hasQueryParamIncludes()) relationshipPaths = this.getQueryParamIncludes();
+                else {
+                    var serializer = this.serializerFor(resource.modelName);
+                    relationshipPaths = serializer.getKeysForIncluded();
+                }
+                return this.getAddToIncludesForResourceAndPaths(resource, relationshipPaths);
+            }
+        },
+        {
+            key: "getAddToIncludesForResourceAndPaths",
+            value: function getAddToIncludesForResourceAndPaths(resource, relationshipPaths) {
+                var _this3 = this;
+                var includes = [];
+                relationshipPaths.forEach(function(path) {
+                    var relationshipNames = path.split(".");
+                    var newIncludes = _this3.getIncludesForResourceAndPath.apply(_this3, [
+                        resource
+                    ].concat(_toConsumableArray(relationshipNames)));
+                    includes.push(newIncludes);
+                });
+                return (0, _uniqByDefault.default)((0, _compactDefault.default)((0, _flattenDefault.default)(includes)), function(m) {
+                    return m.toString();
+                });
+            }
+        },
+        {
+            key: "getIncludesForResourceAndPath",
+            value: function getIncludesForResourceAndPath(resource) {
+                var _this4 = this;
+                for(var _len = arguments.length, names = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++)names[_key - 1] = arguments[_key];
+                var nameForCurrentResource = camelize(names.shift());
+                var includes = [];
+                var modelsToAdd = [];
+                if (this.isModel(resource)) {
+                    var relationship = resource[nameForCurrentResource];
+                    if (this.isModel(relationship)) modelsToAdd = [
+                        relationship
+                    ];
+                    else if (this.isCollection(relationship)) modelsToAdd = relationship.models;
+                } else resource.models.forEach(function(model) {
+                    var relationship = model[nameForCurrentResource];
+                    if (_this4.isModel(relationship)) modelsToAdd.push(relationship);
+                    else if (_this4.isCollection(relationship)) modelsToAdd = modelsToAdd.concat(relationship.models);
+                });
+                includes = includes.concat(modelsToAdd);
+                if (names.length) modelsToAdd.forEach(function(model) {
+                    includes = includes.concat(_this4.getIncludesForResourceAndPath.apply(_this4, [
+                        model
+                    ].concat(names)));
+                });
+                return includes;
+            }
+        },
+        {
+            key: "getResourceObjectForModel",
+            value: function getResourceObjectForModel(model) {
+                var attrs = this._attrsForModel(model, true);
+                delete attrs.id;
+                var hash = {
+                    type: this.typeKeyForModel(model),
+                    id: model.id,
+                    attributes: attrs
+                };
+                return this._maybeAddRelationshipsToResourceObjectForModel(hash, model);
+            }
+        },
+        {
+            key: "_maybeAddRelationshipsToResourceObjectForModel",
+            value: function _maybeAddRelationshipsToResourceObjectForModel(hash, model) {
+                var _this5 = this;
+                var relationships = {};
+                model.associationKeys.forEach(function(key) {
+                    var relationship = model[key];
+                    var relationshipKey = _this5.keyForRelationship(key);
+                    var relationshipHash = {};
+                    if (_this5.hasLinksForRelationship(model, key)) {
+                        var serializer = _this5.serializerFor(model.modelName);
+                        var links = serializer.links(model);
+                        relationshipHash.links = links[key];
+                    }
+                    if (_this5.alwaysIncludeLinkageData || _this5.shouldIncludeLinkageData(key, model) || _this5._relationshipIsIncludedForModel(key, model)) {
+                        var data = null;
+                        if (_this5.isModel(relationship)) data = {
+                            type: _this5.typeKeyForModel(relationship),
+                            id: relationship.id
+                        };
+                        else if (_this5.isCollection(relationship)) data = relationship.models.map(function(model) {
+                            return {
+                                type: _this5.typeKeyForModel(model),
+                                id: model.id
+                            };
+                        });
+                        relationshipHash.data = data;
+                    }
+                    if (!(0, _isEmptyDefault.default)(relationshipHash)) relationships[relationshipKey] = relationshipHash;
+                });
+                if (!(0, _isEmptyDefault.default)(relationships)) hash.relationships = relationships;
+                return hash;
+            }
+        },
+        {
+            key: "hasLinksForRelationship",
+            value: function hasLinksForRelationship(model, relationshipKey) {
+                var serializer = this.serializerFor(model.modelName);
+                var links = serializer.links && serializer.links(model);
+                return links && links[relationshipKey] != null;
+            }
+        },
+        {
+            key: "_relationshipIsIncludedForModel",
+            value: function _relationshipIsIncludedForModel(relationshipKey, model) {
+                if (this.hasQueryParamIncludes()) {
+                    var graph = this.request._includesGraph;
+                    var graphKey = this._graphKeyForModel(model); // Find the resource in the graph
+                    var graphResource; // Check primary data
+                    if (graph.data[graphKey]) graphResource = graph.data[graphKey]; // Check includes
+                    else if (graph.included[this._container.inflector.pluralize(model.modelName)]) graphResource = graph.included[this._container.inflector.pluralize(model.modelName)][graphKey];
+                     // If the model's in the graph, check if relationshipKey should be included
+                    return graphResource && graphResource.relationships && Object.prototype.hasOwnProperty.call(graphResource.relationships, dasherize(relationshipKey));
+                } else {
+                    var relationshipPaths = this.getKeysForIncluded();
+                    return relationshipPaths.includes(relationshipKey);
+                }
+            }
+        },
+        {
+            key: "_createRequestedIncludesGraph",
+            value: function _createRequestedIncludesGraph(primaryResource) {
+                var _this6 = this;
+                var graph = {
+                    data: {}
+                };
+                if (this.isModel(primaryResource)) {
+                    var primaryResourceKey = this._graphKeyForModel(primaryResource);
+                    graph.data[primaryResourceKey] = {};
+                    this._addPrimaryModelToRequestedIncludesGraph(graph, primaryResource);
+                } else if (this.isCollection(primaryResource)) primaryResource.models.forEach(function(model) {
+                    var primaryResourceKey = _this6._graphKeyForModel(model);
+                    graph.data[primaryResourceKey] = {};
+                    _this6._addPrimaryModelToRequestedIncludesGraph(graph, model);
+                });
+                 // Hack :/ Need to think of a better palce to put this if
+                // refactoring json:api serializer.
+                this.request._includesGraph = graph;
+            }
+        },
+        {
+            key: "_addPrimaryModelToRequestedIncludesGraph",
+            value: function _addPrimaryModelToRequestedIncludesGraph(graph, model) {
+                var _this7 = this;
+                if (this.hasQueryParamIncludes()) {
+                    var graphKey = this._graphKeyForModel(model);
+                    this.getQueryParamIncludes().filter(function(item) {
+                        return !!item.trim();
+                    }).forEach(function(includesPath) {
+                        // includesPath is post.comments, for example
+                        graph.data[graphKey].relationships = graph.data[graphKey].relationships || {};
+                        var relationshipKeys = includesPath.split(".").map(dasherize);
+                        var relationshipKey = relationshipKeys[0];
+                        var graphRelationshipKey = relationshipKey;
+                        var normalizedRelationshipKey = camelize(relationshipKey);
+                        var hasAssociation = model.associationKeys.has(normalizedRelationshipKey);
+                        assert(hasAssociation, "You tried to include \"".concat(relationshipKey, "\" with ").concat(model, " but no association named \"").concat(normalizedRelationshipKey, "\" is defined on the model."));
+                        var relationship = model[normalizedRelationshipKey];
+                        var relationshipData;
+                        if (_this7.isModel(relationship)) relationshipData = _this7._graphKeyForModel(relationship);
+                        else if (_this7.isCollection(relationship)) relationshipData = relationship.models.map(_this7._graphKeyForModel);
+                        else relationshipData = null;
+                        graph.data[graphKey].relationships[graphRelationshipKey] = relationshipData;
+                        if (relationship) _this7._addResourceToRequestedIncludesGraph(graph, relationship, relationshipKeys.slice(1));
+                    });
+                }
+            }
+        },
+        {
+            key: "_addResourceToRequestedIncludesGraph",
+            value: function _addResourceToRequestedIncludesGraph(graph, resource, relationshipNames) {
+                var _this8 = this;
+                graph.included = graph.included || {};
+                var models = this.isCollection(resource) ? resource.models : [
+                    resource
+                ];
+                models.forEach(function(model) {
+                    var collectionName = _this8._container.inflector.pluralize(model.modelName);
+                    graph.included[collectionName] = graph.included[collectionName] || {};
+                    _this8._addModelToRequestedIncludesGraph(graph, model, relationshipNames);
+                });
+            }
+        },
+        {
+            key: "_addModelToRequestedIncludesGraph",
+            value: function _addModelToRequestedIncludesGraph(graph, model, relationshipNames) {
+                var collectionName = this._container.inflector.pluralize(model.modelName);
+                var resourceKey = this._graphKeyForModel(model);
+                graph.included[collectionName][resourceKey] = graph.included[collectionName][resourceKey] || {};
+                if (relationshipNames.length) this._addResourceRelationshipsToRequestedIncludesGraph(graph, collectionName, resourceKey, model, relationshipNames);
+            }
+        },
+        {
+            key: "_addResourceRelationshipsToRequestedIncludesGraph",
+            value: function _addResourceRelationshipsToRequestedIncludesGraph(graph, collectionName, resourceKey, model, relationshipNames) {
+                graph.included[collectionName][resourceKey].relationships = graph.included[collectionName][resourceKey].relationships || {};
+                var relationshipName = relationshipNames[0];
+                var relationship = model[camelize(relationshipName)];
+                var relationshipData;
+                if (this.isModel(relationship)) relationshipData = this._graphKeyForModel(relationship);
+                else if (this.isCollection(relationship)) relationshipData = relationship.models.map(this._graphKeyForModel);
+                graph.included[collectionName][resourceKey].relationships[relationshipName] = relationshipData;
+                if (relationship) this._addResourceToRequestedIncludesGraph(graph, relationship, relationshipNames.slice(1));
+            }
+        },
+        {
+            key: "_graphKeyForModel",
+            value: function _graphKeyForModel(model) {
+                return "".concat(model.modelName, ":").concat(model.id);
+            }
+        },
+        {
+            key: "getQueryParamIncludes",
+            value: function getQueryParamIncludes() {
+                var includes = (0, _getDefault.default)(this, "request.queryParams.include");
+                if (includes && !Array.isArray(includes)) includes = includes.split(",");
+                return includes;
+            }
+        },
+        {
+            key: "hasQueryParamIncludes",
+            value: function hasQueryParamIncludes() {
+                return !!this.getQueryParamIncludes();
+            }
+        },
+        {
+            key: "typeKeyForModel",
+            value: function typeKeyForModel(model) {
+                return dasherize(this._container.inflector.pluralize(model.modelName));
+            }
+        },
+        {
+            key: "getCoalescedIds",
+            value: function getCoalescedIds(request) {
+                var ids = request.queryParams && request.queryParams["filter[id]"];
+                if (typeof ids === "string") return ids.split(",");
+                return ids;
+            }
+        },
+        {
+            key: "shouldIncludeLinkageData",
+            value: function shouldIncludeLinkageData(relationshipKey, model) {
+                return false;
+            }
+        }
+    ]);
+    return JSONAPISerializer;
+}(Serializer);
+JSONAPISerializer.prototype.alwaysIncludeLinkageData = false;
+/**
+ * @hide
+ */ var SerializerRegistry = /*#__PURE__*/ function() {
+    function SerializerRegistry(schema) {
+        var serializerMap = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+        _classCallCheck(this, SerializerRegistry);
+        this.schema = schema;
+        this._serializerMap = serializerMap;
+    }
+    _createClass(SerializerRegistry, [
+        {
+            key: "normalize",
+            value: function normalize(payload, modelName) {
+                return this.serializerFor(modelName).normalize(payload);
+            }
+        },
+        {
+            key: "serialize",
+            value: function serialize(response, request) {
+                var _this = this;
+                this.request = request;
+                if (this._isModelOrCollection(response)) {
+                    var serializer = this.serializerFor(response.modelName);
+                    return serializer.serialize(response, request);
+                } else if (Array.isArray(response) && response.some(this._isCollection)) return response.reduce(function(json, collection) {
+                    var serializer = _this.serializerFor(collection.modelName);
+                    if (serializer.embed) json[_this._container.inflector.pluralize(collection.modelName)] = serializer.serialize(collection, request);
+                    else json = Object.assign(json, serializer.serialize(collection, request));
+                    return json;
+                }, {});
+                else return response;
+            }
+        },
+        {
+            key: "serializerFor",
+            value: function serializerFor(type) {
+                var _ref = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {}, _ref$explicit = _ref.explicit, explicit = _ref$explicit === void 0 ? false : _ref$explicit;
+                var SerializerForResponse = type && this._serializerMap && this._serializerMap[camelize(type)];
+                if (explicit) assert(!!SerializerForResponse, "You passed in ".concat(type, " as an explicit serializer type but that serializer doesn't exist."));
+                else {
+                    SerializerForResponse = SerializerForResponse || this._serializerMap.application || Serializer;
+                    assert(!SerializerForResponse || SerializerForResponse.prototype.embed || SerializerForResponse.prototype.root || new SerializerForResponse() instanceof JSONAPISerializer, "You cannot have a serializer that sideloads (embed: false) and disables the root (root: false).");
+                }
+                return new SerializerForResponse(this, type, this.request);
+            }
+        },
+        {
+            key: "_isModel",
+            value: function _isModel(object) {
+                return object instanceof Model;
+            }
+        },
+        {
+            key: "_isCollection",
+            value: function _isCollection(object) {
+                return object instanceof Collection || object instanceof PolymorphicCollection;
+            }
+        },
+        {
+            key: "_isModelOrCollection",
+            value: function _isModelOrCollection(object) {
+                return this._isModel(object) || this._isCollection(object);
+            }
+        },
+        {
+            key: "registerSerializers",
+            value: function registerSerializers(newSerializerMaps) {
+                var currentSerializerMap = this._serializerMap || {};
+                this._serializerMap = Object.assign(currentSerializerMap, newSerializerMaps);
+            }
+        },
+        {
+            key: "getCoalescedIds",
+            value: function getCoalescedIds(request, modelName) {
+                return this.serializerFor(modelName).getCoalescedIds(request);
+            }
+        }
+    ]);
+    return SerializerRegistry;
+}();
+var collectionNameCache = {};
+var internalCollectionNameCache = {};
+var modelNameCache = {};
+/**
+  The primary use of the `Schema` class is to use it to find Models and Collections via the `Model` class methods.
+
+  The `Schema` is most often accessed via the first parameter to a route handler:
+
+  ```js
+  this.get('posts', schema => {
+    return schema.posts.where({ isAdmin: false });
+  });
+  ```
+
+  It is also available from the `.schema` property of a `server` instance:
+
+  ```js
+  server.schema.users.create({ name: 'Yehuda' });
+  ```
+
+  To work with the Model or Collection returned from one of the methods below, refer to the instance methods in the API docs for the `Model` and `Collection` classes.
+
+  @class Schema
+  @constructor
+  @public
+ */ var Schema = /*#__PURE__*/ function() {
+    function Schema(db) {
+        var modelsMap = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+        _classCallCheck(this, Schema);
+        assert(db, "A schema requires a db");
+        /**
+      Returns Mirage's database. See the `Db` docs for the db's API.
+       @property db
+      @type {Object}
+      @public
+    */ this.db = db;
+        this._registry = {};
+        this._dependentAssociations = {
+            polymorphic: []
+        };
+        this.registerModels(modelsMap);
+        this.isSaving = {}; // a hash of models that are being saved, used to avoid cycles
+    }
+    /**
+    @method registerModels
+    @param hash
+    @public
+    @hide
+   */ _createClass(Schema, [
+        {
+            key: "registerModels",
+            value: function registerModels() {
+                var _this = this;
+                var hash = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+                (0, _forInDefault.default)(hash, function(model, key) {
+                    _this.registerModel(key, hash[key]);
+                });
+            }
+        },
+        {
+            key: "registerModel",
+            value: function registerModel(type, ModelClass) {
+                var _this2 = this;
+                var camelizedModelName = camelize(type);
+                var modelName = dasherize(camelizedModelName); // Avoid mutating original class, because we may want to reuse it across many tests
+                ModelClass = ModelClass.extend(); // Store model & fks in registry
+                // TODO: don't think this is needed anymore
+                this._registry[camelizedModelName] = this._registry[camelizedModelName] || {
+                    "class": null,
+                    foreignKeys: []
+                }; // we may have created this key before, if another model added fks to it
+                this._registry[camelizedModelName]["class"] = ModelClass; // TODO: set here, remove from model#constructor
+                ModelClass.prototype._schema = this;
+                ModelClass.prototype.modelName = modelName; // Set up associations
+                ModelClass.prototype.hasManyAssociations = {}; // a registry of the model's hasMany associations. Key is key from model definition, value is association instance itself
+                ModelClass.prototype.hasManyAssociationFks = {}; // a lookup table to get the hasMany association by foreignKey
+                ModelClass.prototype.belongsToAssociations = {}; // a registry of the model's belongsTo associations. Key is key from model definition, value is association instance itself
+                ModelClass.prototype.belongsToAssociationFks = {}; // a lookup table to get the belongsTo association by foreignKey
+                ModelClass.prototype.associationKeys = new Set(); // ex: address.user, user.addresses
+                ModelClass.prototype.associationIdKeys = new Set(); // ex: address.user_id, user.address_ids
+                ModelClass.prototype.dependentAssociations = []; // a registry of associations that depend on this model, needed for deletion cleanup.
+                var fksAddedFromThisModel = {};
+                for(var associationProperty in ModelClass.prototype)if (ModelClass.prototype[associationProperty] instanceof Association) {
+                    var association = ModelClass.prototype[associationProperty];
+                    association.name = associationProperty;
+                    association.modelName = association.modelName || this.toModelName(associationProperty);
+                    association.ownerModelName = modelName;
+                    association.setSchema(this); // Update the registry with this association's foreign keys. This is
+                    // essentially our "db migration", since we must know about the fks.
+                    var _association$getForei = association.getForeignKeyArray(), _association$getForei2 = _slicedToArray(_association$getForei, 2), fkHolder = _association$getForei2[0], fk = _association$getForei2[1];
+                    fksAddedFromThisModel[fkHolder] = fksAddedFromThisModel[fkHolder] || [];
+                    assert(!fksAddedFromThisModel[fkHolder].includes(fk), "Your '".concat(type, "' model definition has multiple possible inverse relationships of type '").concat(fkHolder, "'. Please use explicit inverses."));
+                    fksAddedFromThisModel[fkHolder].push(fk);
+                    this._addForeignKeyToRegistry(fkHolder, fk); // Augment the Model's class with any methods added by this association
+                    association.addMethodsToModelClass(ModelClass, associationProperty);
+                }
+                 // Create a db collection for this model, if doesn't exist
+                var collection = this.toCollectionName(modelName);
+                if (!this.db[collection]) this.db.createCollection(collection);
+                 // Create the entity methods
+                this[collection] = {
+                    camelizedModelName: camelizedModelName,
+                    "new": function _new(attrs) {
+                        return _this2["new"](camelizedModelName, attrs);
+                    },
+                    create: function create(attrs) {
+                        return _this2.create(camelizedModelName, attrs);
+                    },
+                    all: function all(attrs) {
+                        return _this2.all(camelizedModelName, attrs);
+                    },
+                    find: function find(attrs) {
+                        return _this2.find(camelizedModelName, attrs);
+                    },
+                    findBy: function findBy(attrs) {
+                        return _this2.findBy(camelizedModelName, attrs);
+                    },
+                    findOrCreateBy: function findOrCreateBy(attrs) {
+                        return _this2.findOrCreateBy(camelizedModelName, attrs);
+                    },
+                    where: function where(attrs) {
+                        return _this2.where(camelizedModelName, attrs);
+                    },
+                    none: function none(attrs) {
+                        return _this2.none(camelizedModelName, attrs);
+                    },
+                    first: function first(attrs) {
+                        return _this2.first(camelizedModelName, attrs);
+                    }
+                };
+                return this;
+            }
+        },
+        {
+            key: "modelFor",
+            value: function modelFor(type) {
+                return this._registry[type];
+            }
+        },
+        {
+            key: "new",
+            value: function _new(type, attrs) {
+                return this._instantiateModel(dasherize(type), attrs);
+            }
+        },
+        {
+            key: "create",
+            value: function create(type, attrs) {
+                return this["new"](type, attrs).save();
+            }
+        },
+        {
+            key: "all",
+            value: function all(type) {
+                var collection = this.collectionForType(type);
+                return this._hydrate(collection, dasherize(type));
+            }
+        },
+        {
+            key: "none",
+            value: function none(type) {
+                return this._hydrate([], dasherize(type));
+            }
+        },
+        {
+            key: "find",
+            value: function find(type, ids) {
+                var collection = this.collectionForType(type);
+                var records = collection.find(ids);
+                if (Array.isArray(ids)) assert(records.length === ids.length, "Couldn't find all ".concat(this._container.inflector.pluralize(type), " with ids: (").concat(ids.join(","), ") (found ").concat(records.length, " results, but was looking for ").concat(ids.length, ")"));
+                return this._hydrate(records, dasherize(type));
+            }
+        },
+        {
+            key: "findBy",
+            value: function findBy(type, query) {
+                var collection = this.collectionForType(type);
+                var record = collection.findBy(query);
+                return this._hydrate(record, dasherize(type));
+            }
+        },
+        {
+            key: "findOrCreateBy",
+            value: function findOrCreateBy(type, attrs) {
+                var collection = this.collectionForType(type);
+                var record = collection.findBy(attrs);
+                var model;
+                if (!record) model = this.create(type, attrs);
+                else model = this._hydrate(record, dasherize(type));
+                return model;
+            }
+        },
+        {
+            key: "where",
+            value: function where(type, query) {
+                var collection = this.collectionForType(type);
+                var records = collection.where(query);
+                return this._hydrate(records, dasherize(type));
+            }
+        },
+        {
+            key: "first",
+            value: function first(type) {
+                var collection = this.collectionForType(type);
+                var record = collection[0];
+                return this._hydrate(record, dasherize(type));
+            }
+        },
+        {
+            key: "modelClassFor",
+            value: function modelClassFor(modelName) {
+                var model = this._registry[camelize(modelName)];
+                assert(model, "Model not registered: ".concat(modelName));
+                return model["class"].prototype;
+            }
+        },
+        {
+            key: "addDependentAssociation",
+            value: function addDependentAssociation(association, modelName) {
+                if (association.isPolymorphic) this._dependentAssociations.polymorphic.push(association);
+                else {
+                    this._dependentAssociations[modelName] = this._dependentAssociations[modelName] || [];
+                    this._dependentAssociations[modelName].push(association);
+                }
+            }
+        },
+        {
+            key: "dependentAssociationsFor",
+            value: function dependentAssociationsFor(modelName) {
+                var directDependents = this._dependentAssociations[modelName] || [];
+                var polymorphicAssociations = this._dependentAssociations.polymorphic || [];
+                return directDependents.concat(polymorphicAssociations);
+            }
+        },
+        {
+            key: "associationsFor",
+            value: function associationsFor(modelName) {
+                var modelClass = this.modelClassFor(modelName);
+                return Object.assign({}, modelClass.belongsToAssociations, modelClass.hasManyAssociations);
+            }
+        },
+        {
+            key: "hasModelForModelName",
+            value: function hasModelForModelName(modelName) {
+                return this.modelFor(camelize(modelName));
+            }
+        },
+        {
+            key: "collectionForType",
+            value: function collectionForType(type) {
+                var collection = this.toCollectionName(type);
+                assert(this.db[collection], "You're trying to find model(s) of type ".concat(type, " but this collection doesn't exist in the database."));
+                return this.db[collection];
+            }
+        },
+        {
+            key: "toCollectionName",
+            value: function toCollectionName(type) {
+                if (typeof collectionNameCache[type] !== "string") {
+                    var modelName = dasherize(type);
+                    var collectionName = camelize(this._container.inflector.pluralize(modelName));
+                    collectionNameCache[type] = collectionName;
+                }
+                return collectionNameCache[type];
+            } // This is to get at the underlying Db collection. Poorly named... need to
+        },
+        {
+            key: "toInternalCollectionName",
+            value: function toInternalCollectionName(type) {
+                if (typeof internalCollectionNameCache[type] !== "string") {
+                    var internalCollectionName = "_".concat(this.toCollectionName(type));
+                    internalCollectionNameCache[type] = internalCollectionName;
+                }
+                return internalCollectionNameCache[type];
+            }
+        },
+        {
+            key: "toModelName",
+            value: function toModelName(type) {
+                if (typeof modelNameCache[type] !== "string") {
+                    var dasherized = dasherize(type);
+                    var modelName = this._container.inflector.singularize(dasherized);
+                    modelNameCache[type] = modelName;
+                }
+                return modelNameCache[type];
+            }
+        },
+        {
+            key: "_addForeignKeyToRegistry",
+            value: function _addForeignKeyToRegistry(type, fk) {
+                this._registry[type] = this._registry[type] || {
+                    "class": null,
+                    foreignKeys: []
+                };
+                var fks = this._registry[type].foreignKeys;
+                if (!fks.includes(fk)) fks.push(fk);
+            }
+        },
+        {
+            key: "_instantiateModel",
+            value: function _instantiateModel(modelName, attrs) {
+                var ModelClass = this._modelFor(modelName);
+                var fks = this._foreignKeysFor(modelName);
+                return new ModelClass(this, modelName, attrs, fks);
+            }
+        },
+        {
+            key: "_modelFor",
+            value: function _modelFor(modelName) {
+                return this._registry[camelize(modelName)]["class"];
+            }
+        },
+        {
+            key: "_foreignKeysFor",
+            value: function _foreignKeysFor(modelName) {
+                return this._registry[camelize(modelName)].foreignKeys;
+            }
+        },
+        {
+            key: "_hydrate",
+            value: function _hydrate(records, modelName) {
+                if (Array.isArray(records)) {
+                    var models = records.map(function(record) {
+                        return this._instantiateModel(modelName, record);
+                    }, this);
+                    return new Collection(modelName, models);
+                } else if (records) return this._instantiateModel(modelName, records);
+                else return null;
+            }
+        }
+    ]);
+    return Schema;
+}();
+var classes = {
+    Db: Db,
+    Association: Association,
+    RouteHandler: RouteHandler,
+    BaseRouteHandler: BaseRouteHandler,
+    Serializer: Serializer,
+    SerializerRegistry: SerializerRegistry,
+    Schema: Schema
+};
+var defaultInflector$1 = {
+    singularize: (0, _inflected.singularize),
+    pluralize: (0, _inflected.pluralize)
+};
+/**
+  Lightweight DI container for customizable objects that are needed by
+  deeply nested classes.
+
+  @class Container
+  @hide
+ */ var Container = /*#__PURE__*/ function() {
+    function Container() {
+        _classCallCheck(this, Container);
+        this.inflector = defaultInflector$1;
+    }
+    _createClass(Container, [
+        {
+            key: "register",
+            value: function register(key, value) {
+                this[key] = value;
+            }
+        },
+        {
+            key: "create",
+            value: function create(className) {
+                var Class = classes[className];
+                Class.prototype._container = this;
+                for(var _len = arguments.length, args = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++)args[_key - 1] = arguments[_key];
+                return _construct(Class, args);
+            }
+        }
+    ]);
+    return Container;
+}();
+/**
+  These are side effects. We give each class a default container so it can be
+  easily unit tested.
+
+  We should remove these once we have test coverage and can refactor to a proper
+  DI system.
+*/ var defaultContainer = new Container();
+Db.prototype._container = defaultContainer;
+Association.prototype._container = defaultContainer;
+BaseRouteHandler.prototype._container = defaultContainer;
+RouteHandler.prototype._container = defaultContainer;
+Serializer.prototype._container = defaultContainer;
+SerializerRegistry.prototype._container = defaultContainer;
+Schema.prototype._container = defaultContainer;
+/**
+  Mirage Interceptor Class
+
+    urlPrefix;
+
+    namespace;
+
+    // Creates the interceptor instance
+    constructor(mirageServer, mirageConfig)
+
+    // Allow you to change some of the config options after the server is created
+    config(mirageConfig)
+
+    // These are the equivalent of the functions that were on the Mirage Server.
+    // Those Mirage Server functions are redirected to the Interceptors functions for
+    // backward compatibility
+    get
+    post
+    put
+    delete
+    del
+    patch
+    head
+    options
+
+    // Start the interceptor. (Optional) this happens after the mirage server has been completed configured
+    // and all the models, routes, etc have been defined.
+    start
+    // Shutdown the interceptor instance
+    shutdown
+
+ */ /**
+ @hide
+ */ var defaultPassthroughs = [
+    "http://localhost:0/chromecheckurl",
+    "http://localhost:30820/socket.io",
+    function(request) {
+        return /.+\.hot-update.json$/.test(request.url);
+    }
+];
+var defaultRouteOptions = {
+    coalesce: false,
+    timing: undefined
+};
+/**
+ * Determine if the object contains a valid option.
+ *
+ * @method isOption
+ * @param {Object} option An object with one option value pair.
+ * @return {Boolean} True if option is a valid option, false otherwise.
+ * @private
+ */ function isOption(option) {
+    if (!option || _typeof(option) !== "object") return false;
+    var allOptions = Object.keys(defaultRouteOptions);
+    var optionKeys = Object.keys(option);
+    for(var i = 0; i < optionKeys.length; i++){
+        var key = optionKeys[i];
+        if (allOptions.indexOf(key) > -1) return true;
+    }
+    return false;
+}
+/**
+ * Extract arguments for a route.
+ *
+ * @method extractRouteArguments
+ * @param {Array} args Of the form [options], [object, code], [function, code]
+ * [shorthand, options], [shorthand, code, options]
+ * @return {Array} [handler (i.e. the function, object or shorthand), code,
+ * options].
+ */ function extractRouteArguments(args) {
+    var _args$splice = args.splice(-1), _args$splice2 = _slicedToArray(_args$splice, 1), lastArg = _args$splice2[0];
+    if (isOption(lastArg)) lastArg = (0, _assignDefault.default)({}, defaultRouteOptions, lastArg);
+    else {
+        args.push(lastArg);
+        lastArg = defaultRouteOptions;
+    }
+    var t = 2 - args.length;
+    while(t-- > 0)args.push(undefined);
+    args.push(lastArg);
+    return args;
+}
+var PretenderConfig = /*#__PURE__*/ function() {
+    function PretenderConfig() {
+        _classCallCheck(this, PretenderConfig);
+        _defineProperty(this, "urlPrefix", void 0);
+        _defineProperty(this, "namespace", void 0);
+        _defineProperty(this, "timing", void 0);
+        _defineProperty(this, "passthroughChecks", void 0);
+        _defineProperty(this, "pretender", void 0);
+        _defineProperty(this, "mirageServer", void 0);
+        _defineProperty(this, "trackRequests", void 0);
+    }
+    _createClass(PretenderConfig, [
+        {
+            key: "create",
+            value: function create(mirageServer, config) {
+                var _this = this;
+                this.mirageServer = mirageServer;
+                this.pretender = this._create(mirageServer, config);
+                /**
+       Mirage uses [pretender.js](https://github.com/trek/pretender) as its xhttp interceptor. In your Mirage config, `this.pretender` refers to the actual Pretender instance, so any config options that work there will work here as well.
+        ```js
+       createServer({
+          routes() {
+            this.pretender.handledRequest = (verb, path, request) => {
+              console.log(`Your server responded to ${path}`);
+            }
+          }
+        })
+       ```
+        Refer to [Pretender's docs](https://github.com/pretenderjs/pretender) if you want to change any options on your Pretender instance.
+        @property pretender
+       @return {Object} The Pretender instance
+       @public
+       */ mirageServer.pretender = this.pretender;
+                this.passthroughChecks = this.passthroughChecks || [];
+                this.config(config);
+                [
+                    [
+                        "get"
+                    ],
+                    [
+                        "post"
+                    ],
+                    [
+                        "put"
+                    ],
+                    [
+                        "delete",
+                        "del"
+                    ],
+                    [
+                        "patch"
+                    ],
+                    [
+                        "head"
+                    ],
+                    [
+                        "options"
+                    ]
+                ].forEach(function(_ref) {
+                    var _ref2 = _slicedToArray(_ref, 2), verb = _ref2[0], alias = _ref2[1];
+                    _this[verb] = function(path) {
+                        var _this$pretender;
+                        for(var _len = arguments.length, args = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++)args[_key - 1] = arguments[_key];
+                        var _extractRouteArgument = extractRouteArguments(args), _extractRouteArgument2 = _slicedToArray(_extractRouteArgument, 3), rawHandler = _extractRouteArgument2[0], customizedCode = _extractRouteArgument2[1], options = _extractRouteArgument2[2];
+                        var handler = mirageServer.registerRouteHandler(verb, path, rawHandler, customizedCode, options);
+                        var fullPath = _this._getFullPath(path);
+                        var timing = options.timing !== undefined ? options.timing : function() {
+                            return _this.timing;
+                        };
+                        return (_this$pretender = _this.pretender) === null || _this$pretender === void 0 ? void 0 : _this$pretender[verb](fullPath, handler, timing);
+                    };
+                    mirageServer[verb] = _this[verb];
+                    if (alias) {
+                        _this[alias] = _this[verb];
+                        mirageServer[alias] = _this[verb];
+                    }
+                });
+            }
+        },
+        {
+            key: "config",
+            value: function config(_config) {
+                var _ref3, _config$timing;
+                var useDefaultPassthroughs = typeof _config.useDefaultPassthroughs !== "undefined" ? _config.useDefaultPassthroughs : true;
+                if (useDefaultPassthroughs) this._configureDefaultPassthroughs();
+                var didOverridePretenderConfig = _config.trackRequests !== undefined && _config.trackRequests !== this.trackRequests;
+                assert(!didOverridePretenderConfig, "You cannot modify Pretender's request tracking once the server is created");
+                /**
+       Set the number of milliseconds for the the Server's response time.
+        By default there's a 400ms delay during development, and 0 delay in testing (so your tests run fast).
+        ```js
+       createServer({
+          routes() {
+            this.timing = 400; // default
+          }
+        })
+       ```
+        To set the timing for individual routes, see the `timing` option for route handlers.
+        @property timing
+       @type Number
+       @public
+       */ this.timing = (_ref3 = (_config$timing = _config.timing) !== null && _config$timing !== void 0 ? _config$timing : this.timing) !== null && _ref3 !== void 0 ? _ref3 : 400;
+                /**
+       Sets a string to prefix all route handler URLs with.
+        Useful if your app makes API requests to a different port.
+        ```js
+       createServer({
+          routes() {
+            this.urlPrefix = 'http://localhost:8080'
+          }
+        })
+       ```
+       */ this.urlPrefix = this.urlPrefix || _config.urlPrefix || "";
+                /**
+       Set the base namespace used for all routes defined with `get`, `post`, `put` or `del`.
+        For example,
+        ```js
+       createServer({
+          routes() {
+            this.namespace = '/api';
+             // this route will handle the URL '/api/contacts'
+            this.get('/contacts', 'contacts');
+          }
+        })
+       ```
+        Note that only routes defined after `this.namespace` are affected. This is useful if you have a few one-off routes that you don't want under your namespace:
+        ```js
+       createServer({
+          routes() {
+             // this route handles /auth
+            this.get('/auth', function() { ...});
+             this.namespace = '/api';
+            // this route will handle the URL '/api/contacts'
+            this.get('/contacts', 'contacts');
+          };
+        })
+       ```
+        If your app is loaded from the filesystem vs. a server (e.g. via Cordova or Electron vs. `localhost` or `https://yourhost.com/`), you will need to explicitly define a namespace. Likely values are `/` (if requests are made with relative paths) or `https://yourhost.com/api/...` (if requests are made to a defined server).
+        For a sample implementation leveraging a configured API host & namespace, check out [this issue comment](https://github.com/miragejs/ember-cli-mirage/issues/497#issuecomment-183458721).
+        @property namespace
+       @type String
+       @public
+       */ this.namespace = this.namespace || _config.namespace || "";
+            }
+        },
+        {
+            key: "_configureDefaultPassthroughs",
+            value: function _configureDefaultPassthroughs() {
+                var _this2 = this;
+                defaultPassthroughs.forEach(function(passthroughUrl) {
+                    _this2.passthrough(passthroughUrl);
+                });
+            }
+        },
+        {
+            key: "_create",
+            value: function _create(mirageServer, config) {
+                if (typeof window !== "undefined") {
+                    this.trackRequests = config.trackRequests || false;
+                    return new (0, _pretenderDefault.default)(function() {
+                        this.passthroughRequest = function(verb, path, request) {
+                            if (mirageServer.shouldLog()) console.log("Mirage: Passthrough request for ".concat(verb.toUpperCase(), " ").concat(request.url));
+                        };
+                        this.handledRequest = function(verb, path, request) {
+                            if (mirageServer.shouldLog()) {
+                                console.groupCollapsed("Mirage: [".concat(request.status, "] ").concat(verb.toUpperCase(), " ").concat(request.url));
+                                var requestBody = request.requestBody, responseText = request.responseText;
+                                var loggedRequest, loggedResponse;
+                                try {
+                                    loggedRequest = JSON.parse(requestBody);
+                                } catch (e) {
+                                    loggedRequest = requestBody;
+                                }
+                                try {
+                                    loggedResponse = JSON.parse(responseText);
+                                } catch (e) {
+                                    loggedResponse = responseText;
+                                }
+                                console.groupCollapsed("Response");
+                                console.log(loggedResponse);
+                                console.groupEnd();
+                                console.groupCollapsed("Request (data)");
+                                console.log(loggedRequest);
+                                console.groupEnd();
+                                console.groupCollapsed("Request (raw)");
+                                console.log(request);
+                                console.groupEnd();
+                                console.groupEnd();
+                            }
+                        };
+                        var originalCheckPassthrough = this.checkPassthrough;
+                        this.checkPassthrough = function(request) {
+                            var shouldPassthrough = mirageServer.passthroughChecks.some(function(passthroughCheck) {
+                                return passthroughCheck(request);
+                            });
+                            if (shouldPassthrough) {
+                                var url = request.url.includes("?") ? request.url.substr(0, request.url.indexOf("?")) : request.url;
+                                this[request.method.toLowerCase()](url, this.passthrough);
+                            }
+                            return originalCheckPassthrough.apply(this, arguments);
+                        };
+                        this.unhandledRequest = function(verb, path) {
+                            path = decodeURI(path);
+                            var namespaceError = "";
+                            if (this.namespace === "") namespaceError = "There is no existing namespace defined. Please define one";
+                            else namespaceError = "The existing namespace is ".concat(this.namespace);
+                            assert("Your app tried to ".concat(verb, " '").concat(path, "', but there was no route defined to handle this request. Define a route for this endpoint in your routes() config. Did you forget to define a namespace? ").concat(namespaceError));
+                        };
+                    }, {
+                        trackRequests: this.trackRequests
+                    });
+                }
+            }
+        },
+        {
+            key: "passthrough",
+            value: function passthrough() {
+                var _this3 = this;
+                for(var _len2 = arguments.length, paths = new Array(_len2), _key2 = 0; _key2 < _len2; _key2++)paths[_key2] = arguments[_key2];
+                // this only works in browser-like environments for now. in node users will have to configure
+                // their own interceptor if they are using one.
+                if (typeof window !== "undefined") {
+                    var verbs = [
+                        "get",
+                        "post",
+                        "put",
+                        "delete",
+                        "patch",
+                        "options",
+                        "head"
+                    ];
+                    var lastArg = paths[paths.length - 1];
+                    if (paths.length === 0) paths = [
+                        "/**",
+                        "/"
+                    ];
+                    else if (paths.length > 1 && Array.isArray(lastArg)) verbs = paths.pop();
+                    paths.forEach(function(path) {
+                        if (typeof path === "function") _this3.passthroughChecks.push(path);
+                        else verbs.forEach(function(verb) {
+                            var fullPath = _this3._getFullPath(path);
+                            _this3.pretender[verb](fullPath, _this3.pretender.passthrough);
+                        });
+                    });
+                }
+            }
+        },
+        {
+            key: "_getFullPath",
+            value: function _getFullPath(path) {
+                path = path[0] === "/" ? path.slice(1) : path;
+                var fullPath = "";
+                var urlPrefix = this.urlPrefix ? this.urlPrefix.trim() : "";
+                var namespace = ""; // if there is a urlPrefix and a namespace
+                if (this.urlPrefix && this.namespace) {
+                    if (this.namespace[0] === "/" && this.namespace[this.namespace.length - 1] === "/") namespace = this.namespace.substring(0, this.namespace.length - 1).substring(1);
+                    if (this.namespace[0] === "/" && this.namespace[this.namespace.length - 1] !== "/") namespace = this.namespace.substring(1);
+                    if (this.namespace[0] !== "/" && this.namespace[this.namespace.length - 1] === "/") namespace = this.namespace.substring(0, this.namespace.length - 1);
+                    if (this.namespace[0] !== "/" && this.namespace[this.namespace.length - 1] !== "/") namespace = this.namespace;
+                } // if there is a namespace and no urlPrefix
+                if (this.namespace && !this.urlPrefix) {
+                    if (this.namespace[0] === "/" && this.namespace[this.namespace.length - 1] === "/") namespace = this.namespace.substring(0, this.namespace.length - 1);
+                    if (this.namespace[0] === "/" && this.namespace[this.namespace.length - 1] !== "/") namespace = this.namespace;
+                    if (this.namespace[0] !== "/" && this.namespace[this.namespace.length - 1] === "/") {
+                        var namespaceSub = this.namespace.substring(0, this.namespace.length - 1);
+                        namespace = "/".concat(namespaceSub);
+                    }
+                    if (this.namespace[0] !== "/" && this.namespace[this.namespace.length - 1] !== "/") namespace = "/".concat(this.namespace);
+                } // if no namespace
+                if (!this.namespace) namespace = "";
+                 // check to see if path is a FQDN. if so, ignore any urlPrefix/namespace that was set
+                if (/^https?:\/\//.test(path)) fullPath += path;
+                else {
+                    // otherwise, if there is a urlPrefix, use that as the beginning of the path
+                    if (urlPrefix.length) fullPath += urlPrefix[urlPrefix.length - 1] === "/" ? urlPrefix : "".concat(urlPrefix, "/");
+                     // add the namespace to the path
+                    fullPath += namespace; // add a trailing slash to the path if it doesn't already contain one
+                    if (fullPath[fullPath.length - 1] !== "/") fullPath += "/";
+                     // finally add the configured path
+                    fullPath += path; // if we're making a same-origin request, ensure a / is prepended and
+                    // dedup any double slashes
+                    if (!/^https?:\/\//.test(fullPath)) {
+                        fullPath = "/".concat(fullPath);
+                        fullPath = fullPath.replace(/\/+/g, "/");
+                    }
+                }
+                return fullPath;
+            }
+        },
+        {
+            key: "start",
+            value: function start() {}
+        },
+        {
+            key: "shutdown",
+            value: function shutdown() {
+                this.pretender.shutdown();
+            }
+        }
+    ]);
+    return PretenderConfig;
+}();
+var isPluralForModelCache = {};
+var defaultInflector = {
+    singularize: (0, _inflected.singularize),
+    pluralize: (0, _inflected.pluralize)
+};
+/**
+ * Creates a Server
+ * @param {Object} options Server's configuration object
+ * @param {String} options.urlPrefix The base URL for the routes. Example: `http://miragejs.com`.
+ * @param {String} options.namespace The default namespace for the `Server`. Example: `/api/v1`.
+ * @param {Number} options.timing Default latency for the routes to respond to a request.
+ * @param {String} options.environment Defines the environment of the `Server`.
+ * @param {Boolean} options.trackRequests Pretender `trackRequests`.
+ * @param {Boolean} options.useDefaultPassthroughs True to use mirage provided passthroughs
+ * @param {Boolean} options.logging Set to true or false to explicitly specify logging behavior.
+ * @param {Function} options.seeds Called on the seed phase. Should be used to seed the database.
+ * @param {Function} options.scenarios Alias for seeds.
+ * @param {Function} options.routes Should be used to define server routes.
+ * @param {Function} options.baseConfig Alias for routes.
+ * @param {Object} options.inflector Default inflector (used for pluralization and singularization).
+ * @param {Object} options.identityManagers Database identity managers.
+ * @param {Object} options.models Server models
+ * @param {Object} options.serializers Server serializers
+ * @param {Object} options.factories Server factories
+ * @param {Object} options.pretender Pretender instance
+ */ function createServer(options) {
+    return new Server(options);
+}
+/**
+  The Mirage server.
+
+  Note that `this` within your `routes` function refers to the server instance, which is the same instance that `server` refers to in your tests.
+
+  @class Server
+  @public
+*/ var Server = /*#__PURE__*/ function() {
+    /**
+   * Creates a Server
+   * @param {Object} options Server's configuration object
+   * @param {String} options.urlPrefix The base URL for the routes. Example: `http://miragejs.com`.
+   * @param {String} options.namespace The default namespace for the `Server`. Example: `/api/v1`.
+   * @param {Number} options.timing Default latency for the routes to respond to a request.
+   * @param {String} options.environment Defines the environment of the `Server`.
+   * @param {Boolean} options.trackRequests Pretender `trackRequests`.
+   * @param {Boolean} options.useDefaultPassthroughs True to use mirage provided passthroughs
+   * @param {Boolean} options.logging Set to true or false to explicitly specify logging behavior.
+   * @param {Function} options.seeds Called on the seed phase. Should be used to seed the database.
+   * @param {Function} options.scenarios Alias for seeds.
+   * @param {Function} options.routes Should be used to define server routes.
+   * @param {Function} options.baseConfig Alias for routes.
+   * @param {Object} options.inflector Default inflector (used for pluralization and singularization).
+   * @param {Object} options.identityManagers Database identity managers.
+   * @param {Object} options.models Server models
+   * @param {Object} options.serializers Server serializers
+   * @param {Object} options.factories Server factories
+   * @param {Object} options.pretender Pretender instance
+   */ function Server() {
+        var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+        _classCallCheck(this, Server);
+        this._container = new Container();
+        this.config(options);
+        /**
+      Returns the Mirage Db instance.
+       @property db
+      @return Db
+    */ this.db = this.db || undefined;
+        /**
+      Returns the Mirage Schema (ORM) instance.
+       @property schema
+      @return Schema
+    */ this.schema = this.schema || undefined;
+        this.middleware = [];
+    } // todo deprecate following
+    _createClass(Server, [
+        {
+            key: "namespace",
+            get: function get() {
+                return this.interceptor.namespace;
+            },
+            set: function set(value) {
+                this.interceptor.namespace = value;
+            } // todo deprecate following
+        },
+        {
+            key: "urlPrefix",
+            get: function get() {
+                return this.interceptor.urlPrefix;
+            },
+            set: function set(value) {
+                this.interceptor.urlPrefix = value;
+            } // todo deprecate following
+        },
+        {
+            key: "timing",
+            get: function get() {
+                return this.interceptor.timing;
+            },
+            set: function set(value) {
+                this.interceptor.timing = value;
+            } // todo deprecate following
+        },
+        {
+            key: "passthroughChecks",
+            get: function get() {
+                return this.interceptor.passthroughChecks;
+            },
+            set: function set(value) {
+                this.interceptor.passthroughChecks = value;
+            }
+        },
+        {
+            key: "config",
+            value: function config() {
+                var _this$interceptor$sta, _this$interceptor;
+                var _config = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+                if (!_config.interceptor) _config.interceptor = new PretenderConfig();
+                if (this.interceptor) this.interceptor.config(_config);
+                else {
+                    this.interceptor = _config.interceptor;
+                    this.interceptor.create(this, _config);
+                }
+                var didOverrideConfig = _config.environment && this.environment && this.environment !== _config.environment;
+                assert(!didOverrideConfig, "You cannot modify Mirage's environment once the server is created");
+                this.environment = _config.environment || this.environment || "development";
+                if (_config.routes) {
+                    assert(!_config.baseConfig, "The routes option is an alias for the baseConfig option. You can't pass both options into your server definition.");
+                    _config.baseConfig = _config.routes;
+                }
+                if (_config.seeds) {
+                    assert(!_config.scenarios, "The seeds option is an alias for the scenarios.default option. You can't pass both options into your server definition.");
+                    _config.scenarios = {
+                        "default": _config.seeds
+                    };
+                }
+                this._config = _config;
+                /**
+        Mirage needs know the singular and plural versions of certain words for some of its APIs to work.
+         For example, whenever you define a model
+         ```js
+        createServer({
+          models: {
+            post: Model
+          }
+        })
+        ```
+         Mirage will pluralize the word "post" and use it to create a `db.posts` database collection.
+         To accomplish this, Mirage uses an object called an Inflector. An Inflector is an object with two methods, `singularize` and `pluralize`, that Mirage will call whenever it needs to inflect a word.
+         Mirage has a default inflector, so if you write
+         ```js
+        createServer()
+        ```
+         you'll be using the node [inflected](https://github.com/martinandert/inflected#readme) package. This can be customized if you have irregular words or need to change the defaults. You can wead more in [the guide on customizing inflections](/docs/advanced/customizing-inflections).
+         You typically should be able to make your customizations using the provided inflector. It's good to match any custom inflections your backend uses, as this will keep your Mirage code more consistent and simpler.
+         You can also override the inflector completely and provide your own `pluralize` and `singularize` methods:
+         ```js
+        createServer({
+          inflector: {
+            pluralize(word) {
+              // your logic
+            },
+            singularize(word) {
+              // your logic
+            }
+          }
+        })
+        ```
+      */ this.inflector = _config.inflector || defaultInflector;
+                this._container.register("inflector", this.inflector);
+                /**
+        Set to `true` or `false` to explicitly specify logging behavior.
+         By default, server responses are logged in non-testing environments. Logging is disabled by default in testing, so as not to clutter CI test runner output.
+         For example, to enable logging in tests, write the following:
+         ```js
+        test('I can view all users', function() {
+          server.logging = true;
+          server.create('user');
+           visit('/users');
+          // ...
+        });
+        ```
+         You can also write a custom log message using the [Pretender server's `handledRequest` hook](https://github.com/pretenderjs/pretender#handled-requests). (You can access the pretender server from your Mirage server via `server.pretender`.)
+         To override,
+         ```js
+        createServer({
+          routes() {
+            this.pretender.handledRequest = function(verb, path, request) {
+              let { responseText } = request;
+              // log request and response data
+            }
+          }
+        })
+        ```
+         @property logging
+        @return {Boolean}
+        @public
+      */ this.logging = _config.logging !== undefined ? this.logging : undefined;
+                this.testConfig = this.testConfig || undefined;
+                this.trackRequests = _config.trackRequests;
+                if (this.db) this.db.registerIdentityManagers(_config.identityManagers);
+                else this.db = this._container.create("Db", undefined, _config.identityManagers);
+                if (this.schema) {
+                    this.schema.registerModels(_config.models);
+                    this.serializerOrRegistry.registerSerializers(_config.serializers || {});
+                } else {
+                    this.schema = this._container.create("Schema", this.db, _config.models);
+                    this.serializerOrRegistry = this._container.create("SerializerRegistry", this.schema, _config.serializers);
+                }
+                var hasFactories = this._hasModulesOfType(_config, "factories");
+                var hasDefaultScenario = _config.scenarios && Object.prototype.hasOwnProperty.call(_config.scenarios, "default");
+                if (_config.baseConfig) this.loadConfig(_config.baseConfig);
+                if (this.isTest()) {
+                    this.loadConfig(_config.testConfig);
+                    if (typeof window !== "undefined") window.server = this; // TODO: Better way to inject server into test env
+                }
+                if (this.isTest() && hasFactories) this.loadFactories(_config.factories);
+                else if (!this.isTest() && hasDefaultScenario) {
+                    this.loadFactories(_config.factories);
+                    _config.scenarios["default"](this);
+                } else this.loadFixtures();
+                (_this$interceptor$sta = (_this$interceptor = this.interceptor).start) === null || _this$interceptor$sta === void 0 || _this$interceptor$sta.call(_this$interceptor);
+            }
+        },
+        {
+            key: "isTest",
+            value: function isTest() {
+                return this.environment === "test";
+            }
+        },
+        {
+            key: "shouldLog",
+            value: function shouldLog() {
+                return typeof this.logging !== "undefined" ? this.logging : !this.isTest();
+            }
+        },
+        {
+            key: "loadConfig",
+            value: function loadConfig(config) {
+                config === null || config === void 0 || config.call(this);
+                this.timing = this.isTest() ? 0 : this.timing || 0;
+            } // TODO deprecate this in favor of direct call
+        },
+        {
+            key: "passthrough",
+            value: function passthrough() {
+                var _this$interceptor$pas, _this$interceptor2;
+                for(var _len = arguments.length, paths = new Array(_len), _key = 0; _key < _len; _key++)paths[_key] = arguments[_key];
+                (_this$interceptor$pas = (_this$interceptor2 = this.interceptor).passthrough) === null || _this$interceptor$pas === void 0 || _this$interceptor$pas.call.apply(_this$interceptor$pas, [
+                    _this$interceptor2
+                ].concat(paths));
+            }
+        },
+        {
+            key: "loadFixtures",
+            value: function loadFixtures() {
+                var fixtures = this._config.fixtures;
+                for(var _len2 = arguments.length, args = new Array(_len2), _key2 = 0; _key2 < _len2; _key2++)args[_key2] = arguments[_key2];
+                if (args.length) {
+                    var camelizedArgs = args.map(camelize);
+                    var missingKeys = camelizedArgs.filter(function(key) {
+                        return !fixtures[key];
+                    });
+                    if (missingKeys.length) throw new Error("Fixtures not found: ".concat(missingKeys.join(", ")));
+                    fixtures = (0, _pickDefault.default).apply(void 0, [
+                        fixtures
+                    ].concat(_toConsumableArray(camelizedArgs)));
+                }
+                this.db.loadData(fixtures);
+            }
+        },
+        {
+            key: "loadFactories",
+            value: function loadFactories() {
+                var _this = this;
+                var factoryMap = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+                // Store a reference to the factories
+                var currentFactoryMap = this._factoryMap || {};
+                this._factoryMap = (0, _assignDefault.default)(currentFactoryMap, factoryMap); // Create a collection for each factory
+                Object.keys(factoryMap).forEach(function(type) {
+                    var collectionName = _this.schema.toCollectionName(type);
+                    _this.db.createCollection(collectionName);
+                });
+            }
+        },
+        {
+            key: "factoryFor",
+            value: function factoryFor(type) {
+                var camelizedType = camelize(type);
+                if (this._factoryMap && this._factoryMap[camelizedType]) return this._factoryMap[camelizedType];
+            }
+        },
+        {
+            key: "build",
+            value: function build(type) {
+                for(var _len3 = arguments.length, traitsAndOverrides = new Array(_len3 > 1 ? _len3 - 1 : 0), _key3 = 1; _key3 < _len3; _key3++)traitsAndOverrides[_key3 - 1] = arguments[_key3];
+                var traits = traitsAndOverrides.filter(function(arg) {
+                    return arg && typeof arg === "string";
+                });
+                var overrides = (0, _findDefault.default)(traitsAndOverrides, function(arg) {
+                    return (0, _isPlainObjectDefault.default)(arg);
+                });
+                var camelizedType = camelize(type); // Store sequence for factory type as instance variable
+                this.factorySequences = this.factorySequences || {};
+                this.factorySequences[camelizedType] = this.factorySequences[camelizedType] + 1 || 0;
+                var OriginalFactory = this.factoryFor(type);
+                if (OriginalFactory) {
+                    OriginalFactory = OriginalFactory.extend({});
+                    var attrs = OriginalFactory.attrs || {};
+                    this._validateTraits(traits, OriginalFactory, type);
+                    var mergedExtensions = this._mergeExtensions(attrs, traits, overrides);
+                    this._mapAssociationsFromAttributes(type, attrs, overrides);
+                    this._mapAssociationsFromAttributes(type, mergedExtensions);
+                    var Factory = OriginalFactory.extend(mergedExtensions);
+                    var factory = new Factory();
+                    var sequence = this.factorySequences[camelizedType];
+                    return factory.build(sequence);
+                } else return overrides;
+            }
+        },
+        {
+            key: "buildList",
+            value: function buildList(type, amount) {
+                assert((0, _isIntegerDefault.default)(amount), "second argument has to be an integer, you passed: ".concat(_typeof(amount)));
+                var list = [];
+                for(var _len4 = arguments.length, traitsAndOverrides = new Array(_len4 > 2 ? _len4 - 2 : 0), _key4 = 2; _key4 < _len4; _key4++)traitsAndOverrides[_key4 - 2] = arguments[_key4];
+                var buildArgs = [
+                    type
+                ].concat(traitsAndOverrides);
+                for(var i = 0; i < amount; i++)list.push(this.build.apply(this, buildArgs));
+                return list;
+            }
+        },
+        {
+            key: "create",
+            value: function create(type) {
+                var _this2 = this;
+                assert(this._modelOrFactoryExistsForType(type), "You called server.create('".concat(type, "') but no model or factory was found. Make sure you're passing in the singularized version of the model or factory name.")); // When there is a Model defined, we should return an instance
+                // of it instead of returning the bare attributes.
+                for(var _len5 = arguments.length, options = new Array(_len5 > 1 ? _len5 - 1 : 0), _key5 = 1; _key5 < _len5; _key5++)options[_key5 - 1] = arguments[_key5];
+                var traits = options.filter(function(arg) {
+                    return arg && typeof arg === "string";
+                });
+                var overrides = (0, _findDefault.default)(options, function(arg) {
+                    return (0, _isPlainObjectDefault.default)(arg);
+                });
+                var collectionFromCreateList = (0, _findDefault.default)(options, function(arg) {
+                    return arg && Array.isArray(arg);
+                });
+                var attrs = this.build.apply(this, [
+                    type
+                ].concat(_toConsumableArray(traits), [
+                    overrides
+                ]));
+                var modelOrRecord;
+                if (this.schema && this.schema[this.schema.toCollectionName(type)]) {
+                    var modelClass = this.schema[this.schema.toCollectionName(type)];
+                    modelOrRecord = modelClass.create(attrs);
+                } else {
+                    var collection, collectionName;
+                    if (collectionFromCreateList) collection = collectionFromCreateList;
+                    else {
+                        collectionName = this.schema ? this.schema.toInternalCollectionName(type) : "_".concat(this.inflector.pluralize(type));
+                        collection = this.db[collectionName];
+                    }
+                    assert(collection, "You called server.create('".concat(type, "') but no model or factory was found."));
+                    modelOrRecord = collection.insert(attrs);
+                }
+                var OriginalFactory = this.factoryFor(type);
+                if (OriginalFactory) OriginalFactory.extractAfterCreateCallbacks({
+                    traits: traits
+                }).forEach(function(afterCreate) {
+                    afterCreate(modelOrRecord, _this2);
+                });
+                return modelOrRecord;
+            }
+        },
+        {
+            key: "createList",
+            value: function createList(type, amount) {
+                assert(this._modelOrFactoryExistsForType(type), "You called server.createList('".concat(type, "') but no model or factory was found. Make sure you're passing in the singularized version of the model or factory name."));
+                assert((0, _isIntegerDefault.default)(amount), "second argument has to be an integer, you passed: ".concat(_typeof(amount)));
+                var list = [];
+                var collectionName = this.schema ? this.schema.toInternalCollectionName(type) : "_".concat(this.inflector.pluralize(type));
+                var collection = this.db[collectionName];
+                for(var _len6 = arguments.length, traitsAndOverrides = new Array(_len6 > 2 ? _len6 - 2 : 0), _key6 = 2; _key6 < _len6; _key6++)traitsAndOverrides[_key6 - 2] = arguments[_key6];
+                var createArguments = [
+                    type
+                ].concat(traitsAndOverrides, [
+                    collection
+                ]);
+                for(var i = 0; i < amount; i++)list.push(this.create.apply(this, createArguments));
+                return list;
+            }
+        },
+        {
+            key: "shutdown",
+            value: function shutdown() {
+                if (typeof window !== "undefined") this.interceptor.shutdown();
+                if (typeof window !== "undefined" && this.environment === "test") window.server = undefined;
+            }
+        },
+        {
+            key: "resource",
+            value: function resource(resourceName) {
+                var _this3 = this;
+                var _ref = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {}, only = _ref.only, except = _ref.except, path = _ref.path;
+                resourceName = this.inflector.pluralize(resourceName);
+                path = path || "/".concat(resourceName);
+                only = only || [];
+                except = except || [];
+                if (only.length > 0 && except.length > 0) throw "cannot use both :only and :except options";
+                var actionsMethodsAndsPathsMappings = {
+                    index: {
+                        methods: [
+                            "get"
+                        ],
+                        path: "".concat(path)
+                    },
+                    show: {
+                        methods: [
+                            "get"
+                        ],
+                        path: "".concat(path, "/:id")
+                    },
+                    create: {
+                        methods: [
+                            "post"
+                        ],
+                        path: "".concat(path)
+                    },
+                    update: {
+                        methods: [
+                            "put",
+                            "patch"
+                        ],
+                        path: "".concat(path, "/:id")
+                    },
+                    "delete": {
+                        methods: [
+                            "del"
+                        ],
+                        path: "".concat(path, "/:id")
+                    }
+                };
+                var allActions = Object.keys(actionsMethodsAndsPathsMappings);
+                var actions = only.length > 0 && only || except.length > 0 && allActions.filter(function(action) {
+                    return except.indexOf(action) === -1;
+                }) || allActions;
+                actions.forEach(function(action) {
+                    var methodsWithPath = actionsMethodsAndsPathsMappings[action];
+                    methodsWithPath.methods.forEach(function(method) {
+                        return path === resourceName ? _this3[method](methodsWithPath.path) : _this3[method](methodsWithPath.path, resourceName);
+                    });
+                });
+            }
+        },
+        {
+            key: "_serialize",
+            value: function _serialize(body) {
+                if (typeof body === "string") return body;
+                else return JSON.stringify(body);
+            }
+        },
+        {
+            key: "registerRouteHandler",
+            value: function registerRouteHandler(verb, path, rawHandler, customizedCode, options) {
+                var _this4 = this;
+                var middleware = arguments.length > 5 && arguments[5] !== undefined ? arguments[5] : this.middleware;
+                var routeHandler = this._container.create("RouteHandler", {
+                    schema: this.schema,
+                    verb: verb,
+                    rawHandler: rawHandler,
+                    customizedCode: customizedCode,
+                    options: options,
+                    path: path,
+                    serializerOrRegistry: this.serializerOrRegistry,
+                    middleware: middleware
+                });
+                return function(request) {
+                    return routeHandler.handle(request).then(function(mirageResponse) {
+                        var _mirageResponse = _slicedToArray(mirageResponse, 3), code = _mirageResponse[0], headers = _mirageResponse[1], response = _mirageResponse[2];
+                        return [
+                            code,
+                            headers,
+                            _this4._serialize(response)
+                        ];
+                    });
+                };
+            }
+        },
+        {
+            key: "_hasModulesOfType",
+            value: function _hasModulesOfType(modules, type) {
+                var modulesOfType = modules[type];
+                return modulesOfType ? Object.keys(modulesOfType).length > 0 : false;
+            }
+        },
+        {
+            key: "_typeIsPluralForModel",
+            value: function _typeIsPluralForModel(typeOrCollectionName) {
+                if (typeof isPluralForModelCache[typeOrCollectionName] !== "boolean") {
+                    var modelOrFactoryExists = this._modelOrFactoryExistsForTypeOrCollectionName(typeOrCollectionName);
+                    var isPlural = typeOrCollectionName === this.inflector.pluralize(typeOrCollectionName);
+                    var isUncountable = this.inflector.singularize(typeOrCollectionName) === this.inflector.pluralize(typeOrCollectionName);
+                    var isPluralForModel = isPlural && !isUncountable && modelOrFactoryExists;
+                    isPluralForModelCache[typeOrCollectionName] = isPluralForModel;
+                }
+                return isPluralForModelCache[typeOrCollectionName];
+            }
+        },
+        {
+            key: "_modelOrFactoryExistsForType",
+            value: function _modelOrFactoryExistsForType(type) {
+                var modelExists = this.schema && this.schema.modelFor(camelize(type));
+                var dbCollectionExists = this.db[this.schema.toInternalCollectionName(type)];
+                return (modelExists || dbCollectionExists) && !this._typeIsPluralForModel(type);
+            }
+        },
+        {
+            key: "_modelOrFactoryExistsForTypeOrCollectionName",
+            value: function _modelOrFactoryExistsForTypeOrCollectionName(typeOrCollectionName) {
+                var modelExists = this.schema && this.schema.modelFor(camelize(typeOrCollectionName));
+                var dbCollectionExists = this.db[this.schema.toInternalCollectionName(typeOrCollectionName)];
+                return modelExists || dbCollectionExists;
+            }
+        },
+        {
+            key: "_validateTraits",
+            value: function _validateTraits(traits, factory, type) {
+                traits.forEach(function(traitName) {
+                    if (!factory.isTrait(traitName)) throw new Error("'".concat(traitName, "' trait is not registered in '").concat(type, "' factory"));
+                });
+            }
+        },
+        {
+            key: "_mergeExtensions",
+            value: function _mergeExtensions(attrs, traits, overrides) {
+                var allExtensions = traits.map(function(traitName) {
+                    return attrs[traitName].extension;
+                });
+                allExtensions.push(overrides || {});
+                return allExtensions.reduce(function(accum, extension) {
+                    return (0, _assignDefault.default)(accum, extension);
+                }, {});
+            }
+        },
+        {
+            key: "_mapAssociationsFromAttributes",
+            value: function _mapAssociationsFromAttributes(modelName, attributes) {
+                var _this5 = this;
+                var overrides = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
+                Object.keys(attributes || {}).filter(function(attr) {
+                    return isAssociation(attributes[attr]);
+                }).forEach(function(attr) {
+                    var modelClass = _this5.schema.modelClassFor(modelName);
+                    var association = modelClass.associationFor(attr);
+                    assert(association && association instanceof BelongsTo, "You're using the `association` factory helper on the '".concat(attr, "' attribute of your ").concat(modelName, " factory, but that attribute is not a `belongsTo` association."));
+                    var isSelfReferentialBelongsTo = association && association instanceof BelongsTo && association.modelName === modelName;
+                    assert(!isSelfReferentialBelongsTo, "You're using the association() helper on your ".concat(modelName, " factory for ").concat(attr, ", which is a belongsTo self-referential relationship. You can't do this as it will lead to infinite recursion. You can move the helper inside of a trait and use it selectively."));
+                    var isPolymorphic = association && association.opts && association.opts.polymorphic;
+                    assert(!isPolymorphic, "You're using the association() helper on your ".concat(modelName, " factory for ").concat(attr, ", which is a polymorphic relationship. This is not currently supported."));
+                    var factoryAssociation = attributes[attr];
+                    var foreignKey = "".concat(camelize(attr), "Id");
+                    if (!overrides[attr]) attributes[foreignKey] = _this5.create.apply(_this5, [
+                        association.modelName
+                    ].concat(_toConsumableArray(factoryAssociation.traitsAndOverrides))).id;
+                    delete attributes[attr];
+                });
+            }
+        }
+    ]);
+    return Server;
+}();
+var ActiveModelSerializer = Serializer.extend({
+    serializeIds: "always",
+    normalizeIds: true,
+    keyForModel: function keyForModel(type) {
+        return underscore(type);
+    },
+    keyForAttribute: function keyForAttribute(attr) {
+        attr = Serializer.prototype.keyForAttribute.apply(this, arguments);
+        return underscore(attr);
+    },
+    keyForRelationship: function keyForRelationship(type) {
+        return this._container.inflector.pluralize(underscore(type));
+    },
+    keyForEmbeddedRelationship: function keyForEmbeddedRelationship(attributeName) {
+        return underscore(attributeName);
+    },
+    keyForRelationshipIds: function keyForRelationshipIds(type) {
+        return "".concat(underscore(this._container.inflector.singularize(type)), "_ids");
+    },
+    keyForForeignKey: function keyForForeignKey(relationshipName) {
+        return "".concat(underscore(relationshipName), "_id");
+    },
+    keyForPolymorphicForeignKeyId: function keyForPolymorphicForeignKeyId(relationshipName) {
+        return "".concat(underscore(relationshipName), "_id");
+    },
+    keyForPolymorphicForeignKeyType: function keyForPolymorphicForeignKeyType(relationshipName) {
+        return "".concat(underscore(relationshipName), "_type");
+    },
+    normalize: function normalize(payload) {
+        var _this = this;
+        var type = Object.keys(payload)[0];
+        var attrs = payload[type];
+        var modelName = camelize(type);
+        var modelClass = this.schema.modelClassFor(modelName);
+        var belongsToAssociations = modelClass.belongsToAssociations, hasManyAssociations = modelClass.hasManyAssociations;
+        var belongsToKeys = Object.keys(belongsToAssociations);
+        var hasManyKeys = Object.keys(hasManyAssociations);
+        if (this.primaryKey !== "id") {
+            attrs.id = attrs[this.primaryKey];
+            delete attrs[this.primaryKey];
+        }
+        var jsonApiPayload = {
+            data: {
+                type: this._container.inflector.pluralize(type),
+                attributes: {}
+            }
+        };
+        if (attrs.id) jsonApiPayload.data.id = attrs.id;
+        var relationships = {};
+        Object.keys(attrs).forEach(function(key) {
+            if (key !== "id") {
+                if (_this.normalizeIds) {
+                    if (belongsToKeys.includes(key)) {
+                        var association = belongsToAssociations[key];
+                        var associationModel = association.modelName;
+                        relationships[dasherize(key)] = {
+                            data: {
+                                type: associationModel,
+                                id: attrs[key]
+                            }
+                        };
+                    } else if (hasManyKeys.includes(key)) {
+                        var _association = hasManyAssociations[key];
+                        var _associationModel = _association.modelName;
+                        var data = attrs[key].map(function(id) {
+                            return {
+                                type: _associationModel,
+                                id: id
+                            };
+                        });
+                        relationships[dasherize(key)] = {
+                            data: data
+                        };
+                    } else jsonApiPayload.data.attributes[dasherize(key)] = attrs[key];
+                } else jsonApiPayload.data.attributes[dasherize(key)] = attrs[key];
+            }
+        });
+        if (Object.keys(relationships).length) jsonApiPayload.data.relationships = relationships;
+        return jsonApiPayload;
+    },
+    getCoalescedIds: function getCoalescedIds(request) {
+        return request.queryParams && request.queryParams.ids;
+    }
+});
+var restSerializer = ActiveModelSerializer.extend({
+    serializeIds: "always",
+    keyForModel: function keyForModel(type) {
+        return camelize(type);
+    },
+    keyForAttribute: function keyForAttribute(attr) {
+        attr = ActiveModelSerializer.prototype.keyForAttribute.apply(this, arguments);
+        return camelize(attr);
+    },
+    keyForRelationship: function keyForRelationship(type) {
+        return camelize(this._container.inflector.pluralize(type));
+    },
+    keyForEmbeddedRelationship: function keyForEmbeddedRelationship(attributeName) {
+        return camelize(attributeName);
+    },
+    keyForRelationshipIds: function keyForRelationshipIds(type) {
+        return camelize(this._container.inflector.pluralize(type));
+    },
+    keyForForeignKey: function keyForForeignKey(relationshipName) {
+        return camelize(this._container.inflector.singularize(relationshipName));
+    },
+    getCoalescedIds: function getCoalescedIds(request) {
+        return request.queryParams && request.queryParams.ids;
+    }
+});
+/**
+  UUID generator
+
+  @hide
+*/ function uuid() {
+    return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, function(c) {
+        var r = Math.random() * 16 | 0;
+        var v = c === "x" ? r : r & 0x3 | 0x8;
+        return v.toString(16);
+    });
+}
+/**
+  @hide
+*/ function hasMany() {
+    for(var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++)args[_key] = arguments[_key];
+    return _construct(HasMany, args);
+}
+/**
+  @hide
+*/ function belongsTo() {
+    for(var _len2 = arguments.length, args = new Array(_len2), _key2 = 0; _key2 < _len2; _key2++)args[_key2] = arguments[_key2];
+    return _construct(BelongsTo, args);
+}
+var index = {
+    Factory: Factory,
+    Response: Response,
+    hasMany: hasMany,
+    belongsTo: belongsTo
+};
+
+},{"lodash/isPlainObject":"cvSNF","lodash/isFunction":"cfti6","lodash/mapValues":"aMVMF","lodash/uniq":"8cGRk","lodash/flatten":"71l7m","inflected":"h8spq","lodash/lowerFirst":"3JYOb","lodash/isEqual":"9XEia","lodash/map":"94CDd","lodash/cloneDeep":"NMIiZ","lodash/invokeMap":"f9cVh","lodash/compact":"cgwiI","lodash/has":"jni8c","lodash/values":"cKAPx","lodash/isEmpty":"lpItB","lodash/get":"8UELX","lodash/uniqBy":"027Yj","lodash/forIn":"hfqEk","lodash/pick":"bY5l6","lodash/assign":"3RP2Q","lodash/find":"1aUx6","lodash/isInteger":"agurq","@miragejs/pretender-node-polyfill/before":"ieZOl","pretender":"irUnt","@miragejs/pretender-node-polyfill/after":"f5fbx","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"cvSNF":[function(require,module,exports,__globalThis) {
+var baseGetTag = require("c03dd41ed9922dd2"), getPrototype = require("2ca5b85a120835de"), isObjectLike = require("963b65e043435612");
+/** `Object#toString` result references. */ var objectTag = '[object Object]';
+/** Used for built-in method references. */ var funcProto = Function.prototype, objectProto = Object.prototype;
+/** Used to resolve the decompiled source of functions. */ var funcToString = funcProto.toString;
+/** Used to check objects for own properties. */ var hasOwnProperty = objectProto.hasOwnProperty;
+/** Used to infer the `Object` constructor. */ var objectCtorString = funcToString.call(Object);
+/**
+ * Checks if `value` is a plain object, that is, an object created by the
+ * `Object` constructor or one with a `[[Prototype]]` of `null`.
+ *
+ * @static
+ * @memberOf _
+ * @since 0.8.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a plain object, else `false`.
+ * @example
+ *
+ * function Foo() {
+ *   this.a = 1;
+ * }
+ *
+ * _.isPlainObject(new Foo);
+ * // => false
+ *
+ * _.isPlainObject([1, 2, 3]);
+ * // => false
+ *
+ * _.isPlainObject({ 'x': 0, 'y': 0 });
+ * // => true
+ *
+ * _.isPlainObject(Object.create(null));
+ * // => true
+ */ function isPlainObject(value) {
+    if (!isObjectLike(value) || baseGetTag(value) != objectTag) return false;
+    var proto = getPrototype(value);
+    if (proto === null) return true;
+    var Ctor = hasOwnProperty.call(proto, 'constructor') && proto.constructor;
+    return typeof Ctor == 'function' && Ctor instanceof Ctor && funcToString.call(Ctor) == objectCtorString;
+}
+module.exports = isPlainObject;
+
+},{"c03dd41ed9922dd2":"lOnbo","2ca5b85a120835de":"8ASKT","963b65e043435612":"3BLi4"}],"lOnbo":[function(require,module,exports,__globalThis) {
+var Symbol = require("68a84eb98c5d3fa2"), getRawTag = require("9b2aaf31b7bdd837"), objectToString = require("46d5beb3375f8a28");
+/** `Object#toString` result references. */ var nullTag = '[object Null]', undefinedTag = '[object Undefined]';
+/** Built-in value references. */ var symToStringTag = Symbol ? Symbol.toStringTag : undefined;
+/**
+ * The base implementation of `getTag` without fallbacks for buggy environments.
+ *
+ * @private
+ * @param {*} value The value to query.
+ * @returns {string} Returns the `toStringTag`.
+ */ function baseGetTag(value) {
+    if (value == null) return value === undefined ? undefinedTag : nullTag;
+    return symToStringTag && symToStringTag in Object(value) ? getRawTag(value) : objectToString(value);
+}
+module.exports = baseGetTag;
+
+},{"68a84eb98c5d3fa2":"7lsL9","9b2aaf31b7bdd837":"995sO","46d5beb3375f8a28":"bmE3g"}],"7lsL9":[function(require,module,exports,__globalThis) {
+var root = require("9ff1abd51ad45ac0");
+/** Built-in value references. */ var Symbol = root.Symbol;
+module.exports = Symbol;
+
+},{"9ff1abd51ad45ac0":"dSYUs"}],"dSYUs":[function(require,module,exports,__globalThis) {
+var freeGlobal = require("cd92e8811deaabf5");
+/** Detect free variable `self`. */ var freeSelf = typeof self == 'object' && self && self.Object === Object && self;
+/** Used as a reference to the global object. */ var root = freeGlobal || freeSelf || Function('return this')();
+module.exports = root;
+
+},{"cd92e8811deaabf5":"kAk32"}],"kAk32":[function(require,module,exports,__globalThis) {
+/** Detect free variable `global` from Node.js. */ var global = arguments[3];
+var freeGlobal = typeof global == 'object' && global && global.Object === Object && global;
+module.exports = freeGlobal;
+
+},{}],"995sO":[function(require,module,exports,__globalThis) {
+var Symbol = require("e9b4533b2a68f814");
+/** Used for built-in method references. */ var objectProto = Object.prototype;
+/** Used to check objects for own properties. */ var hasOwnProperty = objectProto.hasOwnProperty;
+/**
+ * Used to resolve the
+ * [`toStringTag`](http://ecma-international.org/ecma-262/7.0/#sec-object.prototype.tostring)
+ * of values.
+ */ var nativeObjectToString = objectProto.toString;
+/** Built-in value references. */ var symToStringTag = Symbol ? Symbol.toStringTag : undefined;
+/**
+ * A specialized version of `baseGetTag` which ignores `Symbol.toStringTag` values.
+ *
+ * @private
+ * @param {*} value The value to query.
+ * @returns {string} Returns the raw `toStringTag`.
+ */ function getRawTag(value) {
+    var isOwn = hasOwnProperty.call(value, symToStringTag), tag = value[symToStringTag];
+    try {
+        value[symToStringTag] = undefined;
+        var unmasked = true;
+    } catch (e) {}
+    var result = nativeObjectToString.call(value);
+    if (unmasked) {
+        if (isOwn) value[symToStringTag] = tag;
+        else delete value[symToStringTag];
+    }
+    return result;
+}
+module.exports = getRawTag;
+
+},{"e9b4533b2a68f814":"7lsL9"}],"bmE3g":[function(require,module,exports,__globalThis) {
+/** Used for built-in method references. */ var objectProto = Object.prototype;
+/**
+ * Used to resolve the
+ * [`toStringTag`](http://ecma-international.org/ecma-262/7.0/#sec-object.prototype.tostring)
+ * of values.
+ */ var nativeObjectToString = objectProto.toString;
+/**
+ * Converts `value` to a string using `Object.prototype.toString`.
+ *
+ * @private
+ * @param {*} value The value to convert.
+ * @returns {string} Returns the converted string.
+ */ function objectToString(value) {
+    return nativeObjectToString.call(value);
+}
+module.exports = objectToString;
+
+},{}],"8ASKT":[function(require,module,exports,__globalThis) {
+var overArg = require("11c2fcc01fbb2119");
+/** Built-in value references. */ var getPrototype = overArg(Object.getPrototypeOf, Object);
+module.exports = getPrototype;
+
+},{"11c2fcc01fbb2119":"dpUvl"}],"dpUvl":[function(require,module,exports,__globalThis) {
+/**
+ * Creates a unary function that invokes `func` with its argument transformed.
+ *
+ * @private
+ * @param {Function} func The function to wrap.
+ * @param {Function} transform The argument transform.
+ * @returns {Function} Returns the new function.
+ */ function overArg(func, transform) {
+    return function(arg) {
+        return func(transform(arg));
+    };
+}
+module.exports = overArg;
+
+},{}],"3BLi4":[function(require,module,exports,__globalThis) {
+/**
+ * Checks if `value` is object-like. A value is object-like if it's not `null`
+ * and has a `typeof` result of "object".
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is object-like, else `false`.
+ * @example
+ *
+ * _.isObjectLike({});
+ * // => true
+ *
+ * _.isObjectLike([1, 2, 3]);
+ * // => true
+ *
+ * _.isObjectLike(_.noop);
+ * // => false
+ *
+ * _.isObjectLike(null);
+ * // => false
+ */ function isObjectLike(value) {
+    return value != null && typeof value == 'object';
+}
+module.exports = isObjectLike;
+
+},{}],"cfti6":[function(require,module,exports,__globalThis) {
+var baseGetTag = require("5419308bd9194e11"), isObject = require("3cba3c966459d528");
+/** `Object#toString` result references. */ var asyncTag = '[object AsyncFunction]', funcTag = '[object Function]', genTag = '[object GeneratorFunction]', proxyTag = '[object Proxy]';
+/**
+ * Checks if `value` is classified as a `Function` object.
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a function, else `false`.
+ * @example
+ *
+ * _.isFunction(_);
+ * // => true
+ *
+ * _.isFunction(/abc/);
+ * // => false
+ */ function isFunction(value) {
+    if (!isObject(value)) return false;
+    // The use of `Object#toString` avoids issues with the `typeof` operator
+    // in Safari 9 which returns 'object' for typed arrays and other constructors.
+    var tag = baseGetTag(value);
+    return tag == funcTag || tag == genTag || tag == asyncTag || tag == proxyTag;
+}
+module.exports = isFunction;
+
+},{"5419308bd9194e11":"lOnbo","3cba3c966459d528":"cGhqJ"}],"cGhqJ":[function(require,module,exports,__globalThis) {
+/**
+ * Checks if `value` is the
+ * [language type](http://www.ecma-international.org/ecma-262/7.0/#sec-ecmascript-language-types)
+ * of `Object`. (e.g. arrays, functions, objects, regexes, `new Number(0)`, and `new String('')`)
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is an object, else `false`.
+ * @example
+ *
+ * _.isObject({});
+ * // => true
+ *
+ * _.isObject([1, 2, 3]);
+ * // => true
+ *
+ * _.isObject(_.noop);
+ * // => true
+ *
+ * _.isObject(null);
+ * // => false
+ */ function isObject(value) {
+    var type = typeof value;
+    return value != null && (type == 'object' || type == 'function');
+}
+module.exports = isObject;
+
+},{}],"aMVMF":[function(require,module,exports,__globalThis) {
+var baseAssignValue = require("a3dd03284854d1b5"), baseForOwn = require("3fe946fb5f45d4e9"), baseIteratee = require("8671a2b480ab95e2");
+/**
+ * Creates an object with the same keys as `object` and values generated
+ * by running each own enumerable string keyed property of `object` thru
+ * `iteratee`. The iteratee is invoked with three arguments:
+ * (value, key, object).
+ *
+ * @static
+ * @memberOf _
+ * @since 2.4.0
+ * @category Object
+ * @param {Object} object The object to iterate over.
+ * @param {Function} [iteratee=_.identity] The function invoked per iteration.
+ * @returns {Object} Returns the new mapped object.
+ * @see _.mapKeys
+ * @example
+ *
+ * var users = {
+ *   'fred':    { 'user': 'fred',    'age': 40 },
+ *   'pebbles': { 'user': 'pebbles', 'age': 1 }
+ * };
+ *
+ * _.mapValues(users, function(o) { return o.age; });
+ * // => { 'fred': 40, 'pebbles': 1 } (iteration order is not guaranteed)
+ *
+ * // The `_.property` iteratee shorthand.
+ * _.mapValues(users, 'age');
+ * // => { 'fred': 40, 'pebbles': 1 } (iteration order is not guaranteed)
+ */ function mapValues(object, iteratee) {
+    var result = {};
+    iteratee = baseIteratee(iteratee, 3);
+    baseForOwn(object, function(value, key, object) {
+        baseAssignValue(result, key, iteratee(value, key, object));
+    });
+    return result;
+}
+module.exports = mapValues;
+
+},{"a3dd03284854d1b5":"fprBU","3fe946fb5f45d4e9":"6MqUM","8671a2b480ab95e2":"2fsgg"}],"fprBU":[function(require,module,exports,__globalThis) {
+var defineProperty = require("57c6267f904aee0a");
+/**
+ * The base implementation of `assignValue` and `assignMergeValue` without
+ * value checks.
+ *
+ * @private
+ * @param {Object} object The object to modify.
+ * @param {string} key The key of the property to assign.
+ * @param {*} value The value to assign.
+ */ function baseAssignValue(object, key, value) {
+    if (key == '__proto__' && defineProperty) defineProperty(object, key, {
+        'configurable': true,
+        'enumerable': true,
+        'value': value,
+        'writable': true
+    });
+    else object[key] = value;
+}
+module.exports = baseAssignValue;
+
+},{"57c6267f904aee0a":"cZOnw"}],"cZOnw":[function(require,module,exports,__globalThis) {
+var getNative = require("7565accd8c33cb8b");
+var defineProperty = function() {
+    try {
+        var func = getNative(Object, 'defineProperty');
+        func({}, '', {});
+        return func;
+    } catch (e) {}
+}();
+module.exports = defineProperty;
+
+},{"7565accd8c33cb8b":"9PCIl"}],"9PCIl":[function(require,module,exports,__globalThis) {
+var baseIsNative = require("63e3f1300cdc459f"), getValue = require("16db51a0e009bd8c");
+/**
+ * Gets the native function at `key` of `object`.
+ *
+ * @private
+ * @param {Object} object The object to query.
+ * @param {string} key The key of the method to get.
+ * @returns {*} Returns the function if it's native, else `undefined`.
+ */ function getNative(object, key) {
+    var value = getValue(object, key);
+    return baseIsNative(value) ? value : undefined;
+}
+module.exports = getNative;
+
+},{"63e3f1300cdc459f":"2U9Pn","16db51a0e009bd8c":"kKx5I"}],"2U9Pn":[function(require,module,exports,__globalThis) {
+var isFunction = require("2f9b4543c84c6692"), isMasked = require("cabbc2adfaeb27d9"), isObject = require("cbb5703fe1562e7f"), toSource = require("388b819f47a43aa5");
+/**
+ * Used to match `RegExp`
+ * [syntax characters](http://ecma-international.org/ecma-262/7.0/#sec-patterns).
+ */ var reRegExpChar = /[\\^$.*+?()[\]{}|]/g;
+/** Used to detect host constructors (Safari). */ var reIsHostCtor = /^\[object .+?Constructor\]$/;
+/** Used for built-in method references. */ var funcProto = Function.prototype, objectProto = Object.prototype;
+/** Used to resolve the decompiled source of functions. */ var funcToString = funcProto.toString;
+/** Used to check objects for own properties. */ var hasOwnProperty = objectProto.hasOwnProperty;
+/** Used to detect if a method is native. */ var reIsNative = RegExp('^' + funcToString.call(hasOwnProperty).replace(reRegExpChar, '\\$&').replace(/hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g, '$1.*?') + '$');
+/**
+ * The base implementation of `_.isNative` without bad shim checks.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a native function,
+ *  else `false`.
+ */ function baseIsNative(value) {
+    if (!isObject(value) || isMasked(value)) return false;
+    var pattern = isFunction(value) ? reIsNative : reIsHostCtor;
+    return pattern.test(toSource(value));
+}
+module.exports = baseIsNative;
+
+},{"2f9b4543c84c6692":"cfti6","cabbc2adfaeb27d9":"cMDzi","cbb5703fe1562e7f":"cGhqJ","388b819f47a43aa5":"bYHc7"}],"cMDzi":[function(require,module,exports,__globalThis) {
+var coreJsData = require("2fa6c734b0792bcf");
+/** Used to detect methods masquerading as native. */ var maskSrcKey = function() {
+    var uid = /[^.]+$/.exec(coreJsData && coreJsData.keys && coreJsData.keys.IE_PROTO || '');
+    return uid ? 'Symbol(src)_1.' + uid : '';
+}();
+/**
+ * Checks if `func` has its source masked.
+ *
+ * @private
+ * @param {Function} func The function to check.
+ * @returns {boolean} Returns `true` if `func` is masked, else `false`.
+ */ function isMasked(func) {
+    return !!maskSrcKey && maskSrcKey in func;
+}
+module.exports = isMasked;
+
+},{"2fa6c734b0792bcf":"6gJwQ"}],"6gJwQ":[function(require,module,exports,__globalThis) {
+var root = require("2f0959b2c20d7fb0");
+/** Used to detect overreaching core-js shims. */ var coreJsData = root['__core-js_shared__'];
+module.exports = coreJsData;
+
+},{"2f0959b2c20d7fb0":"dSYUs"}],"bYHc7":[function(require,module,exports,__globalThis) {
+/** Used for built-in method references. */ var funcProto = Function.prototype;
+/** Used to resolve the decompiled source of functions. */ var funcToString = funcProto.toString;
+/**
+ * Converts `func` to its source code.
+ *
+ * @private
+ * @param {Function} func The function to convert.
+ * @returns {string} Returns the source code.
+ */ function toSource(func) {
+    if (func != null) {
+        try {
+            return funcToString.call(func);
+        } catch (e) {}
+        try {
+            return func + '';
+        } catch (e) {}
+    }
+    return '';
+}
+module.exports = toSource;
+
+},{}],"kKx5I":[function(require,module,exports,__globalThis) {
+/**
+ * Gets the value at `key` of `object`.
+ *
+ * @private
+ * @param {Object} [object] The object to query.
+ * @param {string} key The key of the property to get.
+ * @returns {*} Returns the property value.
+ */ function getValue(object, key) {
+    return object == null ? undefined : object[key];
+}
+module.exports = getValue;
+
+},{}],"6MqUM":[function(require,module,exports,__globalThis) {
+var baseFor = require("c7da20818a5fe3d6"), keys = require("1fb77c53defe5720");
+/**
+ * The base implementation of `_.forOwn` without support for iteratee shorthands.
+ *
+ * @private
+ * @param {Object} object The object to iterate over.
+ * @param {Function} iteratee The function invoked per iteration.
+ * @returns {Object} Returns `object`.
+ */ function baseForOwn(object, iteratee) {
+    return object && baseFor(object, iteratee, keys);
+}
+module.exports = baseForOwn;
+
+},{"c7da20818a5fe3d6":"k0bbR","1fb77c53defe5720":"6fHVw"}],"k0bbR":[function(require,module,exports,__globalThis) {
+var createBaseFor = require("178c767a7be60d59");
+/**
+ * The base implementation of `baseForOwn` which iterates over `object`
+ * properties returned by `keysFunc` and invokes `iteratee` for each property.
+ * Iteratee functions may exit iteration early by explicitly returning `false`.
+ *
+ * @private
+ * @param {Object} object The object to iterate over.
+ * @param {Function} iteratee The function invoked per iteration.
+ * @param {Function} keysFunc The function to get the keys of `object`.
+ * @returns {Object} Returns `object`.
+ */ var baseFor = createBaseFor();
+module.exports = baseFor;
+
+},{"178c767a7be60d59":"hCIGA"}],"hCIGA":[function(require,module,exports,__globalThis) {
+/**
+ * Creates a base function for methods like `_.forIn` and `_.forOwn`.
+ *
+ * @private
+ * @param {boolean} [fromRight] Specify iterating from right to left.
+ * @returns {Function} Returns the new base function.
+ */ function createBaseFor(fromRight) {
+    return function(object, iteratee, keysFunc) {
+        var index = -1, iterable = Object(object), props = keysFunc(object), length = props.length;
+        while(length--){
+            var key = props[fromRight ? length : ++index];
+            if (iteratee(iterable[key], key, iterable) === false) break;
+        }
+        return object;
+    };
+}
+module.exports = createBaseFor;
+
+},{}],"6fHVw":[function(require,module,exports,__globalThis) {
+var arrayLikeKeys = require("4c73ca42c789e5ab"), baseKeys = require("e8453365fdacc8da"), isArrayLike = require("7760b47b02971dfa");
+/**
+ * Creates an array of the own enumerable property names of `object`.
+ *
+ * **Note:** Non-object values are coerced to objects. See the
+ * [ES spec](http://ecma-international.org/ecma-262/7.0/#sec-object.keys)
+ * for more details.
+ *
+ * @static
+ * @since 0.1.0
+ * @memberOf _
+ * @category Object
+ * @param {Object} object The object to query.
+ * @returns {Array} Returns the array of property names.
+ * @example
+ *
+ * function Foo() {
+ *   this.a = 1;
+ *   this.b = 2;
+ * }
+ *
+ * Foo.prototype.c = 3;
+ *
+ * _.keys(new Foo);
+ * // => ['a', 'b'] (iteration order is not guaranteed)
+ *
+ * _.keys('hi');
+ * // => ['0', '1']
+ */ function keys(object) {
+    return isArrayLike(object) ? arrayLikeKeys(object) : baseKeys(object);
+}
+module.exports = keys;
+
+},{"4c73ca42c789e5ab":"dquIQ","e8453365fdacc8da":"c0eiI","7760b47b02971dfa":"gMCbp"}],"dquIQ":[function(require,module,exports,__globalThis) {
+var baseTimes = require("7ed875a0e67be76f"), isArguments = require("9cdb51ffa56f149b"), isArray = require("38cd49f1e493b3d7"), isBuffer = require("b379831fe1873fed"), isIndex = require("f362a34cd8321bb7"), isTypedArray = require("c019db5297494469");
+/** Used for built-in method references. */ var objectProto = Object.prototype;
+/** Used to check objects for own properties. */ var hasOwnProperty = objectProto.hasOwnProperty;
+/**
+ * Creates an array of the enumerable property names of the array-like `value`.
+ *
+ * @private
+ * @param {*} value The value to query.
+ * @param {boolean} inherited Specify returning inherited property names.
+ * @returns {Array} Returns the array of property names.
+ */ function arrayLikeKeys(value, inherited) {
+    var isArr = isArray(value), isArg = !isArr && isArguments(value), isBuff = !isArr && !isArg && isBuffer(value), isType = !isArr && !isArg && !isBuff && isTypedArray(value), skipIndexes = isArr || isArg || isBuff || isType, result = skipIndexes ? baseTimes(value.length, String) : [], length = result.length;
+    for(var key in value)if ((inherited || hasOwnProperty.call(value, key)) && !(skipIndexes && // Safari 9 has enumerable `arguments.length` in strict mode.
+    (key == 'length' || // Node.js 0.10 has enumerable non-index properties on buffers.
+    isBuff && (key == 'offset' || key == 'parent') || // PhantomJS 2 has enumerable non-index properties on typed arrays.
+    isType && (key == 'buffer' || key == 'byteLength' || key == 'byteOffset') || // Skip index properties.
+    isIndex(key, length)))) result.push(key);
+    return result;
+}
+module.exports = arrayLikeKeys;
+
+},{"7ed875a0e67be76f":"odqYd","9cdb51ffa56f149b":"8ReNj","38cd49f1e493b3d7":"dZaTH","b379831fe1873fed":"cn85h","f362a34cd8321bb7":"aJpx0","c019db5297494469":"6SVKk"}],"odqYd":[function(require,module,exports,__globalThis) {
+/**
+ * The base implementation of `_.times` without support for iteratee shorthands
+ * or max array length checks.
+ *
+ * @private
+ * @param {number} n The number of times to invoke `iteratee`.
+ * @param {Function} iteratee The function invoked per iteration.
+ * @returns {Array} Returns the array of results.
+ */ function baseTimes(n, iteratee) {
+    var index = -1, result = Array(n);
+    while(++index < n)result[index] = iteratee(index);
+    return result;
+}
+module.exports = baseTimes;
+
+},{}],"8ReNj":[function(require,module,exports,__globalThis) {
+var baseIsArguments = require("b56e5b7d86069686"), isObjectLike = require("bead821d6af018b5");
+/** Used for built-in method references. */ var objectProto = Object.prototype;
+/** Used to check objects for own properties. */ var hasOwnProperty = objectProto.hasOwnProperty;
+/** Built-in value references. */ var propertyIsEnumerable = objectProto.propertyIsEnumerable;
+/**
+ * Checks if `value` is likely an `arguments` object.
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is an `arguments` object,
+ *  else `false`.
+ * @example
+ *
+ * _.isArguments(function() { return arguments; }());
+ * // => true
+ *
+ * _.isArguments([1, 2, 3]);
+ * // => false
+ */ var isArguments = baseIsArguments(function() {
+    return arguments;
+}()) ? baseIsArguments : function(value) {
+    return isObjectLike(value) && hasOwnProperty.call(value, 'callee') && !propertyIsEnumerable.call(value, 'callee');
+};
+module.exports = isArguments;
+
+},{"b56e5b7d86069686":"gx70P","bead821d6af018b5":"3BLi4"}],"gx70P":[function(require,module,exports,__globalThis) {
+var baseGetTag = require("7e8612a4a451f2cc"), isObjectLike = require("b6cdbe52dcf709f8");
+/** `Object#toString` result references. */ var argsTag = '[object Arguments]';
+/**
+ * The base implementation of `_.isArguments`.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is an `arguments` object,
+ */ function baseIsArguments(value) {
+    return isObjectLike(value) && baseGetTag(value) == argsTag;
+}
+module.exports = baseIsArguments;
+
+},{"7e8612a4a451f2cc":"lOnbo","b6cdbe52dcf709f8":"3BLi4"}],"dZaTH":[function(require,module,exports,__globalThis) {
+/**
+ * Checks if `value` is classified as an `Array` object.
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is an array, else `false`.
+ * @example
+ *
+ * _.isArray([1, 2, 3]);
+ * // => true
+ *
+ * _.isArray(document.body.children);
+ * // => false
+ *
+ * _.isArray('abc');
+ * // => false
+ *
+ * _.isArray(_.noop);
+ * // => false
+ */ var isArray = Array.isArray;
+module.exports = isArray;
+
+},{}],"cn85h":[function(require,module,exports,__globalThis) {
+var root = require("cef5ec6f0da1ab00"), stubFalse = require("a1e87b138cf75d1d");
+/** Detect free variable `exports`. */ var freeExports = exports && !exports.nodeType && exports;
+/** Detect free variable `module`. */ var freeModule = freeExports && true && module && !module.nodeType && module;
+/** Detect the popular CommonJS extension `module.exports`. */ var moduleExports = freeModule && freeModule.exports === freeExports;
+/** Built-in value references. */ var Buffer = moduleExports ? root.Buffer : undefined;
+/* Built-in method references for those with the same name as other `lodash` methods. */ var nativeIsBuffer = Buffer ? Buffer.isBuffer : undefined;
+/**
+ * Checks if `value` is a buffer.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.3.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a buffer, else `false`.
+ * @example
+ *
+ * _.isBuffer(new Buffer(2));
+ * // => true
+ *
+ * _.isBuffer(new Uint8Array(2));
+ * // => false
+ */ var isBuffer = nativeIsBuffer || stubFalse;
+module.exports = isBuffer;
+
+},{"cef5ec6f0da1ab00":"dSYUs","a1e87b138cf75d1d":"dx4uy"}],"dx4uy":[function(require,module,exports,__globalThis) {
+/**
+ * This method returns `false`.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.13.0
+ * @category Util
+ * @returns {boolean} Returns `false`.
+ * @example
+ *
+ * _.times(2, _.stubFalse);
+ * // => [false, false]
+ */ function stubFalse() {
+    return false;
+}
+module.exports = stubFalse;
+
+},{}],"aJpx0":[function(require,module,exports,__globalThis) {
+/** Used as references for various `Number` constants. */ var MAX_SAFE_INTEGER = 9007199254740991;
+/** Used to detect unsigned integer values. */ var reIsUint = /^(?:0|[1-9]\d*)$/;
+/**
+ * Checks if `value` is a valid array-like index.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @param {number} [length=MAX_SAFE_INTEGER] The upper bounds of a valid index.
+ * @returns {boolean} Returns `true` if `value` is a valid index, else `false`.
+ */ function isIndex(value, length) {
+    var type = typeof value;
+    length = length == null ? MAX_SAFE_INTEGER : length;
+    return !!length && (type == 'number' || type != 'symbol' && reIsUint.test(value)) && value > -1 && value % 1 == 0 && value < length;
+}
+module.exports = isIndex;
+
+},{}],"6SVKk":[function(require,module,exports,__globalThis) {
+var baseIsTypedArray = require("75a26f037e65be61"), baseUnary = require("903f50eb1c16d257"), nodeUtil = require("fa49853a82034c30");
+/* Node.js helper references. */ var nodeIsTypedArray = nodeUtil && nodeUtil.isTypedArray;
+/**
+ * Checks if `value` is classified as a typed array.
+ *
+ * @static
+ * @memberOf _
+ * @since 3.0.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a typed array, else `false`.
+ * @example
+ *
+ * _.isTypedArray(new Uint8Array);
+ * // => true
+ *
+ * _.isTypedArray([]);
+ * // => false
+ */ var isTypedArray = nodeIsTypedArray ? baseUnary(nodeIsTypedArray) : baseIsTypedArray;
+module.exports = isTypedArray;
+
+},{"75a26f037e65be61":"lGSsl","903f50eb1c16d257":"eJXq4","fa49853a82034c30":"5edNe"}],"lGSsl":[function(require,module,exports,__globalThis) {
+var baseGetTag = require("67544c3df364a802"), isLength = require("f661b3a120d7a4cb"), isObjectLike = require("cdd86c83797c0618");
+/** `Object#toString` result references. */ var argsTag = '[object Arguments]', arrayTag = '[object Array]', boolTag = '[object Boolean]', dateTag = '[object Date]', errorTag = '[object Error]', funcTag = '[object Function]', mapTag = '[object Map]', numberTag = '[object Number]', objectTag = '[object Object]', regexpTag = '[object RegExp]', setTag = '[object Set]', stringTag = '[object String]', weakMapTag = '[object WeakMap]';
+var arrayBufferTag = '[object ArrayBuffer]', dataViewTag = '[object DataView]', float32Tag = '[object Float32Array]', float64Tag = '[object Float64Array]', int8Tag = '[object Int8Array]', int16Tag = '[object Int16Array]', int32Tag = '[object Int32Array]', uint8Tag = '[object Uint8Array]', uint8ClampedTag = '[object Uint8ClampedArray]', uint16Tag = '[object Uint16Array]', uint32Tag = '[object Uint32Array]';
+/** Used to identify `toStringTag` values of typed arrays. */ var typedArrayTags = {};
+typedArrayTags[float32Tag] = typedArrayTags[float64Tag] = typedArrayTags[int8Tag] = typedArrayTags[int16Tag] = typedArrayTags[int32Tag] = typedArrayTags[uint8Tag] = typedArrayTags[uint8ClampedTag] = typedArrayTags[uint16Tag] = typedArrayTags[uint32Tag] = true;
+typedArrayTags[argsTag] = typedArrayTags[arrayTag] = typedArrayTags[arrayBufferTag] = typedArrayTags[boolTag] = typedArrayTags[dataViewTag] = typedArrayTags[dateTag] = typedArrayTags[errorTag] = typedArrayTags[funcTag] = typedArrayTags[mapTag] = typedArrayTags[numberTag] = typedArrayTags[objectTag] = typedArrayTags[regexpTag] = typedArrayTags[setTag] = typedArrayTags[stringTag] = typedArrayTags[weakMapTag] = false;
+/**
+ * The base implementation of `_.isTypedArray` without Node.js optimizations.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a typed array, else `false`.
+ */ function baseIsTypedArray(value) {
+    return isObjectLike(value) && isLength(value.length) && !!typedArrayTags[baseGetTag(value)];
+}
+module.exports = baseIsTypedArray;
+
+},{"67544c3df364a802":"lOnbo","f661b3a120d7a4cb":"hrTBx","cdd86c83797c0618":"3BLi4"}],"hrTBx":[function(require,module,exports,__globalThis) {
+/** Used as references for various `Number` constants. */ var MAX_SAFE_INTEGER = 9007199254740991;
+/**
+ * Checks if `value` is a valid array-like length.
+ *
+ * **Note:** This method is loosely based on
+ * [`ToLength`](http://ecma-international.org/ecma-262/7.0/#sec-tolength).
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a valid length, else `false`.
+ * @example
+ *
+ * _.isLength(3);
+ * // => true
+ *
+ * _.isLength(Number.MIN_VALUE);
+ * // => false
+ *
+ * _.isLength(Infinity);
+ * // => false
+ *
+ * _.isLength('3');
+ * // => false
+ */ function isLength(value) {
+    return typeof value == 'number' && value > -1 && value % 1 == 0 && value <= MAX_SAFE_INTEGER;
+}
+module.exports = isLength;
+
+},{}],"eJXq4":[function(require,module,exports,__globalThis) {
+/**
+ * The base implementation of `_.unary` without support for storing metadata.
+ *
+ * @private
+ * @param {Function} func The function to cap arguments for.
+ * @returns {Function} Returns the new capped function.
+ */ function baseUnary(func) {
+    return function(value) {
+        return func(value);
+    };
+}
+module.exports = baseUnary;
+
+},{}],"5edNe":[function(require,module,exports,__globalThis) {
+var freeGlobal = require("94e753dfbe54816e");
+/** Detect free variable `exports`. */ var freeExports = exports && !exports.nodeType && exports;
+/** Detect free variable `module`. */ var freeModule = freeExports && true && module && !module.nodeType && module;
+/** Detect the popular CommonJS extension `module.exports`. */ var moduleExports = freeModule && freeModule.exports === freeExports;
+/** Detect free variable `process` from Node.js. */ var freeProcess = moduleExports && freeGlobal.process;
+/** Used to access faster Node.js helpers. */ var nodeUtil = function() {
+    try {
+        // Use `util.types` for Node.js 10+.
+        var types = freeModule && freeModule.require && freeModule.require('util').types;
+        if (types) return types;
+        // Legacy `process.binding('util')` for Node.js < 10.
+        return freeProcess && freeProcess.binding && freeProcess.binding('util');
+    } catch (e) {}
+}();
+module.exports = nodeUtil;
+
+},{"94e753dfbe54816e":"kAk32"}],"c0eiI":[function(require,module,exports,__globalThis) {
+var isPrototype = require("7da6298814f9bd95"), nativeKeys = require("3ec652610d8dd5d3");
+/** Used for built-in method references. */ var objectProto = Object.prototype;
+/** Used to check objects for own properties. */ var hasOwnProperty = objectProto.hasOwnProperty;
+/**
+ * The base implementation of `_.keys` which doesn't treat sparse arrays as dense.
+ *
+ * @private
+ * @param {Object} object The object to query.
+ * @returns {Array} Returns the array of property names.
+ */ function baseKeys(object) {
+    if (!isPrototype(object)) return nativeKeys(object);
+    var result = [];
+    for(var key in Object(object))if (hasOwnProperty.call(object, key) && key != 'constructor') result.push(key);
+    return result;
+}
+module.exports = baseKeys;
+
+},{"7da6298814f9bd95":"iG4eR","3ec652610d8dd5d3":"k97u2"}],"iG4eR":[function(require,module,exports,__globalThis) {
+/** Used for built-in method references. */ var objectProto = Object.prototype;
+/**
+ * Checks if `value` is likely a prototype object.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a prototype, else `false`.
+ */ function isPrototype(value) {
+    var Ctor = value && value.constructor, proto = typeof Ctor == 'function' && Ctor.prototype || objectProto;
+    return value === proto;
+}
+module.exports = isPrototype;
+
+},{}],"k97u2":[function(require,module,exports,__globalThis) {
+var overArg = require("aa3357c7a3889df");
+/* Built-in method references for those with the same name as other `lodash` methods. */ var nativeKeys = overArg(Object.keys, Object);
+module.exports = nativeKeys;
+
+},{"aa3357c7a3889df":"dpUvl"}],"gMCbp":[function(require,module,exports,__globalThis) {
+var isFunction = require("bb060d4356645330"), isLength = require("f3db08d4d1110aaf");
+/**
+ * Checks if `value` is array-like. A value is considered array-like if it's
+ * not a function and has a `value.length` that's an integer greater than or
+ * equal to `0` and less than or equal to `Number.MAX_SAFE_INTEGER`.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is array-like, else `false`.
+ * @example
+ *
+ * _.isArrayLike([1, 2, 3]);
+ * // => true
+ *
+ * _.isArrayLike(document.body.children);
+ * // => true
+ *
+ * _.isArrayLike('abc');
+ * // => true
+ *
+ * _.isArrayLike(_.noop);
+ * // => false
+ */ function isArrayLike(value) {
+    return value != null && isLength(value.length) && !isFunction(value);
+}
+module.exports = isArrayLike;
+
+},{"bb060d4356645330":"cfti6","f3db08d4d1110aaf":"hrTBx"}],"2fsgg":[function(require,module,exports,__globalThis) {
+var baseMatches = require("30aeab910fab669"), baseMatchesProperty = require("4f010869f7b63154"), identity = require("28f06147d1eb9502"), isArray = require("3c56f88c4debf449"), property = require("aee920e0ef5bf111");
+/**
+ * The base implementation of `_.iteratee`.
+ *
+ * @private
+ * @param {*} [value=_.identity] The value to convert to an iteratee.
+ * @returns {Function} Returns the iteratee.
+ */ function baseIteratee(value) {
+    // Don't store the `typeof` result in a variable to avoid a JIT bug in Safari 9.
+    // See https://bugs.webkit.org/show_bug.cgi?id=156034 for more details.
+    if (typeof value == 'function') return value;
+    if (value == null) return identity;
+    if (typeof value == 'object') return isArray(value) ? baseMatchesProperty(value[0], value[1]) : baseMatches(value);
+    return property(value);
+}
+module.exports = baseIteratee;
+
+},{"30aeab910fab669":"2mdwX","4f010869f7b63154":"48kxC","28f06147d1eb9502":"dgTUN","3c56f88c4debf449":"dZaTH","aee920e0ef5bf111":"8aSQI"}],"2mdwX":[function(require,module,exports,__globalThis) {
+var baseIsMatch = require("e45515c903dc8f87"), getMatchData = require("89e9034a8071e297"), matchesStrictComparable = require("782598b150762386");
+/**
+ * The base implementation of `_.matches` which doesn't clone `source`.
+ *
+ * @private
+ * @param {Object} source The object of property values to match.
+ * @returns {Function} Returns the new spec function.
+ */ function baseMatches(source) {
+    var matchData = getMatchData(source);
+    if (matchData.length == 1 && matchData[0][2]) return matchesStrictComparable(matchData[0][0], matchData[0][1]);
+    return function(object) {
+        return object === source || baseIsMatch(object, source, matchData);
+    };
+}
+module.exports = baseMatches;
+
+},{"e45515c903dc8f87":"joJZV","89e9034a8071e297":"48Qyi","782598b150762386":"a9Bav"}],"joJZV":[function(require,module,exports,__globalThis) {
+var Stack = require("ae43062900bf7e4d"), baseIsEqual = require("9003c0cc8ac007b6");
+/** Used to compose bitmasks for value comparisons. */ var COMPARE_PARTIAL_FLAG = 1, COMPARE_UNORDERED_FLAG = 2;
+/**
+ * The base implementation of `_.isMatch` without support for iteratee shorthands.
+ *
+ * @private
+ * @param {Object} object The object to inspect.
+ * @param {Object} source The object of property values to match.
+ * @param {Array} matchData The property names, values, and compare flags to match.
+ * @param {Function} [customizer] The function to customize comparisons.
+ * @returns {boolean} Returns `true` if `object` is a match, else `false`.
+ */ function baseIsMatch(object, source, matchData, customizer) {
+    var index = matchData.length, length = index, noCustomizer = !customizer;
+    if (object == null) return !length;
+    object = Object(object);
+    while(index--){
+        var data = matchData[index];
+        if (noCustomizer && data[2] ? data[1] !== object[data[0]] : !(data[0] in object)) return false;
+    }
+    while(++index < length){
+        data = matchData[index];
+        var key = data[0], objValue = object[key], srcValue = data[1];
+        if (noCustomizer && data[2]) {
+            if (objValue === undefined && !(key in object)) return false;
+        } else {
+            var stack = new Stack;
+            if (customizer) var result = customizer(objValue, srcValue, key, object, source, stack);
+            if (!(result === undefined ? baseIsEqual(srcValue, objValue, COMPARE_PARTIAL_FLAG | COMPARE_UNORDERED_FLAG, customizer, stack) : result)) return false;
+        }
+    }
+    return true;
+}
+module.exports = baseIsMatch;
+
+},{"ae43062900bf7e4d":"atP87","9003c0cc8ac007b6":"7i3qr"}],"atP87":[function(require,module,exports,__globalThis) {
+var ListCache = require("cfb30a39eead9e7e"), stackClear = require("ceda2a63c77c915"), stackDelete = require("91ee1b348d9d7172"), stackGet = require("3fe28318f65b9332"), stackHas = require("724ca4def8b84e06"), stackSet = require("e9ceacb40d9582bd");
+/**
+ * Creates a stack cache object to store key-value pairs.
+ *
+ * @private
+ * @constructor
+ * @param {Array} [entries] The key-value pairs to cache.
+ */ function Stack(entries) {
+    var data = this.__data__ = new ListCache(entries);
+    this.size = data.size;
+}
+// Add methods to `Stack`.
+Stack.prototype.clear = stackClear;
+Stack.prototype['delete'] = stackDelete;
+Stack.prototype.get = stackGet;
+Stack.prototype.has = stackHas;
+Stack.prototype.set = stackSet;
+module.exports = Stack;
+
+},{"cfb30a39eead9e7e":"3UZeo","ceda2a63c77c915":"6CpyN","91ee1b348d9d7172":"dGFb0","3fe28318f65b9332":"6zFUp","724ca4def8b84e06":"3VJUX","e9ceacb40d9582bd":"ZfrYM"}],"3UZeo":[function(require,module,exports,__globalThis) {
+var listCacheClear = require("4b1a0d54aed80a7b"), listCacheDelete = require("b700cb849df2c166"), listCacheGet = require("d76dd90eead6cced"), listCacheHas = require("3d210628ba60ec8"), listCacheSet = require("76026bf2d4cfff93");
+/**
+ * Creates an list cache object.
+ *
+ * @private
+ * @constructor
+ * @param {Array} [entries] The key-value pairs to cache.
+ */ function ListCache(entries) {
+    var index = -1, length = entries == null ? 0 : entries.length;
+    this.clear();
+    while(++index < length){
+        var entry = entries[index];
+        this.set(entry[0], entry[1]);
+    }
+}
+// Add methods to `ListCache`.
+ListCache.prototype.clear = listCacheClear;
+ListCache.prototype['delete'] = listCacheDelete;
+ListCache.prototype.get = listCacheGet;
+ListCache.prototype.has = listCacheHas;
+ListCache.prototype.set = listCacheSet;
+module.exports = ListCache;
+
+},{"4b1a0d54aed80a7b":"7AKQv","b700cb849df2c166":"j2Z5O","d76dd90eead6cced":"6Zrrs","3d210628ba60ec8":"i1CBK","76026bf2d4cfff93":"2Rcur"}],"7AKQv":[function(require,module,exports,__globalThis) {
+/**
+ * Removes all key-value entries from the list cache.
+ *
+ * @private
+ * @name clear
+ * @memberOf ListCache
+ */ function listCacheClear() {
+    this.__data__ = [];
+    this.size = 0;
+}
+module.exports = listCacheClear;
+
+},{}],"j2Z5O":[function(require,module,exports,__globalThis) {
+var assocIndexOf = require("173cad7d48c35f4f");
+/** Used for built-in method references. */ var arrayProto = Array.prototype;
+/** Built-in value references. */ var splice = arrayProto.splice;
+/**
+ * Removes `key` and its value from the list cache.
+ *
+ * @private
+ * @name delete
+ * @memberOf ListCache
+ * @param {string} key The key of the value to remove.
+ * @returns {boolean} Returns `true` if the entry was removed, else `false`.
+ */ function listCacheDelete(key) {
+    var data = this.__data__, index = assocIndexOf(data, key);
+    if (index < 0) return false;
+    var lastIndex = data.length - 1;
+    if (index == lastIndex) data.pop();
+    else splice.call(data, index, 1);
+    --this.size;
+    return true;
+}
+module.exports = listCacheDelete;
+
+},{"173cad7d48c35f4f":"cRVsl"}],"cRVsl":[function(require,module,exports,__globalThis) {
+var eq = require("b38bfe408564f7a5");
+/**
+ * Gets the index at which the `key` is found in `array` of key-value pairs.
+ *
+ * @private
+ * @param {Array} array The array to inspect.
+ * @param {*} key The key to search for.
+ * @returns {number} Returns the index of the matched value, else `-1`.
+ */ function assocIndexOf(array, key) {
+    var length = array.length;
+    while(length--){
+        if (eq(array[length][0], key)) return length;
+    }
+    return -1;
+}
+module.exports = assocIndexOf;
+
+},{"b38bfe408564f7a5":"aVz5f"}],"aVz5f":[function(require,module,exports,__globalThis) {
+/**
+ * Performs a
+ * [`SameValueZero`](http://ecma-international.org/ecma-262/7.0/#sec-samevaluezero)
+ * comparison between two values to determine if they are equivalent.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to compare.
+ * @param {*} other The other value to compare.
+ * @returns {boolean} Returns `true` if the values are equivalent, else `false`.
+ * @example
+ *
+ * var object = { 'a': 1 };
+ * var other = { 'a': 1 };
+ *
+ * _.eq(object, object);
+ * // => true
+ *
+ * _.eq(object, other);
+ * // => false
+ *
+ * _.eq('a', 'a');
+ * // => true
+ *
+ * _.eq('a', Object('a'));
+ * // => false
+ *
+ * _.eq(NaN, NaN);
+ * // => true
+ */ function eq(value, other) {
+    return value === other || value !== value && other !== other;
+}
+module.exports = eq;
+
+},{}],"6Zrrs":[function(require,module,exports,__globalThis) {
+var assocIndexOf = require("c0bae780ed176e2c");
+/**
+ * Gets the list cache value for `key`.
+ *
+ * @private
+ * @name get
+ * @memberOf ListCache
+ * @param {string} key The key of the value to get.
+ * @returns {*} Returns the entry value.
+ */ function listCacheGet(key) {
+    var data = this.__data__, index = assocIndexOf(data, key);
+    return index < 0 ? undefined : data[index][1];
+}
+module.exports = listCacheGet;
+
+},{"c0bae780ed176e2c":"cRVsl"}],"i1CBK":[function(require,module,exports,__globalThis) {
+var assocIndexOf = require("7ed3d4e3adbd64a4");
+/**
+ * Checks if a list cache value for `key` exists.
+ *
+ * @private
+ * @name has
+ * @memberOf ListCache
+ * @param {string} key The key of the entry to check.
+ * @returns {boolean} Returns `true` if an entry for `key` exists, else `false`.
+ */ function listCacheHas(key) {
+    return assocIndexOf(this.__data__, key) > -1;
+}
+module.exports = listCacheHas;
+
+},{"7ed3d4e3adbd64a4":"cRVsl"}],"2Rcur":[function(require,module,exports,__globalThis) {
+var assocIndexOf = require("5be4035c2d7ca432");
+/**
+ * Sets the list cache `key` to `value`.
+ *
+ * @private
+ * @name set
+ * @memberOf ListCache
+ * @param {string} key The key of the value to set.
+ * @param {*} value The value to set.
+ * @returns {Object} Returns the list cache instance.
+ */ function listCacheSet(key, value) {
+    var data = this.__data__, index = assocIndexOf(data, key);
+    if (index < 0) {
+        ++this.size;
+        data.push([
+            key,
+            value
+        ]);
+    } else data[index][1] = value;
+    return this;
+}
+module.exports = listCacheSet;
+
+},{"5be4035c2d7ca432":"cRVsl"}],"6CpyN":[function(require,module,exports,__globalThis) {
+var ListCache = require("8a0350213da984ae");
+/**
+ * Removes all key-value entries from the stack.
+ *
+ * @private
+ * @name clear
+ * @memberOf Stack
+ */ function stackClear() {
+    this.__data__ = new ListCache;
+    this.size = 0;
+}
+module.exports = stackClear;
+
+},{"8a0350213da984ae":"3UZeo"}],"dGFb0":[function(require,module,exports,__globalThis) {
+/**
+ * Removes `key` and its value from the stack.
+ *
+ * @private
+ * @name delete
+ * @memberOf Stack
+ * @param {string} key The key of the value to remove.
+ * @returns {boolean} Returns `true` if the entry was removed, else `false`.
+ */ function stackDelete(key) {
+    var data = this.__data__, result = data['delete'](key);
+    this.size = data.size;
+    return result;
+}
+module.exports = stackDelete;
+
+},{}],"6zFUp":[function(require,module,exports,__globalThis) {
+/**
+ * Gets the stack value for `key`.
+ *
+ * @private
+ * @name get
+ * @memberOf Stack
+ * @param {string} key The key of the value to get.
+ * @returns {*} Returns the entry value.
+ */ function stackGet(key) {
+    return this.__data__.get(key);
+}
+module.exports = stackGet;
+
+},{}],"3VJUX":[function(require,module,exports,__globalThis) {
+/**
+ * Checks if a stack value for `key` exists.
+ *
+ * @private
+ * @name has
+ * @memberOf Stack
+ * @param {string} key The key of the entry to check.
+ * @returns {boolean} Returns `true` if an entry for `key` exists, else `false`.
+ */ function stackHas(key) {
+    return this.__data__.has(key);
+}
+module.exports = stackHas;
+
+},{}],"ZfrYM":[function(require,module,exports,__globalThis) {
+var ListCache = require("4737651e99b917d2"), Map = require("1494efbafafa9552"), MapCache = require("6049e8027fe9407f");
+/** Used as the size to enable large array optimizations. */ var LARGE_ARRAY_SIZE = 200;
+/**
+ * Sets the stack `key` to `value`.
+ *
+ * @private
+ * @name set
+ * @memberOf Stack
+ * @param {string} key The key of the value to set.
+ * @param {*} value The value to set.
+ * @returns {Object} Returns the stack cache instance.
+ */ function stackSet(key, value) {
+    var data = this.__data__;
+    if (data instanceof ListCache) {
+        var pairs = data.__data__;
+        if (!Map || pairs.length < LARGE_ARRAY_SIZE - 1) {
+            pairs.push([
+                key,
+                value
+            ]);
+            this.size = ++data.size;
+            return this;
+        }
+        data = this.__data__ = new MapCache(pairs);
+    }
+    data.set(key, value);
+    this.size = data.size;
+    return this;
+}
+module.exports = stackSet;
+
+},{"4737651e99b917d2":"3UZeo","1494efbafafa9552":"8YjF4","6049e8027fe9407f":"664I1"}],"8YjF4":[function(require,module,exports,__globalThis) {
+var getNative = require("ed0752fe9f482107"), root = require("29224713b8d411e6");
+/* Built-in method references that are verified to be native. */ var Map = getNative(root, 'Map');
+module.exports = Map;
+
+},{"ed0752fe9f482107":"9PCIl","29224713b8d411e6":"dSYUs"}],"664I1":[function(require,module,exports,__globalThis) {
+var mapCacheClear = require("a5ffecfb6a8bdac1"), mapCacheDelete = require("d2967b0e32ccfa56"), mapCacheGet = require("ca21409ea89624c0"), mapCacheHas = require("f88fd07f8dd1f67d"), mapCacheSet = require("dbf3eae765642a3b");
+/**
+ * Creates a map cache object to store key-value pairs.
+ *
+ * @private
+ * @constructor
+ * @param {Array} [entries] The key-value pairs to cache.
+ */ function MapCache(entries) {
+    var index = -1, length = entries == null ? 0 : entries.length;
+    this.clear();
+    while(++index < length){
+        var entry = entries[index];
+        this.set(entry[0], entry[1]);
+    }
+}
+// Add methods to `MapCache`.
+MapCache.prototype.clear = mapCacheClear;
+MapCache.prototype['delete'] = mapCacheDelete;
+MapCache.prototype.get = mapCacheGet;
+MapCache.prototype.has = mapCacheHas;
+MapCache.prototype.set = mapCacheSet;
+module.exports = MapCache;
+
+},{"a5ffecfb6a8bdac1":"7kHs4","d2967b0e32ccfa56":"4ny9y","ca21409ea89624c0":"gVeFY","f88fd07f8dd1f67d":"idSOY","dbf3eae765642a3b":"lXUJT"}],"7kHs4":[function(require,module,exports,__globalThis) {
+var Hash = require("4ae82d88051cc92b"), ListCache = require("a07dcf3fd3097a0c"), Map = require("92c01c953ef00ded");
+/**
+ * Removes all key-value entries from the map.
+ *
+ * @private
+ * @name clear
+ * @memberOf MapCache
+ */ function mapCacheClear() {
+    this.size = 0;
+    this.__data__ = {
+        'hash': new Hash,
+        'map': new (Map || ListCache),
+        'string': new Hash
+    };
+}
+module.exports = mapCacheClear;
+
+},{"4ae82d88051cc92b":"jFMT5","a07dcf3fd3097a0c":"3UZeo","92c01c953ef00ded":"8YjF4"}],"jFMT5":[function(require,module,exports,__globalThis) {
+var hashClear = require("f47a1723b6e2d79b"), hashDelete = require("bc25d439ccd1fb47"), hashGet = require("f096b37295a92ab0"), hashHas = require("d88173cbc6a133c8"), hashSet = require("afb9b3bae0461cbf");
+/**
+ * Creates a hash object.
+ *
+ * @private
+ * @constructor
+ * @param {Array} [entries] The key-value pairs to cache.
+ */ function Hash(entries) {
+    var index = -1, length = entries == null ? 0 : entries.length;
+    this.clear();
+    while(++index < length){
+        var entry = entries[index];
+        this.set(entry[0], entry[1]);
+    }
+}
+// Add methods to `Hash`.
+Hash.prototype.clear = hashClear;
+Hash.prototype['delete'] = hashDelete;
+Hash.prototype.get = hashGet;
+Hash.prototype.has = hashHas;
+Hash.prototype.set = hashSet;
+module.exports = Hash;
+
+},{"f47a1723b6e2d79b":"f2NRo","bc25d439ccd1fb47":"cCdgz","f096b37295a92ab0":"eKqTO","d88173cbc6a133c8":"ghnqP","afb9b3bae0461cbf":"6i99R"}],"f2NRo":[function(require,module,exports,__globalThis) {
+var nativeCreate = require("dc294230a47ca365");
+/**
+ * Removes all key-value entries from the hash.
+ *
+ * @private
+ * @name clear
+ * @memberOf Hash
+ */ function hashClear() {
+    this.__data__ = nativeCreate ? nativeCreate(null) : {};
+    this.size = 0;
+}
+module.exports = hashClear;
+
+},{"dc294230a47ca365":"6i8Uf"}],"6i8Uf":[function(require,module,exports,__globalThis) {
+var getNative = require("12f496acdffb7cf7");
+/* Built-in method references that are verified to be native. */ var nativeCreate = getNative(Object, 'create');
+module.exports = nativeCreate;
+
+},{"12f496acdffb7cf7":"9PCIl"}],"cCdgz":[function(require,module,exports,__globalThis) {
+/**
+ * Removes `key` and its value from the hash.
+ *
+ * @private
+ * @name delete
+ * @memberOf Hash
+ * @param {Object} hash The hash to modify.
+ * @param {string} key The key of the value to remove.
+ * @returns {boolean} Returns `true` if the entry was removed, else `false`.
+ */ function hashDelete(key) {
+    var result = this.has(key) && delete this.__data__[key];
+    this.size -= result ? 1 : 0;
+    return result;
+}
+module.exports = hashDelete;
+
+},{}],"eKqTO":[function(require,module,exports,__globalThis) {
+var nativeCreate = require("627211fa3e1596e1");
+/** Used to stand-in for `undefined` hash values. */ var HASH_UNDEFINED = '__lodash_hash_undefined__';
+/** Used for built-in method references. */ var objectProto = Object.prototype;
+/** Used to check objects for own properties. */ var hasOwnProperty = objectProto.hasOwnProperty;
+/**
+ * Gets the hash value for `key`.
+ *
+ * @private
+ * @name get
+ * @memberOf Hash
+ * @param {string} key The key of the value to get.
+ * @returns {*} Returns the entry value.
+ */ function hashGet(key) {
+    var data = this.__data__;
+    if (nativeCreate) {
+        var result = data[key];
+        return result === HASH_UNDEFINED ? undefined : result;
+    }
+    return hasOwnProperty.call(data, key) ? data[key] : undefined;
+}
+module.exports = hashGet;
+
+},{"627211fa3e1596e1":"6i8Uf"}],"ghnqP":[function(require,module,exports,__globalThis) {
+var nativeCreate = require("52b3f0bfeddceb45");
+/** Used for built-in method references. */ var objectProto = Object.prototype;
+/** Used to check objects for own properties. */ var hasOwnProperty = objectProto.hasOwnProperty;
+/**
+ * Checks if a hash value for `key` exists.
+ *
+ * @private
+ * @name has
+ * @memberOf Hash
+ * @param {string} key The key of the entry to check.
+ * @returns {boolean} Returns `true` if an entry for `key` exists, else `false`.
+ */ function hashHas(key) {
+    var data = this.__data__;
+    return nativeCreate ? data[key] !== undefined : hasOwnProperty.call(data, key);
+}
+module.exports = hashHas;
+
+},{"52b3f0bfeddceb45":"6i8Uf"}],"6i99R":[function(require,module,exports,__globalThis) {
+var nativeCreate = require("67b7d10f53ccd515");
+/** Used to stand-in for `undefined` hash values. */ var HASH_UNDEFINED = '__lodash_hash_undefined__';
+/**
+ * Sets the hash `key` to `value`.
+ *
+ * @private
+ * @name set
+ * @memberOf Hash
+ * @param {string} key The key of the value to set.
+ * @param {*} value The value to set.
+ * @returns {Object} Returns the hash instance.
+ */ function hashSet(key, value) {
+    var data = this.__data__;
+    this.size += this.has(key) ? 0 : 1;
+    data[key] = nativeCreate && value === undefined ? HASH_UNDEFINED : value;
+    return this;
+}
+module.exports = hashSet;
+
+},{"67b7d10f53ccd515":"6i8Uf"}],"4ny9y":[function(require,module,exports,__globalThis) {
+var getMapData = require("656d8c5510e0af84");
+/**
+ * Removes `key` and its value from the map.
+ *
+ * @private
+ * @name delete
+ * @memberOf MapCache
+ * @param {string} key The key of the value to remove.
+ * @returns {boolean} Returns `true` if the entry was removed, else `false`.
+ */ function mapCacheDelete(key) {
+    var result = getMapData(this, key)['delete'](key);
+    this.size -= result ? 1 : 0;
+    return result;
+}
+module.exports = mapCacheDelete;
+
+},{"656d8c5510e0af84":"aptgk"}],"aptgk":[function(require,module,exports,__globalThis) {
+var isKeyable = require("adfdd2b4101370ed");
+/**
+ * Gets the data for `map`.
+ *
+ * @private
+ * @param {Object} map The map to query.
+ * @param {string} key The reference key.
+ * @returns {*} Returns the map data.
+ */ function getMapData(map, key) {
+    var data = map.__data__;
+    return isKeyable(key) ? data[typeof key == 'string' ? 'string' : 'hash'] : data.map;
+}
+module.exports = getMapData;
+
+},{"adfdd2b4101370ed":"icylN"}],"icylN":[function(require,module,exports,__globalThis) {
+/**
+ * Checks if `value` is suitable for use as unique object key.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is suitable, else `false`.
+ */ function isKeyable(value) {
+    var type = typeof value;
+    return type == 'string' || type == 'number' || type == 'symbol' || type == 'boolean' ? value !== '__proto__' : value === null;
+}
+module.exports = isKeyable;
+
+},{}],"gVeFY":[function(require,module,exports,__globalThis) {
+var getMapData = require("d345cdfee2b4007d");
+/**
+ * Gets the map value for `key`.
+ *
+ * @private
+ * @name get
+ * @memberOf MapCache
+ * @param {string} key The key of the value to get.
+ * @returns {*} Returns the entry value.
+ */ function mapCacheGet(key) {
+    return getMapData(this, key).get(key);
+}
+module.exports = mapCacheGet;
+
+},{"d345cdfee2b4007d":"aptgk"}],"idSOY":[function(require,module,exports,__globalThis) {
+var getMapData = require("29ebabd55e2d6074");
+/**
+ * Checks if a map value for `key` exists.
+ *
+ * @private
+ * @name has
+ * @memberOf MapCache
+ * @param {string} key The key of the entry to check.
+ * @returns {boolean} Returns `true` if an entry for `key` exists, else `false`.
+ */ function mapCacheHas(key) {
+    return getMapData(this, key).has(key);
+}
+module.exports = mapCacheHas;
+
+},{"29ebabd55e2d6074":"aptgk"}],"lXUJT":[function(require,module,exports,__globalThis) {
+var getMapData = require("21c5ffca56eeb737");
+/**
+ * Sets the map `key` to `value`.
+ *
+ * @private
+ * @name set
+ * @memberOf MapCache
+ * @param {string} key The key of the value to set.
+ * @param {*} value The value to set.
+ * @returns {Object} Returns the map cache instance.
+ */ function mapCacheSet(key, value) {
+    var data = getMapData(this, key), size = data.size;
+    data.set(key, value);
+    this.size += data.size == size ? 0 : 1;
+    return this;
+}
+module.exports = mapCacheSet;
+
+},{"21c5ffca56eeb737":"aptgk"}],"7i3qr":[function(require,module,exports,__globalThis) {
+var baseIsEqualDeep = require("bd1d38ebd4028e5a"), isObjectLike = require("809bbb0c20650dbc");
+/**
+ * The base implementation of `_.isEqual` which supports partial comparisons
+ * and tracks traversed objects.
+ *
+ * @private
+ * @param {*} value The value to compare.
+ * @param {*} other The other value to compare.
+ * @param {boolean} bitmask The bitmask flags.
+ *  1 - Unordered comparison
+ *  2 - Partial comparison
+ * @param {Function} [customizer] The function to customize comparisons.
+ * @param {Object} [stack] Tracks traversed `value` and `other` objects.
+ * @returns {boolean} Returns `true` if the values are equivalent, else `false`.
+ */ function baseIsEqual(value, other, bitmask, customizer, stack) {
+    if (value === other) return true;
+    if (value == null || other == null || !isObjectLike(value) && !isObjectLike(other)) return value !== value && other !== other;
+    return baseIsEqualDeep(value, other, bitmask, customizer, baseIsEqual, stack);
+}
+module.exports = baseIsEqual;
+
+},{"bd1d38ebd4028e5a":"6GoQ9","809bbb0c20650dbc":"3BLi4"}],"6GoQ9":[function(require,module,exports,__globalThis) {
+var Stack = require("60c73bca87468e58"), equalArrays = require("96bc8a1825db53a5"), equalByTag = require("8bdece495e87fb69"), equalObjects = require("bb94920432a68eca"), getTag = require("45495edff98e5837"), isArray = require("18256411ae9e2858"), isBuffer = require("e5ba7abf54247fc5"), isTypedArray = require("50d786bb5c7366af");
+/** Used to compose bitmasks for value comparisons. */ var COMPARE_PARTIAL_FLAG = 1;
+/** `Object#toString` result references. */ var argsTag = '[object Arguments]', arrayTag = '[object Array]', objectTag = '[object Object]';
+/** Used for built-in method references. */ var objectProto = Object.prototype;
+/** Used to check objects for own properties. */ var hasOwnProperty = objectProto.hasOwnProperty;
+/**
+ * A specialized version of `baseIsEqual` for arrays and objects which performs
+ * deep comparisons and tracks traversed objects enabling objects with circular
+ * references to be compared.
+ *
+ * @private
+ * @param {Object} object The object to compare.
+ * @param {Object} other The other object to compare.
+ * @param {number} bitmask The bitmask flags. See `baseIsEqual` for more details.
+ * @param {Function} customizer The function to customize comparisons.
+ * @param {Function} equalFunc The function to determine equivalents of values.
+ * @param {Object} [stack] Tracks traversed `object` and `other` objects.
+ * @returns {boolean} Returns `true` if the objects are equivalent, else `false`.
+ */ function baseIsEqualDeep(object, other, bitmask, customizer, equalFunc, stack) {
+    var objIsArr = isArray(object), othIsArr = isArray(other), objTag = objIsArr ? arrayTag : getTag(object), othTag = othIsArr ? arrayTag : getTag(other);
+    objTag = objTag == argsTag ? objectTag : objTag;
+    othTag = othTag == argsTag ? objectTag : othTag;
+    var objIsObj = objTag == objectTag, othIsObj = othTag == objectTag, isSameTag = objTag == othTag;
+    if (isSameTag && isBuffer(object)) {
+        if (!isBuffer(other)) return false;
+        objIsArr = true;
+        objIsObj = false;
+    }
+    if (isSameTag && !objIsObj) {
+        stack || (stack = new Stack);
+        return objIsArr || isTypedArray(object) ? equalArrays(object, other, bitmask, customizer, equalFunc, stack) : equalByTag(object, other, objTag, bitmask, customizer, equalFunc, stack);
+    }
+    if (!(bitmask & COMPARE_PARTIAL_FLAG)) {
+        var objIsWrapped = objIsObj && hasOwnProperty.call(object, '__wrapped__'), othIsWrapped = othIsObj && hasOwnProperty.call(other, '__wrapped__');
+        if (objIsWrapped || othIsWrapped) {
+            var objUnwrapped = objIsWrapped ? object.value() : object, othUnwrapped = othIsWrapped ? other.value() : other;
+            stack || (stack = new Stack);
+            return equalFunc(objUnwrapped, othUnwrapped, bitmask, customizer, stack);
+        }
+    }
+    if (!isSameTag) return false;
+    stack || (stack = new Stack);
+    return equalObjects(object, other, bitmask, customizer, equalFunc, stack);
+}
+module.exports = baseIsEqualDeep;
+
+},{"60c73bca87468e58":"atP87","96bc8a1825db53a5":"dQBwf","8bdece495e87fb69":"iqa6H","bb94920432a68eca":"klCEf","45495edff98e5837":"cRPhM","18256411ae9e2858":"dZaTH","e5ba7abf54247fc5":"cn85h","50d786bb5c7366af":"6SVKk"}],"dQBwf":[function(require,module,exports,__globalThis) {
+var SetCache = require("9b110ce138e67ce5"), arraySome = require("1ee20de911db0cb0"), cacheHas = require("defff3d81be91b23");
+/** Used to compose bitmasks for value comparisons. */ var COMPARE_PARTIAL_FLAG = 1, COMPARE_UNORDERED_FLAG = 2;
+/**
+ * A specialized version of `baseIsEqualDeep` for arrays with support for
+ * partial deep comparisons.
+ *
+ * @private
+ * @param {Array} array The array to compare.
+ * @param {Array} other The other array to compare.
+ * @param {number} bitmask The bitmask flags. See `baseIsEqual` for more details.
+ * @param {Function} customizer The function to customize comparisons.
+ * @param {Function} equalFunc The function to determine equivalents of values.
+ * @param {Object} stack Tracks traversed `array` and `other` objects.
+ * @returns {boolean} Returns `true` if the arrays are equivalent, else `false`.
+ */ function equalArrays(array, other, bitmask, customizer, equalFunc, stack) {
+    var isPartial = bitmask & COMPARE_PARTIAL_FLAG, arrLength = array.length, othLength = other.length;
+    if (arrLength != othLength && !(isPartial && othLength > arrLength)) return false;
+    // Check that cyclic values are equal.
+    var arrStacked = stack.get(array);
+    var othStacked = stack.get(other);
+    if (arrStacked && othStacked) return arrStacked == other && othStacked == array;
+    var index = -1, result = true, seen = bitmask & COMPARE_UNORDERED_FLAG ? new SetCache : undefined;
+    stack.set(array, other);
+    stack.set(other, array);
+    // Ignore non-index properties.
+    while(++index < arrLength){
+        var arrValue = array[index], othValue = other[index];
+        if (customizer) var compared = isPartial ? customizer(othValue, arrValue, index, other, array, stack) : customizer(arrValue, othValue, index, array, other, stack);
+        if (compared !== undefined) {
+            if (compared) continue;
+            result = false;
+            break;
+        }
+        // Recursively compare arrays (susceptible to call stack limits).
+        if (seen) {
+            if (!arraySome(other, function(othValue, othIndex) {
+                if (!cacheHas(seen, othIndex) && (arrValue === othValue || equalFunc(arrValue, othValue, bitmask, customizer, stack))) return seen.push(othIndex);
+            })) {
+                result = false;
+                break;
+            }
+        } else if (!(arrValue === othValue || equalFunc(arrValue, othValue, bitmask, customizer, stack))) {
+            result = false;
+            break;
+        }
+    }
+    stack['delete'](array);
+    stack['delete'](other);
+    return result;
+}
+module.exports = equalArrays;
+
+},{"9b110ce138e67ce5":"1SXrY","1ee20de911db0cb0":"aLDHW","defff3d81be91b23":"70cVb"}],"1SXrY":[function(require,module,exports,__globalThis) {
+var MapCache = require("10fe37252553d0bd"), setCacheAdd = require("9a831e81e9a1f98c"), setCacheHas = require("1a2b6c8a7399c39f");
+/**
+ *
+ * Creates an array cache object to store unique values.
+ *
+ * @private
+ * @constructor
+ * @param {Array} [values] The values to cache.
+ */ function SetCache(values) {
+    var index = -1, length = values == null ? 0 : values.length;
+    this.__data__ = new MapCache;
+    while(++index < length)this.add(values[index]);
+}
+// Add methods to `SetCache`.
+SetCache.prototype.add = SetCache.prototype.push = setCacheAdd;
+SetCache.prototype.has = setCacheHas;
+module.exports = SetCache;
+
+},{"10fe37252553d0bd":"664I1","9a831e81e9a1f98c":"cZViu","1a2b6c8a7399c39f":"4zNID"}],"cZViu":[function(require,module,exports,__globalThis) {
+/** Used to stand-in for `undefined` hash values. */ var HASH_UNDEFINED = '__lodash_hash_undefined__';
+/**
+ * Adds `value` to the array cache.
+ *
+ * @private
+ * @name add
+ * @memberOf SetCache
+ * @alias push
+ * @param {*} value The value to cache.
+ * @returns {Object} Returns the cache instance.
+ */ function setCacheAdd(value) {
+    this.__data__.set(value, HASH_UNDEFINED);
+    return this;
+}
+module.exports = setCacheAdd;
+
+},{}],"4zNID":[function(require,module,exports,__globalThis) {
+/**
+ * Checks if `value` is in the array cache.
+ *
+ * @private
+ * @name has
+ * @memberOf SetCache
+ * @param {*} value The value to search for.
+ * @returns {number} Returns `true` if `value` is found, else `false`.
+ */ function setCacheHas(value) {
+    return this.__data__.has(value);
+}
+module.exports = setCacheHas;
+
+},{}],"aLDHW":[function(require,module,exports,__globalThis) {
+/**
+ * A specialized version of `_.some` for arrays without support for iteratee
+ * shorthands.
+ *
+ * @private
+ * @param {Array} [array] The array to iterate over.
+ * @param {Function} predicate The function invoked per iteration.
+ * @returns {boolean} Returns `true` if any element passes the predicate check,
+ *  else `false`.
+ */ function arraySome(array, predicate) {
+    var index = -1, length = array == null ? 0 : array.length;
+    while(++index < length){
+        if (predicate(array[index], index, array)) return true;
+    }
+    return false;
+}
+module.exports = arraySome;
+
+},{}],"70cVb":[function(require,module,exports,__globalThis) {
+/**
+ * Checks if a `cache` value for `key` exists.
+ *
+ * @private
+ * @param {Object} cache The cache to query.
+ * @param {string} key The key of the entry to check.
+ * @returns {boolean} Returns `true` if an entry for `key` exists, else `false`.
+ */ function cacheHas(cache, key) {
+    return cache.has(key);
+}
+module.exports = cacheHas;
+
+},{}],"iqa6H":[function(require,module,exports,__globalThis) {
+var Symbol = require("474c1df4fc722b40"), Uint8Array = require("dbf6aa5033a0f48"), eq = require("539966708f906e61"), equalArrays = require("8142d4017f0a425f"), mapToArray = require("48cddf732eff33ba"), setToArray = require("9dc78b26c5daba20");
+/** Used to compose bitmasks for value comparisons. */ var COMPARE_PARTIAL_FLAG = 1, COMPARE_UNORDERED_FLAG = 2;
+/** `Object#toString` result references. */ var boolTag = '[object Boolean]', dateTag = '[object Date]', errorTag = '[object Error]', mapTag = '[object Map]', numberTag = '[object Number]', regexpTag = '[object RegExp]', setTag = '[object Set]', stringTag = '[object String]', symbolTag = '[object Symbol]';
+var arrayBufferTag = '[object ArrayBuffer]', dataViewTag = '[object DataView]';
+/** Used to convert symbols to primitives and strings. */ var symbolProto = Symbol ? Symbol.prototype : undefined, symbolValueOf = symbolProto ? symbolProto.valueOf : undefined;
+/**
+ * A specialized version of `baseIsEqualDeep` for comparing objects of
+ * the same `toStringTag`.
+ *
+ * **Note:** This function only supports comparing values with tags of
+ * `Boolean`, `Date`, `Error`, `Number`, `RegExp`, or `String`.
+ *
+ * @private
+ * @param {Object} object The object to compare.
+ * @param {Object} other The other object to compare.
+ * @param {string} tag The `toStringTag` of the objects to compare.
+ * @param {number} bitmask The bitmask flags. See `baseIsEqual` for more details.
+ * @param {Function} customizer The function to customize comparisons.
+ * @param {Function} equalFunc The function to determine equivalents of values.
+ * @param {Object} stack Tracks traversed `object` and `other` objects.
+ * @returns {boolean} Returns `true` if the objects are equivalent, else `false`.
+ */ function equalByTag(object, other, tag, bitmask, customizer, equalFunc, stack) {
+    switch(tag){
+        case dataViewTag:
+            if (object.byteLength != other.byteLength || object.byteOffset != other.byteOffset) return false;
+            object = object.buffer;
+            other = other.buffer;
+        case arrayBufferTag:
+            if (object.byteLength != other.byteLength || !equalFunc(new Uint8Array(object), new Uint8Array(other))) return false;
+            return true;
+        case boolTag:
+        case dateTag:
+        case numberTag:
+            // Coerce booleans to `1` or `0` and dates to milliseconds.
+            // Invalid dates are coerced to `NaN`.
+            return eq(+object, +other);
+        case errorTag:
+            return object.name == other.name && object.message == other.message;
+        case regexpTag:
+        case stringTag:
+            // Coerce regexes to strings and treat strings, primitives and objects,
+            // as equal. See http://www.ecma-international.org/ecma-262/7.0/#sec-regexp.prototype.tostring
+            // for more details.
+            return object == other + '';
+        case mapTag:
+            var convert = mapToArray;
+        case setTag:
+            var isPartial = bitmask & COMPARE_PARTIAL_FLAG;
+            convert || (convert = setToArray);
+            if (object.size != other.size && !isPartial) return false;
+            // Assume cyclic values are equal.
+            var stacked = stack.get(object);
+            if (stacked) return stacked == other;
+            bitmask |= COMPARE_UNORDERED_FLAG;
+            // Recursively compare objects (susceptible to call stack limits).
+            stack.set(object, other);
+            var result = equalArrays(convert(object), convert(other), bitmask, customizer, equalFunc, stack);
+            stack['delete'](object);
+            return result;
+        case symbolTag:
+            if (symbolValueOf) return symbolValueOf.call(object) == symbolValueOf.call(other);
+    }
+    return false;
+}
+module.exports = equalByTag;
+
+},{"474c1df4fc722b40":"7lsL9","dbf6aa5033a0f48":"6xFrA","539966708f906e61":"aVz5f","8142d4017f0a425f":"dQBwf","48cddf732eff33ba":"kAwkU","9dc78b26c5daba20":"2qJif"}],"6xFrA":[function(require,module,exports,__globalThis) {
+var root = require("f755339301d6568f");
+/** Built-in value references. */ var Uint8Array = root.Uint8Array;
+module.exports = Uint8Array;
+
+},{"f755339301d6568f":"dSYUs"}],"kAwkU":[function(require,module,exports,__globalThis) {
+/**
+ * Converts `map` to its key-value pairs.
+ *
+ * @private
+ * @param {Object} map The map to convert.
+ * @returns {Array} Returns the key-value pairs.
+ */ function mapToArray(map) {
+    var index = -1, result = Array(map.size);
+    map.forEach(function(value, key) {
+        result[++index] = [
+            key,
+            value
+        ];
+    });
+    return result;
+}
+module.exports = mapToArray;
+
+},{}],"2qJif":[function(require,module,exports,__globalThis) {
+/**
+ * Converts `set` to an array of its values.
+ *
+ * @private
+ * @param {Object} set The set to convert.
+ * @returns {Array} Returns the values.
+ */ function setToArray(set) {
+    var index = -1, result = Array(set.size);
+    set.forEach(function(value) {
+        result[++index] = value;
+    });
+    return result;
+}
+module.exports = setToArray;
+
+},{}],"klCEf":[function(require,module,exports,__globalThis) {
+var getAllKeys = require("b911593d305cf4a2");
+/** Used to compose bitmasks for value comparisons. */ var COMPARE_PARTIAL_FLAG = 1;
+/** Used for built-in method references. */ var objectProto = Object.prototype;
+/** Used to check objects for own properties. */ var hasOwnProperty = objectProto.hasOwnProperty;
+/**
+ * A specialized version of `baseIsEqualDeep` for objects with support for
+ * partial deep comparisons.
+ *
+ * @private
+ * @param {Object} object The object to compare.
+ * @param {Object} other The other object to compare.
+ * @param {number} bitmask The bitmask flags. See `baseIsEqual` for more details.
+ * @param {Function} customizer The function to customize comparisons.
+ * @param {Function} equalFunc The function to determine equivalents of values.
+ * @param {Object} stack Tracks traversed `object` and `other` objects.
+ * @returns {boolean} Returns `true` if the objects are equivalent, else `false`.
+ */ function equalObjects(object, other, bitmask, customizer, equalFunc, stack) {
+    var isPartial = bitmask & COMPARE_PARTIAL_FLAG, objProps = getAllKeys(object), objLength = objProps.length, othProps = getAllKeys(other), othLength = othProps.length;
+    if (objLength != othLength && !isPartial) return false;
+    var index = objLength;
+    while(index--){
+        var key = objProps[index];
+        if (!(isPartial ? key in other : hasOwnProperty.call(other, key))) return false;
+    }
+    // Check that cyclic values are equal.
+    var objStacked = stack.get(object);
+    var othStacked = stack.get(other);
+    if (objStacked && othStacked) return objStacked == other && othStacked == object;
+    var result = true;
+    stack.set(object, other);
+    stack.set(other, object);
+    var skipCtor = isPartial;
+    while(++index < objLength){
+        key = objProps[index];
+        var objValue = object[key], othValue = other[key];
+        if (customizer) var compared = isPartial ? customizer(othValue, objValue, key, other, object, stack) : customizer(objValue, othValue, key, object, other, stack);
+        // Recursively compare objects (susceptible to call stack limits).
+        if (!(compared === undefined ? objValue === othValue || equalFunc(objValue, othValue, bitmask, customizer, stack) : compared)) {
+            result = false;
+            break;
+        }
+        skipCtor || (skipCtor = key == 'constructor');
+    }
+    if (result && !skipCtor) {
+        var objCtor = object.constructor, othCtor = other.constructor;
+        // Non `Object` object instances with different constructors are not equal.
+        if (objCtor != othCtor && 'constructor' in object && 'constructor' in other && !(typeof objCtor == 'function' && objCtor instanceof objCtor && typeof othCtor == 'function' && othCtor instanceof othCtor)) result = false;
+    }
+    stack['delete'](object);
+    stack['delete'](other);
+    return result;
+}
+module.exports = equalObjects;
+
+},{"b911593d305cf4a2":"d2kML"}],"d2kML":[function(require,module,exports,__globalThis) {
+var baseGetAllKeys = require("c3dbe402f6996a21"), getSymbols = require("aa79b69a13f924db"), keys = require("e3ad83e53433bc8a");
+/**
+ * Creates an array of own enumerable property names and symbols of `object`.
+ *
+ * @private
+ * @param {Object} object The object to query.
+ * @returns {Array} Returns the array of property names and symbols.
+ */ function getAllKeys(object) {
+    return baseGetAllKeys(object, keys, getSymbols);
+}
+module.exports = getAllKeys;
+
+},{"c3dbe402f6996a21":"aeckf","aa79b69a13f924db":"5p5Yd","e3ad83e53433bc8a":"6fHVw"}],"aeckf":[function(require,module,exports,__globalThis) {
+var arrayPush = require("abfc70b400ed76c2"), isArray = require("148b85918856c33a");
+/**
+ * The base implementation of `getAllKeys` and `getAllKeysIn` which uses
+ * `keysFunc` and `symbolsFunc` to get the enumerable property names and
+ * symbols of `object`.
+ *
+ * @private
+ * @param {Object} object The object to query.
+ * @param {Function} keysFunc The function to get the keys of `object`.
+ * @param {Function} symbolsFunc The function to get the symbols of `object`.
+ * @returns {Array} Returns the array of property names and symbols.
+ */ function baseGetAllKeys(object, keysFunc, symbolsFunc) {
+    var result = keysFunc(object);
+    return isArray(object) ? result : arrayPush(result, symbolsFunc(object));
+}
+module.exports = baseGetAllKeys;
+
+},{"abfc70b400ed76c2":"ivo5r","148b85918856c33a":"dZaTH"}],"ivo5r":[function(require,module,exports,__globalThis) {
+/**
+ * Appends the elements of `values` to `array`.
+ *
+ * @private
+ * @param {Array} array The array to modify.
+ * @param {Array} values The values to append.
+ * @returns {Array} Returns `array`.
+ */ function arrayPush(array, values) {
+    var index = -1, length = values.length, offset = array.length;
+    while(++index < length)array[offset + index] = values[index];
+    return array;
+}
+module.exports = arrayPush;
+
+},{}],"5p5Yd":[function(require,module,exports,__globalThis) {
+var arrayFilter = require("7fe025254f0b7e4a"), stubArray = require("6b1c62cea92cdb9");
+/** Used for built-in method references. */ var objectProto = Object.prototype;
+/** Built-in value references. */ var propertyIsEnumerable = objectProto.propertyIsEnumerable;
+/* Built-in method references for those with the same name as other `lodash` methods. */ var nativeGetSymbols = Object.getOwnPropertySymbols;
+/**
+ * Creates an array of the own enumerable symbols of `object`.
+ *
+ * @private
+ * @param {Object} object The object to query.
+ * @returns {Array} Returns the array of symbols.
+ */ var getSymbols = !nativeGetSymbols ? stubArray : function(object) {
+    if (object == null) return [];
+    object = Object(object);
+    return arrayFilter(nativeGetSymbols(object), function(symbol) {
+        return propertyIsEnumerable.call(object, symbol);
+    });
+};
+module.exports = getSymbols;
+
+},{"7fe025254f0b7e4a":"hmIQ7","6b1c62cea92cdb9":"6TgRy"}],"hmIQ7":[function(require,module,exports,__globalThis) {
+/**
+ * A specialized version of `_.filter` for arrays without support for
+ * iteratee shorthands.
+ *
+ * @private
+ * @param {Array} [array] The array to iterate over.
+ * @param {Function} predicate The function invoked per iteration.
+ * @returns {Array} Returns the new filtered array.
+ */ function arrayFilter(array, predicate) {
+    var index = -1, length = array == null ? 0 : array.length, resIndex = 0, result = [];
+    while(++index < length){
+        var value = array[index];
+        if (predicate(value, index, array)) result[resIndex++] = value;
+    }
+    return result;
+}
+module.exports = arrayFilter;
+
+},{}],"6TgRy":[function(require,module,exports,__globalThis) {
+/**
+ * This method returns a new empty array.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.13.0
+ * @category Util
+ * @returns {Array} Returns the new empty array.
+ * @example
+ *
+ * var arrays = _.times(2, _.stubArray);
+ *
+ * console.log(arrays);
+ * // => [[], []]
+ *
+ * console.log(arrays[0] === arrays[1]);
+ * // => false
+ */ function stubArray() {
+    return [];
+}
+module.exports = stubArray;
+
+},{}],"cRPhM":[function(require,module,exports,__globalThis) {
+var DataView = require("7f038695b2fdb86e"), Map = require("28e3344aae951f13"), Promise = require("b286298be5b1d9a4"), Set = require("3ae50c158f89813"), WeakMap = require("9f458755f627d456"), baseGetTag = require("8e9160b373d7fe66"), toSource = require("b210627dd951641f");
+/** `Object#toString` result references. */ var mapTag = '[object Map]', objectTag = '[object Object]', promiseTag = '[object Promise]', setTag = '[object Set]', weakMapTag = '[object WeakMap]';
+var dataViewTag = '[object DataView]';
+/** Used to detect maps, sets, and weakmaps. */ var dataViewCtorString = toSource(DataView), mapCtorString = toSource(Map), promiseCtorString = toSource(Promise), setCtorString = toSource(Set), weakMapCtorString = toSource(WeakMap);
+/**
+ * Gets the `toStringTag` of `value`.
+ *
+ * @private
+ * @param {*} value The value to query.
+ * @returns {string} Returns the `toStringTag`.
+ */ var getTag = baseGetTag;
+// Fallback for data views, maps, sets, and weak maps in IE 11 and promises in Node.js < 6.
+if (DataView && getTag(new DataView(new ArrayBuffer(1))) != dataViewTag || Map && getTag(new Map) != mapTag || Promise && getTag(Promise.resolve()) != promiseTag || Set && getTag(new Set) != setTag || WeakMap && getTag(new WeakMap) != weakMapTag) getTag = function(value) {
+    var result = baseGetTag(value), Ctor = result == objectTag ? value.constructor : undefined, ctorString = Ctor ? toSource(Ctor) : '';
+    if (ctorString) switch(ctorString){
+        case dataViewCtorString:
+            return dataViewTag;
+        case mapCtorString:
+            return mapTag;
+        case promiseCtorString:
+            return promiseTag;
+        case setCtorString:
+            return setTag;
+        case weakMapCtorString:
+            return weakMapTag;
+    }
+    return result;
+};
+module.exports = getTag;
+
+},{"7f038695b2fdb86e":"ejRu5","28e3344aae951f13":"8YjF4","b286298be5b1d9a4":"jbvCt","3ae50c158f89813":"4xGLf","9f458755f627d456":"av50V","8e9160b373d7fe66":"lOnbo","b210627dd951641f":"bYHc7"}],"ejRu5":[function(require,module,exports,__globalThis) {
+var getNative = require("a6517d0448dad786"), root = require("f83c375075418382");
+/* Built-in method references that are verified to be native. */ var DataView = getNative(root, 'DataView');
+module.exports = DataView;
+
+},{"a6517d0448dad786":"9PCIl","f83c375075418382":"dSYUs"}],"jbvCt":[function(require,module,exports,__globalThis) {
+var getNative = require("6940648d854355b5"), root = require("a5c6637bac681a0");
+/* Built-in method references that are verified to be native. */ var Promise = getNative(root, 'Promise');
+module.exports = Promise;
+
+},{"6940648d854355b5":"9PCIl","a5c6637bac681a0":"dSYUs"}],"4xGLf":[function(require,module,exports,__globalThis) {
+var getNative = require("56b792d64741a4ff"), root = require("ca486d41cdf819d4");
+/* Built-in method references that are verified to be native. */ var Set = getNative(root, 'Set');
+module.exports = Set;
+
+},{"56b792d64741a4ff":"9PCIl","ca486d41cdf819d4":"dSYUs"}],"av50V":[function(require,module,exports,__globalThis) {
+var getNative = require("4507415bd8810d3c"), root = require("7a9a6581834a8452");
+/* Built-in method references that are verified to be native. */ var WeakMap = getNative(root, 'WeakMap');
+module.exports = WeakMap;
+
+},{"4507415bd8810d3c":"9PCIl","7a9a6581834a8452":"dSYUs"}],"48Qyi":[function(require,module,exports,__globalThis) {
+var isStrictComparable = require("8ba18052e16e94fb"), keys = require("94ffded3a85af2f6");
+/**
+ * Gets the property names, values, and compare flags of `object`.
+ *
+ * @private
+ * @param {Object} object The object to query.
+ * @returns {Array} Returns the match data of `object`.
+ */ function getMatchData(object) {
+    var result = keys(object), length = result.length;
+    while(length--){
+        var key = result[length], value = object[key];
+        result[length] = [
+            key,
+            value,
+            isStrictComparable(value)
+        ];
+    }
+    return result;
+}
+module.exports = getMatchData;
+
+},{"8ba18052e16e94fb":"lpdGS","94ffded3a85af2f6":"6fHVw"}],"lpdGS":[function(require,module,exports,__globalThis) {
+var isObject = require("be1941f960bbf057");
+/**
+ * Checks if `value` is suitable for strict equality comparisons, i.e. `===`.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` if suitable for strict
+ *  equality comparisons, else `false`.
+ */ function isStrictComparable(value) {
+    return value === value && !isObject(value);
+}
+module.exports = isStrictComparable;
+
+},{"be1941f960bbf057":"cGhqJ"}],"a9Bav":[function(require,module,exports,__globalThis) {
+/**
+ * A specialized version of `matchesProperty` for source values suitable
+ * for strict equality comparisons, i.e. `===`.
+ *
+ * @private
+ * @param {string} key The key of the property to get.
+ * @param {*} srcValue The value to match.
+ * @returns {Function} Returns the new spec function.
+ */ function matchesStrictComparable(key, srcValue) {
+    return function(object) {
+        if (object == null) return false;
+        return object[key] === srcValue && (srcValue !== undefined || key in Object(object));
+    };
+}
+module.exports = matchesStrictComparable;
+
+},{}],"48kxC":[function(require,module,exports,__globalThis) {
+var baseIsEqual = require("cebe22f5ca0827a7"), get = require("d5ca180f7d6f956a"), hasIn = require("3462bb3f546fa1f7"), isKey = require("f5fef07966a1c4ee"), isStrictComparable = require("2a1cd212d48516"), matchesStrictComparable = require("885e72ee7fc6d296"), toKey = require("cd65eaf4a3af29f6");
+/** Used to compose bitmasks for value comparisons. */ var COMPARE_PARTIAL_FLAG = 1, COMPARE_UNORDERED_FLAG = 2;
+/**
+ * The base implementation of `_.matchesProperty` which doesn't clone `srcValue`.
+ *
+ * @private
+ * @param {string} path The path of the property to get.
+ * @param {*} srcValue The value to match.
+ * @returns {Function} Returns the new spec function.
+ */ function baseMatchesProperty(path, srcValue) {
+    if (isKey(path) && isStrictComparable(srcValue)) return matchesStrictComparable(toKey(path), srcValue);
+    return function(object) {
+        var objValue = get(object, path);
+        return objValue === undefined && objValue === srcValue ? hasIn(object, path) : baseIsEqual(srcValue, objValue, COMPARE_PARTIAL_FLAG | COMPARE_UNORDERED_FLAG);
+    };
+}
+module.exports = baseMatchesProperty;
+
+},{"cebe22f5ca0827a7":"7i3qr","d5ca180f7d6f956a":"8UELX","3462bb3f546fa1f7":"57qii","f5fef07966a1c4ee":"4wPWG","2a1cd212d48516":"lpdGS","885e72ee7fc6d296":"a9Bav","cd65eaf4a3af29f6":"bEgue"}],"8UELX":[function(require,module,exports,__globalThis) {
+var baseGet = require("446ba3c1be7939a3");
+/**
+ * Gets the value at `path` of `object`. If the resolved value is
+ * `undefined`, the `defaultValue` is returned in its place.
+ *
+ * @static
+ * @memberOf _
+ * @since 3.7.0
+ * @category Object
+ * @param {Object} object The object to query.
+ * @param {Array|string} path The path of the property to get.
+ * @param {*} [defaultValue] The value returned for `undefined` resolved values.
+ * @returns {*} Returns the resolved value.
+ * @example
+ *
+ * var object = { 'a': [{ 'b': { 'c': 3 } }] };
+ *
+ * _.get(object, 'a[0].b.c');
+ * // => 3
+ *
+ * _.get(object, ['a', '0', 'b', 'c']);
+ * // => 3
+ *
+ * _.get(object, 'a.b.c', 'default');
+ * // => 'default'
+ */ function get(object, path, defaultValue) {
+    var result = object == null ? undefined : baseGet(object, path);
+    return result === undefined ? defaultValue : result;
+}
+module.exports = get;
+
+},{"446ba3c1be7939a3":"kMRe3"}],"kMRe3":[function(require,module,exports,__globalThis) {
+var castPath = require("434ba191fc1dcf09"), toKey = require("c3296f04fad32769");
+/**
+ * The base implementation of `_.get` without support for default values.
+ *
+ * @private
+ * @param {Object} object The object to query.
+ * @param {Array|string} path The path of the property to get.
+ * @returns {*} Returns the resolved value.
+ */ function baseGet(object, path) {
+    path = castPath(path, object);
+    var index = 0, length = path.length;
+    while(object != null && index < length)object = object[toKey(path[index++])];
+    return index && index == length ? object : undefined;
+}
+module.exports = baseGet;
+
+},{"434ba191fc1dcf09":"apxk5","c3296f04fad32769":"bEgue"}],"apxk5":[function(require,module,exports,__globalThis) {
+var isArray = require("26a856890198f45b"), isKey = require("e823e604d75f975b"), stringToPath = require("f5fff1c342107fbd"), toString = require("b04e8cc634273c23");
+/**
+ * Casts `value` to a path array if it's not one.
+ *
+ * @private
+ * @param {*} value The value to inspect.
+ * @param {Object} [object] The object to query keys on.
+ * @returns {Array} Returns the cast property path array.
+ */ function castPath(value, object) {
+    if (isArray(value)) return value;
+    return isKey(value, object) ? [
+        value
+    ] : stringToPath(toString(value));
+}
+module.exports = castPath;
+
+},{"26a856890198f45b":"dZaTH","e823e604d75f975b":"4wPWG","f5fff1c342107fbd":"1m1j5","b04e8cc634273c23":"joIdQ"}],"4wPWG":[function(require,module,exports,__globalThis) {
+var isArray = require("1efcc081e9a448a8"), isSymbol = require("4cdff6c9e9ff5d38");
+/** Used to match property names within property paths. */ var reIsDeepProp = /\.|\[(?:[^[\]]*|(["'])(?:(?!\1)[^\\]|\\.)*?\1)\]/, reIsPlainProp = /^\w*$/;
+/**
+ * Checks if `value` is a property name and not a property path.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @param {Object} [object] The object to query keys on.
+ * @returns {boolean} Returns `true` if `value` is a property name, else `false`.
+ */ function isKey(value, object) {
+    if (isArray(value)) return false;
+    var type = typeof value;
+    if (type == 'number' || type == 'symbol' || type == 'boolean' || value == null || isSymbol(value)) return true;
+    return reIsPlainProp.test(value) || !reIsDeepProp.test(value) || object != null && value in Object(object);
+}
+module.exports = isKey;
+
+},{"1efcc081e9a448a8":"dZaTH","4cdff6c9e9ff5d38":"i3BHC"}],"i3BHC":[function(require,module,exports,__globalThis) {
+var baseGetTag = require("6118c0d5630f51ce"), isObjectLike = require("74644060ad1a1d3c");
+/** `Object#toString` result references. */ var symbolTag = '[object Symbol]';
+/**
+ * Checks if `value` is classified as a `Symbol` primitive or object.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a symbol, else `false`.
+ * @example
+ *
+ * _.isSymbol(Symbol.iterator);
+ * // => true
+ *
+ * _.isSymbol('abc');
+ * // => false
+ */ function isSymbol(value) {
+    return typeof value == 'symbol' || isObjectLike(value) && baseGetTag(value) == symbolTag;
+}
+module.exports = isSymbol;
+
+},{"6118c0d5630f51ce":"lOnbo","74644060ad1a1d3c":"3BLi4"}],"1m1j5":[function(require,module,exports,__globalThis) {
+var memoizeCapped = require("55f565a895f455e5");
+/** Used to match property names within property paths. */ var rePropName = /[^.[\]]+|\[(?:(-?\d+(?:\.\d+)?)|(["'])((?:(?!\2)[^\\]|\\.)*?)\2)\]|(?=(?:\.|\[\])(?:\.|\[\]|$))/g;
+/** Used to match backslashes in property paths. */ var reEscapeChar = /\\(\\)?/g;
+/**
+ * Converts `string` to a property path array.
+ *
+ * @private
+ * @param {string} string The string to convert.
+ * @returns {Array} Returns the property path array.
+ */ var stringToPath = memoizeCapped(function(string) {
+    var result = [];
+    if (string.charCodeAt(0) === 46 /* . */ ) result.push('');
+    string.replace(rePropName, function(match, number, quote, subString) {
+        result.push(quote ? subString.replace(reEscapeChar, '$1') : number || match);
+    });
+    return result;
+});
+module.exports = stringToPath;
+
+},{"55f565a895f455e5":"j3xlQ"}],"j3xlQ":[function(require,module,exports,__globalThis) {
+var memoize = require("cb456550b1f5dd0a");
+/** Used as the maximum memoize cache size. */ var MAX_MEMOIZE_SIZE = 500;
+/**
+ * A specialized version of `_.memoize` which clears the memoized function's
+ * cache when it exceeds `MAX_MEMOIZE_SIZE`.
+ *
+ * @private
+ * @param {Function} func The function to have its output memoized.
+ * @returns {Function} Returns the new memoized function.
+ */ function memoizeCapped(func) {
+    var result = memoize(func, function(key) {
+        if (cache.size === MAX_MEMOIZE_SIZE) cache.clear();
+        return key;
+    });
+    var cache = result.cache;
+    return result;
+}
+module.exports = memoizeCapped;
+
+},{"cb456550b1f5dd0a":"azHKC"}],"azHKC":[function(require,module,exports,__globalThis) {
+var MapCache = require("b34b26bf235f1cdd");
+/** Error message constants. */ var FUNC_ERROR_TEXT = 'Expected a function';
+/**
+ * Creates a function that memoizes the result of `func`. If `resolver` is
+ * provided, it determines the cache key for storing the result based on the
+ * arguments provided to the memoized function. By default, the first argument
+ * provided to the memoized function is used as the map cache key. The `func`
+ * is invoked with the `this` binding of the memoized function.
+ *
+ * **Note:** The cache is exposed as the `cache` property on the memoized
+ * function. Its creation may be customized by replacing the `_.memoize.Cache`
+ * constructor with one whose instances implement the
+ * [`Map`](http://ecma-international.org/ecma-262/7.0/#sec-properties-of-the-map-prototype-object)
+ * method interface of `clear`, `delete`, `get`, `has`, and `set`.
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Function
+ * @param {Function} func The function to have its output memoized.
+ * @param {Function} [resolver] The function to resolve the cache key.
+ * @returns {Function} Returns the new memoized function.
+ * @example
+ *
+ * var object = { 'a': 1, 'b': 2 };
+ * var other = { 'c': 3, 'd': 4 };
+ *
+ * var values = _.memoize(_.values);
+ * values(object);
+ * // => [1, 2]
+ *
+ * values(other);
+ * // => [3, 4]
+ *
+ * object.a = 2;
+ * values(object);
+ * // => [1, 2]
+ *
+ * // Modify the result cache.
+ * values.cache.set(object, ['a', 'b']);
+ * values(object);
+ * // => ['a', 'b']
+ *
+ * // Replace `_.memoize.Cache`.
+ * _.memoize.Cache = WeakMap;
+ */ function memoize(func, resolver) {
+    if (typeof func != 'function' || resolver != null && typeof resolver != 'function') throw new TypeError(FUNC_ERROR_TEXT);
+    var memoized = function() {
+        var args = arguments, key = resolver ? resolver.apply(this, args) : args[0], cache = memoized.cache;
+        if (cache.has(key)) return cache.get(key);
+        var result = func.apply(this, args);
+        memoized.cache = cache.set(key, result) || cache;
+        return result;
+    };
+    memoized.cache = new (memoize.Cache || MapCache);
+    return memoized;
+}
+// Expose `MapCache`.
+memoize.Cache = MapCache;
+module.exports = memoize;
+
+},{"b34b26bf235f1cdd":"664I1"}],"joIdQ":[function(require,module,exports,__globalThis) {
+var baseToString = require("81fca33832a744d9");
+/**
+ * Converts `value` to a string. An empty string is returned for `null`
+ * and `undefined` values. The sign of `-0` is preserved.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to convert.
+ * @returns {string} Returns the converted string.
+ * @example
+ *
+ * _.toString(null);
+ * // => ''
+ *
+ * _.toString(-0);
+ * // => '-0'
+ *
+ * _.toString([1, 2, 3]);
+ * // => '1,2,3'
+ */ function toString(value) {
+    return value == null ? '' : baseToString(value);
+}
+module.exports = toString;
+
+},{"81fca33832a744d9":"goDP8"}],"goDP8":[function(require,module,exports,__globalThis) {
+var Symbol = require("16af83505444e42a"), arrayMap = require("8439a3a1551d0706"), isArray = require("4b12c9f502d3288a"), isSymbol = require("a0ebd327d618908a");
+/** Used as references for various `Number` constants. */ var INFINITY = 1 / 0;
+/** Used to convert symbols to primitives and strings. */ var symbolProto = Symbol ? Symbol.prototype : undefined, symbolToString = symbolProto ? symbolProto.toString : undefined;
+/**
+ * The base implementation of `_.toString` which doesn't convert nullish
+ * values to empty strings.
+ *
+ * @private
+ * @param {*} value The value to process.
+ * @returns {string} Returns the string.
+ */ function baseToString(value) {
+    // Exit early for strings to avoid a performance hit in some environments.
+    if (typeof value == 'string') return value;
+    if (isArray(value)) // Recursively convert values (susceptible to call stack limits).
+    return arrayMap(value, baseToString) + '';
+    if (isSymbol(value)) return symbolToString ? symbolToString.call(value) : '';
+    var result = value + '';
+    return result == '0' && 1 / value == -INFINITY ? '-0' : result;
+}
+module.exports = baseToString;
+
+},{"16af83505444e42a":"7lsL9","8439a3a1551d0706":"imI5Z","4b12c9f502d3288a":"dZaTH","a0ebd327d618908a":"i3BHC"}],"imI5Z":[function(require,module,exports,__globalThis) {
+/**
+ * A specialized version of `_.map` for arrays without support for iteratee
+ * shorthands.
+ *
+ * @private
+ * @param {Array} [array] The array to iterate over.
+ * @param {Function} iteratee The function invoked per iteration.
+ * @returns {Array} Returns the new mapped array.
+ */ function arrayMap(array, iteratee) {
+    var index = -1, length = array == null ? 0 : array.length, result = Array(length);
+    while(++index < length)result[index] = iteratee(array[index], index, array);
+    return result;
+}
+module.exports = arrayMap;
+
+},{}],"bEgue":[function(require,module,exports,__globalThis) {
+var isSymbol = require("2aed9f6fd4b7386");
+/** Used as references for various `Number` constants. */ var INFINITY = 1 / 0;
+/**
+ * Converts `value` to a string key if it's not a string or symbol.
+ *
+ * @private
+ * @param {*} value The value to inspect.
+ * @returns {string|symbol} Returns the key.
+ */ function toKey(value) {
+    if (typeof value == 'string' || isSymbol(value)) return value;
+    var result = value + '';
+    return result == '0' && 1 / value == -INFINITY ? '-0' : result;
+}
+module.exports = toKey;
+
+},{"2aed9f6fd4b7386":"i3BHC"}],"57qii":[function(require,module,exports,__globalThis) {
+var baseHasIn = require("9fbd4bb192f3f572"), hasPath = require("b0aefd36de99e579");
+/**
+ * Checks if `path` is a direct or inherited property of `object`.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Object
+ * @param {Object} object The object to query.
+ * @param {Array|string} path The path to check.
+ * @returns {boolean} Returns `true` if `path` exists, else `false`.
+ * @example
+ *
+ * var object = _.create({ 'a': _.create({ 'b': 2 }) });
+ *
+ * _.hasIn(object, 'a');
+ * // => true
+ *
+ * _.hasIn(object, 'a.b');
+ * // => true
+ *
+ * _.hasIn(object, ['a', 'b']);
+ * // => true
+ *
+ * _.hasIn(object, 'b');
+ * // => false
+ */ function hasIn(object, path) {
+    return object != null && hasPath(object, path, baseHasIn);
+}
+module.exports = hasIn;
+
+},{"9fbd4bb192f3f572":"in8KZ","b0aefd36de99e579":"4QNMG"}],"in8KZ":[function(require,module,exports,__globalThis) {
+/**
+ * The base implementation of `_.hasIn` without support for deep paths.
+ *
+ * @private
+ * @param {Object} [object] The object to query.
+ * @param {Array|string} key The key to check.
+ * @returns {boolean} Returns `true` if `key` exists, else `false`.
+ */ function baseHasIn(object, key) {
+    return object != null && key in Object(object);
+}
+module.exports = baseHasIn;
+
+},{}],"4QNMG":[function(require,module,exports,__globalThis) {
+var castPath = require("bdbd2cfd212d36f7"), isArguments = require("47ffafdab3ba0d6f"), isArray = require("93ebd263ff0131c1"), isIndex = require("252ef74480e01958"), isLength = require("23c2f64e75e90a2"), toKey = require("af5ade297cb685ee");
+/**
+ * Checks if `path` exists on `object`.
+ *
+ * @private
+ * @param {Object} object The object to query.
+ * @param {Array|string} path The path to check.
+ * @param {Function} hasFunc The function to check properties.
+ * @returns {boolean} Returns `true` if `path` exists, else `false`.
+ */ function hasPath(object, path, hasFunc) {
+    path = castPath(path, object);
+    var index = -1, length = path.length, result = false;
+    while(++index < length){
+        var key = toKey(path[index]);
+        if (!(result = object != null && hasFunc(object, key))) break;
+        object = object[key];
+    }
+    if (result || ++index != length) return result;
+    length = object == null ? 0 : object.length;
+    return !!length && isLength(length) && isIndex(key, length) && (isArray(object) || isArguments(object));
+}
+module.exports = hasPath;
+
+},{"bdbd2cfd212d36f7":"apxk5","47ffafdab3ba0d6f":"8ReNj","93ebd263ff0131c1":"dZaTH","252ef74480e01958":"aJpx0","23c2f64e75e90a2":"hrTBx","af5ade297cb685ee":"bEgue"}],"dgTUN":[function(require,module,exports,__globalThis) {
+/**
+ * This method returns the first argument it receives.
+ *
+ * @static
+ * @since 0.1.0
+ * @memberOf _
+ * @category Util
+ * @param {*} value Any value.
+ * @returns {*} Returns `value`.
+ * @example
+ *
+ * var object = { 'a': 1 };
+ *
+ * console.log(_.identity(object) === object);
+ * // => true
+ */ function identity(value) {
+    return value;
+}
+module.exports = identity;
+
+},{}],"8aSQI":[function(require,module,exports,__globalThis) {
+var baseProperty = require("c7f2d79ee4b1c16a"), basePropertyDeep = require("abf31da39349df22"), isKey = require("a387ef4a4373de2c"), toKey = require("9315973458389ae7");
+/**
+ * Creates a function that returns the value at `path` of a given object.
+ *
+ * @static
+ * @memberOf _
+ * @since 2.4.0
+ * @category Util
+ * @param {Array|string} path The path of the property to get.
+ * @returns {Function} Returns the new accessor function.
+ * @example
+ *
+ * var objects = [
+ *   { 'a': { 'b': 2 } },
+ *   { 'a': { 'b': 1 } }
+ * ];
+ *
+ * _.map(objects, _.property('a.b'));
+ * // => [2, 1]
+ *
+ * _.map(_.sortBy(objects, _.property(['a', 'b'])), 'a.b');
+ * // => [1, 2]
+ */ function property(path) {
+    return isKey(path) ? baseProperty(toKey(path)) : basePropertyDeep(path);
+}
+module.exports = property;
+
+},{"c7f2d79ee4b1c16a":"4HOmE","abf31da39349df22":"c9dhz","a387ef4a4373de2c":"4wPWG","9315973458389ae7":"bEgue"}],"4HOmE":[function(require,module,exports,__globalThis) {
+/**
+ * The base implementation of `_.property` without support for deep paths.
+ *
+ * @private
+ * @param {string} key The key of the property to get.
+ * @returns {Function} Returns the new accessor function.
+ */ function baseProperty(key) {
+    return function(object) {
+        return object == null ? undefined : object[key];
+    };
+}
+module.exports = baseProperty;
+
+},{}],"c9dhz":[function(require,module,exports,__globalThis) {
+var baseGet = require("f0f9f03bc3030d02");
+/**
+ * A specialized version of `baseProperty` which supports deep paths.
+ *
+ * @private
+ * @param {Array|string} path The path of the property to get.
+ * @returns {Function} Returns the new accessor function.
+ */ function basePropertyDeep(path) {
+    return function(object) {
+        return baseGet(object, path);
+    };
+}
+module.exports = basePropertyDeep;
+
+},{"f0f9f03bc3030d02":"kMRe3"}],"8cGRk":[function(require,module,exports,__globalThis) {
+var baseUniq = require("8e268641906a92b2");
+/**
+ * Creates a duplicate-free version of an array, using
+ * [`SameValueZero`](http://ecma-international.org/ecma-262/7.0/#sec-samevaluezero)
+ * for equality comparisons, in which only the first occurrence of each element
+ * is kept. The order of result values is determined by the order they occur
+ * in the array.
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Array
+ * @param {Array} array The array to inspect.
+ * @returns {Array} Returns the new duplicate free array.
+ * @example
+ *
+ * _.uniq([2, 1, 2]);
+ * // => [2, 1]
+ */ function uniq(array) {
+    return array && array.length ? baseUniq(array) : [];
+}
+module.exports = uniq;
+
+},{"8e268641906a92b2":"llHH0"}],"llHH0":[function(require,module,exports,__globalThis) {
+var SetCache = require("56c8470806d11628"), arrayIncludes = require("a1d85be956e037a9"), arrayIncludesWith = require("8cd18f86a4a2c118"), cacheHas = require("3acf9f4a3a78c511"), createSet = require("19b77385b4f7775a"), setToArray = require("4568580f7416eb83");
+/** Used as the size to enable large array optimizations. */ var LARGE_ARRAY_SIZE = 200;
+/**
+ * The base implementation of `_.uniqBy` without support for iteratee shorthands.
+ *
+ * @private
+ * @param {Array} array The array to inspect.
+ * @param {Function} [iteratee] The iteratee invoked per element.
+ * @param {Function} [comparator] The comparator invoked per element.
+ * @returns {Array} Returns the new duplicate free array.
+ */ function baseUniq(array, iteratee, comparator) {
+    var index = -1, includes = arrayIncludes, length = array.length, isCommon = true, result = [], seen = result;
+    if (comparator) {
+        isCommon = false;
+        includes = arrayIncludesWith;
+    } else if (length >= LARGE_ARRAY_SIZE) {
+        var set = iteratee ? null : createSet(array);
+        if (set) return setToArray(set);
+        isCommon = false;
+        includes = cacheHas;
+        seen = new SetCache;
+    } else seen = iteratee ? [] : result;
+    outer: while(++index < length){
+        var value = array[index], computed = iteratee ? iteratee(value) : value;
+        value = comparator || value !== 0 ? value : 0;
+        if (isCommon && computed === computed) {
+            var seenIndex = seen.length;
+            while(seenIndex--){
+                if (seen[seenIndex] === computed) continue outer;
+            }
+            if (iteratee) seen.push(computed);
+            result.push(value);
+        } else if (!includes(seen, computed, comparator)) {
+            if (seen !== result) seen.push(computed);
+            result.push(value);
+        }
+    }
+    return result;
+}
+module.exports = baseUniq;
+
+},{"56c8470806d11628":"1SXrY","a1d85be956e037a9":"kfd3F","8cd18f86a4a2c118":"ghsru","3acf9f4a3a78c511":"70cVb","19b77385b4f7775a":"6hipu","4568580f7416eb83":"2qJif"}],"kfd3F":[function(require,module,exports,__globalThis) {
+var baseIndexOf = require("277b2d1a618f2b2f");
+/**
+ * A specialized version of `_.includes` for arrays without support for
+ * specifying an index to search from.
+ *
+ * @private
+ * @param {Array} [array] The array to inspect.
+ * @param {*} target The value to search for.
+ * @returns {boolean} Returns `true` if `target` is found, else `false`.
+ */ function arrayIncludes(array, value) {
+    var length = array == null ? 0 : array.length;
+    return !!length && baseIndexOf(array, value, 0) > -1;
+}
+module.exports = arrayIncludes;
+
+},{"277b2d1a618f2b2f":"8NgWU"}],"8NgWU":[function(require,module,exports,__globalThis) {
+var baseFindIndex = require("badcebec79c8cd4"), baseIsNaN = require("c991ed2b82d165b"), strictIndexOf = require("c0bb8190b05a00a5");
+/**
+ * The base implementation of `_.indexOf` without `fromIndex` bounds checks.
+ *
+ * @private
+ * @param {Array} array The array to inspect.
+ * @param {*} value The value to search for.
+ * @param {number} fromIndex The index to search from.
+ * @returns {number} Returns the index of the matched value, else `-1`.
+ */ function baseIndexOf(array, value, fromIndex) {
+    return value === value ? strictIndexOf(array, value, fromIndex) : baseFindIndex(array, baseIsNaN, fromIndex);
+}
+module.exports = baseIndexOf;
+
+},{"badcebec79c8cd4":"630D7","c991ed2b82d165b":"47cqG","c0bb8190b05a00a5":"8MeE0"}],"630D7":[function(require,module,exports,__globalThis) {
+/**
+ * The base implementation of `_.findIndex` and `_.findLastIndex` without
+ * support for iteratee shorthands.
+ *
+ * @private
+ * @param {Array} array The array to inspect.
+ * @param {Function} predicate The function invoked per iteration.
+ * @param {number} fromIndex The index to search from.
+ * @param {boolean} [fromRight] Specify iterating from right to left.
+ * @returns {number} Returns the index of the matched value, else `-1`.
+ */ function baseFindIndex(array, predicate, fromIndex, fromRight) {
+    var length = array.length, index = fromIndex + (fromRight ? 1 : -1);
+    while(fromRight ? index-- : ++index < length){
+        if (predicate(array[index], index, array)) return index;
+    }
+    return -1;
+}
+module.exports = baseFindIndex;
+
+},{}],"47cqG":[function(require,module,exports,__globalThis) {
+/**
+ * The base implementation of `_.isNaN` without support for number objects.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is `NaN`, else `false`.
+ */ function baseIsNaN(value) {
+    return value !== value;
+}
+module.exports = baseIsNaN;
+
+},{}],"8MeE0":[function(require,module,exports,__globalThis) {
+/**
+ * A specialized version of `_.indexOf` which performs strict equality
+ * comparisons of values, i.e. `===`.
+ *
+ * @private
+ * @param {Array} array The array to inspect.
+ * @param {*} value The value to search for.
+ * @param {number} fromIndex The index to search from.
+ * @returns {number} Returns the index of the matched value, else `-1`.
+ */ function strictIndexOf(array, value, fromIndex) {
+    var index = fromIndex - 1, length = array.length;
+    while(++index < length){
+        if (array[index] === value) return index;
+    }
+    return -1;
+}
+module.exports = strictIndexOf;
+
+},{}],"ghsru":[function(require,module,exports,__globalThis) {
+/**
+ * This function is like `arrayIncludes` except that it accepts a comparator.
+ *
+ * @private
+ * @param {Array} [array] The array to inspect.
+ * @param {*} target The value to search for.
+ * @param {Function} comparator The comparator invoked per element.
+ * @returns {boolean} Returns `true` if `target` is found, else `false`.
+ */ function arrayIncludesWith(array, value, comparator) {
+    var index = -1, length = array == null ? 0 : array.length;
+    while(++index < length){
+        if (comparator(value, array[index])) return true;
+    }
+    return false;
+}
+module.exports = arrayIncludesWith;
+
+},{}],"6hipu":[function(require,module,exports,__globalThis) {
+var Set = require("17777365baf8e16"), noop = require("a02c367b3608ccee"), setToArray = require("cd8d0af6a14b2f7d");
+/** Used as references for various `Number` constants. */ var INFINITY = 1 / 0;
+/**
+ * Creates a set object of `values`.
+ *
+ * @private
+ * @param {Array} values The values to add to the set.
+ * @returns {Object} Returns the new set.
+ */ var createSet = !(Set && 1 / setToArray(new Set([
+    ,
+    -0
+]))[1] == INFINITY) ? noop : function(values) {
+    return new Set(values);
+};
+module.exports = createSet;
+
+},{"17777365baf8e16":"4xGLf","a02c367b3608ccee":"dSFAq","cd8d0af6a14b2f7d":"2qJif"}],"dSFAq":[function(require,module,exports,__globalThis) {
+/**
+ * This method returns `undefined`.
+ *
+ * @static
+ * @memberOf _
+ * @since 2.3.0
+ * @category Util
+ * @example
+ *
+ * _.times(2, _.noop);
+ * // => [undefined, undefined]
+ */ function noop() {
+// No operation performed.
+}
+module.exports = noop;
+
+},{}],"71l7m":[function(require,module,exports,__globalThis) {
+var baseFlatten = require("a35d6abfacb4b52b");
+/**
+ * Flattens `array` a single level deep.
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Array
+ * @param {Array} array The array to flatten.
+ * @returns {Array} Returns the new flattened array.
+ * @example
+ *
+ * _.flatten([1, [2, [3, [4]], 5]]);
+ * // => [1, 2, [3, [4]], 5]
+ */ function flatten(array) {
+    var length = array == null ? 0 : array.length;
+    return length ? baseFlatten(array, 1) : [];
+}
+module.exports = flatten;
+
+},{"a35d6abfacb4b52b":"60rt9"}],"60rt9":[function(require,module,exports,__globalThis) {
+var arrayPush = require("d752582e5b174691"), isFlattenable = require("ec5f080ebf5764e8");
+/**
+ * The base implementation of `_.flatten` with support for restricting flattening.
+ *
+ * @private
+ * @param {Array} array The array to flatten.
+ * @param {number} depth The maximum recursion depth.
+ * @param {boolean} [predicate=isFlattenable] The function invoked per iteration.
+ * @param {boolean} [isStrict] Restrict to values that pass `predicate` checks.
+ * @param {Array} [result=[]] The initial result value.
+ * @returns {Array} Returns the new flattened array.
+ */ function baseFlatten(array, depth, predicate, isStrict, result) {
+    var index = -1, length = array.length;
+    predicate || (predicate = isFlattenable);
+    result || (result = []);
+    while(++index < length){
+        var value = array[index];
+        if (depth > 0 && predicate(value)) {
+            if (depth > 1) // Recursively flatten arrays (susceptible to call stack limits).
+            baseFlatten(value, depth - 1, predicate, isStrict, result);
+            else arrayPush(result, value);
+        } else if (!isStrict) result[result.length] = value;
+    }
+    return result;
+}
+module.exports = baseFlatten;
+
+},{"d752582e5b174691":"ivo5r","ec5f080ebf5764e8":"O762m"}],"O762m":[function(require,module,exports,__globalThis) {
+var Symbol = require("dde07f6ab8ba5eb5"), isArguments = require("ee6f325d7f5309b1"), isArray = require("ff8d93236e335297");
+/** Built-in value references. */ var spreadableSymbol = Symbol ? Symbol.isConcatSpreadable : undefined;
+/**
+ * Checks if `value` is a flattenable `arguments` object or array.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is flattenable, else `false`.
+ */ function isFlattenable(value) {
+    return isArray(value) || isArguments(value) || !!(spreadableSymbol && value && value[spreadableSymbol]);
+}
+module.exports = isFlattenable;
+
+},{"dde07f6ab8ba5eb5":"7lsL9","ee6f325d7f5309b1":"8ReNj","ff8d93236e335297":"dZaTH"}],"h8spq":[function(require,module,exports,__globalThis) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "pluralize", ()=>pluralize);
+parcelHelpers.export(exports, "singularize", ()=>singularize);
+parcelHelpers.export(exports, "camelize", ()=>camelize);
+parcelHelpers.export(exports, "underscore", ()=>underscore);
+parcelHelpers.export(exports, "humanize", ()=>humanize);
+parcelHelpers.export(exports, "titleize", ()=>titleize);
+parcelHelpers.export(exports, "tableize", ()=>tableize);
+parcelHelpers.export(exports, "classify", ()=>classify);
+parcelHelpers.export(exports, "dasherize", ()=>dasherize);
+parcelHelpers.export(exports, "foreignKey", ()=>foreignKey);
+parcelHelpers.export(exports, "ordinal", ()=>ordinal);
+parcelHelpers.export(exports, "ordinalize", ()=>ordinalize);
+parcelHelpers.export(exports, "transliterate", ()=>transliterate);
+parcelHelpers.export(exports, "parameterize", ()=>parameterize);
+parcelHelpers.export(exports, "capitalize", ()=>capitalize);
+parcelHelpers.export(exports, "inflections", ()=>inflections);
+parcelHelpers.export(exports, "transliterations", ()=>transliterations);
+parcelHelpers.export(exports, "constantify", ()=>constantify);
+var toString = Object.prototype.toString;
+function isFunc(obj) {
+    return toString.call(obj) === "[object Function]";
+}
+var classCallCheck = function(instance, Constructor) {
+    if (!(instance instanceof Constructor)) throw new TypeError("Cannot call a class as a function");
+};
+var createClass = function() {
+    function defineProperties(target, props) {
+        for(var i = 0; i < props.length; i++){
+            var descriptor = props[i];
+            descriptor.enumerable = descriptor.enumerable || false;
+            descriptor.configurable = true;
+            if ("value" in descriptor) descriptor.writable = true;
+            Object.defineProperty(target, descriptor.key, descriptor);
+        }
+    }
+    return function(Constructor, protoProps, staticProps) {
+        if (protoProps) defineProperties(Constructor.prototype, protoProps);
+        if (staticProps) defineProperties(Constructor, staticProps);
+        return Constructor;
+    };
+}();
+function icPart(str) {
+    return str.split("").map(function(c) {
+        return "(?:" + c.toUpperCase() + "|" + c.toLowerCase() + ")";
+    }).join("");
+}
+function remove(arr, elem) {
+    for(var i = arr.length - 1; i >= 0; i--)if (arr[i] === elem) Array.prototype.splice.call(arr, i, 1);
+}
+function hasProp(obj, key) {
+    return Object.prototype.hasOwnProperty.call(obj, key);
+}
+var instances = {};
+var Inflector = function() {
+    createClass(Inflector, null, [
+        {
+            key: "getInstance",
+            value: function getInstance(locale) {
+                instances[locale] = instances[locale] || new Inflector();
+                return instances[locale];
+            }
+        }
+    ]);
+    function Inflector() {
+        classCallCheck(this, Inflector);
+        this.plurals = [];
+        this.singulars = [];
+        this.uncountables = [];
+        this.humans = [];
+        this.acronyms = {};
+        this.acronymRegex = /(?=a)b/;
+    }
+    createClass(Inflector, [
+        {
+            key: "acronym",
+            value: function acronym(word) {
+                this.acronyms[word.toLowerCase()] = word;
+                var values = [];
+                for(var key in this.acronyms)if (hasProp(this.acronyms, key)) values.push(this.acronyms[key]);
+                this.acronymRegex = new RegExp(values.join("|"));
+            }
+        },
+        {
+            key: "plural",
+            value: function plural(rule, replacement) {
+                if (typeof rule === "string") remove(this.uncountables, rule);
+                remove(this.uncountables, replacement);
+                this.plurals.unshift([
+                    rule,
+                    replacement
+                ]);
+            }
+        },
+        {
+            key: "singular",
+            value: function singular(rule, replacement) {
+                if (typeof rule === "string") remove(this.uncountables, rule);
+                remove(this.uncountables, replacement);
+                this.singulars.unshift([
+                    rule,
+                    replacement
+                ]);
+            }
+        },
+        {
+            key: "irregular",
+            value: function irregular(singular, plural) {
+                remove(this.uncountables, singular);
+                remove(this.uncountables, plural);
+                var s0 = singular[0];
+                var sRest = singular.substr(1);
+                var p0 = plural[0];
+                var pRest = plural.substr(1);
+                if (s0.toUpperCase() === p0.toUpperCase()) {
+                    this.plural(new RegExp("(" + s0 + ")" + sRest + "$", "i"), "$1" + pRest);
+                    this.plural(new RegExp("(" + p0 + ")" + pRest + "$", "i"), "$1" + pRest);
+                    this.singular(new RegExp("(" + s0 + ")" + sRest + "$", "i"), "$1" + sRest);
+                    this.singular(new RegExp("(" + p0 + ")" + pRest + "$", "i"), "$1" + sRest);
+                } else {
+                    var sRestIC = icPart(sRest);
+                    var pRestIC = icPart(pRest);
+                    this.plural(new RegExp(s0.toUpperCase() + sRestIC + "$"), p0.toUpperCase() + pRest);
+                    this.plural(new RegExp(s0.toLowerCase() + sRestIC + "$"), p0.toLowerCase() + pRest);
+                    this.plural(new RegExp(p0.toUpperCase() + pRestIC + "$"), p0.toUpperCase() + pRest);
+                    this.plural(new RegExp(p0.toLowerCase() + pRestIC + "$"), p0.toLowerCase() + pRest);
+                    this.singular(new RegExp(s0.toUpperCase() + sRestIC + "$"), s0.toUpperCase() + sRest);
+                    this.singular(new RegExp(s0.toLowerCase() + sRestIC + "$"), s0.toLowerCase() + sRest);
+                    this.singular(new RegExp(p0.toUpperCase() + pRestIC + "$"), s0.toUpperCase() + sRest);
+                    this.singular(new RegExp(p0.toLowerCase() + pRestIC + "$"), s0.toLowerCase() + sRest);
+                }
+            }
+        },
+        {
+            key: "uncountable",
+            value: function uncountable() {
+                for(var _len = arguments.length, words = Array(_len), _key = 0; _key < _len; _key++)words[_key] = arguments[_key];
+                this.uncountables = this.uncountables.concat(words);
+            }
+        },
+        {
+            key: "human",
+            value: function human(rule, replacement) {
+                this.humans.unshift([
+                    rule,
+                    replacement
+                ]);
+            }
+        },
+        {
+            key: "clear",
+            value: function clear() {
+                var scope = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : "all";
+                if (scope === "all") {
+                    this.plurals = [];
+                    this.singulars = [];
+                    this.uncountables = [];
+                    this.humans = [];
+                } else this[scope] = [];
+            }
+        }
+    ]);
+    return Inflector;
+}();
+function en(inflector) {
+    inflector.plural(/$/, "s");
+    inflector.plural(/s$/i, "s");
+    inflector.plural(/^(ax|test)is$/i, "$1es");
+    inflector.plural(/(octop|vir)us$/i, "$1i");
+    inflector.plural(/(octop|vir)i$/i, "$1i");
+    inflector.plural(/(alias|status)$/i, "$1es");
+    inflector.plural(/(bu)s$/i, "$1ses");
+    inflector.plural(/(buffal|tomat)o$/i, "$1oes");
+    inflector.plural(/([ti])um$/i, "$1a");
+    inflector.plural(/([ti])a$/i, "$1a");
+    inflector.plural(/sis$/i, "ses");
+    inflector.plural(/(?:([^f])fe|([lr])f)$/i, "$1$2ves");
+    inflector.plural(/(hive)$/i, "$1s");
+    inflector.plural(/([^aeiouy]|qu)y$/i, "$1ies");
+    inflector.plural(/(x|ch|ss|sh)$/i, "$1es");
+    inflector.plural(/(matr|vert|ind)(?:ix|ex)$/i, "$1ices");
+    inflector.plural(/^(m|l)ouse$/i, "$1ice");
+    inflector.plural(/^(m|l)ice$/i, "$1ice");
+    inflector.plural(/^(ox)$/i, "$1en");
+    inflector.plural(/^(oxen)$/i, "$1");
+    inflector.plural(/(quiz)$/i, "$1zes");
+    inflector.singular(/s$/i, "");
+    inflector.singular(/(ss)$/i, "$1");
+    inflector.singular(/(n)ews$/i, "$1ews");
+    inflector.singular(/([ti])a$/i, "$1um");
+    inflector.singular(/((a)naly|(b)a|(d)iagno|(p)arenthe|(p)rogno|(s)ynop|(t)he)(sis|ses)$/i, "$1sis");
+    inflector.singular(/(^analy)(sis|ses)$/i, "$1sis");
+    inflector.singular(/([^f])ves$/i, "$1fe");
+    inflector.singular(/(hive)s$/i, "$1");
+    inflector.singular(/(tive)s$/i, "$1");
+    inflector.singular(/([lr])ves$/i, "$1f");
+    inflector.singular(/([^aeiouy]|qu)ies$/i, "$1y");
+    inflector.singular(/(s)eries$/i, "$1eries");
+    inflector.singular(/(m)ovies$/i, "$1ovie");
+    inflector.singular(/(x|ch|ss|sh)es$/i, "$1");
+    inflector.singular(/^(m|l)ice$/i, "$1ouse");
+    inflector.singular(/(bus)(es)?$/i, "$1");
+    inflector.singular(/(o)es$/i, "$1");
+    inflector.singular(/(shoe)s$/i, "$1");
+    inflector.singular(/(cris|test)(is|es)$/i, "$1is");
+    inflector.singular(/^(a)x[ie]s$/i, "$1xis");
+    inflector.singular(/(octop|vir)(us|i)$/i, "$1us");
+    inflector.singular(/(alias|status)(es)?$/i, "$1");
+    inflector.singular(/^(ox)en/i, "$1");
+    inflector.singular(/(vert|ind)ices$/i, "$1ex");
+    inflector.singular(/(matr)ices$/i, "$1ix");
+    inflector.singular(/(quiz)zes$/i, "$1");
+    inflector.singular(/(database)s$/i, "$1");
+    inflector.irregular("person", "people");
+    inflector.irregular("man", "men");
+    inflector.irregular("child", "children");
+    inflector.irregular("sex", "sexes");
+    inflector.irregular("move", "moves");
+    inflector.irregular("zombie", "zombies");
+    inflector.uncountable("equipment", "information", "rice", "money", "species", "series", "fish", "sheep", "jeans", "police");
+}
+var defaults$1 = {
+    en: en
+};
+function inflections(locale, fn) {
+    if (isFunc(locale)) {
+        fn = locale;
+        locale = null;
+    }
+    locale = locale || "en";
+    if (fn) fn(Inflector.getInstance(locale));
+    else return Inflector.getInstance(locale);
+}
+for(var locale in defaults$1)inflections(locale, defaults$1[locale]);
+function applyInflections(word, rules) {
+    var result = "" + word, rule, regex, replacement;
+    if (result.length === 0) return result;
+    else {
+        var match = result.toLowerCase().match(/\b\w+$/);
+        if (match && inflections().uncountables.indexOf(match[0]) > -1) return result;
+        else {
+            for(var i = 0, ii = rules.length; i < ii; i++){
+                rule = rules[i];
+                regex = rule[0];
+                replacement = rule[1];
+                if (result.match(regex)) {
+                    result = result.replace(regex, replacement);
+                    break;
+                }
+            }
+            return result;
+        }
+    }
+}
+function pluralize(word) {
+    var locale = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : "en";
+    return applyInflections(word, inflections(locale).plurals);
+}
+function singularize(word) {
+    var locale = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : "en";
+    return applyInflections(word, inflections(locale).singulars);
+}
+function capitalize(str) {
+    var result = str === null || str === undefined ? "" : String(str);
+    return result.charAt(0).toUpperCase() + result.slice(1);
+}
+function camelize(term, uppercaseFirstLetter) {
+    if (uppercaseFirstLetter === null || uppercaseFirstLetter === undefined) uppercaseFirstLetter = true;
+    var result = "" + term;
+    if (uppercaseFirstLetter) result = result.replace(/^[a-z\d]*/, function(a) {
+        return inflections().acronyms[a] || capitalize(a);
+    });
+    else result = result.replace(new RegExp("^(?:" + inflections().acronymRegex.source + "(?=\\b|[A-Z_])|\\w)"), function(a) {
+        return a.toLowerCase();
+    });
+    result = result.replace(/(?:_|(\/))([a-z\d]*)/gi, function(match, a, b, idx, string) {
+        a || (a = "");
+        return "" + a + (inflections().acronyms[b] || capitalize(b));
+    });
+    return result;
+}
+function underscore(camelCasedWord) {
+    var result = "" + camelCasedWord;
+    result = result.replace(new RegExp("(?:([A-Za-z\\d])|^)(" + inflections().acronymRegex.source + ")(?=\\b|[^a-z])", "g"), function(match, $1, $2) {
+        return "" + ($1 || "") + ($1 ? "_" : "") + $2.toLowerCase();
+    });
+    result = result.replace(/([A-Z\d]+)([A-Z][a-z])/g, "$1_$2");
+    result = result.replace(/([a-z\d])([A-Z])/g, "$1_$2");
+    result = result.replace(/-/g, "_");
+    return result.toLowerCase();
+}
+function humanize(lowerCaseAndUnderscoredWord, options) {
+    var result = "" + lowerCaseAndUnderscoredWord;
+    var humans = inflections().humans;
+    var human = void 0, rule = void 0, replacement = void 0;
+    options = options || {};
+    if (options.capitalize === null || options.capitalize === undefined) options.capitalize = true;
+    for(var i = 0, ii = humans.length; i < ii; i++){
+        human = humans[i];
+        rule = human[0];
+        replacement = human[1];
+        if (rule.test && rule.test(result) || result.indexOf(rule) > -1) {
+            result = result.replace(rule, replacement);
+            break;
+        }
+    }
+    result = result.replace(/_id$/, "");
+    result = result.replace(/_/g, " ");
+    result = result.replace(/([a-z\d]*)/gi, function(match) {
+        return inflections().acronyms[match] || match.toLowerCase();
+    });
+    if (options.capitalize) result = result.replace(/^\w/, function(match) {
+        return match.toUpperCase();
+    });
+    return result;
+}
+function titleize(word) {
+    return humanize(underscore(word)).replace(/(^|[\s¿/]+)([a-z])/g, function(match, boundary, letter, idx, string) {
+        return match.replace(letter, letter.toUpperCase());
+    });
+}
+function tableize(className) {
+    return pluralize(underscore(className));
+}
+function classify(tableName) {
+    return camelize(singularize(tableName.replace(/.*\./g, "")));
+}
+function dasherize(underscoredWord) {
+    return underscoredWord.replace(/_/g, "-");
+}
+function foreignKey(className) {
+    var separateWithUnderscore = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;
+    return "" + underscore(className) + (separateWithUnderscore ? "_id" : "id");
+}
+function ordinal(number) {
+    var absNumber = Math.abs(Number(number));
+    var mod100 = absNumber % 100;
+    if (mod100 === 11 || mod100 === 12 || mod100 === 13) return "th";
+    else switch(absNumber % 10){
+        case 1:
+            return "st";
+        case 2:
+            return "nd";
+        case 3:
+            return "rd";
+        default:
+            return "th";
+    }
+}
+function ordinalize(number) {
+    return "" + number + ordinal(number);
+}
+// prettier-ignore
+var DEFAULT_APPROXIMATIONS = {
+    "\xc0": 'A',
+    "\xc1": 'A',
+    "\xc2": 'A',
+    "\xc3": 'A',
+    "\xc4": 'A',
+    "\xc5": 'A',
+    "\xc6": 'AE',
+    "\xc7": 'C',
+    "\xc8": 'E',
+    "\xc9": 'E',
+    "\xca": 'E',
+    "\xcb": 'E',
+    "\xcc": 'I',
+    "\xcd": 'I',
+    "\xce": 'I',
+    "\xcf": 'I',
+    "\xd0": 'D',
+    "\xd1": 'N',
+    "\xd2": 'O',
+    "\xd3": 'O',
+    "\xd4": 'O',
+    "\xd5": 'O',
+    "\xd6": 'O',
+    "\xd7": 'x',
+    "\xd8": 'O',
+    "\xd9": 'U',
+    "\xda": 'U',
+    "\xdb": 'U',
+    "\xdc": 'U',
+    "\xdd": 'Y',
+    "\xde": 'Th',
+    "\xdf": 'ss',
+    "\xe0": 'a',
+    "\xe1": 'a',
+    "\xe2": 'a',
+    "\xe3": 'a',
+    "\xe4": 'a',
+    "\xe5": 'a',
+    "\xe6": 'ae',
+    "\xe7": 'c',
+    "\xe8": 'e',
+    "\xe9": 'e',
+    "\xea": 'e',
+    "\xeb": 'e',
+    "\xec": 'i',
+    "\xed": 'i',
+    "\xee": 'i',
+    "\xef": 'i',
+    "\xf0": 'd',
+    "\xf1": 'n',
+    "\xf2": 'o',
+    "\xf3": 'o',
+    "\xf4": 'o',
+    "\xf5": 'o',
+    "\xf6": 'o',
+    "\xf8": 'o',
+    "\xf9": 'u',
+    "\xfa": 'u',
+    "\xfb": 'u',
+    "\xfc": 'u',
+    "\xfd": 'y',
+    "\xfe": 'th',
+    "\xff": 'y',
+    "\u0100": 'A',
+    "\u0101": 'a',
+    "\u0102": 'A',
+    "\u0103": 'a',
+    "\u0104": 'A',
+    "\u0105": 'a',
+    "\u0106": 'C',
+    "\u0107": 'c',
+    "\u0108": 'C',
+    "\u0109": 'c',
+    "\u010A": 'C',
+    "\u010B": 'c',
+    "\u010C": 'C',
+    "\u010D": 'c',
+    "\u010E": 'D',
+    "\u010F": 'd',
+    "\u0110": 'D',
+    "\u0111": 'd',
+    "\u0112": 'E',
+    "\u0113": 'e',
+    "\u0114": 'E',
+    "\u0115": 'e',
+    "\u0116": 'E',
+    "\u0117": 'e',
+    "\u0118": 'E',
+    "\u0119": 'e',
+    "\u011A": 'E',
+    "\u011B": 'e',
+    "\u011C": 'G',
+    "\u011D": 'g',
+    "\u011E": 'G',
+    "\u011F": 'g',
+    "\u0120": 'G',
+    "\u0121": 'g',
+    "\u0122": 'G',
+    "\u0123": 'g',
+    "\u0124": 'H',
+    "\u0125": 'h',
+    "\u0126": 'H',
+    "\u0127": 'h',
+    "\u0128": 'I',
+    "\u0129": 'i',
+    "\u012A": 'I',
+    "\u012B": 'i',
+    "\u012C": 'I',
+    "\u012D": 'i',
+    "\u012E": 'I',
+    "\u012F": 'i',
+    "\u0130": 'I',
+    "\u0131": 'i',
+    "\u0132": 'IJ',
+    "\u0133": 'ij',
+    "\u0134": 'J',
+    "\u0135": 'j',
+    "\u0136": 'K',
+    "\u0137": 'k',
+    "\u0138": 'k',
+    "\u0139": 'L',
+    "\u013A": 'l',
+    "\u013B": 'L',
+    "\u013C": 'l',
+    "\u013D": 'L',
+    "\u013E": 'l',
+    "\u013F": 'L',
+    "\u0140": 'l',
+    "\u0141": 'L',
+    "\u0142": 'l',
+    "\u0143": 'N',
+    "\u0144": 'n',
+    "\u0145": 'N',
+    "\u0146": 'n',
+    "\u0147": 'N',
+    "\u0148": 'n',
+    "\u0149": '\'n',
+    "\u014A": 'NG',
+    "\u014B": 'ng',
+    "\u014C": 'O',
+    "\u014D": 'o',
+    "\u014E": 'O',
+    "\u014F": 'o',
+    "\u0150": 'O',
+    "\u0151": 'o',
+    "\u0152": 'OE',
+    "\u0153": 'oe',
+    "\u0154": 'R',
+    "\u0155": 'r',
+    "\u0156": 'R',
+    "\u0157": 'r',
+    "\u0158": 'R',
+    "\u0159": 'r',
+    "\u015A": 'S',
+    "\u015B": 's',
+    "\u015C": 'S',
+    "\u015D": 's',
+    "\u015E": 'S',
+    "\u015F": 's',
+    "\u0160": 'S',
+    "\u0161": 's',
+    "\u0162": 'T',
+    "\u0163": 't',
+    "\u0164": 'T',
+    "\u0165": 't',
+    "\u0166": 'T',
+    "\u0167": 't',
+    "\u0168": 'U',
+    "\u0169": 'u',
+    "\u016A": 'U',
+    "\u016B": 'u',
+    "\u016C": 'U',
+    "\u016D": 'u',
+    "\u016E": 'U',
+    "\u016F": 'u',
+    "\u0170": 'U',
+    "\u0171": 'u',
+    "\u0172": 'U',
+    "\u0173": 'u',
+    "\u0174": 'W',
+    "\u0175": 'w',
+    "\u0176": 'Y',
+    "\u0177": 'y',
+    "\u0178": 'Y',
+    "\u0179": 'Z',
+    "\u017A": 'z',
+    "\u017B": 'Z',
+    "\u017C": 'z',
+    "\u017D": 'Z',
+    "\u017E": 'z',
+    "\u0410": 'A',
+    "\u0411": 'B',
+    "\u0412": 'V',
+    "\u0413": 'G',
+    "\u0414": 'D',
+    "\u0415": 'E',
+    "\u0401": 'E',
+    "\u0416": 'ZH',
+    "\u0417": 'Z',
+    "\u0418": 'I',
+    "\u0419": 'J',
+    "\u041A": 'K',
+    "\u041B": 'L',
+    "\u041C": 'M',
+    "\u041D": 'N',
+    "\u041E": 'O',
+    "\u041F": 'P',
+    "\u0420": 'R',
+    "\u0421": 'S',
+    "\u0422": 'T',
+    "\u0423": 'U',
+    "\u0424": 'F',
+    "\u0425": 'KH',
+    "\u0426": 'C',
+    "\u0427": 'CH',
+    "\u0428": 'SH',
+    "\u0429": 'SHCH',
+    "\u042A": '',
+    "\u042B": 'Y',
+    "\u042C": '',
+    "\u042D": 'E',
+    "\u042E": 'YU',
+    "\u042F": 'YA',
+    "\u0430": 'a',
+    "\u0431": 'b',
+    "\u0432": 'v',
+    "\u0433": 'g',
+    "\u0434": 'd',
+    "\u0435": 'e',
+    "\u0451": 'e',
+    "\u0436": 'zh',
+    "\u0437": 'z',
+    "\u0438": 'i',
+    "\u0439": 'j',
+    "\u043A": 'k',
+    "\u043B": 'l',
+    "\u043C": 'm',
+    "\u043D": 'n',
+    "\u043E": 'o',
+    "\u043F": 'p',
+    "\u0440": 'r',
+    "\u0441": 's',
+    "\u0442": 't',
+    "\u0443": 'u',
+    "\u0444": 'f',
+    "\u0445": 'kh',
+    "\u0446": 'c',
+    "\u0447": 'ch',
+    "\u0448": 'sh',
+    "\u0449": 'shch',
+    "\u044A": '',
+    "\u044B": 'y',
+    "\u044C": '',
+    "\u044D": 'e',
+    "\u044E": 'yu',
+    "\u044F": 'ya'
+};
+var DEFAULT_REPLACEMENT_CHAR = "?";
+var instances$1 = {};
+var Transliterator = function() {
+    createClass(Transliterator, null, [
+        {
+            key: 'getInstance',
+            value: function getInstance(locale) {
+                instances$1[locale] = instances$1[locale] || new Transliterator();
+                return instances$1[locale];
+            }
+        }
+    ]);
+    function Transliterator() {
+        classCallCheck(this, Transliterator);
+        this.approximations = {};
+        for(var char in DEFAULT_APPROXIMATIONS)this.approximate(char, DEFAULT_APPROXIMATIONS[char]);
+    }
+    createClass(Transliterator, [
+        {
+            key: 'approximate',
+            value: function approximate(char, replacement) {
+                this.approximations[char] = replacement;
+            }
+        },
+        {
+            key: 'transliterate',
+            value: function transliterate(string, replacement) {
+                var _this = this;
+                return string.replace(/[^\u0000-\u007f]/g, function(c) {
+                    return _this.approximations[c] || replacement || DEFAULT_REPLACEMENT_CHAR;
+                });
+            }
+        }
+    ]);
+    return Transliterator;
+}();
+function transliterations(locale, fn) {
+    if (isFunc(locale)) {
+        fn = locale;
+        locale = null;
+    }
+    locale = locale || "en";
+    if (fn) fn(Transliterator.getInstance(locale));
+    else return Transliterator.getInstance(locale);
+}
+function transliterate(string) {
+    var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+    var locale = options.locale || "en";
+    var replacement = options.replacement || "?";
+    return transliterations(locale).transliterate(string, replacement);
+}
+function parameterize(string) {
+    var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+    if (options.separator === undefined) options.separator = "-";
+    if (options.separator === null) options.separator = "";
+    // replace accented chars with their ascii equivalents
+    var result = transliterate(string, options);
+    result = result.replace(/[^a-z0-9\-_]+/ig, options.separator);
+    if (options.separator.length) {
+        var separatorRegex = new RegExp(options.separator);
+        // no more than one of the separator in a row
+        result = result.replace(new RegExp(separatorRegex.source + "{2,}"), options.separator);
+        // remove leading/trailing separator
+        result = result.replace(new RegExp("^" + separatorRegex.source + "|" + separatorRegex.source + "$", "i"), "");
+    }
+    if (options.preserveCase) return result;
+    return result.toLowerCase();
+}
+function constantify(word) {
+    return underscore(word).toUpperCase().replace(/\s+/g, "_");
+}
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"3JYOb":[function(require,module,exports,__globalThis) {
+var createCaseFirst = require("37b457320f64d2d7");
+/**
+ * Converts the first character of `string` to lower case.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category String
+ * @param {string} [string=''] The string to convert.
+ * @returns {string} Returns the converted string.
+ * @example
+ *
+ * _.lowerFirst('Fred');
+ * // => 'fred'
+ *
+ * _.lowerFirst('FRED');
+ * // => 'fRED'
+ */ var lowerFirst = createCaseFirst('toLowerCase');
+module.exports = lowerFirst;
+
+},{"37b457320f64d2d7":"arkB7"}],"arkB7":[function(require,module,exports,__globalThis) {
+var castSlice = require("6cc0e53be1623a5f"), hasUnicode = require("e28707473345265"), stringToArray = require("32980b84821a53a0"), toString = require("e00796f8e204e98");
+/**
+ * Creates a function like `_.lowerFirst`.
+ *
+ * @private
+ * @param {string} methodName The name of the `String` case method to use.
+ * @returns {Function} Returns the new case function.
+ */ function createCaseFirst(methodName) {
+    return function(string) {
+        string = toString(string);
+        var strSymbols = hasUnicode(string) ? stringToArray(string) : undefined;
+        var chr = strSymbols ? strSymbols[0] : string.charAt(0);
+        var trailing = strSymbols ? castSlice(strSymbols, 1).join('') : string.slice(1);
+        return chr[methodName]() + trailing;
+    };
+}
+module.exports = createCaseFirst;
+
+},{"6cc0e53be1623a5f":"eHx77","e28707473345265":"b3sZ0","32980b84821a53a0":"dl1Gh","e00796f8e204e98":"joIdQ"}],"eHx77":[function(require,module,exports,__globalThis) {
+var baseSlice = require("19fbc2ab8fa927cd");
+/**
+ * Casts `array` to a slice if it's needed.
+ *
+ * @private
+ * @param {Array} array The array to inspect.
+ * @param {number} start The start position.
+ * @param {number} [end=array.length] The end position.
+ * @returns {Array} Returns the cast slice.
+ */ function castSlice(array, start, end) {
+    var length = array.length;
+    end = end === undefined ? length : end;
+    return !start && end >= length ? array : baseSlice(array, start, end);
+}
+module.exports = castSlice;
+
+},{"19fbc2ab8fa927cd":"cqqI2"}],"cqqI2":[function(require,module,exports,__globalThis) {
+/**
+ * The base implementation of `_.slice` without an iteratee call guard.
+ *
+ * @private
+ * @param {Array} array The array to slice.
+ * @param {number} [start=0] The start position.
+ * @param {number} [end=array.length] The end position.
+ * @returns {Array} Returns the slice of `array`.
+ */ function baseSlice(array, start, end) {
+    var index = -1, length = array.length;
+    if (start < 0) start = -start > length ? 0 : length + start;
+    end = end > length ? length : end;
+    if (end < 0) end += length;
+    length = start > end ? 0 : end - start >>> 0;
+    start >>>= 0;
+    var result = Array(length);
+    while(++index < length)result[index] = array[index + start];
+    return result;
+}
+module.exports = baseSlice;
+
+},{}],"b3sZ0":[function(require,module,exports,__globalThis) {
+/** Used to compose unicode character classes. */ var rsAstralRange = '\\ud800-\\udfff', rsComboMarksRange = '\\u0300-\\u036f', reComboHalfMarksRange = '\\ufe20-\\ufe2f', rsComboSymbolsRange = '\\u20d0-\\u20ff', rsComboRange = rsComboMarksRange + reComboHalfMarksRange + rsComboSymbolsRange, rsVarRange = '\\ufe0e\\ufe0f';
+/** Used to compose unicode capture groups. */ var rsZWJ = '\\u200d';
+/** Used to detect strings with [zero-width joiners or code points from the astral planes](http://eev.ee/blog/2015/09/12/dark-corners-of-unicode/). */ var reHasUnicode = RegExp('[' + rsZWJ + rsAstralRange + rsComboRange + rsVarRange + ']');
+/**
+ * Checks if `string` contains Unicode symbols.
+ *
+ * @private
+ * @param {string} string The string to inspect.
+ * @returns {boolean} Returns `true` if a symbol is found, else `false`.
+ */ function hasUnicode(string) {
+    return reHasUnicode.test(string);
+}
+module.exports = hasUnicode;
+
+},{}],"dl1Gh":[function(require,module,exports,__globalThis) {
+var asciiToArray = require("55ec07d60faf873c"), hasUnicode = require("d3e31b390208b2ca"), unicodeToArray = require("2a468ebcd49732b9");
+/**
+ * Converts `string` to an array.
+ *
+ * @private
+ * @param {string} string The string to convert.
+ * @returns {Array} Returns the converted array.
+ */ function stringToArray(string) {
+    return hasUnicode(string) ? unicodeToArray(string) : asciiToArray(string);
+}
+module.exports = stringToArray;
+
+},{"55ec07d60faf873c":"1GB6M","d3e31b390208b2ca":"b3sZ0","2a468ebcd49732b9":"5Z8Ku"}],"1GB6M":[function(require,module,exports,__globalThis) {
+/**
+ * Converts an ASCII `string` to an array.
+ *
+ * @private
+ * @param {string} string The string to convert.
+ * @returns {Array} Returns the converted array.
+ */ function asciiToArray(string) {
+    return string.split('');
+}
+module.exports = asciiToArray;
+
+},{}],"5Z8Ku":[function(require,module,exports,__globalThis) {
+/** Used to compose unicode character classes. */ var rsAstralRange = '\\ud800-\\udfff', rsComboMarksRange = '\\u0300-\\u036f', reComboHalfMarksRange = '\\ufe20-\\ufe2f', rsComboSymbolsRange = '\\u20d0-\\u20ff', rsComboRange = rsComboMarksRange + reComboHalfMarksRange + rsComboSymbolsRange, rsVarRange = '\\ufe0e\\ufe0f';
+/** Used to compose unicode capture groups. */ var rsAstral = '[' + rsAstralRange + ']', rsCombo = '[' + rsComboRange + ']', rsFitz = '\\ud83c[\\udffb-\\udfff]', rsModifier = '(?:' + rsCombo + '|' + rsFitz + ')', rsNonAstral = '[^' + rsAstralRange + ']', rsRegional = '(?:\\ud83c[\\udde6-\\uddff]){2}', rsSurrPair = '[\\ud800-\\udbff][\\udc00-\\udfff]', rsZWJ = '\\u200d';
+/** Used to compose unicode regexes. */ var reOptMod = rsModifier + '?', rsOptVar = '[' + rsVarRange + ']?', rsOptJoin = '(?:' + rsZWJ + '(?:' + [
+    rsNonAstral,
+    rsRegional,
+    rsSurrPair
+].join('|') + ')' + rsOptVar + reOptMod + ')*', rsSeq = rsOptVar + reOptMod + rsOptJoin, rsSymbol = '(?:' + [
+    rsNonAstral + rsCombo + '?',
+    rsCombo,
+    rsRegional,
+    rsSurrPair,
+    rsAstral
+].join('|') + ')';
+/** Used to match [string symbols](https://mathiasbynens.be/notes/javascript-unicode). */ var reUnicode = RegExp(rsFitz + '(?=' + rsFitz + ')|' + rsSymbol + rsSeq, 'g');
+/**
+ * Converts a Unicode `string` to an array.
+ *
+ * @private
+ * @param {string} string The string to convert.
+ * @returns {Array} Returns the converted array.
+ */ function unicodeToArray(string) {
+    return string.match(reUnicode) || [];
+}
+module.exports = unicodeToArray;
+
+},{}],"9XEia":[function(require,module,exports,__globalThis) {
+var baseIsEqual = require("7b71d3bc42bb6f3e");
+/**
+ * Performs a deep comparison between two values to determine if they are
+ * equivalent.
+ *
+ * **Note:** This method supports comparing arrays, array buffers, booleans,
+ * date objects, error objects, maps, numbers, `Object` objects, regexes,
+ * sets, strings, symbols, and typed arrays. `Object` objects are compared
+ * by their own, not inherited, enumerable properties. Functions and DOM
+ * nodes are compared by strict equality, i.e. `===`.
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Lang
+ * @param {*} value The value to compare.
+ * @param {*} other The other value to compare.
+ * @returns {boolean} Returns `true` if the values are equivalent, else `false`.
+ * @example
+ *
+ * var object = { 'a': 1 };
+ * var other = { 'a': 1 };
+ *
+ * _.isEqual(object, other);
+ * // => true
+ *
+ * object === other;
+ * // => false
+ */ function isEqual(value, other) {
+    return baseIsEqual(value, other);
+}
+module.exports = isEqual;
+
+},{"7b71d3bc42bb6f3e":"7i3qr"}],"94CDd":[function(require,module,exports,__globalThis) {
+var arrayMap = require("61518c8bb036dd9b"), baseIteratee = require("8bad46685c8864d"), baseMap = require("51c76ab24fdb66f9"), isArray = require("7cb4cacc4dea406c");
+/**
+ * Creates an array of values by running each element in `collection` thru
+ * `iteratee`. The iteratee is invoked with three arguments:
+ * (value, index|key, collection).
+ *
+ * Many lodash methods are guarded to work as iteratees for methods like
+ * `_.every`, `_.filter`, `_.map`, `_.mapValues`, `_.reject`, and `_.some`.
+ *
+ * The guarded methods are:
+ * `ary`, `chunk`, `curry`, `curryRight`, `drop`, `dropRight`, `every`,
+ * `fill`, `invert`, `parseInt`, `random`, `range`, `rangeRight`, `repeat`,
+ * `sampleSize`, `slice`, `some`, `sortBy`, `split`, `take`, `takeRight`,
+ * `template`, `trim`, `trimEnd`, `trimStart`, and `words`
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Collection
+ * @param {Array|Object} collection The collection to iterate over.
+ * @param {Function} [iteratee=_.identity] The function invoked per iteration.
+ * @returns {Array} Returns the new mapped array.
+ * @example
+ *
+ * function square(n) {
+ *   return n * n;
+ * }
+ *
+ * _.map([4, 8], square);
+ * // => [16, 64]
+ *
+ * _.map({ 'a': 4, 'b': 8 }, square);
+ * // => [16, 64] (iteration order is not guaranteed)
+ *
+ * var users = [
+ *   { 'user': 'barney' },
+ *   { 'user': 'fred' }
+ * ];
+ *
+ * // The `_.property` iteratee shorthand.
+ * _.map(users, 'user');
+ * // => ['barney', 'fred']
+ */ function map(collection, iteratee) {
+    var func = isArray(collection) ? arrayMap : baseMap;
+    return func(collection, baseIteratee(iteratee, 3));
+}
+module.exports = map;
+
+},{"61518c8bb036dd9b":"imI5Z","8bad46685c8864d":"2fsgg","51c76ab24fdb66f9":"cLeHB","7cb4cacc4dea406c":"dZaTH"}],"cLeHB":[function(require,module,exports,__globalThis) {
+var baseEach = require("488df795cf6fe570"), isArrayLike = require("2924e2db4bb5430d");
+/**
+ * The base implementation of `_.map` without support for iteratee shorthands.
+ *
+ * @private
+ * @param {Array|Object} collection The collection to iterate over.
+ * @param {Function} iteratee The function invoked per iteration.
+ * @returns {Array} Returns the new mapped array.
+ */ function baseMap(collection, iteratee) {
+    var index = -1, result = isArrayLike(collection) ? Array(collection.length) : [];
+    baseEach(collection, function(value, key, collection) {
+        result[++index] = iteratee(value, key, collection);
+    });
+    return result;
+}
+module.exports = baseMap;
+
+},{"488df795cf6fe570":"1glfs","2924e2db4bb5430d":"gMCbp"}],"1glfs":[function(require,module,exports,__globalThis) {
+var baseForOwn = require("ee57d32bcdc873cb"), createBaseEach = require("f1e3fc84161ef3ec");
+/**
+ * The base implementation of `_.forEach` without support for iteratee shorthands.
+ *
+ * @private
+ * @param {Array|Object} collection The collection to iterate over.
+ * @param {Function} iteratee The function invoked per iteration.
+ * @returns {Array|Object} Returns `collection`.
+ */ var baseEach = createBaseEach(baseForOwn);
+module.exports = baseEach;
+
+},{"ee57d32bcdc873cb":"6MqUM","f1e3fc84161ef3ec":"dfv3e"}],"dfv3e":[function(require,module,exports,__globalThis) {
+var isArrayLike = require("49bbd11cbf093bb1");
+/**
+ * Creates a `baseEach` or `baseEachRight` function.
+ *
+ * @private
+ * @param {Function} eachFunc The function to iterate over a collection.
+ * @param {boolean} [fromRight] Specify iterating from right to left.
+ * @returns {Function} Returns the new base function.
+ */ function createBaseEach(eachFunc, fromRight) {
+    return function(collection, iteratee) {
+        if (collection == null) return collection;
+        if (!isArrayLike(collection)) return eachFunc(collection, iteratee);
+        var length = collection.length, index = fromRight ? length : -1, iterable = Object(collection);
+        while(fromRight ? index-- : ++index < length){
+            if (iteratee(iterable[index], index, iterable) === false) break;
+        }
+        return collection;
+    };
+}
+module.exports = createBaseEach;
+
+},{"49bbd11cbf093bb1":"gMCbp"}],"NMIiZ":[function(require,module,exports,__globalThis) {
+var baseClone = require("9b38cc9a3ba32230");
+/** Used to compose bitmasks for cloning. */ var CLONE_DEEP_FLAG = 1, CLONE_SYMBOLS_FLAG = 4;
+/**
+ * This method is like `_.clone` except that it recursively clones `value`.
+ *
+ * @static
+ * @memberOf _
+ * @since 1.0.0
+ * @category Lang
+ * @param {*} value The value to recursively clone.
+ * @returns {*} Returns the deep cloned value.
+ * @see _.clone
+ * @example
+ *
+ * var objects = [{ 'a': 1 }, { 'b': 2 }];
+ *
+ * var deep = _.cloneDeep(objects);
+ * console.log(deep[0] === objects[0]);
+ * // => false
+ */ function cloneDeep(value) {
+    return baseClone(value, CLONE_DEEP_FLAG | CLONE_SYMBOLS_FLAG);
+}
+module.exports = cloneDeep;
+
+},{"9b38cc9a3ba32230":"2GC2p"}],"2GC2p":[function(require,module,exports,__globalThis) {
+var Stack = require("c3256a0a192955f9"), arrayEach = require("3a79976eb46af94a"), assignValue = require("bc83a05a4f99d69b"), baseAssign = require("e6b4c3e6c85df6bb"), baseAssignIn = require("f340cc553ba5643c"), cloneBuffer = require("e72e99883a50402d"), copyArray = require("dc840ead07f1054"), copySymbols = require("309288e8ee190af0"), copySymbolsIn = require("687fa30fede0b048"), getAllKeys = require("bb0ba724f98b094d"), getAllKeysIn = require("12bae1dca0e83064"), getTag = require("4c3204eaea28d680"), initCloneArray = require("fd7741200b462cdf"), initCloneByTag = require("f93a1d24ac08e076"), initCloneObject = require("630039e80f692f17"), isArray = require("f37949484ab52dae"), isBuffer = require("ac876cc65d29c86e"), isMap = require("1056c031d98783c0"), isObject = require("1800fb3122907fc2"), isSet = require("31f022f648037bd3"), keys = require("5f3267fbd9848a7d"), keysIn = require("7d3f3bdc4f2e7bb8");
+/** Used to compose bitmasks for cloning. */ var CLONE_DEEP_FLAG = 1, CLONE_FLAT_FLAG = 2, CLONE_SYMBOLS_FLAG = 4;
+/** `Object#toString` result references. */ var argsTag = '[object Arguments]', arrayTag = '[object Array]', boolTag = '[object Boolean]', dateTag = '[object Date]', errorTag = '[object Error]', funcTag = '[object Function]', genTag = '[object GeneratorFunction]', mapTag = '[object Map]', numberTag = '[object Number]', objectTag = '[object Object]', regexpTag = '[object RegExp]', setTag = '[object Set]', stringTag = '[object String]', symbolTag = '[object Symbol]', weakMapTag = '[object WeakMap]';
+var arrayBufferTag = '[object ArrayBuffer]', dataViewTag = '[object DataView]', float32Tag = '[object Float32Array]', float64Tag = '[object Float64Array]', int8Tag = '[object Int8Array]', int16Tag = '[object Int16Array]', int32Tag = '[object Int32Array]', uint8Tag = '[object Uint8Array]', uint8ClampedTag = '[object Uint8ClampedArray]', uint16Tag = '[object Uint16Array]', uint32Tag = '[object Uint32Array]';
+/** Used to identify `toStringTag` values supported by `_.clone`. */ var cloneableTags = {};
+cloneableTags[argsTag] = cloneableTags[arrayTag] = cloneableTags[arrayBufferTag] = cloneableTags[dataViewTag] = cloneableTags[boolTag] = cloneableTags[dateTag] = cloneableTags[float32Tag] = cloneableTags[float64Tag] = cloneableTags[int8Tag] = cloneableTags[int16Tag] = cloneableTags[int32Tag] = cloneableTags[mapTag] = cloneableTags[numberTag] = cloneableTags[objectTag] = cloneableTags[regexpTag] = cloneableTags[setTag] = cloneableTags[stringTag] = cloneableTags[symbolTag] = cloneableTags[uint8Tag] = cloneableTags[uint8ClampedTag] = cloneableTags[uint16Tag] = cloneableTags[uint32Tag] = true;
+cloneableTags[errorTag] = cloneableTags[funcTag] = cloneableTags[weakMapTag] = false;
+/**
+ * The base implementation of `_.clone` and `_.cloneDeep` which tracks
+ * traversed objects.
+ *
+ * @private
+ * @param {*} value The value to clone.
+ * @param {boolean} bitmask The bitmask flags.
+ *  1 - Deep clone
+ *  2 - Flatten inherited properties
+ *  4 - Clone symbols
+ * @param {Function} [customizer] The function to customize cloning.
+ * @param {string} [key] The key of `value`.
+ * @param {Object} [object] The parent object of `value`.
+ * @param {Object} [stack] Tracks traversed objects and their clone counterparts.
+ * @returns {*} Returns the cloned value.
+ */ function baseClone(value, bitmask, customizer, key, object, stack) {
+    var result, isDeep = bitmask & CLONE_DEEP_FLAG, isFlat = bitmask & CLONE_FLAT_FLAG, isFull = bitmask & CLONE_SYMBOLS_FLAG;
+    if (customizer) result = object ? customizer(value, key, object, stack) : customizer(value);
+    if (result !== undefined) return result;
+    if (!isObject(value)) return value;
+    var isArr = isArray(value);
+    if (isArr) {
+        result = initCloneArray(value);
+        if (!isDeep) return copyArray(value, result);
+    } else {
+        var tag = getTag(value), isFunc = tag == funcTag || tag == genTag;
+        if (isBuffer(value)) return cloneBuffer(value, isDeep);
+        if (tag == objectTag || tag == argsTag || isFunc && !object) {
+            result = isFlat || isFunc ? {} : initCloneObject(value);
+            if (!isDeep) return isFlat ? copySymbolsIn(value, baseAssignIn(result, value)) : copySymbols(value, baseAssign(result, value));
+        } else {
+            if (!cloneableTags[tag]) return object ? value : {};
+            result = initCloneByTag(value, tag, isDeep);
+        }
+    }
+    // Check for circular references and return its corresponding clone.
+    stack || (stack = new Stack);
+    var stacked = stack.get(value);
+    if (stacked) return stacked;
+    stack.set(value, result);
+    if (isSet(value)) value.forEach(function(subValue) {
+        result.add(baseClone(subValue, bitmask, customizer, subValue, value, stack));
+    });
+    else if (isMap(value)) value.forEach(function(subValue, key) {
+        result.set(key, baseClone(subValue, bitmask, customizer, key, value, stack));
+    });
+    var keysFunc = isFull ? isFlat ? getAllKeysIn : getAllKeys : isFlat ? keysIn : keys;
+    var props = isArr ? undefined : keysFunc(value);
+    arrayEach(props || value, function(subValue, key) {
+        if (props) {
+            key = subValue;
+            subValue = value[key];
+        }
+        // Recursively populate clone (susceptible to call stack limits).
+        assignValue(result, key, baseClone(subValue, bitmask, customizer, key, value, stack));
+    });
+    return result;
+}
+module.exports = baseClone;
+
+},{"c3256a0a192955f9":"atP87","3a79976eb46af94a":"kMhnH","bc83a05a4f99d69b":"5M3eX","e6b4c3e6c85df6bb":"fNRtQ","f340cc553ba5643c":"6Gpuu","e72e99883a50402d":"6zXd4","dc840ead07f1054":"jJ8fu","309288e8ee190af0":"78Za0","687fa30fede0b048":"lhZg2","bb0ba724f98b094d":"d2kML","12bae1dca0e83064":"6BBOq","4c3204eaea28d680":"cRPhM","fd7741200b462cdf":"1RKeS","f93a1d24ac08e076":"26ysD","630039e80f692f17":"dG1H0","f37949484ab52dae":"dZaTH","ac876cc65d29c86e":"cn85h","1056c031d98783c0":"3qbv8","1800fb3122907fc2":"cGhqJ","31f022f648037bd3":"bZrVh","5f3267fbd9848a7d":"6fHVw","7d3f3bdc4f2e7bb8":"c9sMs"}],"kMhnH":[function(require,module,exports,__globalThis) {
+/**
+ * A specialized version of `_.forEach` for arrays without support for
+ * iteratee shorthands.
+ *
+ * @private
+ * @param {Array} [array] The array to iterate over.
+ * @param {Function} iteratee The function invoked per iteration.
+ * @returns {Array} Returns `array`.
+ */ function arrayEach(array, iteratee) {
+    var index = -1, length = array == null ? 0 : array.length;
+    while(++index < length){
+        if (iteratee(array[index], index, array) === false) break;
+    }
+    return array;
+}
+module.exports = arrayEach;
+
+},{}],"5M3eX":[function(require,module,exports,__globalThis) {
+var baseAssignValue = require("be513dd57a36b3f4"), eq = require("b62ef95b3cf1cde1");
+/** Used for built-in method references. */ var objectProto = Object.prototype;
+/** Used to check objects for own properties. */ var hasOwnProperty = objectProto.hasOwnProperty;
+/**
+ * Assigns `value` to `key` of `object` if the existing value is not equivalent
+ * using [`SameValueZero`](http://ecma-international.org/ecma-262/7.0/#sec-samevaluezero)
+ * for equality comparisons.
+ *
+ * @private
+ * @param {Object} object The object to modify.
+ * @param {string} key The key of the property to assign.
+ * @param {*} value The value to assign.
+ */ function assignValue(object, key, value) {
+    var objValue = object[key];
+    if (!(hasOwnProperty.call(object, key) && eq(objValue, value)) || value === undefined && !(key in object)) baseAssignValue(object, key, value);
+}
+module.exports = assignValue;
+
+},{"be513dd57a36b3f4":"fprBU","b62ef95b3cf1cde1":"aVz5f"}],"fNRtQ":[function(require,module,exports,__globalThis) {
+var copyObject = require("c7567f70ddd05963"), keys = require("fcf23a0242ef0da9");
+/**
+ * The base implementation of `_.assign` without support for multiple sources
+ * or `customizer` functions.
+ *
+ * @private
+ * @param {Object} object The destination object.
+ * @param {Object} source The source object.
+ * @returns {Object} Returns `object`.
+ */ function baseAssign(object, source) {
+    return object && copyObject(source, keys(source), object);
+}
+module.exports = baseAssign;
+
+},{"c7567f70ddd05963":"gfA7W","fcf23a0242ef0da9":"6fHVw"}],"gfA7W":[function(require,module,exports,__globalThis) {
+var assignValue = require("51e2769785cbfa78"), baseAssignValue = require("9cddf6ac1a092765");
+/**
+ * Copies properties of `source` to `object`.
+ *
+ * @private
+ * @param {Object} source The object to copy properties from.
+ * @param {Array} props The property identifiers to copy.
+ * @param {Object} [object={}] The object to copy properties to.
+ * @param {Function} [customizer] The function to customize copied values.
+ * @returns {Object} Returns `object`.
+ */ function copyObject(source, props, object, customizer) {
+    var isNew = !object;
+    object || (object = {});
+    var index = -1, length = props.length;
+    while(++index < length){
+        var key = props[index];
+        var newValue = customizer ? customizer(object[key], source[key], key, object, source) : undefined;
+        if (newValue === undefined) newValue = source[key];
+        if (isNew) baseAssignValue(object, key, newValue);
+        else assignValue(object, key, newValue);
+    }
+    return object;
+}
+module.exports = copyObject;
+
+},{"51e2769785cbfa78":"5M3eX","9cddf6ac1a092765":"fprBU"}],"6Gpuu":[function(require,module,exports,__globalThis) {
+var copyObject = require("6f2a44bcb454186d"), keysIn = require("7697a1565646c93");
+/**
+ * The base implementation of `_.assignIn` without support for multiple sources
+ * or `customizer` functions.
+ *
+ * @private
+ * @param {Object} object The destination object.
+ * @param {Object} source The source object.
+ * @returns {Object} Returns `object`.
+ */ function baseAssignIn(object, source) {
+    return object && copyObject(source, keysIn(source), object);
+}
+module.exports = baseAssignIn;
+
+},{"6f2a44bcb454186d":"gfA7W","7697a1565646c93":"c9sMs"}],"c9sMs":[function(require,module,exports,__globalThis) {
+var arrayLikeKeys = require("635aebb56f3a408f"), baseKeysIn = require("194eb1a802636842"), isArrayLike = require("ac15afdc3ddd76cd");
+/**
+ * Creates an array of the own and inherited enumerable property names of `object`.
+ *
+ * **Note:** Non-object values are coerced to objects.
+ *
+ * @static
+ * @memberOf _
+ * @since 3.0.0
+ * @category Object
+ * @param {Object} object The object to query.
+ * @returns {Array} Returns the array of property names.
+ * @example
+ *
+ * function Foo() {
+ *   this.a = 1;
+ *   this.b = 2;
+ * }
+ *
+ * Foo.prototype.c = 3;
+ *
+ * _.keysIn(new Foo);
+ * // => ['a', 'b', 'c'] (iteration order is not guaranteed)
+ */ function keysIn(object) {
+    return isArrayLike(object) ? arrayLikeKeys(object, true) : baseKeysIn(object);
+}
+module.exports = keysIn;
+
+},{"635aebb56f3a408f":"dquIQ","194eb1a802636842":"23s7e","ac15afdc3ddd76cd":"gMCbp"}],"23s7e":[function(require,module,exports,__globalThis) {
+var isObject = require("bd1636f5883f1002"), isPrototype = require("f7d53cd92b2b977b"), nativeKeysIn = require("c039208a16eb68bd");
+/** Used for built-in method references. */ var objectProto = Object.prototype;
+/** Used to check objects for own properties. */ var hasOwnProperty = objectProto.hasOwnProperty;
+/**
+ * The base implementation of `_.keysIn` which doesn't treat sparse arrays as dense.
+ *
+ * @private
+ * @param {Object} object The object to query.
+ * @returns {Array} Returns the array of property names.
+ */ function baseKeysIn(object) {
+    if (!isObject(object)) return nativeKeysIn(object);
+    var isProto = isPrototype(object), result = [];
+    for(var key in object)if (!(key == 'constructor' && (isProto || !hasOwnProperty.call(object, key)))) result.push(key);
+    return result;
+}
+module.exports = baseKeysIn;
+
+},{"bd1636f5883f1002":"cGhqJ","f7d53cd92b2b977b":"iG4eR","c039208a16eb68bd":"5CFL0"}],"5CFL0":[function(require,module,exports,__globalThis) {
+/**
+ * This function is like
+ * [`Object.keys`](http://ecma-international.org/ecma-262/7.0/#sec-object.keys)
+ * except that it includes inherited enumerable properties.
+ *
+ * @private
+ * @param {Object} object The object to query.
+ * @returns {Array} Returns the array of property names.
+ */ function nativeKeysIn(object) {
+    var result = [];
+    if (object != null) for(var key in Object(object))result.push(key);
+    return result;
+}
+module.exports = nativeKeysIn;
+
+},{}],"6zXd4":[function(require,module,exports,__globalThis) {
+var root = require("5d68e87b918bbcc5");
+/** Detect free variable `exports`. */ var freeExports = exports && !exports.nodeType && exports;
+/** Detect free variable `module`. */ var freeModule = freeExports && true && module && !module.nodeType && module;
+/** Detect the popular CommonJS extension `module.exports`. */ var moduleExports = freeModule && freeModule.exports === freeExports;
+/** Built-in value references. */ var Buffer = moduleExports ? root.Buffer : undefined, allocUnsafe = Buffer ? Buffer.allocUnsafe : undefined;
+/**
+ * Creates a clone of  `buffer`.
+ *
+ * @private
+ * @param {Buffer} buffer The buffer to clone.
+ * @param {boolean} [isDeep] Specify a deep clone.
+ * @returns {Buffer} Returns the cloned buffer.
+ */ function cloneBuffer(buffer, isDeep) {
+    if (isDeep) return buffer.slice();
+    var length = buffer.length, result = allocUnsafe ? allocUnsafe(length) : new buffer.constructor(length);
+    buffer.copy(result);
+    return result;
+}
+module.exports = cloneBuffer;
+
+},{"5d68e87b918bbcc5":"dSYUs"}],"jJ8fu":[function(require,module,exports,__globalThis) {
+/**
+ * Copies the values of `source` to `array`.
+ *
+ * @private
+ * @param {Array} source The array to copy values from.
+ * @param {Array} [array=[]] The array to copy values to.
+ * @returns {Array} Returns `array`.
+ */ function copyArray(source, array) {
+    var index = -1, length = source.length;
+    array || (array = Array(length));
+    while(++index < length)array[index] = source[index];
+    return array;
+}
+module.exports = copyArray;
+
+},{}],"78Za0":[function(require,module,exports,__globalThis) {
+var copyObject = require("4cc37626612884ad"), getSymbols = require("39cbde2205d9399c");
+/**
+ * Copies own symbols of `source` to `object`.
+ *
+ * @private
+ * @param {Object} source The object to copy symbols from.
+ * @param {Object} [object={}] The object to copy symbols to.
+ * @returns {Object} Returns `object`.
+ */ function copySymbols(source, object) {
+    return copyObject(source, getSymbols(source), object);
+}
+module.exports = copySymbols;
+
+},{"4cc37626612884ad":"gfA7W","39cbde2205d9399c":"5p5Yd"}],"lhZg2":[function(require,module,exports,__globalThis) {
+var copyObject = require("73fd77060a6bfcff"), getSymbolsIn = require("9b660e6b0c20d303");
+/**
+ * Copies own and inherited symbols of `source` to `object`.
+ *
+ * @private
+ * @param {Object} source The object to copy symbols from.
+ * @param {Object} [object={}] The object to copy symbols to.
+ * @returns {Object} Returns `object`.
+ */ function copySymbolsIn(source, object) {
+    return copyObject(source, getSymbolsIn(source), object);
+}
+module.exports = copySymbolsIn;
+
+},{"73fd77060a6bfcff":"gfA7W","9b660e6b0c20d303":"dVaAc"}],"dVaAc":[function(require,module,exports,__globalThis) {
+var arrayPush = require("2f7c7daf8773557"), getPrototype = require("6ccae2aa7cfa3c66"), getSymbols = require("bdb501682ee9305d"), stubArray = require("7641fe4ae6d2cc96");
+/* Built-in method references for those with the same name as other `lodash` methods. */ var nativeGetSymbols = Object.getOwnPropertySymbols;
+/**
+ * Creates an array of the own and inherited enumerable symbols of `object`.
+ *
+ * @private
+ * @param {Object} object The object to query.
+ * @returns {Array} Returns the array of symbols.
+ */ var getSymbolsIn = !nativeGetSymbols ? stubArray : function(object) {
+    var result = [];
+    while(object){
+        arrayPush(result, getSymbols(object));
+        object = getPrototype(object);
+    }
+    return result;
+};
+module.exports = getSymbolsIn;
+
+},{"2f7c7daf8773557":"ivo5r","6ccae2aa7cfa3c66":"8ASKT","bdb501682ee9305d":"5p5Yd","7641fe4ae6d2cc96":"6TgRy"}],"6BBOq":[function(require,module,exports,__globalThis) {
+var baseGetAllKeys = require("f6d6a583609f5bf6"), getSymbolsIn = require("feede5d0a2d06427"), keysIn = require("287f70f798405911");
+/**
+ * Creates an array of own and inherited enumerable property names and
+ * symbols of `object`.
+ *
+ * @private
+ * @param {Object} object The object to query.
+ * @returns {Array} Returns the array of property names and symbols.
+ */ function getAllKeysIn(object) {
+    return baseGetAllKeys(object, keysIn, getSymbolsIn);
+}
+module.exports = getAllKeysIn;
+
+},{"f6d6a583609f5bf6":"aeckf","feede5d0a2d06427":"dVaAc","287f70f798405911":"c9sMs"}],"1RKeS":[function(require,module,exports,__globalThis) {
+/** Used for built-in method references. */ var objectProto = Object.prototype;
+/** Used to check objects for own properties. */ var hasOwnProperty = objectProto.hasOwnProperty;
+/**
+ * Initializes an array clone.
+ *
+ * @private
+ * @param {Array} array The array to clone.
+ * @returns {Array} Returns the initialized clone.
+ */ function initCloneArray(array) {
+    var length = array.length, result = new array.constructor(length);
+    // Add properties assigned by `RegExp#exec`.
+    if (length && typeof array[0] == 'string' && hasOwnProperty.call(array, 'index')) {
+        result.index = array.index;
+        result.input = array.input;
+    }
+    return result;
+}
+module.exports = initCloneArray;
+
+},{}],"26ysD":[function(require,module,exports,__globalThis) {
+var cloneArrayBuffer = require("d24f0b9a34d2e38a"), cloneDataView = require("dbf04edaab2ae376"), cloneRegExp = require("763300f2dd9bdaf3"), cloneSymbol = require("c30e64d90e4b92d1"), cloneTypedArray = require("d1edd8349e9ad54d");
+/** `Object#toString` result references. */ var boolTag = '[object Boolean]', dateTag = '[object Date]', mapTag = '[object Map]', numberTag = '[object Number]', regexpTag = '[object RegExp]', setTag = '[object Set]', stringTag = '[object String]', symbolTag = '[object Symbol]';
+var arrayBufferTag = '[object ArrayBuffer]', dataViewTag = '[object DataView]', float32Tag = '[object Float32Array]', float64Tag = '[object Float64Array]', int8Tag = '[object Int8Array]', int16Tag = '[object Int16Array]', int32Tag = '[object Int32Array]', uint8Tag = '[object Uint8Array]', uint8ClampedTag = '[object Uint8ClampedArray]', uint16Tag = '[object Uint16Array]', uint32Tag = '[object Uint32Array]';
+/**
+ * Initializes an object clone based on its `toStringTag`.
+ *
+ * **Note:** This function only supports cloning values with tags of
+ * `Boolean`, `Date`, `Error`, `Map`, `Number`, `RegExp`, `Set`, or `String`.
+ *
+ * @private
+ * @param {Object} object The object to clone.
+ * @param {string} tag The `toStringTag` of the object to clone.
+ * @param {boolean} [isDeep] Specify a deep clone.
+ * @returns {Object} Returns the initialized clone.
+ */ function initCloneByTag(object, tag, isDeep) {
+    var Ctor = object.constructor;
+    switch(tag){
+        case arrayBufferTag:
+            return cloneArrayBuffer(object);
+        case boolTag:
+        case dateTag:
+            return new Ctor(+object);
+        case dataViewTag:
+            return cloneDataView(object, isDeep);
+        case float32Tag:
+        case float64Tag:
+        case int8Tag:
+        case int16Tag:
+        case int32Tag:
+        case uint8Tag:
+        case uint8ClampedTag:
+        case uint16Tag:
+        case uint32Tag:
+            return cloneTypedArray(object, isDeep);
+        case mapTag:
+            return new Ctor;
+        case numberTag:
+        case stringTag:
+            return new Ctor(object);
+        case regexpTag:
+            return cloneRegExp(object);
+        case setTag:
+            return new Ctor;
+        case symbolTag:
+            return cloneSymbol(object);
+    }
+}
+module.exports = initCloneByTag;
+
+},{"d24f0b9a34d2e38a":"7fi2W","dbf04edaab2ae376":"hEqzP","763300f2dd9bdaf3":"aeJOQ","c30e64d90e4b92d1":"5ScBc","d1edd8349e9ad54d":"7eG7Y"}],"7fi2W":[function(require,module,exports,__globalThis) {
+var Uint8Array = require("c50984a96481fd62");
+/**
+ * Creates a clone of `arrayBuffer`.
+ *
+ * @private
+ * @param {ArrayBuffer} arrayBuffer The array buffer to clone.
+ * @returns {ArrayBuffer} Returns the cloned array buffer.
+ */ function cloneArrayBuffer(arrayBuffer) {
+    var result = new arrayBuffer.constructor(arrayBuffer.byteLength);
+    new Uint8Array(result).set(new Uint8Array(arrayBuffer));
+    return result;
+}
+module.exports = cloneArrayBuffer;
+
+},{"c50984a96481fd62":"6xFrA"}],"hEqzP":[function(require,module,exports,__globalThis) {
+var cloneArrayBuffer = require("55b473c4a5622b5a");
+/**
+ * Creates a clone of `dataView`.
+ *
+ * @private
+ * @param {Object} dataView The data view to clone.
+ * @param {boolean} [isDeep] Specify a deep clone.
+ * @returns {Object} Returns the cloned data view.
+ */ function cloneDataView(dataView, isDeep) {
+    var buffer = isDeep ? cloneArrayBuffer(dataView.buffer) : dataView.buffer;
+    return new dataView.constructor(buffer, dataView.byteOffset, dataView.byteLength);
+}
+module.exports = cloneDataView;
+
+},{"55b473c4a5622b5a":"7fi2W"}],"aeJOQ":[function(require,module,exports,__globalThis) {
+/** Used to match `RegExp` flags from their coerced string values. */ var reFlags = /\w*$/;
+/**
+ * Creates a clone of `regexp`.
+ *
+ * @private
+ * @param {Object} regexp The regexp to clone.
+ * @returns {Object} Returns the cloned regexp.
+ */ function cloneRegExp(regexp) {
+    var result = new regexp.constructor(regexp.source, reFlags.exec(regexp));
+    result.lastIndex = regexp.lastIndex;
+    return result;
+}
+module.exports = cloneRegExp;
+
+},{}],"5ScBc":[function(require,module,exports,__globalThis) {
+var Symbol = require("b88cf659c1f1d984");
+/** Used to convert symbols to primitives and strings. */ var symbolProto = Symbol ? Symbol.prototype : undefined, symbolValueOf = symbolProto ? symbolProto.valueOf : undefined;
+/**
+ * Creates a clone of the `symbol` object.
+ *
+ * @private
+ * @param {Object} symbol The symbol object to clone.
+ * @returns {Object} Returns the cloned symbol object.
+ */ function cloneSymbol(symbol) {
+    return symbolValueOf ? Object(symbolValueOf.call(symbol)) : {};
+}
+module.exports = cloneSymbol;
+
+},{"b88cf659c1f1d984":"7lsL9"}],"7eG7Y":[function(require,module,exports,__globalThis) {
+var cloneArrayBuffer = require("b3183de060e04548");
+/**
+ * Creates a clone of `typedArray`.
+ *
+ * @private
+ * @param {Object} typedArray The typed array to clone.
+ * @param {boolean} [isDeep] Specify a deep clone.
+ * @returns {Object} Returns the cloned typed array.
+ */ function cloneTypedArray(typedArray, isDeep) {
+    var buffer = isDeep ? cloneArrayBuffer(typedArray.buffer) : typedArray.buffer;
+    return new typedArray.constructor(buffer, typedArray.byteOffset, typedArray.length);
+}
+module.exports = cloneTypedArray;
+
+},{"b3183de060e04548":"7fi2W"}],"dG1H0":[function(require,module,exports,__globalThis) {
+var baseCreate = require("4a25a11eb90445e8"), getPrototype = require("8c92276927b7c3e0"), isPrototype = require("e939f15d7a0f64a5");
+/**
+ * Initializes an object clone.
+ *
+ * @private
+ * @param {Object} object The object to clone.
+ * @returns {Object} Returns the initialized clone.
+ */ function initCloneObject(object) {
+    return typeof object.constructor == 'function' && !isPrototype(object) ? baseCreate(getPrototype(object)) : {};
+}
+module.exports = initCloneObject;
+
+},{"4a25a11eb90445e8":"ef1VZ","8c92276927b7c3e0":"8ASKT","e939f15d7a0f64a5":"iG4eR"}],"ef1VZ":[function(require,module,exports,__globalThis) {
+var isObject = require("2c87f13f7934e7bd");
+/** Built-in value references. */ var objectCreate = Object.create;
+/**
+ * The base implementation of `_.create` without support for assigning
+ * properties to the created object.
+ *
+ * @private
+ * @param {Object} proto The object to inherit from.
+ * @returns {Object} Returns the new object.
+ */ var baseCreate = function() {
+    function object() {}
+    return function(proto) {
+        if (!isObject(proto)) return {};
+        if (objectCreate) return objectCreate(proto);
+        object.prototype = proto;
+        var result = new object;
+        object.prototype = undefined;
+        return result;
+    };
+}();
+module.exports = baseCreate;
+
+},{"2c87f13f7934e7bd":"cGhqJ"}],"3qbv8":[function(require,module,exports,__globalThis) {
+var baseIsMap = require("bcb4b5290583d129"), baseUnary = require("6a7e6b1a2d9fb1d5"), nodeUtil = require("7d4f449dd306450f");
+/* Node.js helper references. */ var nodeIsMap = nodeUtil && nodeUtil.isMap;
+/**
+ * Checks if `value` is classified as a `Map` object.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.3.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a map, else `false`.
+ * @example
+ *
+ * _.isMap(new Map);
+ * // => true
+ *
+ * _.isMap(new WeakMap);
+ * // => false
+ */ var isMap = nodeIsMap ? baseUnary(nodeIsMap) : baseIsMap;
+module.exports = isMap;
+
+},{"bcb4b5290583d129":"9v3CD","6a7e6b1a2d9fb1d5":"eJXq4","7d4f449dd306450f":"5edNe"}],"9v3CD":[function(require,module,exports,__globalThis) {
+var getTag = require("f59b9932854175ea"), isObjectLike = require("88260e33e0003386");
+/** `Object#toString` result references. */ var mapTag = '[object Map]';
+/**
+ * The base implementation of `_.isMap` without Node.js optimizations.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a map, else `false`.
+ */ function baseIsMap(value) {
+    return isObjectLike(value) && getTag(value) == mapTag;
+}
+module.exports = baseIsMap;
+
+},{"f59b9932854175ea":"cRPhM","88260e33e0003386":"3BLi4"}],"bZrVh":[function(require,module,exports,__globalThis) {
+var baseIsSet = require("efa5963001bed2f4"), baseUnary = require("3cb35dba719c68b1"), nodeUtil = require("7a3e899a332ff7be");
+/* Node.js helper references. */ var nodeIsSet = nodeUtil && nodeUtil.isSet;
+/**
+ * Checks if `value` is classified as a `Set` object.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.3.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a set, else `false`.
+ * @example
+ *
+ * _.isSet(new Set);
+ * // => true
+ *
+ * _.isSet(new WeakSet);
+ * // => false
+ */ var isSet = nodeIsSet ? baseUnary(nodeIsSet) : baseIsSet;
+module.exports = isSet;
+
+},{"efa5963001bed2f4":"7lzzg","3cb35dba719c68b1":"eJXq4","7a3e899a332ff7be":"5edNe"}],"7lzzg":[function(require,module,exports,__globalThis) {
+var getTag = require("3451ecb010f954cc"), isObjectLike = require("b6fc875bc5f351c9");
+/** `Object#toString` result references. */ var setTag = '[object Set]';
+/**
+ * The base implementation of `_.isSet` without Node.js optimizations.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a set, else `false`.
+ */ function baseIsSet(value) {
+    return isObjectLike(value) && getTag(value) == setTag;
+}
+module.exports = baseIsSet;
+
+},{"3451ecb010f954cc":"cRPhM","b6fc875bc5f351c9":"3BLi4"}],"f9cVh":[function(require,module,exports,__globalThis) {
+var apply = require("2b226154c49c91c4"), baseEach = require("27c4ce74aa0e1e00"), baseInvoke = require("ac2fc2019e7f5670"), baseRest = require("b173850d0a63c016"), isArrayLike = require("ed2fc0b1d5cf27e9");
+/**
+ * Invokes the method at `path` of each element in `collection`, returning
+ * an array of the results of each invoked method. Any additional arguments
+ * are provided to each invoked method. If `path` is a function, it's invoked
+ * for, and `this` bound to, each element in `collection`.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Collection
+ * @param {Array|Object} collection The collection to iterate over.
+ * @param {Array|Function|string} path The path of the method to invoke or
+ *  the function invoked per iteration.
+ * @param {...*} [args] The arguments to invoke each method with.
+ * @returns {Array} Returns the array of results.
+ * @example
+ *
+ * _.invokeMap([[5, 1, 7], [3, 2, 1]], 'sort');
+ * // => [[1, 5, 7], [1, 2, 3]]
+ *
+ * _.invokeMap([123, 456], String.prototype.split, '');
+ * // => [['1', '2', '3'], ['4', '5', '6']]
+ */ var invokeMap = baseRest(function(collection, path, args) {
+    var index = -1, isFunc = typeof path == 'function', result = isArrayLike(collection) ? Array(collection.length) : [];
+    baseEach(collection, function(value) {
+        result[++index] = isFunc ? apply(path, value, args) : baseInvoke(value, path, args);
+    });
+    return result;
+});
+module.exports = invokeMap;
+
+},{"2b226154c49c91c4":"gUweg","27c4ce74aa0e1e00":"1glfs","ac2fc2019e7f5670":"gUHNE","b173850d0a63c016":"kd260","ed2fc0b1d5cf27e9":"gMCbp"}],"gUweg":[function(require,module,exports,__globalThis) {
+/**
+ * A faster alternative to `Function#apply`, this function invokes `func`
+ * with the `this` binding of `thisArg` and the arguments of `args`.
+ *
+ * @private
+ * @param {Function} func The function to invoke.
+ * @param {*} thisArg The `this` binding of `func`.
+ * @param {Array} args The arguments to invoke `func` with.
+ * @returns {*} Returns the result of `func`.
+ */ function apply(func, thisArg, args) {
+    switch(args.length){
+        case 0:
+            return func.call(thisArg);
+        case 1:
+            return func.call(thisArg, args[0]);
+        case 2:
+            return func.call(thisArg, args[0], args[1]);
+        case 3:
+            return func.call(thisArg, args[0], args[1], args[2]);
+    }
+    return func.apply(thisArg, args);
+}
+module.exports = apply;
+
+},{}],"gUHNE":[function(require,module,exports,__globalThis) {
+var apply = require("ac762a0bb6e8149f"), castPath = require("9f4267f66f5c1d0a"), last = require("bbc1c17b8c368d7c"), parent = require("f2cbf82cd927014d"), toKey = require("249cf52180a0c208");
+/**
+ * The base implementation of `_.invoke` without support for individual
+ * method arguments.
+ *
+ * @private
+ * @param {Object} object The object to query.
+ * @param {Array|string} path The path of the method to invoke.
+ * @param {Array} args The arguments to invoke the method with.
+ * @returns {*} Returns the result of the invoked method.
+ */ function baseInvoke(object, path, args) {
+    path = castPath(path, object);
+    object = parent(object, path);
+    var func = object == null ? object : object[toKey(last(path))];
+    return func == null ? undefined : apply(func, object, args);
+}
+module.exports = baseInvoke;
+
+},{"ac762a0bb6e8149f":"gUweg","9f4267f66f5c1d0a":"apxk5","bbc1c17b8c368d7c":"fv3GK","f2cbf82cd927014d":"1hPE8","249cf52180a0c208":"bEgue"}],"fv3GK":[function(require,module,exports,__globalThis) {
+/**
+ * Gets the last element of `array`.
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Array
+ * @param {Array} array The array to query.
+ * @returns {*} Returns the last element of `array`.
+ * @example
+ *
+ * _.last([1, 2, 3]);
+ * // => 3
+ */ function last(array) {
+    var length = array == null ? 0 : array.length;
+    return length ? array[length - 1] : undefined;
+}
+module.exports = last;
+
+},{}],"1hPE8":[function(require,module,exports,__globalThis) {
+var baseGet = require("cbcb75b7339c1ad"), baseSlice = require("3443758a32fd0de1");
+/**
+ * Gets the parent value at `path` of `object`.
+ *
+ * @private
+ * @param {Object} object The object to query.
+ * @param {Array} path The path to get the parent value of.
+ * @returns {*} Returns the parent value.
+ */ function parent(object, path) {
+    return path.length < 2 ? object : baseGet(object, baseSlice(path, 0, -1));
+}
+module.exports = parent;
+
+},{"cbcb75b7339c1ad":"kMRe3","3443758a32fd0de1":"cqqI2"}],"kd260":[function(require,module,exports,__globalThis) {
+var identity = require("3b2979bd51a0f85f"), overRest = require("ff7d23ff2a2ea6f8"), setToString = require("a11d545e809d14f7");
+/**
+ * The base implementation of `_.rest` which doesn't validate or coerce arguments.
+ *
+ * @private
+ * @param {Function} func The function to apply a rest parameter to.
+ * @param {number} [start=func.length-1] The start position of the rest parameter.
+ * @returns {Function} Returns the new function.
+ */ function baseRest(func, start) {
+    return setToString(overRest(func, start, identity), func + '');
+}
+module.exports = baseRest;
+
+},{"3b2979bd51a0f85f":"dgTUN","ff7d23ff2a2ea6f8":"16F1z","a11d545e809d14f7":"b5kjI"}],"16F1z":[function(require,module,exports,__globalThis) {
+var apply = require("6f683b05f63ed25a");
+/* Built-in method references for those with the same name as other `lodash` methods. */ var nativeMax = Math.max;
+/**
+ * A specialized version of `baseRest` which transforms the rest array.
+ *
+ * @private
+ * @param {Function} func The function to apply a rest parameter to.
+ * @param {number} [start=func.length-1] The start position of the rest parameter.
+ * @param {Function} transform The rest array transform.
+ * @returns {Function} Returns the new function.
+ */ function overRest(func, start, transform) {
+    start = nativeMax(start === undefined ? func.length - 1 : start, 0);
+    return function() {
+        var args = arguments, index = -1, length = nativeMax(args.length - start, 0), array = Array(length);
+        while(++index < length)array[index] = args[start + index];
+        index = -1;
+        var otherArgs = Array(start + 1);
+        while(++index < start)otherArgs[index] = args[index];
+        otherArgs[start] = transform(array);
+        return apply(func, this, otherArgs);
+    };
+}
+module.exports = overRest;
+
+},{"6f683b05f63ed25a":"gUweg"}],"b5kjI":[function(require,module,exports,__globalThis) {
+var baseSetToString = require("eebd487fbab521b6"), shortOut = require("9114f59293388d49");
+/**
+ * Sets the `toString` method of `func` to return `string`.
+ *
+ * @private
+ * @param {Function} func The function to modify.
+ * @param {Function} string The `toString` result.
+ * @returns {Function} Returns `func`.
+ */ var setToString = shortOut(baseSetToString);
+module.exports = setToString;
+
+},{"eebd487fbab521b6":"lgihM","9114f59293388d49":"7ulLs"}],"lgihM":[function(require,module,exports,__globalThis) {
+var constant = require("706929c7b4749485"), defineProperty = require("eff1240bc0447727"), identity = require("b00d1e57326793e1");
+/**
+ * The base implementation of `setToString` without support for hot loop shorting.
+ *
+ * @private
+ * @param {Function} func The function to modify.
+ * @param {Function} string The `toString` result.
+ * @returns {Function} Returns `func`.
+ */ var baseSetToString = !defineProperty ? identity : function(func, string) {
+    return defineProperty(func, 'toString', {
+        'configurable': true,
+        'enumerable': false,
+        'value': constant(string),
+        'writable': true
+    });
+};
+module.exports = baseSetToString;
+
+},{"706929c7b4749485":"1HI6K","eff1240bc0447727":"cZOnw","b00d1e57326793e1":"dgTUN"}],"1HI6K":[function(require,module,exports,__globalThis) {
+/**
+ * Creates a function that returns `value`.
+ *
+ * @static
+ * @memberOf _
+ * @since 2.4.0
+ * @category Util
+ * @param {*} value The value to return from the new function.
+ * @returns {Function} Returns the new constant function.
+ * @example
+ *
+ * var objects = _.times(2, _.constant({ 'a': 1 }));
+ *
+ * console.log(objects);
+ * // => [{ 'a': 1 }, { 'a': 1 }]
+ *
+ * console.log(objects[0] === objects[1]);
+ * // => true
+ */ function constant(value) {
+    return function() {
+        return value;
+    };
+}
+module.exports = constant;
+
+},{}],"7ulLs":[function(require,module,exports,__globalThis) {
+/** Used to detect hot functions by number of calls within a span of milliseconds. */ var HOT_COUNT = 800, HOT_SPAN = 16;
+/* Built-in method references for those with the same name as other `lodash` methods. */ var nativeNow = Date.now;
+/**
+ * Creates a function that'll short out and invoke `identity` instead
+ * of `func` when it's called `HOT_COUNT` or more times in `HOT_SPAN`
+ * milliseconds.
+ *
+ * @private
+ * @param {Function} func The function to restrict.
+ * @returns {Function} Returns the new shortable function.
+ */ function shortOut(func) {
+    var count = 0, lastCalled = 0;
+    return function() {
+        var stamp = nativeNow(), remaining = HOT_SPAN - (stamp - lastCalled);
+        lastCalled = stamp;
+        if (remaining > 0) {
+            if (++count >= HOT_COUNT) return arguments[0];
+        } else count = 0;
+        return func.apply(undefined, arguments);
+    };
+}
+module.exports = shortOut;
+
+},{}],"cgwiI":[function(require,module,exports,__globalThis) {
+/**
+ * Creates an array with all falsey values removed. The values `false`, `null`,
+ * `0`, `""`, `undefined`, and `NaN` are falsey.
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Array
+ * @param {Array} array The array to compact.
+ * @returns {Array} Returns the new array of filtered values.
+ * @example
+ *
+ * _.compact([0, 1, false, 2, '', 3]);
+ * // => [1, 2, 3]
+ */ function compact(array) {
+    var index = -1, length = array == null ? 0 : array.length, resIndex = 0, result = [];
+    while(++index < length){
+        var value = array[index];
+        if (value) result[resIndex++] = value;
+    }
+    return result;
+}
+module.exports = compact;
+
+},{}],"jni8c":[function(require,module,exports,__globalThis) {
+var baseHas = require("adf86b651ea78123"), hasPath = require("d1ab8f0895b2d3d5");
+/**
+ * Checks if `path` is a direct property of `object`.
+ *
+ * @static
+ * @since 0.1.0
+ * @memberOf _
+ * @category Object
+ * @param {Object} object The object to query.
+ * @param {Array|string} path The path to check.
+ * @returns {boolean} Returns `true` if `path` exists, else `false`.
+ * @example
+ *
+ * var object = { 'a': { 'b': 2 } };
+ * var other = _.create({ 'a': _.create({ 'b': 2 }) });
+ *
+ * _.has(object, 'a');
+ * // => true
+ *
+ * _.has(object, 'a.b');
+ * // => true
+ *
+ * _.has(object, ['a', 'b']);
+ * // => true
+ *
+ * _.has(other, 'a');
+ * // => false
+ */ function has(object, path) {
+    return object != null && hasPath(object, path, baseHas);
+}
+module.exports = has;
+
+},{"adf86b651ea78123":"2SDbO","d1ab8f0895b2d3d5":"4QNMG"}],"2SDbO":[function(require,module,exports,__globalThis) {
+/** Used for built-in method references. */ var objectProto = Object.prototype;
+/** Used to check objects for own properties. */ var hasOwnProperty = objectProto.hasOwnProperty;
+/**
+ * The base implementation of `_.has` without support for deep paths.
+ *
+ * @private
+ * @param {Object} [object] The object to query.
+ * @param {Array|string} key The key to check.
+ * @returns {boolean} Returns `true` if `key` exists, else `false`.
+ */ function baseHas(object, key) {
+    return object != null && hasOwnProperty.call(object, key);
+}
+module.exports = baseHas;
+
+},{}],"cKAPx":[function(require,module,exports,__globalThis) {
+var baseValues = require("f4ee8afbcaba5363"), keys = require("4f6b7e914d03d8e3");
+/**
+ * Creates an array of the own enumerable string keyed property values of `object`.
+ *
+ * **Note:** Non-object values are coerced to objects.
+ *
+ * @static
+ * @since 0.1.0
+ * @memberOf _
+ * @category Object
+ * @param {Object} object The object to query.
+ * @returns {Array} Returns the array of property values.
+ * @example
+ *
+ * function Foo() {
+ *   this.a = 1;
+ *   this.b = 2;
+ * }
+ *
+ * Foo.prototype.c = 3;
+ *
+ * _.values(new Foo);
+ * // => [1, 2] (iteration order is not guaranteed)
+ *
+ * _.values('hi');
+ * // => ['h', 'i']
+ */ function values(object) {
+    return object == null ? [] : baseValues(object, keys(object));
+}
+module.exports = values;
+
+},{"f4ee8afbcaba5363":"1CRl4","4f6b7e914d03d8e3":"6fHVw"}],"1CRl4":[function(require,module,exports,__globalThis) {
+var arrayMap = require("2696d06e8e2fc398");
+/**
+ * The base implementation of `_.values` and `_.valuesIn` which creates an
+ * array of `object` property values corresponding to the property names
+ * of `props`.
+ *
+ * @private
+ * @param {Object} object The object to query.
+ * @param {Array} props The property names to get values for.
+ * @returns {Object} Returns the array of property values.
+ */ function baseValues(object, props) {
+    return arrayMap(props, function(key) {
+        return object[key];
+    });
+}
+module.exports = baseValues;
+
+},{"2696d06e8e2fc398":"imI5Z"}],"lpItB":[function(require,module,exports,__globalThis) {
+var baseKeys = require("a008df59f82d2c8f"), getTag = require("d63799a808049d04"), isArguments = require("1f4ee6aee3a7eae0"), isArray = require("b708be4f72c2a706"), isArrayLike = require("ab4b4eaf96f9163a"), isBuffer = require("80b58ade5ee2f70"), isPrototype = require("3a444e8bd8b275f2"), isTypedArray = require("6af418b3352c301b");
+/** `Object#toString` result references. */ var mapTag = '[object Map]', setTag = '[object Set]';
+/** Used for built-in method references. */ var objectProto = Object.prototype;
+/** Used to check objects for own properties. */ var hasOwnProperty = objectProto.hasOwnProperty;
+/**
+ * Checks if `value` is an empty object, collection, map, or set.
+ *
+ * Objects are considered empty if they have no own enumerable string keyed
+ * properties.
+ *
+ * Array-like values such as `arguments` objects, arrays, buffers, strings, or
+ * jQuery-like collections are considered empty if they have a `length` of `0`.
+ * Similarly, maps and sets are considered empty if they have a `size` of `0`.
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is empty, else `false`.
+ * @example
+ *
+ * _.isEmpty(null);
+ * // => true
+ *
+ * _.isEmpty(true);
+ * // => true
+ *
+ * _.isEmpty(1);
+ * // => true
+ *
+ * _.isEmpty([1, 2, 3]);
+ * // => false
+ *
+ * _.isEmpty({ 'a': 1 });
+ * // => false
+ */ function isEmpty(value) {
+    if (value == null) return true;
+    if (isArrayLike(value) && (isArray(value) || typeof value == 'string' || typeof value.splice == 'function' || isBuffer(value) || isTypedArray(value) || isArguments(value))) return !value.length;
+    var tag = getTag(value);
+    if (tag == mapTag || tag == setTag) return !value.size;
+    if (isPrototype(value)) return !baseKeys(value).length;
+    for(var key in value){
+        if (hasOwnProperty.call(value, key)) return false;
+    }
+    return true;
+}
+module.exports = isEmpty;
+
+},{"a008df59f82d2c8f":"c0eiI","d63799a808049d04":"cRPhM","1f4ee6aee3a7eae0":"8ReNj","b708be4f72c2a706":"dZaTH","ab4b4eaf96f9163a":"gMCbp","80b58ade5ee2f70":"cn85h","3a444e8bd8b275f2":"iG4eR","6af418b3352c301b":"6SVKk"}],"027Yj":[function(require,module,exports,__globalThis) {
+var baseIteratee = require("ce9604aad32f97ab"), baseUniq = require("9fbd8e46e11f49c4");
+/**
+ * This method is like `_.uniq` except that it accepts `iteratee` which is
+ * invoked for each element in `array` to generate the criterion by which
+ * uniqueness is computed. The order of result values is determined by the
+ * order they occur in the array. The iteratee is invoked with one argument:
+ * (value).
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Array
+ * @param {Array} array The array to inspect.
+ * @param {Function} [iteratee=_.identity] The iteratee invoked per element.
+ * @returns {Array} Returns the new duplicate free array.
+ * @example
+ *
+ * _.uniqBy([2.1, 1.2, 2.3], Math.floor);
+ * // => [2.1, 1.2]
+ *
+ * // The `_.property` iteratee shorthand.
+ * _.uniqBy([{ 'x': 1 }, { 'x': 2 }, { 'x': 1 }], 'x');
+ * // => [{ 'x': 1 }, { 'x': 2 }]
+ */ function uniqBy(array, iteratee) {
+    return array && array.length ? baseUniq(array, baseIteratee(iteratee, 2)) : [];
+}
+module.exports = uniqBy;
+
+},{"ce9604aad32f97ab":"2fsgg","9fbd8e46e11f49c4":"llHH0"}],"hfqEk":[function(require,module,exports,__globalThis) {
+var baseFor = require("6f49ac2e144b4ed"), castFunction = require("5f8f129fc5ff26a6"), keysIn = require("678578ce407317bb");
+/**
+ * Iterates over own and inherited enumerable string keyed properties of an
+ * object and invokes `iteratee` for each property. The iteratee is invoked
+ * with three arguments: (value, key, object). Iteratee functions may exit
+ * iteration early by explicitly returning `false`.
+ *
+ * @static
+ * @memberOf _
+ * @since 0.3.0
+ * @category Object
+ * @param {Object} object The object to iterate over.
+ * @param {Function} [iteratee=_.identity] The function invoked per iteration.
+ * @returns {Object} Returns `object`.
+ * @see _.forInRight
+ * @example
+ *
+ * function Foo() {
+ *   this.a = 1;
+ *   this.b = 2;
+ * }
+ *
+ * Foo.prototype.c = 3;
+ *
+ * _.forIn(new Foo, function(value, key) {
+ *   console.log(key);
+ * });
+ * // => Logs 'a', 'b', then 'c' (iteration order is not guaranteed).
+ */ function forIn(object, iteratee) {
+    return object == null ? object : baseFor(object, castFunction(iteratee), keysIn);
+}
+module.exports = forIn;
+
+},{"6f49ac2e144b4ed":"k0bbR","5f8f129fc5ff26a6":"9qOGA","678578ce407317bb":"c9sMs"}],"9qOGA":[function(require,module,exports,__globalThis) {
+var identity = require("c0eaa1c5ad52cc2f");
+/**
+ * Casts `value` to `identity` if it's not a function.
+ *
+ * @private
+ * @param {*} value The value to inspect.
+ * @returns {Function} Returns cast function.
+ */ function castFunction(value) {
+    return typeof value == 'function' ? value : identity;
+}
+module.exports = castFunction;
+
+},{"c0eaa1c5ad52cc2f":"dgTUN"}],"bY5l6":[function(require,module,exports,__globalThis) {
+var basePick = require("e13834df88faab8"), flatRest = require("7f4b4cdb31764f87");
+/**
+ * Creates an object composed of the picked `object` properties.
+ *
+ * @static
+ * @since 0.1.0
+ * @memberOf _
+ * @category Object
+ * @param {Object} object The source object.
+ * @param {...(string|string[])} [paths] The property paths to pick.
+ * @returns {Object} Returns the new object.
+ * @example
+ *
+ * var object = { 'a': 1, 'b': '2', 'c': 3 };
+ *
+ * _.pick(object, ['a', 'c']);
+ * // => { 'a': 1, 'c': 3 }
+ */ var pick = flatRest(function(object, paths) {
+    return object == null ? {} : basePick(object, paths);
+});
+module.exports = pick;
+
+},{"e13834df88faab8":"3dMQF","7f4b4cdb31764f87":"bmlRd"}],"3dMQF":[function(require,module,exports,__globalThis) {
+var basePickBy = require("4620eb0b3c4f1463"), hasIn = require("c697490fd5f67a25");
+/**
+ * The base implementation of `_.pick` without support for individual
+ * property identifiers.
+ *
+ * @private
+ * @param {Object} object The source object.
+ * @param {string[]} paths The property paths to pick.
+ * @returns {Object} Returns the new object.
+ */ function basePick(object, paths) {
+    return basePickBy(object, paths, function(value, path) {
+        return hasIn(object, path);
+    });
+}
+module.exports = basePick;
+
+},{"4620eb0b3c4f1463":"kGNmD","c697490fd5f67a25":"57qii"}],"kGNmD":[function(require,module,exports,__globalThis) {
+var baseGet = require("d8aa974fba65e61e"), baseSet = require("b07dbab95dca4167"), castPath = require("64b51364f27b9088");
+/**
+ * The base implementation of  `_.pickBy` without support for iteratee shorthands.
+ *
+ * @private
+ * @param {Object} object The source object.
+ * @param {string[]} paths The property paths to pick.
+ * @param {Function} predicate The function invoked per property.
+ * @returns {Object} Returns the new object.
+ */ function basePickBy(object, paths, predicate) {
+    var index = -1, length = paths.length, result = {};
+    while(++index < length){
+        var path = paths[index], value = baseGet(object, path);
+        if (predicate(value, path)) baseSet(result, castPath(path, object), value);
+    }
+    return result;
+}
+module.exports = basePickBy;
+
+},{"d8aa974fba65e61e":"kMRe3","b07dbab95dca4167":"5Mi1g","64b51364f27b9088":"apxk5"}],"5Mi1g":[function(require,module,exports,__globalThis) {
+var assignValue = require("a01f3b7ce097c710"), castPath = require("56e0b8a492d56399"), isIndex = require("d1eb8acc5a65dc38"), isObject = require("dfb182b16ef275c0"), toKey = require("6a51dc787ca5b6e3");
+/**
+ * The base implementation of `_.set`.
+ *
+ * @private
+ * @param {Object} object The object to modify.
+ * @param {Array|string} path The path of the property to set.
+ * @param {*} value The value to set.
+ * @param {Function} [customizer] The function to customize path creation.
+ * @returns {Object} Returns `object`.
+ */ function baseSet(object, path, value, customizer) {
+    if (!isObject(object)) return object;
+    path = castPath(path, object);
+    var index = -1, length = path.length, lastIndex = length - 1, nested = object;
+    while(nested != null && ++index < length){
+        var key = toKey(path[index]), newValue = value;
+        if (key === '__proto__' || key === 'constructor' || key === 'prototype') return object;
+        if (index != lastIndex) {
+            var objValue = nested[key];
+            newValue = customizer ? customizer(objValue, key, nested) : undefined;
+            if (newValue === undefined) newValue = isObject(objValue) ? objValue : isIndex(path[index + 1]) ? [] : {};
+        }
+        assignValue(nested, key, newValue);
+        nested = nested[key];
+    }
+    return object;
+}
+module.exports = baseSet;
+
+},{"a01f3b7ce097c710":"5M3eX","56e0b8a492d56399":"apxk5","d1eb8acc5a65dc38":"aJpx0","dfb182b16ef275c0":"cGhqJ","6a51dc787ca5b6e3":"bEgue"}],"bmlRd":[function(require,module,exports,__globalThis) {
+var flatten = require("199f7cbd69032298"), overRest = require("aa5c38699e42775a"), setToString = require("6a66c8b3fbd122d5");
+/**
+ * A specialized version of `baseRest` which flattens the rest array.
+ *
+ * @private
+ * @param {Function} func The function to apply a rest parameter to.
+ * @returns {Function} Returns the new function.
+ */ function flatRest(func) {
+    return setToString(overRest(func, undefined, flatten), func + '');
+}
+module.exports = flatRest;
+
+},{"199f7cbd69032298":"71l7m","aa5c38699e42775a":"16F1z","6a66c8b3fbd122d5":"b5kjI"}],"3RP2Q":[function(require,module,exports,__globalThis) {
+var assignValue = require("cd50f116bb7c0628"), copyObject = require("7bcaa9d60d9bad0c"), createAssigner = require("db25c5a8055340d4"), isArrayLike = require("b829ba96c1ea24e1"), isPrototype = require("add8cc04c06f0a24"), keys = require("3f4056e956015995");
+/** Used for built-in method references. */ var objectProto = Object.prototype;
+/** Used to check objects for own properties. */ var hasOwnProperty = objectProto.hasOwnProperty;
+/**
+ * Assigns own enumerable string keyed properties of source objects to the
+ * destination object. Source objects are applied from left to right.
+ * Subsequent sources overwrite property assignments of previous sources.
+ *
+ * **Note:** This method mutates `object` and is loosely based on
+ * [`Object.assign`](https://mdn.io/Object/assign).
+ *
+ * @static
+ * @memberOf _
+ * @since 0.10.0
+ * @category Object
+ * @param {Object} object The destination object.
+ * @param {...Object} [sources] The source objects.
+ * @returns {Object} Returns `object`.
+ * @see _.assignIn
+ * @example
+ *
+ * function Foo() {
+ *   this.a = 1;
+ * }
+ *
+ * function Bar() {
+ *   this.c = 3;
+ * }
+ *
+ * Foo.prototype.b = 2;
+ * Bar.prototype.d = 4;
+ *
+ * _.assign({ 'a': 0 }, new Foo, new Bar);
+ * // => { 'a': 1, 'c': 3 }
+ */ var assign = createAssigner(function(object, source) {
+    if (isPrototype(source) || isArrayLike(source)) {
+        copyObject(source, keys(source), object);
+        return;
+    }
+    for(var key in source)if (hasOwnProperty.call(source, key)) assignValue(object, key, source[key]);
+});
+module.exports = assign;
+
+},{"cd50f116bb7c0628":"5M3eX","7bcaa9d60d9bad0c":"gfA7W","db25c5a8055340d4":"7RrvA","b829ba96c1ea24e1":"gMCbp","add8cc04c06f0a24":"iG4eR","3f4056e956015995":"6fHVw"}],"7RrvA":[function(require,module,exports,__globalThis) {
+var baseRest = require("b91f3c8e236f389b"), isIterateeCall = require("4f5832110eba92d3");
+/**
+ * Creates a function like `_.assign`.
+ *
+ * @private
+ * @param {Function} assigner The function to assign values.
+ * @returns {Function} Returns the new assigner function.
+ */ function createAssigner(assigner) {
+    return baseRest(function(object, sources) {
+        var index = -1, length = sources.length, customizer = length > 1 ? sources[length - 1] : undefined, guard = length > 2 ? sources[2] : undefined;
+        customizer = assigner.length > 3 && typeof customizer == 'function' ? (length--, customizer) : undefined;
+        if (guard && isIterateeCall(sources[0], sources[1], guard)) {
+            customizer = length < 3 ? undefined : customizer;
+            length = 1;
+        }
+        object = Object(object);
+        while(++index < length){
+            var source = sources[index];
+            if (source) assigner(object, source, index, customizer);
+        }
+        return object;
+    });
+}
+module.exports = createAssigner;
+
+},{"b91f3c8e236f389b":"kd260","4f5832110eba92d3":"7JSn7"}],"7JSn7":[function(require,module,exports,__globalThis) {
+var eq = require("a8ec2a011d2eca69"), isArrayLike = require("616bc732534dffe0"), isIndex = require("e781332a36d1bd7"), isObject = require("c8548bf6929b8a5d");
+/**
+ * Checks if the given arguments are from an iteratee call.
+ *
+ * @private
+ * @param {*} value The potential iteratee value argument.
+ * @param {*} index The potential iteratee index or key argument.
+ * @param {*} object The potential iteratee object argument.
+ * @returns {boolean} Returns `true` if the arguments are from an iteratee call,
+ *  else `false`.
+ */ function isIterateeCall(value, index, object) {
+    if (!isObject(object)) return false;
+    var type = typeof index;
+    if (type == 'number' ? isArrayLike(object) && isIndex(index, object.length) : type == 'string' && index in object) return eq(object[index], value);
+    return false;
+}
+module.exports = isIterateeCall;
+
+},{"a8ec2a011d2eca69":"aVz5f","616bc732534dffe0":"gMCbp","e781332a36d1bd7":"aJpx0","c8548bf6929b8a5d":"cGhqJ"}],"1aUx6":[function(require,module,exports,__globalThis) {
+var createFind = require("f180f4459f295340"), findIndex = require("5af87c887948f3ca");
+/**
+ * Iterates over elements of `collection`, returning the first element
+ * `predicate` returns truthy for. The predicate is invoked with three
+ * arguments: (value, index|key, collection).
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Collection
+ * @param {Array|Object} collection The collection to inspect.
+ * @param {Function} [predicate=_.identity] The function invoked per iteration.
+ * @param {number} [fromIndex=0] The index to search from.
+ * @returns {*} Returns the matched element, else `undefined`.
+ * @example
+ *
+ * var users = [
+ *   { 'user': 'barney',  'age': 36, 'active': true },
+ *   { 'user': 'fred',    'age': 40, 'active': false },
+ *   { 'user': 'pebbles', 'age': 1,  'active': true }
+ * ];
+ *
+ * _.find(users, function(o) { return o.age < 40; });
+ * // => object for 'barney'
+ *
+ * // The `_.matches` iteratee shorthand.
+ * _.find(users, { 'age': 1, 'active': true });
+ * // => object for 'pebbles'
+ *
+ * // The `_.matchesProperty` iteratee shorthand.
+ * _.find(users, ['active', false]);
+ * // => object for 'fred'
+ *
+ * // The `_.property` iteratee shorthand.
+ * _.find(users, 'active');
+ * // => object for 'barney'
+ */ var find = createFind(findIndex);
+module.exports = find;
+
+},{"f180f4459f295340":"3B6Ah","5af87c887948f3ca":"5OrPR"}],"3B6Ah":[function(require,module,exports,__globalThis) {
+var baseIteratee = require("ad0cafc4de9b66e6"), isArrayLike = require("cfacddc571674e4b"), keys = require("847fe2f1205991cd");
+/**
+ * Creates a `_.find` or `_.findLast` function.
+ *
+ * @private
+ * @param {Function} findIndexFunc The function to find the collection index.
+ * @returns {Function} Returns the new find function.
+ */ function createFind(findIndexFunc) {
+    return function(collection, predicate, fromIndex) {
+        var iterable = Object(collection);
+        if (!isArrayLike(collection)) {
+            var iteratee = baseIteratee(predicate, 3);
+            collection = keys(collection);
+            predicate = function(key) {
+                return iteratee(iterable[key], key, iterable);
+            };
+        }
+        var index = findIndexFunc(collection, predicate, fromIndex);
+        return index > -1 ? iterable[iteratee ? collection[index] : index] : undefined;
+    };
+}
+module.exports = createFind;
+
+},{"ad0cafc4de9b66e6":"2fsgg","cfacddc571674e4b":"gMCbp","847fe2f1205991cd":"6fHVw"}],"5OrPR":[function(require,module,exports,__globalThis) {
+var baseFindIndex = require("c4739d82cf87a9be"), baseIteratee = require("a250b62014668b1"), toInteger = require("8b47b48a148e503b");
+/* Built-in method references for those with the same name as other `lodash` methods. */ var nativeMax = Math.max;
+/**
+ * This method is like `_.find` except that it returns the index of the first
+ * element `predicate` returns truthy for instead of the element itself.
+ *
+ * @static
+ * @memberOf _
+ * @since 1.1.0
+ * @category Array
+ * @param {Array} array The array to inspect.
+ * @param {Function} [predicate=_.identity] The function invoked per iteration.
+ * @param {number} [fromIndex=0] The index to search from.
+ * @returns {number} Returns the index of the found element, else `-1`.
+ * @example
+ *
+ * var users = [
+ *   { 'user': 'barney',  'active': false },
+ *   { 'user': 'fred',    'active': false },
+ *   { 'user': 'pebbles', 'active': true }
+ * ];
+ *
+ * _.findIndex(users, function(o) { return o.user == 'barney'; });
+ * // => 0
+ *
+ * // The `_.matches` iteratee shorthand.
+ * _.findIndex(users, { 'user': 'fred', 'active': false });
+ * // => 1
+ *
+ * // The `_.matchesProperty` iteratee shorthand.
+ * _.findIndex(users, ['active', false]);
+ * // => 0
+ *
+ * // The `_.property` iteratee shorthand.
+ * _.findIndex(users, 'active');
+ * // => 2
+ */ function findIndex(array, predicate, fromIndex) {
+    var length = array == null ? 0 : array.length;
+    if (!length) return -1;
+    var index = fromIndex == null ? 0 : toInteger(fromIndex);
+    if (index < 0) index = nativeMax(length + index, 0);
+    return baseFindIndex(array, baseIteratee(predicate, 3), index);
+}
+module.exports = findIndex;
+
+},{"c4739d82cf87a9be":"630D7","a250b62014668b1":"2fsgg","8b47b48a148e503b":"ds6ZT"}],"ds6ZT":[function(require,module,exports,__globalThis) {
+var toFinite = require("e624a4916a3de577");
+/**
+ * Converts `value` to an integer.
+ *
+ * **Note:** This method is loosely based on
+ * [`ToInteger`](http://www.ecma-international.org/ecma-262/7.0/#sec-tointeger).
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to convert.
+ * @returns {number} Returns the converted integer.
+ * @example
+ *
+ * _.toInteger(3.2);
+ * // => 3
+ *
+ * _.toInteger(Number.MIN_VALUE);
+ * // => 0
+ *
+ * _.toInteger(Infinity);
+ * // => 1.7976931348623157e+308
+ *
+ * _.toInteger('3.2');
+ * // => 3
+ */ function toInteger(value) {
+    var result = toFinite(value), remainder = result % 1;
+    return result === result ? remainder ? result - remainder : result : 0;
+}
+module.exports = toInteger;
+
+},{"e624a4916a3de577":"dkCNj"}],"dkCNj":[function(require,module,exports,__globalThis) {
+var toNumber = require("90c5878489629896");
+/** Used as references for various `Number` constants. */ var INFINITY = 1 / 0, MAX_INTEGER = 1.7976931348623157e+308;
+/**
+ * Converts `value` to a finite number.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.12.0
+ * @category Lang
+ * @param {*} value The value to convert.
+ * @returns {number} Returns the converted number.
+ * @example
+ *
+ * _.toFinite(3.2);
+ * // => 3.2
+ *
+ * _.toFinite(Number.MIN_VALUE);
+ * // => 5e-324
+ *
+ * _.toFinite(Infinity);
+ * // => 1.7976931348623157e+308
+ *
+ * _.toFinite('3.2');
+ * // => 3.2
+ */ function toFinite(value) {
+    if (!value) return value === 0 ? value : 0;
+    value = toNumber(value);
+    if (value === INFINITY || value === -INFINITY) {
+        var sign = value < 0 ? -1 : 1;
+        return sign * MAX_INTEGER;
+    }
+    return value === value ? value : 0;
+}
+module.exports = toFinite;
+
+},{"90c5878489629896":"12NaH"}],"12NaH":[function(require,module,exports,__globalThis) {
+var baseTrim = require("261e89907fb89d78"), isObject = require("faaa289d287a34a5"), isSymbol = require("47b3bd23f771891");
+/** Used as references for various `Number` constants. */ var NAN = 0 / 0;
+/** Used to detect bad signed hexadecimal string values. */ var reIsBadHex = /^[-+]0x[0-9a-f]+$/i;
+/** Used to detect binary string values. */ var reIsBinary = /^0b[01]+$/i;
+/** Used to detect octal string values. */ var reIsOctal = /^0o[0-7]+$/i;
+/** Built-in method references without a dependency on `root`. */ var freeParseInt = parseInt;
+/**
+ * Converts `value` to a number.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to process.
+ * @returns {number} Returns the number.
+ * @example
+ *
+ * _.toNumber(3.2);
+ * // => 3.2
+ *
+ * _.toNumber(Number.MIN_VALUE);
+ * // => 5e-324
+ *
+ * _.toNumber(Infinity);
+ * // => Infinity
+ *
+ * _.toNumber('3.2');
+ * // => 3.2
+ */ function toNumber(value) {
+    if (typeof value == 'number') return value;
+    if (isSymbol(value)) return NAN;
+    if (isObject(value)) {
+        var other = typeof value.valueOf == 'function' ? value.valueOf() : value;
+        value = isObject(other) ? other + '' : other;
+    }
+    if (typeof value != 'string') return value === 0 ? value : +value;
+    value = baseTrim(value);
+    var isBinary = reIsBinary.test(value);
+    return isBinary || reIsOctal.test(value) ? freeParseInt(value.slice(2), isBinary ? 2 : 8) : reIsBadHex.test(value) ? NAN : +value;
+}
+module.exports = toNumber;
+
+},{"261e89907fb89d78":"eUJZ3","faaa289d287a34a5":"cGhqJ","47b3bd23f771891":"i3BHC"}],"eUJZ3":[function(require,module,exports,__globalThis) {
+var trimmedEndIndex = require("985d3c9be7b51937");
+/** Used to match leading whitespace. */ var reTrimStart = /^\s+/;
+/**
+ * The base implementation of `_.trim`.
+ *
+ * @private
+ * @param {string} string The string to trim.
+ * @returns {string} Returns the trimmed string.
+ */ function baseTrim(string) {
+    return string ? string.slice(0, trimmedEndIndex(string) + 1).replace(reTrimStart, '') : string;
+}
+module.exports = baseTrim;
+
+},{"985d3c9be7b51937":"hHJmS"}],"hHJmS":[function(require,module,exports,__globalThis) {
+/** Used to match a single whitespace character. */ var reWhitespace = /\s/;
+/**
+ * Used by `_.trim` and `_.trimEnd` to get the index of the last non-whitespace
+ * character of `string`.
+ *
+ * @private
+ * @param {string} string The string to inspect.
+ * @returns {number} Returns the index of the last non-whitespace character.
+ */ function trimmedEndIndex(string) {
+    var index = string.length;
+    while(index-- && reWhitespace.test(string.charAt(index)));
+    return index;
+}
+module.exports = trimmedEndIndex;
+
+},{}],"agurq":[function(require,module,exports,__globalThis) {
+var toInteger = require("30cd30e4ff45060e");
+/**
+ * Checks if `value` is an integer.
+ *
+ * **Note:** This method is based on
+ * [`Number.isInteger`](https://mdn.io/Number/isInteger).
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is an integer, else `false`.
+ * @example
+ *
+ * _.isInteger(3);
+ * // => true
+ *
+ * _.isInteger(Number.MIN_VALUE);
+ * // => false
+ *
+ * _.isInteger(Infinity);
+ * // => false
+ *
+ * _.isInteger('3');
+ * // => false
+ */ function isInteger(value) {
+    return typeof value == 'number' && value == toInteger(value);
+}
+module.exports = isInteger;
+
+},{"30cd30e4ff45060e":"ds6ZT"}],"ieZOl":[function(require,module,exports,__globalThis) {
+var global = arguments[3];
+if (typeof global !== "undefined" && typeof global.self === 'undefined') {
+    global.self = {};
+    global.__pretenderNodePolyfill = true;
+}
+
+},{}],"irUnt":[function(require,module,exports,__globalThis) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _routeRecognizer = require("route-recognizer");
+var _routeRecognizerDefault = parcelHelpers.interopDefault(_routeRecognizer);
+var _fakeXmlHttpRequest = require("fake-xml-http-request");
+var _fakeXmlHttpRequestDefault = parcelHelpers.interopDefault(_fakeXmlHttpRequest);
+var global = arguments[3];
+var commonjsGlobal = typeof globalThis !== 'undefined' ? globalThis : typeof window !== 'undefined' ? window : typeof global !== 'undefined' ? global : typeof self !== 'undefined' ? self : {};
+/**
+ * Check if we're required to add a port number.
+ *
+ * @see https://url.spec.whatwg.org/#default-port
+ * @param {Number|String} port Port number we need to check
+ * @param {String} protocol Protocol we need to check against.
+ * @returns {Boolean} Is it a default port for the given protocol
+ * @api private
+ */ var requiresPort = function required(port, protocol) {
+    protocol = protocol.split(':')[0];
+    port = +port;
+    if (!port) return false;
+    switch(protocol){
+        case 'http':
+        case 'ws':
+            return port !== 80;
+        case 'https':
+        case 'wss':
+            return port !== 443;
+        case 'ftp':
+            return port !== 21;
+        case 'gopher':
+            return port !== 70;
+        case 'file':
+            return false;
+    }
+    return port !== 0;
+};
+var has = Object.prototype.hasOwnProperty, undef;
+/**
+ * Decode a URI encoded string.
+ *
+ * @param {String} input The URI encoded string.
+ * @returns {String|Null} The decoded string.
+ * @api private
+ */ function decode(input) {
+    try {
+        return decodeURIComponent(input.replace(/\+/g, ' '));
+    } catch (e) {
+        return null;
+    }
+}
+/**
+ * Simple query string parser.
+ *
+ * @param {String} query The query string that needs to be parsed.
+ * @returns {Object}
+ * @api public
+ */ function querystring(query) {
+    var parser = /([^=?&]+)=?([^&]*)/g, result = {}, part;
+    while(part = parser.exec(query)){
+        var key = decode(part[1]), value = decode(part[2]);
+        //
+        // Prevent overriding of existing properties. This ensures that build-in
+        // methods like `toString` or __proto__ are not overriden by malicious
+        // querystrings.
+        //
+        // In the case if failed decoding, we want to omit the key/value pairs
+        // from the result.
+        //
+        if (key === null || value === null || key in result) continue;
+        result[key] = value;
+    }
+    return result;
+}
+/**
+ * Transform a query string to an object.
+ *
+ * @param {Object} obj Object that should be transformed.
+ * @param {String} prefix Optional prefix.
+ * @returns {String}
+ * @api public
+ */ function querystringify(obj, prefix) {
+    prefix = prefix || '';
+    var pairs = [], value, key;
+    //
+    // Optionally prefix with a '?' if needed
+    //
+    if ('string' !== typeof prefix) prefix = '?';
+    for(key in obj)if (has.call(obj, key)) {
+        value = obj[key];
+        //
+        // Edge cases where we actually want to encode the value to an empty
+        // string instead of the stringified value.
+        //
+        if (!value && (value === null || value === undef || isNaN(value))) value = '';
+        key = encodeURIComponent(key);
+        value = encodeURIComponent(value);
+        //
+        // If we failed to encode the strings, we should bail out as we don't
+        // want to add invalid strings to the query.
+        //
+        if (key === null || value === null) continue;
+        pairs.push(key + '=' + value);
+    }
+    return pairs.length ? prefix + pairs.join('&') : '';
+}
+//
+// Expose the module.
+//
+var stringify = querystringify;
+var parse = querystring;
+var querystringify_1 = {
+    stringify: stringify,
+    parse: parse
+};
+var slashes = /^[A-Za-z][A-Za-z0-9+-.]*:\/\//, protocolre = /^([a-z][a-z0-9.+-]*:)?(\/\/)?([\\/]+)?([\S\s]*)/i, windowsDriveLetter = /^[a-zA-Z]:/, whitespace = '[\\x09\\x0A\\x0B\\x0C\\x0D\\x20\\xA0\\u1680\\u180E\\u2000\\u2001\\u2002\\u2003\\u2004\\u2005\\u2006\\u2007\\u2008\\u2009\\u200A\\u202F\\u205F\\u3000\\u2028\\u2029\\uFEFF]', left = new RegExp('^' + whitespace + '+');
+/**
+ * Trim a given string.
+ *
+ * @param {String} str String to trim.
+ * @public
+ */ function trimLeft(str) {
+    return (str ? str : '').toString().replace(left, '');
+}
+/**
+ * These are the parse rules for the URL parser, it informs the parser
+ * about:
+ *
+ * 0. The char it Needs to parse, if it's a string it should be done using
+ *    indexOf, RegExp using exec and NaN means set as current value.
+ * 1. The property we should set when parsing this value.
+ * 2. Indication if it's backwards or forward parsing, when set as number it's
+ *    the value of extra chars that should be split off.
+ * 3. Inherit from location if non existing in the parser.
+ * 4. `toLowerCase` the resulting value.
+ */ var rules = [
+    [
+        '#',
+        'hash'
+    ],
+    [
+        '?',
+        'query'
+    ],
+    function sanitize(address, url) {
+        return isSpecial(url.protocol) ? address.replace(/\\/g, '/') : address;
+    },
+    [
+        '/',
+        'pathname'
+    ],
+    [
+        '@',
+        'auth',
+        1
+    ],
+    [
+        NaN,
+        'host',
+        undefined,
+        1,
+        1
+    ],
+    [
+        /:(\d+)$/,
+        'port',
+        undefined,
+        1
+    ],
+    [
+        NaN,
+        'hostname',
+        undefined,
+        1,
+        1
+    ] // Set left over.
+];
+/**
+ * These properties should not be copied or inherited from. This is only needed
+ * for all non blob URL's as a blob URL does not include a hash, only the
+ * origin.
+ *
+ * @type {Object}
+ * @private
+ */ var ignore = {
+    hash: 1,
+    query: 1
+};
+/**
+ * The location object differs when your code is loaded through a normal page,
+ * Worker or through a worker using a blob. And with the blobble begins the
+ * trouble as the location object will contain the URL of the blob, not the
+ * location of the page where our code is loaded in. The actual origin is
+ * encoded in the `pathname` so we can thankfully generate a good "default"
+ * location from it so we can generate proper relative URL's again.
+ *
+ * @param {Object|String} loc Optional default location object.
+ * @returns {Object} lolcation object.
+ * @public
+ */ function lolcation(loc) {
+    var globalVar;
+    if (typeof window !== 'undefined') globalVar = window;
+    else if (typeof commonjsGlobal !== 'undefined') globalVar = commonjsGlobal;
+    else if (typeof self !== 'undefined') globalVar = self;
+    else globalVar = {};
+    var location = globalVar.location || {};
+    loc = loc || location;
+    var finaldestination = {}, type = typeof loc, key;
+    if ('blob:' === loc.protocol) finaldestination = new Url(unescape(loc.pathname), {});
+    else if ('string' === type) {
+        finaldestination = new Url(loc, {});
+        for(key in ignore)delete finaldestination[key];
+    } else if ('object' === type) {
+        for(key in loc){
+            if (key in ignore) continue;
+            finaldestination[key] = loc[key];
+        }
+        if (finaldestination.slashes === undefined) finaldestination.slashes = slashes.test(loc.href);
+    }
+    return finaldestination;
+}
+/**
+ * Check whether a protocol scheme is special.
+ *
+ * @param {String} The protocol scheme of the URL
+ * @return {Boolean} `true` if the protocol scheme is special, else `false`
+ * @private
+ */ function isSpecial(scheme) {
+    return scheme === 'file:' || scheme === 'ftp:' || scheme === 'http:' || scheme === 'https:' || scheme === 'ws:' || scheme === 'wss:';
+}
+/**
+ * @typedef ProtocolExtract
+ * @type Object
+ * @property {String} protocol Protocol matched in the URL, in lowercase.
+ * @property {Boolean} slashes `true` if protocol is followed by "//", else `false`.
+ * @property {String} rest Rest of the URL that is not part of the protocol.
+ */ /**
+ * Extract protocol information from a URL with/without double slash ("//").
+ *
+ * @param {String} address URL we want to extract from.
+ * @param {Object} location
+ * @return {ProtocolExtract} Extracted information.
+ * @private
+ */ function extractProtocol(address, location) {
+    address = trimLeft(address);
+    location = location || {};
+    var match = protocolre.exec(address);
+    var protocol = match[1] ? match[1].toLowerCase() : '';
+    var forwardSlashes = !!match[2];
+    var otherSlashes = !!match[3];
+    var slashesCount = 0;
+    var rest;
+    if (forwardSlashes) {
+        if (otherSlashes) {
+            rest = match[2] + match[3] + match[4];
+            slashesCount = match[2].length + match[3].length;
+        } else {
+            rest = match[2] + match[4];
+            slashesCount = match[2].length;
+        }
+    } else if (otherSlashes) {
+        rest = match[3] + match[4];
+        slashesCount = match[3].length;
+    } else rest = match[4];
+    if (protocol === 'file:') {
+        if (slashesCount >= 2) rest = rest.slice(2);
+    } else if (isSpecial(protocol)) rest = match[4];
+    else if (protocol) {
+        if (forwardSlashes) rest = rest.slice(2);
+    } else if (slashesCount >= 2 && isSpecial(location.protocol)) rest = match[4];
+    return {
+        protocol: protocol,
+        slashes: forwardSlashes || isSpecial(protocol),
+        slashesCount: slashesCount,
+        rest: rest
+    };
+}
+/**
+ * Resolve a relative URL pathname against a base URL pathname.
+ *
+ * @param {String} relative Pathname of the relative URL.
+ * @param {String} base Pathname of the base URL.
+ * @return {String} Resolved pathname.
+ * @private
+ */ function resolve(relative, base) {
+    if (relative === '') return base;
+    var path = (base || '/').split('/').slice(0, -1).concat(relative.split('/')), i = path.length, last = path[i - 1], unshift = false, up = 0;
+    while(i--){
+        if (path[i] === '.') path.splice(i, 1);
+        else if (path[i] === '..') {
+            path.splice(i, 1);
+            up++;
+        } else if (up) {
+            if (i === 0) unshift = true;
+            path.splice(i, 1);
+            up--;
+        }
+    }
+    if (unshift) path.unshift('');
+    if (last === '.' || last === '..') path.push('');
+    return path.join('/');
+}
+/**
+ * The actual URL instance. Instead of returning an object we've opted-in to
+ * create an actual constructor as it's much more memory efficient and
+ * faster and it pleases my OCD.
+ *
+ * It is worth noting that we should not use `URL` as class name to prevent
+ * clashes with the global URL instance that got introduced in browsers.
+ *
+ * @constructor
+ * @param {String} address URL we want to parse.
+ * @param {Object|String} [location] Location defaults for relative paths.
+ * @param {Boolean|Function} [parser] Parser for the query string.
+ * @private
+ */ function Url(address, location, parser) {
+    address = trimLeft(address);
+    if (!(this instanceof Url)) return new Url(address, location, parser);
+    var relative, extracted, parse, instruction, index, key, instructions = rules.slice(), type = typeof location, url = this, i = 0;
+    //
+    // The following if statements allows this module two have compatibility with
+    // 2 different API:
+    //
+    // 1. Node.js's `url.parse` api which accepts a URL, boolean as arguments
+    //    where the boolean indicates that the query string should also be parsed.
+    //
+    // 2. The `URL` interface of the browser which accepts a URL, object as
+    //    arguments. The supplied object will be used as default values / fall-back
+    //    for relative paths.
+    //
+    if ('object' !== type && 'string' !== type) {
+        parser = location;
+        location = null;
+    }
+    if (parser && 'function' !== typeof parser) parser = querystringify_1.parse;
+    location = lolcation(location);
+    //
+    // Extract protocol information before running the instructions.
+    //
+    extracted = extractProtocol(address || '', location);
+    relative = !extracted.protocol && !extracted.slashes;
+    url.slashes = extracted.slashes || relative && location.slashes;
+    url.protocol = extracted.protocol || location.protocol || '';
+    address = extracted.rest;
+    //
+    // When the authority component is absent the URL starts with a path
+    // component.
+    //
+    if (extracted.protocol === 'file:' && (extracted.slashesCount !== 2 || windowsDriveLetter.test(address)) || !extracted.slashes && (extracted.protocol || extracted.slashesCount < 2 || !isSpecial(url.protocol))) instructions[3] = [
+        /(.*)/,
+        'pathname'
+    ];
+    for(; i < instructions.length; i++){
+        instruction = instructions[i];
+        if (typeof instruction === 'function') {
+            address = instruction(address, url);
+            continue;
+        }
+        parse = instruction[0];
+        key = instruction[1];
+        if (parse !== parse) url[key] = address;
+        else if ('string' === typeof parse) {
+            if (~(index = address.indexOf(parse))) {
+                if ('number' === typeof instruction[2]) {
+                    url[key] = address.slice(0, index);
+                    address = address.slice(index + instruction[2]);
+                } else {
+                    url[key] = address.slice(index);
+                    address = address.slice(0, index);
+                }
+            }
+        } else if (index = parse.exec(address)) {
+            url[key] = index[1];
+            address = address.slice(0, index.index);
+        }
+        url[key] = url[key] || (relative && instruction[3] ? location[key] || '' : '');
+        //
+        // Hostname, host and protocol should be lowercased so they can be used to
+        // create a proper `origin`.
+        //
+        if (instruction[4]) url[key] = url[key].toLowerCase();
+    }
+    //
+    // Also parse the supplied query string in to an object. If we're supplied
+    // with a custom parser as function use that instead of the default build-in
+    // parser.
+    //
+    if (parser) url.query = parser(url.query);
+    //
+    // If the URL is relative, resolve the pathname against the base URL.
+    //
+    if (relative && location.slashes && url.pathname.charAt(0) !== '/' && (url.pathname !== '' || location.pathname !== '')) url.pathname = resolve(url.pathname, location.pathname);
+    //
+    // Default to a / for pathname if none exists. This normalizes the URL
+    // to always have a /
+    //
+    if (url.pathname.charAt(0) !== '/' && isSpecial(url.protocol)) url.pathname = '/' + url.pathname;
+    //
+    // We should not add port numbers if they are already the default port number
+    // for a given protocol. As the host also contains the port number we're going
+    // override it with the hostname which contains no port number.
+    //
+    if (!requiresPort(url.port, url.protocol)) {
+        url.host = url.hostname;
+        url.port = '';
+    }
+    //
+    // Parse down the `auth` for the username and password.
+    //
+    url.username = url.password = '';
+    if (url.auth) {
+        instruction = url.auth.split(':');
+        url.username = instruction[0] || '';
+        url.password = instruction[1] || '';
+    }
+    url.origin = url.protocol !== 'file:' && isSpecial(url.protocol) && url.host ? url.protocol + '//' + url.host : 'null';
+    //
+    // The href is just the compiled result.
+    //
+    url.href = url.toString();
+}
+/**
+ * This is convenience method for changing properties in the URL instance to
+ * insure that they all propagate correctly.
+ *
+ * @param {String} part          Property we need to adjust.
+ * @param {Mixed} value          The newly assigned value.
+ * @param {Boolean|Function} fn  When setting the query, it will be the function
+ *                               used to parse the query.
+ *                               When setting the protocol, double slash will be
+ *                               removed from the final url if it is true.
+ * @returns {URL} URL instance for chaining.
+ * @public
+ */ function set(part, value, fn) {
+    var url = this;
+    switch(part){
+        case 'query':
+            if ('string' === typeof value && value.length) value = (fn || querystringify_1.parse)(value);
+            url[part] = value;
+            break;
+        case 'port':
+            url[part] = value;
+            if (!requiresPort(value, url.protocol)) {
+                url.host = url.hostname;
+                url[part] = '';
+            } else if (value) url.host = url.hostname + ':' + value;
+            break;
+        case 'hostname':
+            url[part] = value;
+            if (url.port) value += ':' + url.port;
+            url.host = value;
+            break;
+        case 'host':
+            url[part] = value;
+            if (/:\d+$/.test(value)) {
+                value = value.split(':');
+                url.port = value.pop();
+                url.hostname = value.join(':');
+            } else {
+                url.hostname = value;
+                url.port = '';
+            }
+            break;
+        case 'protocol':
+            url.protocol = value.toLowerCase();
+            url.slashes = !fn;
+            break;
+        case 'pathname':
+        case 'hash':
+            if (value) {
+                var char = part === 'pathname' ? '/' : '#';
+                url[part] = value.charAt(0) !== char ? char + value : value;
+            } else url[part] = value;
+            break;
+        default:
+            url[part] = value;
+    }
+    for(var i = 0; i < rules.length; i++){
+        var ins = rules[i];
+        if (ins[4]) url[ins[1]] = url[ins[1]].toLowerCase();
+    }
+    url.origin = url.protocol !== 'file:' && isSpecial(url.protocol) && url.host ? url.protocol + '//' + url.host : 'null';
+    url.href = url.toString();
+    return url;
+}
+/**
+ * Transform the properties back in to a valid and full URL string.
+ *
+ * @param {Function} stringify Optional query stringify function.
+ * @returns {String} Compiled version of the URL.
+ * @public
+ */ function toString(stringify) {
+    if (!stringify || 'function' !== typeof stringify) stringify = querystringify_1.stringify;
+    var query, url = this, protocol = url.protocol;
+    if (protocol && protocol.charAt(protocol.length - 1) !== ':') protocol += ':';
+    var result = protocol + (url.slashes || isSpecial(url.protocol) ? '//' : '');
+    if (url.username) {
+        result += url.username;
+        if (url.password) result += ':' + url.password;
+        result += '@';
+    }
+    result += url.host + url.pathname;
+    query = 'object' === typeof url.query ? stringify(url.query) : url.query;
+    if (query) result += '?' !== query.charAt(0) ? '?' + query : query;
+    if (url.hash) result += url.hash;
+    return result;
+}
+Url.prototype = {
+    set: set,
+    toString: toString
+};
+//
+// Expose the URL parser and some additional properties that might be useful for
+// others or testing.
+//
+Url.extractProtocol = extractProtocol;
+Url.location = lolcation;
+Url.trimLeft = trimLeft;
+Url.qs = querystringify_1;
+var urlParse = Url;
+/**
+ * parseURL - decompose a URL into its parts
+ * @param  {String} url a URL
+ * @return {Object} parts of the URL, including the following
+ *
+ * 'https://www.yahoo.com:1234/mypage?test=yes#abc'
+ *
+ * {
+ *   host: 'www.yahoo.com:1234',
+ *   protocol: 'https:',
+ *   search: '?test=yes',
+ *   hash: '#abc',
+ *   href: 'https://www.yahoo.com:1234/mypage?test=yes#abc',
+ *   pathname: '/mypage',
+ *   fullpath: '/mypage?test=yes'
+ * }
+ */ function parseURL(url) {
+    var parsedUrl = new urlParse(url);
+    if (!parsedUrl.host) // eslint-disable-next-line no-self-assign
+    parsedUrl.href = parsedUrl.href; // IE: load the host and protocol
+    var pathname = parsedUrl.pathname;
+    if (pathname.charAt(0) !== '/') pathname = '/' + pathname; // IE: prepend leading slash
+    var host = parsedUrl.host;
+    if (parsedUrl.port === '80' || parsedUrl.port === '443') host = parsedUrl.hostname; // IE: remove default port
+    return {
+        host: host,
+        protocol: parsedUrl.protocol,
+        search: parsedUrl.query,
+        hash: parsedUrl.hash,
+        href: parsedUrl.href,
+        pathname: pathname,
+        fullpath: pathname + (parsedUrl.query || '') + (parsedUrl.hash || '')
+    };
+}
+/**
+ * Registry
+ *
+ * A registry is a map of HTTP verbs to route recognizers.
+ */ var Registry = /** @class */ function() {
+    function Registry() {
+        // Herein we keep track of RouteRecognizer instances
+        // keyed by HTTP method. Feel free to add more as needed.
+        this.verbs = {
+            GET: new (0, _routeRecognizerDefault.default)(),
+            PUT: new (0, _routeRecognizerDefault.default)(),
+            POST: new (0, _routeRecognizerDefault.default)(),
+            DELETE: new (0, _routeRecognizerDefault.default)(),
+            PATCH: new (0, _routeRecognizerDefault.default)(),
+            HEAD: new (0, _routeRecognizerDefault.default)(),
+            OPTIONS: new (0, _routeRecognizerDefault.default)()
+        };
+    }
+    return Registry;
+}();
+/**
+ * Hosts
+ *
+ * a map of hosts to Registries, ultimately allowing
+ * a per-host-and-port, per HTTP verb lookup of RouteRecognizers
+ */ var Hosts = /** @class */ function() {
+    function Hosts() {
+        this.registries = {};
+    }
+    /**
+     * Hosts#forURL - retrieve a map of HTTP verbs to RouteRecognizers
+     *                for a given URL
+     *
+     * @param  {String} url a URL
+     * @return {Registry}   a map of HTTP verbs to RouteRecognizers
+     *                      corresponding to the provided URL's
+     *                      hostname and port
+     */ Hosts.prototype.forURL = function(url) {
+        var host = parseURL(url).host;
+        var registry = this.registries[host];
+        if (registry === undefined) registry = this.registries[host] = new Registry();
+        return registry.verbs;
+    };
+    return Hosts;
+}();
+var global$1 = typeof globalThis !== 'undefined' && globalThis || typeof self !== 'undefined' && self || typeof global$1 !== 'undefined' && global$1;
+var support = {
+    searchParams: 'URLSearchParams' in global$1,
+    iterable: 'Symbol' in global$1 && 'iterator' in Symbol,
+    blob: 'FileReader' in global$1 && 'Blob' in global$1 && function() {
+        try {
+            new Blob();
+            return true;
+        } catch (e) {
+            return false;
+        }
+    }(),
+    formData: 'FormData' in global$1,
+    arrayBuffer: 'ArrayBuffer' in global$1
+};
+function isDataView(obj) {
+    return obj && DataView.prototype.isPrototypeOf(obj);
+}
+if (support.arrayBuffer) {
+    var viewClasses = [
+        '[object Int8Array]',
+        '[object Uint8Array]',
+        '[object Uint8ClampedArray]',
+        '[object Int16Array]',
+        '[object Uint16Array]',
+        '[object Int32Array]',
+        '[object Uint32Array]',
+        '[object Float32Array]',
+        '[object Float64Array]'
+    ];
+    var isArrayBufferView = ArrayBuffer.isView || function(obj) {
+        return obj && viewClasses.indexOf(Object.prototype.toString.call(obj)) > -1;
+    };
+}
+function normalizeName(name) {
+    if (typeof name !== 'string') name = String(name);
+    if (/[^a-z0-9\-#$%&'*+.^_`|~!]/i.test(name) || name === '') throw new TypeError('Invalid character in header field name: "' + name + '"');
+    return name.toLowerCase();
+}
+function normalizeValue(value) {
+    if (typeof value !== 'string') value = String(value);
+    return value;
+}
+// Build a destructive iterator for the value list
+function iteratorFor(items) {
+    var iterator = {
+        next: function() {
+            var value = items.shift();
+            return {
+                done: value === undefined,
+                value: value
+            };
+        }
+    };
+    if (support.iterable) iterator[Symbol.iterator] = function() {
+        return iterator;
+    };
+    return iterator;
+}
+function Headers(headers) {
+    this.map = {};
+    if (headers instanceof Headers) headers.forEach(function(value, name) {
+        this.append(name, value);
+    }, this);
+    else if (Array.isArray(headers)) headers.forEach(function(header) {
+        this.append(header[0], header[1]);
+    }, this);
+    else if (headers) Object.getOwnPropertyNames(headers).forEach(function(name) {
+        this.append(name, headers[name]);
+    }, this);
+}
+Headers.prototype.append = function(name, value) {
+    name = normalizeName(name);
+    value = normalizeValue(value);
+    var oldValue = this.map[name];
+    this.map[name] = oldValue ? oldValue + ', ' + value : value;
+};
+Headers.prototype['delete'] = function(name) {
+    delete this.map[normalizeName(name)];
+};
+Headers.prototype.get = function(name) {
+    name = normalizeName(name);
+    return this.has(name) ? this.map[name] : null;
+};
+Headers.prototype.has = function(name) {
+    return this.map.hasOwnProperty(normalizeName(name));
+};
+Headers.prototype.set = function(name, value) {
+    this.map[normalizeName(name)] = normalizeValue(value);
+};
+Headers.prototype.forEach = function(callback, thisArg) {
+    for(var name in this.map)if (this.map.hasOwnProperty(name)) callback.call(thisArg, this.map[name], name, this);
+};
+Headers.prototype.keys = function() {
+    var items = [];
+    this.forEach(function(value, name) {
+        items.push(name);
+    });
+    return iteratorFor(items);
+};
+Headers.prototype.values = function() {
+    var items = [];
+    this.forEach(function(value) {
+        items.push(value);
+    });
+    return iteratorFor(items);
+};
+Headers.prototype.entries = function() {
+    var items = [];
+    this.forEach(function(value, name) {
+        items.push([
+            name,
+            value
+        ]);
+    });
+    return iteratorFor(items);
+};
+if (support.iterable) Headers.prototype[Symbol.iterator] = Headers.prototype.entries;
+function consumed(body) {
+    if (body.bodyUsed) return Promise.reject(new TypeError('Already read'));
+    body.bodyUsed = true;
+}
+function fileReaderReady(reader) {
+    return new Promise(function(resolve, reject) {
+        reader.onload = function() {
+            resolve(reader.result);
+        };
+        reader.onerror = function() {
+            reject(reader.error);
+        };
+    });
+}
+function readBlobAsArrayBuffer(blob) {
+    var reader = new FileReader();
+    var promise = fileReaderReady(reader);
+    reader.readAsArrayBuffer(blob);
+    return promise;
+}
+function readBlobAsText(blob) {
+    var reader = new FileReader();
+    var promise = fileReaderReady(reader);
+    reader.readAsText(blob);
+    return promise;
+}
+function readArrayBufferAsText(buf) {
+    var view = new Uint8Array(buf);
+    var chars = new Array(view.length);
+    for(var i = 0; i < view.length; i++)chars[i] = String.fromCharCode(view[i]);
+    return chars.join('');
+}
+function bufferClone(buf) {
+    if (buf.slice) return buf.slice(0);
+    else {
+        var view = new Uint8Array(buf.byteLength);
+        view.set(new Uint8Array(buf));
+        return view.buffer;
+    }
+}
+function Body() {
+    this.bodyUsed = false;
+    this._initBody = function(body) {
+        /*
+      fetch-mock wraps the Response object in an ES6 Proxy to
+      provide useful test harness features such as flush. However, on
+      ES5 browsers without fetch or Proxy support pollyfills must be used;
+      the proxy-pollyfill is unable to proxy an attribute unless it exists
+      on the object before the Proxy is created. This change ensures
+      Response.bodyUsed exists on the instance, while maintaining the
+      semantic of setting Request.bodyUsed in the constructor before
+      _initBody is called.
+    */ this.bodyUsed = this.bodyUsed;
+        this._bodyInit = body;
+        if (!body) this._bodyText = '';
+        else if (typeof body === 'string') this._bodyText = body;
+        else if (support.blob && Blob.prototype.isPrototypeOf(body)) this._bodyBlob = body;
+        else if (support.formData && FormData.prototype.isPrototypeOf(body)) this._bodyFormData = body;
+        else if (support.searchParams && URLSearchParams.prototype.isPrototypeOf(body)) this._bodyText = body.toString();
+        else if (support.arrayBuffer && support.blob && isDataView(body)) {
+            this._bodyArrayBuffer = bufferClone(body.buffer);
+            // IE 10-11 can't handle a DataView body.
+            this._bodyInit = new Blob([
+                this._bodyArrayBuffer
+            ]);
+        } else if (support.arrayBuffer && (ArrayBuffer.prototype.isPrototypeOf(body) || isArrayBufferView(body))) this._bodyArrayBuffer = bufferClone(body);
+        else this._bodyText = body = Object.prototype.toString.call(body);
+        if (!this.headers.get('content-type')) {
+            if (typeof body === 'string') this.headers.set('content-type', 'text/plain;charset=UTF-8');
+            else if (this._bodyBlob && this._bodyBlob.type) this.headers.set('content-type', this._bodyBlob.type);
+            else if (support.searchParams && URLSearchParams.prototype.isPrototypeOf(body)) this.headers.set('content-type', 'application/x-www-form-urlencoded;charset=UTF-8');
+        }
+    };
+    if (support.blob) {
+        this.blob = function() {
+            var rejected = consumed(this);
+            if (rejected) return rejected;
+            if (this._bodyBlob) return Promise.resolve(this._bodyBlob);
+            else if (this._bodyArrayBuffer) return Promise.resolve(new Blob([
+                this._bodyArrayBuffer
+            ]));
+            else if (this._bodyFormData) throw new Error('could not read FormData body as blob');
+            else return Promise.resolve(new Blob([
+                this._bodyText
+            ]));
+        };
+        this.arrayBuffer = function() {
+            if (this._bodyArrayBuffer) {
+                var isConsumed = consumed(this);
+                if (isConsumed) return isConsumed;
+                if (ArrayBuffer.isView(this._bodyArrayBuffer)) return Promise.resolve(this._bodyArrayBuffer.buffer.slice(this._bodyArrayBuffer.byteOffset, this._bodyArrayBuffer.byteOffset + this._bodyArrayBuffer.byteLength));
+                else return Promise.resolve(this._bodyArrayBuffer);
+            } else return this.blob().then(readBlobAsArrayBuffer);
+        };
+    }
+    this.text = function() {
+        var rejected = consumed(this);
+        if (rejected) return rejected;
+        if (this._bodyBlob) return readBlobAsText(this._bodyBlob);
+        else if (this._bodyArrayBuffer) return Promise.resolve(readArrayBufferAsText(this._bodyArrayBuffer));
+        else if (this._bodyFormData) throw new Error('could not read FormData body as text');
+        else return Promise.resolve(this._bodyText);
+    };
+    if (support.formData) this.formData = function() {
+        return this.text().then(decode$1);
+    };
+    this.json = function() {
+        return this.text().then(JSON.parse);
+    };
+    return this;
+}
+// HTTP methods whose capitalization should be normalized
+var methods = [
+    'DELETE',
+    'GET',
+    'HEAD',
+    'OPTIONS',
+    'POST',
+    'PUT'
+];
+function normalizeMethod(method) {
+    var upcased = method.toUpperCase();
+    return methods.indexOf(upcased) > -1 ? upcased : method;
+}
+function Request(input, options) {
+    if (!(this instanceof Request)) throw new TypeError('Please use the "new" operator, this DOM object constructor cannot be called as a function.');
+    options = options || {};
+    var body = options.body;
+    if (input instanceof Request) {
+        if (input.bodyUsed) throw new TypeError('Already read');
+        this.url = input.url;
+        this.credentials = input.credentials;
+        if (!options.headers) this.headers = new Headers(input.headers);
+        this.method = input.method;
+        this.mode = input.mode;
+        this.signal = input.signal;
+        if (!body && input._bodyInit != null) {
+            body = input._bodyInit;
+            input.bodyUsed = true;
+        }
+    } else this.url = String(input);
+    this.credentials = options.credentials || this.credentials || 'same-origin';
+    if (options.headers || !this.headers) this.headers = new Headers(options.headers);
+    this.method = normalizeMethod(options.method || this.method || 'GET');
+    this.mode = options.mode || this.mode || null;
+    this.signal = options.signal || this.signal;
+    this.referrer = null;
+    if ((this.method === 'GET' || this.method === 'HEAD') && body) throw new TypeError('Body not allowed for GET or HEAD requests');
+    this._initBody(body);
+    if (this.method === 'GET' || this.method === 'HEAD') {
+        if (options.cache === 'no-store' || options.cache === 'no-cache') {
+            // Search for a '_' parameter in the query string
+            var reParamSearch = /([?&])_=[^&]*/;
+            if (reParamSearch.test(this.url)) // If it already exists then set the value with the current time
+            this.url = this.url.replace(reParamSearch, '$1_=' + new Date().getTime());
+            else {
+                // Otherwise add a new '_' parameter to the end with the current time
+                var reQueryString = /\?/;
+                this.url += (reQueryString.test(this.url) ? '&' : '?') + '_=' + new Date().getTime();
+            }
+        }
+    }
+}
+Request.prototype.clone = function() {
+    return new Request(this, {
+        body: this._bodyInit
+    });
+};
+function decode$1(body) {
+    var form = new FormData();
+    body.trim().split('&').forEach(function(bytes) {
+        if (bytes) {
+            var split = bytes.split('=');
+            var name = split.shift().replace(/\+/g, ' ');
+            var value = split.join('=').replace(/\+/g, ' ');
+            form.append(decodeURIComponent(name), decodeURIComponent(value));
+        }
+    });
+    return form;
+}
+function parseHeaders(rawHeaders) {
+    var headers = new Headers();
+    // Replace instances of \r\n and \n followed by at least one space or horizontal tab with a space
+    // https://tools.ietf.org/html/rfc7230#section-3.2
+    var preProcessedHeaders = rawHeaders.replace(/\r?\n[\t ]+/g, ' ');
+    // Avoiding split via regex to work around a common IE11 bug with the core-js 3.6.0 regex polyfill
+    // https://github.com/github/fetch/issues/748
+    // https://github.com/zloirock/core-js/issues/751
+    preProcessedHeaders.split('\r').map(function(header) {
+        return header.indexOf('\n') === 0 ? header.substr(1, header.length) : header;
+    }).forEach(function(line) {
+        var parts = line.split(':');
+        var key = parts.shift().trim();
+        if (key) {
+            var value = parts.join(':').trim();
+            headers.append(key, value);
+        }
+    });
+    return headers;
+}
+Body.call(Request.prototype);
+function Response(bodyInit, options) {
+    if (!(this instanceof Response)) throw new TypeError('Please use the "new" operator, this DOM object constructor cannot be called as a function.');
+    if (!options) options = {};
+    this.type = 'default';
+    this.status = options.status === undefined ? 200 : options.status;
+    this.ok = this.status >= 200 && this.status < 300;
+    this.statusText = options.statusText === undefined ? '' : '' + options.statusText;
+    this.headers = new Headers(options.headers);
+    this.url = options.url || '';
+    this._initBody(bodyInit);
+}
+Body.call(Response.prototype);
+Response.prototype.clone = function() {
+    return new Response(this._bodyInit, {
+        status: this.status,
+        statusText: this.statusText,
+        headers: new Headers(this.headers),
+        url: this.url
+    });
+};
+Response.error = function() {
+    var response = new Response(null, {
+        status: 0,
+        statusText: ''
+    });
+    response.type = 'error';
+    return response;
+};
+var redirectStatuses = [
+    301,
+    302,
+    303,
+    307,
+    308
+];
+Response.redirect = function(url, status) {
+    if (redirectStatuses.indexOf(status) === -1) throw new RangeError('Invalid status code');
+    return new Response(null, {
+        status: status,
+        headers: {
+            location: url
+        }
+    });
+};
+var DOMException = global$1.DOMException;
+try {
+    new DOMException();
+} catch (err) {
+    DOMException = function(message, name) {
+        this.message = message;
+        this.name = name;
+        var error = Error(message);
+        this.stack = error.stack;
+    };
+    DOMException.prototype = Object.create(Error.prototype);
+    DOMException.prototype.constructor = DOMException;
+}
+function fetch(input, init) {
+    return new Promise(function(resolve, reject) {
+        var request = new Request(input, init);
+        if (request.signal && request.signal.aborted) return reject(new DOMException('Aborted', 'AbortError'));
+        var xhr = new XMLHttpRequest();
+        function abortXhr() {
+            xhr.abort();
+        }
+        xhr.onload = function() {
+            var options = {
+                status: xhr.status,
+                statusText: xhr.statusText,
+                headers: parseHeaders(xhr.getAllResponseHeaders() || '')
+            };
+            options.url = 'responseURL' in xhr ? xhr.responseURL : options.headers.get('X-Request-URL');
+            var body = 'response' in xhr ? xhr.response : xhr.responseText;
+            setTimeout(function() {
+                resolve(new Response(body, options));
+            }, 0);
+        };
+        xhr.onerror = function() {
+            setTimeout(function() {
+                reject(new TypeError('Network request failed'));
+            }, 0);
+        };
+        xhr.ontimeout = function() {
+            setTimeout(function() {
+                reject(new TypeError('Network request failed'));
+            }, 0);
+        };
+        xhr.onabort = function() {
+            setTimeout(function() {
+                reject(new DOMException('Aborted', 'AbortError'));
+            }, 0);
+        };
+        function fixUrl(url) {
+            try {
+                return url === '' && global$1.location.href ? global$1.location.href : url;
+            } catch (e) {
+                return url;
+            }
+        }
+        xhr.open(request.method, fixUrl(request.url), true);
+        if (request.credentials === 'include') xhr.withCredentials = true;
+        else if (request.credentials === 'omit') xhr.withCredentials = false;
+        if ('responseType' in xhr) {
+            if (support.blob) xhr.responseType = 'blob';
+            else if (support.arrayBuffer && request.headers.get('Content-Type') && request.headers.get('Content-Type').indexOf('application/octet-stream') !== -1) xhr.responseType = 'arraybuffer';
+        }
+        if (init && typeof init.headers === 'object' && !(init.headers instanceof Headers)) Object.getOwnPropertyNames(init.headers).forEach(function(name) {
+            xhr.setRequestHeader(name, normalizeValue(init.headers[name]));
+        });
+        else request.headers.forEach(function(value, name) {
+            xhr.setRequestHeader(name, value);
+        });
+        if (request.signal) {
+            request.signal.addEventListener('abort', abortXhr);
+            xhr.onreadystatechange = function() {
+                // DONE (success or failure)
+                if (xhr.readyState === 4) request.signal.removeEventListener('abort', abortXhr);
+            };
+        }
+        xhr.send(typeof request._bodyInit === 'undefined' ? null : request._bodyInit);
+    });
+}
+fetch.polyfill = true;
+if (!global$1.fetch) {
+    global$1.fetch = fetch;
+    global$1.Headers = Headers;
+    global$1.Request = Request;
+    global$1.Response = Response;
+}
+var FakeFetch = /*#__PURE__*/ Object.freeze({
+    __proto__: null,
+    Headers: Headers,
+    Request: Request,
+    Response: Response,
+    get DOMException () {
+        return DOMException;
+    },
+    fetch: fetch
+});
+function createPassthrough(fakeXHR, nativeXMLHttpRequest) {
+    // event types to handle on the xhr
+    var evts = [
+        'error',
+        'timeout',
+        'abort',
+        'readystatechange'
+    ];
+    // event types to handle on the xhr.upload
+    var uploadEvents = [];
+    // properties to copy from the native xhr to fake xhr
+    var lifecycleProps = [
+        'readyState',
+        'responseText',
+        'response',
+        'responseXML',
+        'responseURL',
+        'status',
+        'statusText'
+    ];
+    var xhr = fakeXHR._passthroughRequest = new nativeXMLHttpRequest();
+    xhr.open(fakeXHR.method, fakeXHR.url, fakeXHR.async, fakeXHR.username, fakeXHR.password);
+    if (fakeXHR.responseType === 'arraybuffer') {
+        lifecycleProps = [
+            'readyState',
+            'response',
+            'status',
+            'statusText'
+        ];
+        xhr.responseType = fakeXHR.responseType;
+    }
+    // use onload if the browser supports it
+    if ('onload' in xhr) evts.push('load');
+    // add progress event for async calls
+    // avoid using progress events for sync calls, they will hang https://bugs.webkit.org/show_bug.cgi?id=40996.
+    if (fakeXHR.async && fakeXHR.responseType !== 'arraybuffer') {
+        evts.push('progress');
+        uploadEvents.push('progress');
+    }
+    // update `propertyNames` properties from `fromXHR` to `toXHR`
+    function copyLifecycleProperties(propertyNames, fromXHR, toXHR) {
+        for(var i = 0; i < propertyNames.length; i++){
+            var prop = propertyNames[i];
+            if (prop in fromXHR) toXHR[prop] = fromXHR[prop];
+        }
+    }
+    // fire fake event on `eventable`
+    function dispatchEvent(eventable, eventType, event) {
+        eventable.dispatchEvent(event);
+        if (eventable['on' + eventType]) eventable['on' + eventType](event);
+    }
+    // set the on- handler on the native xhr for the given eventType
+    function createHandler(eventType) {
+        xhr['on' + eventType] = function(event) {
+            copyLifecycleProperties(lifecycleProps, xhr, fakeXHR);
+            dispatchEvent(fakeXHR, eventType, event);
+        };
+    }
+    // set the on- handler on the native xhr's `upload` property for
+    // the given eventType
+    function createUploadHandler(eventType) {
+        if (xhr.upload && fakeXHR.upload && fakeXHR.upload['on' + eventType]) xhr.upload['on' + eventType] = function(event) {
+            dispatchEvent(fakeXHR.upload, eventType, event);
+        };
+    }
+    var i;
+    for(i = 0; i < evts.length; i++)createHandler(evts[i]);
+    for(i = 0; i < uploadEvents.length; i++)createUploadHandler(uploadEvents[i]);
+    if (fakeXHR.async) {
+        xhr.timeout = fakeXHR.timeout;
+        xhr.withCredentials = fakeXHR.withCredentials;
+    }
+    // XMLHttpRequest.timeout default initializes to 0, and is not allowed to be used for
+    // synchronous XMLHttpRequests requests in a document environment. However, when a XHR
+    // polyfill does not sets the timeout value, it will throw in React Native environment.
+    // TODO:
+    // synchronous XHR is deprecated, make async the default as XMLHttpRequest.open(),
+    // and throw error if sync XHR has timeout not 0
+    if (!xhr.timeout && xhr.timeout !== 0) xhr.timeout = 0; // default XMLHttpRequest timeout
+    for(var h in fakeXHR.requestHeaders)xhr.setRequestHeader(h, fakeXHR.requestHeaders[h]);
+    return xhr;
+}
+function interceptor(ctx) {
+    function FakeRequest() {
+        // super()
+        (0, _fakeXmlHttpRequestDefault.default).call(this);
+    }
+    FakeRequest.prototype = Object.create((0, _fakeXmlHttpRequestDefault.default).prototype);
+    FakeRequest.prototype.constructor = FakeRequest;
+    // extend
+    FakeRequest.prototype.send = function send() {
+        this.sendArguments = arguments;
+        if (!ctx.pretender.running) throw new Error("You shut down a Pretender instance while there was a pending request. That request just tried to complete. Check to see if you accidentally shut down a pretender earlier than you intended to");
+        (0, _fakeXmlHttpRequestDefault.default).prototype.send.apply(this, arguments);
+        if (ctx.pretender.checkPassthrough(this)) this.passthrough();
+        else ctx.pretender.handleRequest(this);
+    };
+    FakeRequest.prototype.passthrough = function passthrough() {
+        if (!this.sendArguments) throw new Error("You attempted to passthrough a FakeRequest that was never sent. Call `.send()` on the original request first");
+        var xhr = createPassthrough(this, ctx.pretender._nativeXMLHttpRequest);
+        xhr.send.apply(xhr, this.sendArguments);
+        return xhr;
+    };
+    FakeRequest.prototype._passthroughCheck = function(method, args) {
+        if (this._passthroughRequest) return this._passthroughRequest[method].apply(this._passthroughRequest, args);
+        return (0, _fakeXmlHttpRequestDefault.default).prototype[method].apply(this, args);
+    };
+    FakeRequest.prototype.abort = function abort() {
+        return this._passthroughCheck('abort', arguments);
+    };
+    FakeRequest.prototype.getResponseHeader = function getResponseHeader() {
+        return this._passthroughCheck('getResponseHeader', arguments);
+    };
+    FakeRequest.prototype.getAllResponseHeaders = function getAllResponseHeaders() {
+        return this._passthroughCheck('getAllResponseHeaders', arguments);
+    };
+    if (ctx.pretender._nativeXMLHttpRequest.prototype._passthroughCheck) // eslint-disable-next-line no-console
+    console.warn("You created a second Pretender instance while there was already one running. Running two Pretender servers at once will lead to unexpected results and will be removed entirely in a future major version.Please call .shutdown() on your instances when you no longer need them to respond.");
+    return FakeRequest;
+}
+var NoopArray = /** @class */ function() {
+    function NoopArray() {
+        this.length = 0;
+    }
+    NoopArray.prototype.push = function() {
+        var _items = [];
+        for(var _i = 0; _i < arguments.length; _i++)_items[_i] = arguments[_i];
+        return 0;
+    };
+    return NoopArray;
+}();
+function scheduleProgressEvent(request, startTime, totalTime) {
+    var totalSize = 0;
+    var body = request.requestBody;
+    if (body) {
+        if (body instanceof FormData) body.forEach(function(value) {
+            if (value instanceof File) totalSize += value.size;
+            else totalSize += value.length;
+        });
+        else // Support Blob, BufferSource, USVString, ArrayBufferView
+        totalSize = body.byteLength || body.size || body.length || 0;
+    }
+    setTimeout(function() {
+        if (!request.aborted && !request.status) {
+            var elapsedTime = new Date().getTime() - startTime.getTime();
+            var progressTransmitted = totalTime <= 0 ? 0 : elapsedTime / totalTime * totalSize;
+            // ProgressEvent expects loaded, total
+            // https://xhr.spec.whatwg.org/#interface-progressevent
+            request.upload._progress(true, progressTransmitted, totalSize);
+            request._progress(true, progressTransmitted, totalSize);
+            scheduleProgressEvent(request, startTime, totalTime);
+        } else if (request.status) {
+            // we're done, send a final progress event with loaded === total
+            request.upload._progress(true, totalSize, totalSize);
+            request._progress(true, totalSize, totalSize);
+        }
+    }, 50);
+}
+function isArray(array) {
+    return Object.prototype.toString.call(array) === '[object Array]';
+}
+var PASSTHROUGH = {};
+function verbify(verb) {
+    return function(path, handler, async) {
+        return this.register(verb, path, handler, async);
+    };
+}
+var Pretender = /** @class */ function() {
+    function Pretender() {
+        var _this = this;
+        this.hosts = new Hosts();
+        this.handlers = [];
+        this.get = verbify('GET');
+        this.post = verbify('POST');
+        this.put = verbify('PUT');
+        this.delete = verbify('DELETE');
+        this.patch = verbify('PATCH');
+        this.head = verbify('HEAD');
+        this.options = verbify('OPTIONS');
+        this.passthrough = PASSTHROUGH;
+        var lastArg = arguments[arguments.length - 1];
+        var options = typeof lastArg === 'object' ? lastArg : null;
+        var shouldNotTrack = options && options.trackRequests === false;
+        this.handledRequests = shouldNotTrack ? new NoopArray() : [];
+        this.passthroughRequests = shouldNotTrack ? new NoopArray() : [];
+        this.unhandledRequests = shouldNotTrack ? new NoopArray() : [];
+        this.requestReferences = [];
+        this.forcePassthrough = options && options.forcePassthrough === true;
+        this.disableUnhandled = options && options.disableUnhandled === true;
+        // reference the native XMLHttpRequest object so
+        // it can be restored later
+        this._nativeXMLHttpRequest = self.XMLHttpRequest;
+        this.running = false;
+        var ctx = {
+            pretender: this
+        };
+        this.ctx = ctx;
+        // capture xhr requests, channeling them into
+        // the route map.
+        self.XMLHttpRequest = interceptor(ctx);
+        // polyfill fetch when xhr is ready
+        this._fetchProps = FakeFetch ? [
+            'fetch',
+            'Headers',
+            'Request',
+            'Response'
+        ] : [];
+        this._fetchProps.forEach(function(name) {
+            _this['_native' + name] = self[name];
+            self[name] = FakeFetch[name];
+        }, this);
+        // 'start' the server
+        this.running = true;
+        // trigger the route map DSL.
+        var argLength = options ? arguments.length - 1 : arguments.length;
+        for(var i = 0; i < argLength; i++)this.map(arguments[i]);
+    }
+    Pretender.prototype.map = function(maps) {
+        maps.call(this);
+    };
+    Pretender.prototype.register = function(verb, url, handler, async) {
+        if (!handler) throw new Error('The function you tried passing to Pretender to handle ' + verb + ' ' + url + ' is undefined or missing.');
+        var handlerInstance = handler;
+        handlerInstance.numberOfCalls = 0;
+        handlerInstance.async = async;
+        this.handlers.push(handlerInstance);
+        var registry = this.hosts.forURL(url)[verb];
+        registry.add([
+            {
+                path: parseURL(url).fullpath,
+                handler: handlerInstance
+            }
+        ]);
+        return handlerInstance;
+    };
+    Pretender.prototype.checkPassthrough = function(request) {
+        var verb = request.method.toUpperCase();
+        var path = parseURL(request.url).fullpath;
+        var recognized = this.hosts.forURL(request.url)[verb].recognize(path);
+        var match = recognized && recognized[0];
+        if (match && match.handler === PASSTHROUGH || this.forcePassthrough) {
+            this.passthroughRequests.push(request);
+            this.passthroughRequest(verb, path, request);
+            return true;
+        }
+        return false;
+    };
+    Pretender.prototype.handleRequest = function(request) {
+        var verb = request.method.toUpperCase();
+        var path = request.url;
+        var handler = this._handlerFor(verb, path, request);
+        if (handler) {
+            handler.handler.numberOfCalls++;
+            var async_1 = handler.handler.async;
+            this.handledRequests.push(request);
+            var pretender_1 = this;
+            var _handleRequest_1 = function(statusHeadersAndBody) {
+                if (!isArray(statusHeadersAndBody)) {
+                    var note = 'Remember to `return [status, headers, body];` in your route handler.';
+                    throw new Error('Nothing returned by handler for ' + path + '. ' + note);
+                }
+                var status = statusHeadersAndBody[0];
+                var headers = pretender_1.prepareHeaders(statusHeadersAndBody[1]);
+                var body = pretender_1.prepareBody(statusHeadersAndBody[2], headers);
+                pretender_1.handleResponse(request, async_1, function() {
+                    request.respond(status, headers, body);
+                    pretender_1.handledRequest(verb, path, request);
+                });
+            };
+            try {
+                var result = handler.handler(request);
+                if (result && typeof result.then === 'function') // `result` is a promise, resolve it
+                result.then(function(resolvedResult) {
+                    _handleRequest_1(resolvedResult);
+                });
+                else _handleRequest_1(result);
+            } catch (error) {
+                this.erroredRequest(verb, path, request, error);
+                this.resolve(request);
+            }
+        } else if (!this.disableUnhandled) {
+            this.unhandledRequests.push(request);
+            this.unhandledRequest(verb, path, request);
+        }
+    };
+    Pretender.prototype.handleResponse = function(request, strategy, callback) {
+        var delay = typeof strategy === 'function' ? strategy() : strategy;
+        delay = typeof delay === 'boolean' || typeof delay === 'number' ? delay : 0;
+        if (delay === false) callback();
+        else {
+            var pretender_2 = this;
+            pretender_2.requestReferences.push({
+                request: request,
+                callback: callback
+            });
+            if (delay !== true) {
+                scheduleProgressEvent(request, new Date(), delay);
+                setTimeout(function() {
+                    pretender_2.resolve(request);
+                }, delay);
+            }
+        }
+    };
+    Pretender.prototype.resolve = function(request) {
+        for(var i = 0, len = this.requestReferences.length; i < len; i++){
+            var res = this.requestReferences[i];
+            if (res.request === request) {
+                res.callback();
+                this.requestReferences.splice(i, 1);
+                break;
+            }
+        }
+    };
+    Pretender.prototype.requiresManualResolution = function(verb, path) {
+        var handler = this._handlerFor(verb.toUpperCase(), path, {});
+        if (!handler) return false;
+        var async = handler.handler.async;
+        return typeof async === 'function' ? async() === true : async === true;
+    };
+    Pretender.prototype.prepareBody = function(body, _headers) {
+        return body;
+    };
+    Pretender.prototype.prepareHeaders = function(headers) {
+        return headers;
+    };
+    Pretender.prototype.handledRequest = function(_verb, _path, _request) {
+    /* no-op */ };
+    Pretender.prototype.passthroughRequest = function(_verb, _path, _request) {
+    /* no-op */ };
+    Pretender.prototype.unhandledRequest = function(verb, path, _request) {
+        throw new Error('Pretender intercepted ' + verb + ' ' + path + ' but no handler was defined for this type of request');
+    };
+    Pretender.prototype.erroredRequest = function(verb, path, _request, error) {
+        error.message = 'Pretender intercepted ' + verb + ' ' + path + ' but encountered an error: ' + error.message;
+        throw error;
+    };
+    Pretender.prototype.shutdown = function() {
+        var _this = this;
+        self.XMLHttpRequest = this._nativeXMLHttpRequest;
+        this._fetchProps.forEach(function(name) {
+            self[name] = _this['_native' + name];
+        }, this);
+        this.ctx.pretender = undefined;
+        // 'stop' the server
+        this.running = false;
+    };
+    Pretender.prototype._handlerFor = function(verb, url, request) {
+        var registry = this.hosts.forURL(url)[verb];
+        var matches = registry.recognize(parseURL(url).fullpath);
+        var match = matches ? matches[0] : null;
+        if (match) {
+            request.params = match.params;
+            request.queryParams = matches.queryParams;
+        }
+        return match;
+    };
+    Pretender.parseURL = parseURL;
+    Pretender.Hosts = Hosts;
+    Pretender.Registry = Registry;
+    return Pretender;
+}();
+Pretender.parseURL = parseURL;
+Pretender.Hosts = Hosts;
+Pretender.Registry = Registry;
+exports.default = Pretender;
+
+},{"route-recognizer":"eSUqu","fake-xml-http-request":"7gpNs","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"eSUqu":[function(require,module,exports,__globalThis) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var createObject = Object.create;
+function createMap() {
+    var map = createObject(null);
+    map["__"] = undefined;
+    delete map["__"];
+    return map;
+}
+var Target = function Target(path, matcher, delegate) {
+    this.path = path;
+    this.matcher = matcher;
+    this.delegate = delegate;
+};
+Target.prototype.to = function to(target, callback) {
+    var delegate = this.delegate;
+    if (delegate && delegate.willAddRoute) target = delegate.willAddRoute(this.matcher.target, target);
+    this.matcher.add(this.path, target);
+    if (callback) {
+        if (callback.length === 0) throw new Error("You must have an argument in the function passed to `to`");
+        this.matcher.addChild(this.path, target, callback, this.delegate);
+    }
+};
+var Matcher = function Matcher(target) {
+    this.routes = createMap();
+    this.children = createMap();
+    this.target = target;
+};
+Matcher.prototype.add = function add(path, target) {
+    this.routes[path] = target;
+};
+Matcher.prototype.addChild = function addChild(path, target, callback, delegate) {
+    var matcher = new Matcher(target);
+    this.children[path] = matcher;
+    var match = generateMatch(path, matcher, delegate);
+    if (delegate && delegate.contextEntered) delegate.contextEntered(target, match);
+    callback(match);
+};
+function generateMatch(startingPath, matcher, delegate) {
+    function match(path, callback) {
+        var fullPath = startingPath + path;
+        if (callback) callback(generateMatch(fullPath, matcher, delegate));
+        else return new Target(fullPath, matcher, delegate);
+    }
+    return match;
+}
+function addRoute(routeArray, path, handler) {
+    var len = 0;
+    for(var i = 0; i < routeArray.length; i++)len += routeArray[i].path.length;
+    path = path.substr(len);
+    var route = {
+        path: path,
+        handler: handler
+    };
+    routeArray.push(route);
+}
+function eachRoute(baseRoute, matcher, callback, binding) {
+    var routes = matcher.routes;
+    var paths = Object.keys(routes);
+    for(var i = 0; i < paths.length; i++){
+        var path = paths[i];
+        var routeArray = baseRoute.slice();
+        addRoute(routeArray, path, routes[path]);
+        var nested = matcher.children[path];
+        if (nested) eachRoute(routeArray, nested, callback, binding);
+        else callback.call(binding, routeArray);
+    }
+}
+var map = function(callback, addRouteCallback) {
+    var matcher = new Matcher();
+    callback(generateMatch("", matcher, this.delegate));
+    eachRoute([], matcher, function(routes) {
+        if (addRouteCallback) addRouteCallback(this, routes);
+        else this.add(routes);
+    }, this);
+};
+// Normalizes percent-encoded values in `path` to upper-case and decodes percent-encoded
+// values that are not reserved (i.e., unicode characters, emoji, etc). The reserved
+// chars are "/" and "%".
+// Safe to call multiple times on the same path.
+// Normalizes percent-encoded values in `path` to upper-case and decodes percent-encoded
+function normalizePath(path) {
+    return path.split("/").map(normalizeSegment).join("/");
+}
+// We want to ensure the characters "%" and "/" remain in percent-encoded
+// form when normalizing paths, so replace them with their encoded form after
+// decoding the rest of the path
+var SEGMENT_RESERVED_CHARS = /%|\//g;
+function normalizeSegment(segment) {
+    if (segment.length < 3 || segment.indexOf("%") === -1) return segment;
+    return decodeURIComponent(segment).replace(SEGMENT_RESERVED_CHARS, encodeURIComponent);
+}
+// We do not want to encode these characters when generating dynamic path segments
+// See https://tools.ietf.org/html/rfc3986#section-3.3
+// sub-delims: "!", "$", "&", "'", "(", ")", "*", "+", ",", ";", "="
+// others allowed by RFC 3986: ":", "@"
+//
+// First encode the entire path segment, then decode any of the encoded special chars.
+//
+// The chars "!", "'", "(", ")", "*" do not get changed by `encodeURIComponent`,
+// so the possible encoded chars are:
+// ['%24', '%26', '%2B', '%2C', '%3B', '%3D', '%3A', '%40'].
+var PATH_SEGMENT_ENCODINGS = /%(?:2(?:4|6|B|C)|3(?:B|D|A)|40)/g;
+function encodePathSegment(str) {
+    return encodeURIComponent(str).replace(PATH_SEGMENT_ENCODINGS, decodeURIComponent);
+}
+var escapeRegex = /(\/|\.|\*|\+|\?|\||\(|\)|\[|\]|\{|\}|\\)/g;
+var isArray = Array.isArray;
+var hasOwnProperty = Object.prototype.hasOwnProperty;
+function getParam(params, key) {
+    if (typeof params !== "object" || params === null) throw new Error("You must pass an object as the second argument to `generate`.");
+    if (!hasOwnProperty.call(params, key)) throw new Error("You must provide param `" + key + "` to `generate`.");
+    var value = params[key];
+    var str = typeof value === "string" ? value : "" + value;
+    if (str.length === 0) throw new Error("You must provide a param `" + key + "`.");
+    return str;
+}
+var eachChar = [];
+eachChar[0 /* Static */ ] = function(segment, currentState) {
+    var state = currentState;
+    var value = segment.value;
+    for(var i = 0; i < value.length; i++){
+        var ch = value.charCodeAt(i);
+        state = state.put(ch, false, false);
+    }
+    return state;
+};
+eachChar[1 /* Dynamic */ ] = function(_, currentState) {
+    return currentState.put(47 /* SLASH */ , true, true);
+};
+eachChar[2 /* Star */ ] = function(_, currentState) {
+    return currentState.put(-1 /* ANY */ , false, true);
+};
+eachChar[4 /* Epsilon */ ] = function(_, currentState) {
+    return currentState;
+};
+var regex = [];
+regex[0 /* Static */ ] = function(segment) {
+    return segment.value.replace(escapeRegex, "\\$1");
+};
+regex[1 /* Dynamic */ ] = function() {
+    return "([^/]+)";
+};
+regex[2 /* Star */ ] = function() {
+    return "(.+)";
+};
+regex[4 /* Epsilon */ ] = function() {
+    return "";
+};
+var generate = [];
+generate[0 /* Static */ ] = function(segment) {
+    return segment.value;
+};
+generate[1 /* Dynamic */ ] = function(segment, params) {
+    var value = getParam(params, segment.value);
+    if (RouteRecognizer.ENCODE_AND_DECODE_PATH_SEGMENTS) return encodePathSegment(value);
+    else return value;
+};
+generate[2 /* Star */ ] = function(segment, params) {
+    return getParam(params, segment.value);
+};
+generate[4 /* Epsilon */ ] = function() {
+    return "";
+};
+var EmptyObject = Object.freeze({});
+var EmptyArray = Object.freeze([]);
+// The `names` will be populated with the paramter name for each dynamic/star
+// segment. `shouldDecodes` will be populated with a boolean for each dyanamic/star
+// segment, indicating whether it should be decoded during recognition.
+function parse(segments, route, types) {
+    // normalize route as not starting with a "/". Recognition will
+    // also normalize.
+    if (route.length > 0 && route.charCodeAt(0) === 47 /* SLASH */ ) route = route.substr(1);
+    var parts = route.split("/");
+    var names = undefined;
+    var shouldDecodes = undefined;
+    for(var i = 0; i < parts.length; i++){
+        var part = parts[i];
+        var flags = 0;
+        var type = 0;
+        if (part === "") type = 4 /* Epsilon */ ;
+        else if (part.charCodeAt(0) === 58 /* COLON */ ) type = 1 /* Dynamic */ ;
+        else if (part.charCodeAt(0) === 42 /* STAR */ ) type = 2 /* Star */ ;
+        else type = 0 /* Static */ ;
+        flags = 2 << type;
+        if (flags & 12 /* Named */ ) {
+            part = part.slice(1);
+            names = names || [];
+            names.push(part);
+            shouldDecodes = shouldDecodes || [];
+            shouldDecodes.push((flags & 4 /* Decoded */ ) !== 0);
+        }
+        if (flags & 14 /* Counted */ ) types[type]++;
+        segments.push({
+            type: type,
+            value: normalizeSegment(part)
+        });
+    }
+    return {
+        names: names || EmptyArray,
+        shouldDecodes: shouldDecodes || EmptyArray
+    };
+}
+function isEqualCharSpec(spec, char, negate) {
+    return spec.char === char && spec.negate === negate;
+}
+// A State has a character specification and (`charSpec`) and a list of possible
+// subsequent states (`nextStates`).
+//
+// If a State is an accepting state, it will also have several additional
+// properties:
+//
+// * `regex`: A regular expression that is used to extract parameters from paths
+//   that reached this accepting state.
+// * `handlers`: Information on how to convert the list of captures into calls
+//   to registered handlers with the specified parameters
+// * `types`: How many static, dynamic or star segments in this route. Used to
+//   decide which route to use if multiple registered routes match a path.
+//
+// Currently, State is implemented naively by looping over `nextStates` and
+// comparing a character specification against a character. A more efficient
+// implementation would use a hash of keys pointing at one or more next states.
+var State = function State(states, id, char, negate, repeat) {
+    this.states = states;
+    this.id = id;
+    this.char = char;
+    this.negate = negate;
+    this.nextStates = repeat ? id : null;
+    this.pattern = "";
+    this._regex = undefined;
+    this.handlers = undefined;
+    this.types = undefined;
+};
+State.prototype.regex = function regex$1() {
+    if (!this._regex) this._regex = new RegExp(this.pattern);
+    return this._regex;
+};
+State.prototype.get = function get(char, negate) {
+    var this$1 = this;
+    var nextStates = this.nextStates;
+    if (nextStates === null) return;
+    if (isArray(nextStates)) for(var i = 0; i < nextStates.length; i++){
+        var child = this$1.states[nextStates[i]];
+        if (isEqualCharSpec(child, char, negate)) return child;
+    }
+    else {
+        var child$1 = this.states[nextStates];
+        if (isEqualCharSpec(child$1, char, negate)) return child$1;
+    }
+};
+State.prototype.put = function put(char, negate, repeat) {
+    var state;
+    // If the character specification already exists in a child of the current
+    // state, just return that state.
+    if (state = this.get(char, negate)) return state;
+    // Make a new state for the character spec
+    var states = this.states;
+    state = new State(states, states.length, char, negate, repeat);
+    states[states.length] = state;
+    // Insert the new state as a child of the current state
+    if (this.nextStates == null) this.nextStates = state.id;
+    else if (isArray(this.nextStates)) this.nextStates.push(state.id);
+    else this.nextStates = [
+        this.nextStates,
+        state.id
+    ];
+    // Return the new state
+    return state;
+};
+// Find a list of child states matching the next character
+State.prototype.match = function match(ch) {
+    var this$1 = this;
+    var nextStates = this.nextStates;
+    if (!nextStates) return [];
+    var returned = [];
+    if (isArray(nextStates)) for(var i = 0; i < nextStates.length; i++){
+        var child = this$1.states[nextStates[i]];
+        if (isMatch(child, ch)) returned.push(child);
+    }
+    else {
+        var child$1 = this.states[nextStates];
+        if (isMatch(child$1, ch)) returned.push(child$1);
+    }
+    return returned;
+};
+function isMatch(spec, char) {
+    return spec.negate ? spec.char !== char && spec.char !== -1 /* ANY */  : spec.char === char || spec.char === -1 /* ANY */ ;
+}
+// This is a somewhat naive strategy, but should work in a lot of cases
+// A better strategy would properly resolve /posts/:id/new and /posts/edit/:id.
+//
+// This strategy generally prefers more static and less dynamic matching.
+// Specifically, it
+//
+//  * prefers fewer stars to more, then
+//  * prefers using stars for less of the match to more, then
+//  * prefers fewer dynamic segments to more, then
+//  * prefers more static segments to more
+function sortSolutions(states) {
+    return states.sort(function(a, b) {
+        var ref = a.types || [
+            0,
+            0,
+            0
+        ];
+        var astatics = ref[0];
+        var adynamics = ref[1];
+        var astars = ref[2];
+        var ref$1 = b.types || [
+            0,
+            0,
+            0
+        ];
+        var bstatics = ref$1[0];
+        var bdynamics = ref$1[1];
+        var bstars = ref$1[2];
+        if (astars !== bstars) return astars - bstars;
+        if (astars) {
+            if (astatics !== bstatics) return bstatics - astatics;
+            if (adynamics !== bdynamics) return bdynamics - adynamics;
+        }
+        if (adynamics !== bdynamics) return adynamics - bdynamics;
+        if (astatics !== bstatics) return bstatics - astatics;
+        return 0;
+    });
+}
+function recognizeChar(states, ch) {
+    var nextStates = [];
+    for(var i = 0, l = states.length; i < l; i++){
+        var state = states[i];
+        nextStates = nextStates.concat(state.match(ch));
+    }
+    return nextStates;
+}
+var RecognizeResults = function RecognizeResults(queryParams) {
+    this.length = 0;
+    this.queryParams = queryParams || {};
+};
+RecognizeResults.prototype.splice = Array.prototype.splice;
+RecognizeResults.prototype.slice = Array.prototype.slice;
+RecognizeResults.prototype.push = Array.prototype.push;
+function findHandler(state, originalPath, queryParams) {
+    var handlers = state.handlers;
+    var regex = state.regex();
+    if (!regex || !handlers) throw new Error("state not initialized");
+    var captures = originalPath.match(regex);
+    var currentCapture = 1;
+    var result = new RecognizeResults(queryParams);
+    result.length = handlers.length;
+    for(var i = 0; i < handlers.length; i++){
+        var handler = handlers[i];
+        var names = handler.names;
+        var shouldDecodes = handler.shouldDecodes;
+        var params = EmptyObject;
+        var isDynamic = false;
+        if (names !== EmptyArray && shouldDecodes !== EmptyArray) for(var j = 0; j < names.length; j++){
+            isDynamic = true;
+            var name = names[j];
+            var capture = captures && captures[currentCapture++];
+            if (params === EmptyObject) params = {};
+            if (RouteRecognizer.ENCODE_AND_DECODE_PATH_SEGMENTS && shouldDecodes[j]) params[name] = capture && decodeURIComponent(capture);
+            else params[name] = capture;
+        }
+        result[i] = {
+            handler: handler.handler,
+            params: params,
+            isDynamic: isDynamic
+        };
+    }
+    return result;
+}
+function decodeQueryParamPart(part) {
+    // http://www.w3.org/TR/html401/interact/forms.html#h-17.13.4.1
+    part = part.replace(/\+/gm, "%20");
+    var result;
+    try {
+        result = decodeURIComponent(part);
+    } catch (error) {
+        result = "";
+    }
+    return result;
+}
+var RouteRecognizer = function RouteRecognizer() {
+    this.names = createMap();
+    var states = [];
+    var state = new State(states, 0, -1 /* ANY */ , true, false);
+    states[0] = state;
+    this.states = states;
+    this.rootState = state;
+};
+RouteRecognizer.prototype.add = function add(routes, options) {
+    var currentState = this.rootState;
+    var pattern = "^";
+    var types = [
+        0,
+        0,
+        0
+    ];
+    var handlers = new Array(routes.length);
+    var allSegments = [];
+    var isEmpty = true;
+    var j = 0;
+    for(var i = 0; i < routes.length; i++){
+        var route = routes[i];
+        var ref = parse(allSegments, route.path, types);
+        var names = ref.names;
+        var shouldDecodes = ref.shouldDecodes;
+        // preserve j so it points to the start of newly added segments
+        for(; j < allSegments.length; j++){
+            var segment = allSegments[j];
+            if (segment.type === 4 /* Epsilon */ ) continue;
+            isEmpty = false;
+            // Add a "/" for the new segment
+            currentState = currentState.put(47 /* SLASH */ , false, false);
+            pattern += "/";
+            // Add a representation of the segment to the NFA and regex
+            currentState = eachChar[segment.type](segment, currentState);
+            pattern += regex[segment.type](segment);
+        }
+        handlers[i] = {
+            handler: route.handler,
+            names: names,
+            shouldDecodes: shouldDecodes
+        };
+    }
+    if (isEmpty) {
+        currentState = currentState.put(47 /* SLASH */ , false, false);
+        pattern += "/";
+    }
+    currentState.handlers = handlers;
+    currentState.pattern = pattern + "$";
+    currentState.types = types;
+    var name;
+    if (typeof options === "object" && options !== null && options.as) name = options.as;
+    if (name) // if (this.names[name]) {
+    //   throw new Error("You may not add a duplicate route named `" + name + "`.");
+    // }
+    this.names[name] = {
+        segments: allSegments,
+        handlers: handlers
+    };
+};
+RouteRecognizer.prototype.handlersFor = function handlersFor(name) {
+    var route = this.names[name];
+    if (!route) throw new Error("There is no route named " + name);
+    var result = new Array(route.handlers.length);
+    for(var i = 0; i < route.handlers.length; i++){
+        var handler = route.handlers[i];
+        result[i] = handler;
+    }
+    return result;
+};
+RouteRecognizer.prototype.hasRoute = function hasRoute(name) {
+    return !!this.names[name];
+};
+RouteRecognizer.prototype.generate = function generate$1(name, params) {
+    var route = this.names[name];
+    var output = "";
+    if (!route) throw new Error("There is no route named " + name);
+    var segments = route.segments;
+    for(var i = 0; i < segments.length; i++){
+        var segment = segments[i];
+        if (segment.type === 4 /* Epsilon */ ) continue;
+        output += "/";
+        output += generate[segment.type](segment, params);
+    }
+    if (output.charAt(0) !== "/") output = "/" + output;
+    if (params && params.queryParams) output += this.generateQueryString(params.queryParams);
+    return output;
+};
+RouteRecognizer.prototype.generateQueryString = function generateQueryString(params) {
+    var pairs = [];
+    var keys = Object.keys(params);
+    keys.sort();
+    for(var i = 0; i < keys.length; i++){
+        var key = keys[i];
+        var value = params[key];
+        if (value == null) continue;
+        var pair = encodeURIComponent(key);
+        if (isArray(value)) for(var j = 0; j < value.length; j++){
+            var arrayPair = key + "[]" + "=" + encodeURIComponent(value[j]);
+            pairs.push(arrayPair);
+        }
+        else {
+            pair += "=" + encodeURIComponent(value);
+            pairs.push(pair);
+        }
+    }
+    if (pairs.length === 0) return "";
+    return "?" + pairs.join("&");
+};
+RouteRecognizer.prototype.parseQueryString = function parseQueryString(queryString) {
+    var pairs = queryString.split("&");
+    var queryParams = {};
+    for(var i = 0; i < pairs.length; i++){
+        var pair = pairs[i].split("="), key = decodeQueryParamPart(pair[0]), keyLength = key.length, isArray = false, value = void 0;
+        if (pair.length === 1) value = "true";
+        else {
+            // Handle arrays
+            if (keyLength > 2 && key.slice(keyLength - 2) === "[]") {
+                isArray = true;
+                key = key.slice(0, keyLength - 2);
+                if (!queryParams[key]) queryParams[key] = [];
+            }
+            value = pair[1] ? decodeQueryParamPart(pair[1]) : "";
+        }
+        if (isArray) queryParams[key].push(value);
+        else queryParams[key] = value;
+    }
+    return queryParams;
+};
+RouteRecognizer.prototype.recognize = function recognize(path) {
+    var results;
+    var states = [
+        this.rootState
+    ];
+    var queryParams = {};
+    var isSlashDropped = false;
+    var hashStart = path.indexOf("#");
+    if (hashStart !== -1) path = path.substr(0, hashStart);
+    var queryStart = path.indexOf("?");
+    if (queryStart !== -1) {
+        var queryString = path.substr(queryStart + 1, path.length);
+        path = path.substr(0, queryStart);
+        queryParams = this.parseQueryString(queryString);
+    }
+    if (path.charAt(0) !== "/") path = "/" + path;
+    var originalPath = path;
+    if (RouteRecognizer.ENCODE_AND_DECODE_PATH_SEGMENTS) path = normalizePath(path);
+    else {
+        path = decodeURI(path);
+        originalPath = decodeURI(originalPath);
+    }
+    var pathLen = path.length;
+    if (pathLen > 1 && path.charAt(pathLen - 1) === "/") {
+        path = path.substr(0, pathLen - 1);
+        originalPath = originalPath.substr(0, originalPath.length - 1);
+        isSlashDropped = true;
+    }
+    for(var i = 0; i < path.length; i++){
+        states = recognizeChar(states, path.charCodeAt(i));
+        if (!states.length) break;
+    }
+    var solutions = [];
+    for(var i$1 = 0; i$1 < states.length; i$1++)if (states[i$1].handlers) solutions.push(states[i$1]);
+    states = sortSolutions(solutions);
+    var state = solutions[0];
+    if (state && state.handlers) {
+        // if a trailing slash was dropped and a star segment is the last segment
+        // specified, put the trailing slash back
+        if (isSlashDropped && state.pattern && state.pattern.slice(-5) === "(.+)$") originalPath = originalPath + "/";
+        results = findHandler(state, originalPath, queryParams);
+    }
+    return results;
+};
+RouteRecognizer.VERSION = "0.3.4";
+// Set to false to opt-out of encoding and decoding path segments.
+// See https://github.com/tildeio/route-recognizer/pull/55
+RouteRecognizer.ENCODE_AND_DECODE_PATH_SEGMENTS = true;
+RouteRecognizer.Normalizer = {
+    normalizeSegment: normalizeSegment,
+    normalizePath: normalizePath,
+    encodePathSegment: encodePathSegment
+};
+RouteRecognizer.prototype.map = map;
+exports.default = RouteRecognizer;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"7gpNs":[function(require,module,exports,__globalThis) {
+/**
+ * Minimal Event interface implementation
+ *
+ * Original implementation by Sven Fuchs: https://gist.github.com/995028
+ * Modifications and tests by Christian Johansen.
+ *
+ * @author Sven Fuchs (svenfuchs@artweb-design.de)
+ * @author Christian Johansen (christian@cjohansen.no)
+ * @license BSD
+ *
+ * Copyright (c) 2011 Sven Fuchs, Christian Johansen
+ */ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _Event = function Event(type, bubbles, cancelable, target) {
+    this.type = type;
+    this.bubbles = bubbles;
+    this.cancelable = cancelable;
+    this.target = target;
+};
+_Event.prototype = {
+    stopPropagation: function() {},
+    preventDefault: function() {
+        this.defaultPrevented = true;
+    }
+};
+/*
+  Used to set the statusText property of an xhr object
+*/ var httpStatusCodes = {
+    100: "Continue",
+    101: "Switching Protocols",
+    200: "OK",
+    201: "Created",
+    202: "Accepted",
+    203: "Non-Authoritative Information",
+    204: "No Content",
+    205: "Reset Content",
+    206: "Partial Content",
+    300: "Multiple Choice",
+    301: "Moved Permanently",
+    302: "Found",
+    303: "See Other",
+    304: "Not Modified",
+    305: "Use Proxy",
+    307: "Temporary Redirect",
+    400: "Bad Request",
+    401: "Unauthorized",
+    402: "Payment Required",
+    403: "Forbidden",
+    404: "Not Found",
+    405: "Method Not Allowed",
+    406: "Not Acceptable",
+    407: "Proxy Authentication Required",
+    408: "Request Timeout",
+    409: "Conflict",
+    410: "Gone",
+    411: "Length Required",
+    412: "Precondition Failed",
+    413: "Request Entity Too Large",
+    414: "Request-URI Too Long",
+    415: "Unsupported Media Type",
+    416: "Requested Range Not Satisfiable",
+    417: "Expectation Failed",
+    422: "Unprocessable Entity",
+    500: "Internal Server Error",
+    501: "Not Implemented",
+    502: "Bad Gateway",
+    503: "Service Unavailable",
+    504: "Gateway Timeout",
+    505: "HTTP Version Not Supported"
+};
+/*
+  Cross-browser XML parsing. Used to turn
+  XML responses into Document objects
+  Borrowed from JSpec
+*/ function parseXML(text) {
+    var xmlDoc;
+    if (typeof DOMParser != "undefined") {
+        var parser = new DOMParser();
+        xmlDoc = parser.parseFromString(text, "text/xml");
+    } else {
+        xmlDoc = new ActiveXObject("Microsoft.XMLDOM");
+        xmlDoc.async = "false";
+        xmlDoc.loadXML(text);
+    }
+    return xmlDoc;
+}
+/*
+  Without mocking, the native XMLHttpRequest object will throw
+  an error when attempting to set these headers. We match this behavior.
+*/ var unsafeHeaders = {
+    "Accept-Charset": true,
+    "Accept-Encoding": true,
+    "Connection": true,
+    "Content-Length": true,
+    "Cookie": true,
+    "Cookie2": true,
+    "Content-Transfer-Encoding": true,
+    "Date": true,
+    "Expect": true,
+    "Host": true,
+    "Keep-Alive": true,
+    "Referer": true,
+    "TE": true,
+    "Trailer": true,
+    "Transfer-Encoding": true,
+    "Upgrade": true,
+    "User-Agent": true,
+    "Via": true
+};
+/*
+  Adds an "event" onto the fake xhr object
+  that just calls the same-named method. This is
+  in case a library adds callbacks for these events.
+*/ function _addEventListener(eventName, xhr) {
+    xhr.addEventListener(eventName, function(event) {
+        var listener = xhr["on" + eventName];
+        if (listener && typeof listener == "function") listener.call(event.target, event);
+    });
+}
+function EventedObject() {
+    this._eventListeners = {};
+    var events = [
+        "loadstart",
+        "progress",
+        "load",
+        "abort",
+        "loadend"
+    ];
+    for(var i = events.length - 1; i >= 0; i--)_addEventListener(events[i], this);
+}
+EventedObject.prototype = {
+    /*
+    Duplicates the behavior of native XMLHttpRequest's addEventListener function
+  */ addEventListener: function addEventListener(event, listener) {
+        this._eventListeners[event] = this._eventListeners[event] || [];
+        this._eventListeners[event].push(listener);
+    },
+    /*
+    Duplicates the behavior of native XMLHttpRequest's removeEventListener function
+  */ removeEventListener: function removeEventListener(event, listener) {
+        var listeners = this._eventListeners[event] || [];
+        for(var i = 0, l = listeners.length; i < l; ++i){
+            if (listeners[i] == listener) return listeners.splice(i, 1);
+        }
+    },
+    /*
+    Duplicates the behavior of native XMLHttpRequest's dispatchEvent function
+  */ dispatchEvent: function dispatchEvent(event) {
+        var type = event.type;
+        var listeners = this._eventListeners[type] || [];
+        for(var i = 0; i < listeners.length; i++)if (typeof listeners[i] == "function") listeners[i].call(this, event);
+        else listeners[i].handleEvent(event);
+        return !!event.defaultPrevented;
+    },
+    /*
+    Triggers an `onprogress` event with the given parameters.
+  */ _progress: function _progress(lengthComputable, loaded, total) {
+        var event = new _Event('progress');
+        event.target = this;
+        event.lengthComputable = lengthComputable;
+        event.loaded = loaded;
+        event.total = total;
+        this.dispatchEvent(event);
+    }
+};
+/*
+  Constructor for a fake window.XMLHttpRequest
+*/ function FakeXMLHttpRequest() {
+    EventedObject.call(this);
+    this.readyState = FakeXMLHttpRequest.UNSENT;
+    this.requestHeaders = {};
+    this.requestBody = null;
+    this.status = 0;
+    this.statusText = "";
+    this.upload = new EventedObject();
+    this.onabort = null;
+    this.onerror = null;
+    this.onload = null;
+    this.onloadend = null;
+    this.onloadstart = null;
+    this.onprogress = null;
+    this.onreadystatechange = null;
+    this.ontimeout = null;
+}
+FakeXMLHttpRequest.prototype = new EventedObject();
+// These status codes are available on the native XMLHttpRequest
+// object, so we match that here in case a library is relying on them.
+FakeXMLHttpRequest.UNSENT = 0;
+FakeXMLHttpRequest.OPENED = 1;
+FakeXMLHttpRequest.HEADERS_RECEIVED = 2;
+FakeXMLHttpRequest.LOADING = 3;
+FakeXMLHttpRequest.DONE = 4;
+var FakeXMLHttpRequestProto = {
+    UNSENT: 0,
+    OPENED: 1,
+    HEADERS_RECEIVED: 2,
+    LOADING: 3,
+    DONE: 4,
+    async: true,
+    withCredentials: false,
+    /*
+    Duplicates the behavior of native XMLHttpRequest's open function
+  */ open: function open(method, url, async, username, password) {
+        this.method = method;
+        this.url = url;
+        this.async = typeof async == "boolean" ? async : true;
+        this.username = username;
+        this.password = password;
+        this.responseText = null;
+        this.response = this.responseText;
+        this.responseXML = null;
+        this.responseURL = url;
+        this.requestHeaders = {};
+        this.sendFlag = false;
+        this._readyStateChange(FakeXMLHttpRequest.OPENED);
+    },
+    /*
+    Duplicates the behavior of native XMLHttpRequest's setRequestHeader function
+  */ setRequestHeader: function setRequestHeader(header, value) {
+        verifyState(this);
+        if (unsafeHeaders[header] || /^(Sec-|Proxy-)/.test(header)) throw new Error("Refused to set unsafe header \"" + header + "\"");
+        if (this.requestHeaders[header]) this.requestHeaders[header] += "," + value;
+        else this.requestHeaders[header] = value;
+    },
+    /*
+    Duplicates the behavior of native XMLHttpRequest's send function
+  */ send: function send(data) {
+        verifyState(this);
+        if (!/^(get|head)$/i.test(this.method)) {
+            var hasContentTypeHeader = false;
+            Object.keys(this.requestHeaders).forEach(function(key) {
+                if (key.toLowerCase() === 'content-type') hasContentTypeHeader = true;
+            });
+            if (!hasContentTypeHeader && !(data || '').toString().match('FormData')) this.requestHeaders["Content-Type"] = "text/plain;charset=UTF-8";
+            this.requestBody = data;
+        }
+        this.errorFlag = false;
+        this.sendFlag = this.async;
+        this._readyStateChange(FakeXMLHttpRequest.OPENED);
+        if (typeof this.onSend == "function") this.onSend(this);
+        this.dispatchEvent(new _Event("loadstart", false, false, this));
+    },
+    /*
+    Duplicates the behavior of native XMLHttpRequest's abort function
+  */ abort: function abort() {
+        this.aborted = true;
+        this.responseText = null;
+        this.response = this.responseText;
+        this.errorFlag = true;
+        this.requestHeaders = {};
+        this.dispatchEvent(new _Event("abort", false, false, this));
+        if (this.readyState > FakeXMLHttpRequest.UNSENT && this.sendFlag) {
+            this._readyStateChange(FakeXMLHttpRequest.UNSENT);
+            this.sendFlag = false;
+        }
+        if (typeof this.onerror === "function") this.onerror();
+    },
+    /*
+    Duplicates the behavior of native XMLHttpRequest's getResponseHeader function
+  */ getResponseHeader: function getResponseHeader(header) {
+        if (this.readyState < FakeXMLHttpRequest.HEADERS_RECEIVED) return null;
+        if (/^Set-Cookie2?$/i.test(header)) return null;
+        header = header.toLowerCase();
+        for(var h in this.responseHeaders){
+            if (h.toLowerCase() == header) return this.responseHeaders[h];
+        }
+        return null;
+    },
+    /*
+    Duplicates the behavior of native XMLHttpRequest's getAllResponseHeaders function
+  */ getAllResponseHeaders: function getAllResponseHeaders() {
+        if (this.readyState < FakeXMLHttpRequest.HEADERS_RECEIVED) return "";
+        var headers = "";
+        for(var header in this.responseHeaders)if (this.responseHeaders.hasOwnProperty(header) && !/^Set-Cookie2?$/i.test(header)) headers += header + ": " + this.responseHeaders[header] + "\r\n";
+        return headers;
+    },
+    /*
+   Duplicates the behavior of native XMLHttpRequest's overrideMimeType function
+   */ overrideMimeType: function overrideMimeType(mimeType) {
+        if (typeof mimeType === "string") this.forceMimeType = mimeType.toLowerCase();
+    },
+    /*
+    Places a FakeXMLHttpRequest object into the passed
+    state.
+  */ _readyStateChange: function _readyStateChange(state) {
+        this.readyState = state;
+        if (typeof this.onreadystatechange == "function") this.onreadystatechange(new _Event("readystatechange"));
+        this.dispatchEvent(new _Event("readystatechange"));
+        if (this.readyState == FakeXMLHttpRequest.DONE) this.dispatchEvent(new _Event("load", false, false, this));
+        if (this.readyState == FakeXMLHttpRequest.UNSENT || this.readyState == FakeXMLHttpRequest.DONE) this.dispatchEvent(new _Event("loadend", false, false, this));
+    },
+    /*
+    Sets the FakeXMLHttpRequest object's response headers and
+    places the object into readyState 2
+  */ _setResponseHeaders: function _setResponseHeaders(headers) {
+        this.responseHeaders = {};
+        for(var header in headers)if (headers.hasOwnProperty(header)) this.responseHeaders[header] = headers[header];
+        if (this.forceMimeType) this.responseHeaders['Content-Type'] = this.forceMimeType;
+        if (this.async) this._readyStateChange(FakeXMLHttpRequest.HEADERS_RECEIVED);
+        else this.readyState = FakeXMLHttpRequest.HEADERS_RECEIVED;
+    },
+    /*
+    Sets the FakeXMLHttpRequest object's response body and
+    if body text is XML, sets responseXML to parsed document
+    object
+  */ _setResponseBody: function _setResponseBody(body) {
+        verifyRequestSent(this);
+        verifyHeadersReceived(this);
+        verifyResponseBodyType(body);
+        var chunkSize = this.chunkSize || 10;
+        var index = 0;
+        this.responseText = "";
+        this.response = this.responseText;
+        do {
+            if (this.async) this._readyStateChange(FakeXMLHttpRequest.LOADING);
+            this.responseText += body.substring(index, index + chunkSize);
+            this.response = this.responseText;
+            index += chunkSize;
+        }while (index < body.length);
+        var type = this.getResponseHeader("Content-Type");
+        if (this.responseText && (!type || /(text\/xml)|(application\/xml)|(\+xml)/.test(type))) try {
+            this.responseXML = parseXML(this.responseText);
+        } catch (e) {
+        // Unable to parse XML - no biggie
+        }
+        if (this.async) this._readyStateChange(FakeXMLHttpRequest.DONE);
+        else this.readyState = FakeXMLHttpRequest.DONE;
+    },
+    /*
+    Forces a response on to the FakeXMLHttpRequest object.
+
+    This is the public API for faking responses. This function
+    takes a number status, headers object, and string body:
+
+    ```
+    xhr.respond(404, {Content-Type: 'text/plain'}, "Sorry. This object was not found.")
+
+    ```
+  */ respond: function respond(status, headers, body) {
+        this._setResponseHeaders(headers || {});
+        this.status = typeof status == "number" ? status : 200;
+        this.statusText = httpStatusCodes[this.status];
+        this._setResponseBody(body || "");
+    }
+};
+for(var property in FakeXMLHttpRequestProto)FakeXMLHttpRequest.prototype[property] = FakeXMLHttpRequestProto[property];
+function verifyState(xhr) {
+    if (xhr.readyState !== FakeXMLHttpRequest.OPENED) throw new Error("INVALID_STATE_ERR");
+    if (xhr.sendFlag) throw new Error("INVALID_STATE_ERR");
+}
+function verifyRequestSent(xhr) {
+    if (xhr.readyState == FakeXMLHttpRequest.DONE) throw new Error("Request done");
+}
+function verifyHeadersReceived(xhr) {
+    if (xhr.async && xhr.readyState != FakeXMLHttpRequest.HEADERS_RECEIVED) throw new Error("No headers received");
+}
+function verifyResponseBodyType(body) {
+    if (typeof body != "string") {
+        var error = new Error("Attempted to respond to fake XMLHttpRequest with " + body + ", which is not a string.");
+        error.name = "InvalidBodyException";
+        throw error;
+    }
+}
+exports.default = FakeXMLHttpRequest;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"f5fbx":[function(require,module,exports,__globalThis) {
+var global = arguments[3];
+if (typeof global !== "undefined" && global.__pretenderNodePolyfill) {
+    delete global.self;
+    delete global.__pretenderNodePolyfill;
+}
+
+},{}],"i0mk9":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$ad3c = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$ad3c.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "default", ()=>HostVans);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactRouter = require("react-router");
+var _s = $RefreshSig$();
+function HostVans() {
+    _s();
+    const [HostVan, setHostVan] = (0, _react.useState)([]);
+    (0, _react.useEffect)(()=>{
+        async function getAllHostVan() {
+            try {
+                const response = await fetch("/api/host/vans");
+                const data = await response.json();
+                console.log(data.vans);
+                setHostVan(data.vans);
+            } catch (error) {
+                console.error("Error fetching host vans:", error);
+            }
+        }
+        getAllHostVan();
+    }, []);
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "flex flex-col items-center",
+        children: HostVan.map((van)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouter.Link), {
+                to: `/host/vans/${van.id}`,
+                className: "block mb-4",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "HostVanContainer p-3 bg-grey-200 flex gap-4 border",
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "p-3",
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                                className: "w-[100px] h-auto",
+                                src: van.imageUrl,
+                                alt: `${van.name} picture`
+                            }, void 0, false, {
+                                fileName: "components/HostVans.jsx",
+                                lineNumber: 30,
+                                columnNumber: 15
+                            }, this)
+                        }, void 0, false, {
+                            fileName: "components/HostVans.jsx",
+                            lineNumber: 29,
+                            columnNumber: 13
+                        }, this),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            children: [
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                    className: "font-bold",
+                                    children: van.name
+                                }, void 0, false, {
+                                    fileName: "components/HostVans.jsx",
+                                    lineNumber: 37,
+                                    columnNumber: 15
+                                }, this),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                    className: "text-gray-600",
+                                    children: [
+                                        "$",
+                                        van.price
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "components/HostVans.jsx",
+                                    lineNumber: 38,
+                                    columnNumber: 15
+                                }, this)
+                            ]
+                        }, void 0, true, {
+                            fileName: "components/HostVans.jsx",
+                            lineNumber: 36,
+                            columnNumber: 13
+                        }, this)
+                    ]
+                }, void 0, true, {
+                    fileName: "components/HostVans.jsx",
+                    lineNumber: 28,
+                    columnNumber: 11
+                }, this)
+            }, van.id, false, {
+                fileName: "components/HostVans.jsx",
+                lineNumber: 27,
+                columnNumber: 9
+            }, this))
+    }, void 0, false, {
+        fileName: "components/HostVans.jsx",
+        lineNumber: 25,
+        columnNumber: 5
+    }, this);
+}
+_s(HostVans, "1oOHIyjcrn8Ghuvj7uuORKTHNP8=");
+_c = HostVans;
+var _c;
+$RefreshReg$(_c, "HostVans");
+
+  $parcel$ReactRefreshHelpers$ad3c.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router":"dXVwI","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"1So5t":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$0025 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$0025.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "default", ()=>HostVanDetail);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _reactRouter = require("react-router");
+var _react = require("react");
+var _s = $RefreshSig$();
+function HostVanDetail() {
+    _s();
+    const activeClass = `font-bold underline`;
+    const { id } = (0, _reactRouter.useParams)();
+    const [hostVanDetail, setHostVanDetail] = (0, _react.useState)({});
+    (0, _react.useEffect)(()=>{
+        async function getHostVanDetail() {
+            const response = await fetch(`/api/host/vans/${id}`);
+            const data = await response.json();
+            setHostVanDetail(data.vans[0]);
+            console.log(data.vans[0]);
+        }
+        getHostVanDetail();
+    }, []);
+    const vanImage = hostVanDetail?.imageUrl;
+    const vanType = hostVanDetail?.type;
+    const vanName = hostVanDetail?.name;
+    const vanRent = `$${hostVanDetail?.price}`;
+    const vanDescription = hostVanDetail?.description;
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "p-2 m-3",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouter.Link), {
+                    to: "..",
+                    relative: "path",
+                    children: [
+                        " ",
+                        "\u2190 ",
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                            children: "Back to all vans"
+                        }, void 0, false, {
+                            fileName: "components/HostVanDetail.jsx",
+                            lineNumber: 32,
+                            columnNumber: 18
+                        }, this)
+                    ]
+                }, void 0, true, {
+                    fileName: "components/HostVanDetail.jsx",
+                    lineNumber: 30,
+                    columnNumber: 9
+                }, this)
+            }, void 0, false, {
+                fileName: "components/HostVanDetail.jsx",
+                lineNumber: 29,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "p-3",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "flex p-3 gap-4",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                                    className: "w-[150px] h-auto rounded-lg",
+                                    src: vanImage,
+                                    alt: ""
+                                }, void 0, false, {
+                                    fileName: "components/HostVanDetail.jsx",
+                                    lineNumber: 39,
+                                    columnNumber: 13
+                                }, this)
+                            }, void 0, false, {
+                                fileName: "components/HostVanDetail.jsx",
+                                lineNumber: 38,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "space-y-2",
+                                children: [
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                        children: vanType === "simple" ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                            className: "text-[#ffffff] mt-2 bg-amber-600 px-2 py-1 rounded-sm",
+                                            children: "Simple"
+                                        }, void 0, false, {
+                                            fileName: "components/HostVanDetail.jsx",
+                                            lineNumber: 49,
+                                            columnNumber: 17
+                                        }, this) : vanType === "rugged" ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                            className: "bg-emerald-700 text-white mt-2 px-2 py-1 rounded-sm",
+                                            children: "Rugged"
+                                        }, void 0, false, {
+                                            fileName: "components/HostVanDetail.jsx",
+                                            lineNumber: 53,
+                                            columnNumber: 17
+                                        }, this) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                            className: "bg-black text-white mt-2 px-2 py-1 rounded-sm",
+                                            children: "Luxury"
+                                        }, void 0, false, {
+                                            fileName: "components/HostVanDetail.jsx",
+                                            lineNumber: 57,
+                                            columnNumber: 17
+                                        }, this)
+                                    }, void 0, false, {
+                                        fileName: "components/HostVanDetail.jsx",
+                                        lineNumber: 47,
+                                        columnNumber: 13
+                                    }, this),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                        className: "font-extrabold text-2xl",
+                                        children: vanName
+                                    }, void 0, false, {
+                                        fileName: "components/HostVanDetail.jsx",
+                                        lineNumber: 63,
+                                        columnNumber: 13
+                                    }, this),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                        className: "font-bold text-lg leading-1.5",
+                                        children: [
+                                            vanRent,
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                                className: "font-thin",
+                                                children: `/day`
+                                            }, void 0, false, {
+                                                fileName: "components/HostVanDetail.jsx",
+                                                lineNumber: 67,
+                                                columnNumber: 15
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "components/HostVanDetail.jsx",
+                                        lineNumber: 65,
+                                        columnNumber: 13
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "components/HostVanDetail.jsx",
+                                lineNumber: 46,
+                                columnNumber: 11
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "components/HostVanDetail.jsx",
+                        lineNumber: 37,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("header", {
+                        className: "flex space-x-4 p-3",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouter.NavLink), {
+                                to: ".",
+                                end: true,
+                                className: ({ isActive })=>isActive ? activeClass : null,
+                                children: "Details"
+                            }, void 0, false, {
+                                fileName: "components/HostVanDetail.jsx",
+                                lineNumber: 73,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouter.NavLink), {
+                                to: "pricing",
+                                className: ({ isActive })=>isActive ? activeClass : null,
+                                children: "Pricing"
+                            }, void 0, false, {
+                                fileName: "components/HostVanDetail.jsx",
+                                lineNumber: 81,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouter.NavLink), {
+                                to: "photo",
+                                className: ({ isActive })=>isActive ? activeClass : null,
+                                children: "Photo"
+                            }, void 0, false, {
+                                fileName: "components/HostVanDetail.jsx",
+                                lineNumber: 88,
+                                columnNumber: 11
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "components/HostVanDetail.jsx",
+                        lineNumber: 72,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouter.Outlet), {
+                        context: hostVanDetail
+                    }, void 0, false, {
+                        fileName: "components/HostVanDetail.jsx",
+                        lineNumber: 96,
+                        columnNumber: 9
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "components/HostVanDetail.jsx",
+                lineNumber: 36,
+                columnNumber: 7
+            }, this)
+        ]
+    }, void 0, true);
+}
+_s(HostVanDetail, "hV/tnab+orzBXmymvFCMDVBYt5M=", false, function() {
+    return [
+        (0, _reactRouter.useParams)
+    ];
+});
+_c = HostVanDetail;
+var _c;
+$RefreshReg$(_c, "HostVanDetail");
+
+  $parcel$ReactRefreshHelpers$0025.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react-router":"dXVwI","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"k8oIQ":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$716e = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$716e.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "default", ()=>HostVanDetail_Description);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _reactRouter = require("react-router");
+var _s = $RefreshSig$();
+function HostVanDetail_Description() {
+    _s();
+    const hostVanDetail = (0, _reactRouter.useOutletContext)();
+    const vanName = hostVanDetail.name;
+    const vanType = hostVanDetail.type;
+    const vanDescription = hostVanDetail?.description;
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "flex flex-col space-y-4 p-3",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                className: "font-bold",
+                children: [
+                    "Name: ",
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: "font-thin",
+                        children: vanName
+                    }, void 0, false, {
+                        fileName: "components/HostVanDetail_Description.jsx",
+                        lineNumber: 12,
+                        columnNumber: 15
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "components/HostVanDetail_Description.jsx",
+                lineNumber: 11,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                className: "font-bold",
+                children: [
+                    "Type: ",
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: "font-thin",
+                        children: vanType
+                    }, void 0, false, {
+                        fileName: "components/HostVanDetail_Description.jsx",
+                        lineNumber: 16,
+                        columnNumber: 15
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "components/HostVanDetail_Description.jsx",
+                lineNumber: 15,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                className: "font-bold",
+                children: [
+                    "Description: ",
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: "font-thin",
+                        children: vanDescription
+                    }, void 0, false, {
+                        fileName: "components/HostVanDetail_Description.jsx",
+                        lineNumber: 20,
+                        columnNumber: 22
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "components/HostVanDetail_Description.jsx",
+                lineNumber: 19,
+                columnNumber: 7
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "components/HostVanDetail_Description.jsx",
+        lineNumber: 10,
+        columnNumber: 5
+    }, this);
+}
+_s(HostVanDetail_Description, "GI9dC1ht0vBSEnIt6exoYRLcRbI=", false, function() {
+    return [
+        (0, _reactRouter.useOutletContext)
+    ];
+});
+_c = HostVanDetail_Description;
+var _c;
+$RefreshReg$(_c, "HostVanDetail_Description");
+
+  $parcel$ReactRefreshHelpers$716e.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react-router":"dXVwI","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"ad4Ac":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$bb1d = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$bb1d.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "default", ()=>HostVanDetail_Photos);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _reactRouter = require("react-router");
+var _s = $RefreshSig$();
+function HostVanDetail_Photos() {
+    _s();
+    const hostVanDetail = (0, _reactRouter.useOutletContext)();
+    const vanImage = hostVanDetail?.imageUrl;
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+            className: "w-[100px] h-auto rounded-lg",
+            src: vanImage,
+            alt: ""
+        }, void 0, false, {
+            fileName: "components/HostVanDetail_Photos.jsx",
+            lineNumber: 8,
+            columnNumber: 7
+        }, this)
+    }, void 0, false, {
+        fileName: "components/HostVanDetail_Photos.jsx",
+        lineNumber: 7,
+        columnNumber: 5
+    }, this);
+}
+_s(HostVanDetail_Photos, "GI9dC1ht0vBSEnIt6exoYRLcRbI=", false, function() {
+    return [
+        (0, _reactRouter.useOutletContext)
+    ];
+});
+_c = HostVanDetail_Photos;
+var _c;
+$RefreshReg$(_c, "HostVanDetail_Photos");
+
+  $parcel$ReactRefreshHelpers$bb1d.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react-router":"dXVwI","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"5E0xc":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$813c = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$813c.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "default", ()=>HostVanDetail_Pricing);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _reactRouter = require("react-router");
+var _s = $RefreshSig$();
+function HostVanDetail_Pricing() {
+    _s();
+    const hostVanDetail = (0, _reactRouter.useOutletContext)();
+    const vanPricing = hostVanDetail?.price;
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+        className: "text-3xl",
+        children: [
+            `$${vanPricing}`,
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                className: "text-sm",
+                children: `/day`
+            }, void 0, false, {
+                fileName: "components/HostVanDetail_Pricing.jsx",
+                lineNumber: 7,
+                columnNumber: 55
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "components/HostVanDetail_Pricing.jsx",
+        lineNumber: 7,
+        columnNumber: 10
+    }, this);
+}
+_s(HostVanDetail_Pricing, "GI9dC1ht0vBSEnIt6exoYRLcRbI=", false, function() {
+    return [
+        (0, _reactRouter.useOutletContext)
+    ];
+});
+_c = HostVanDetail_Pricing;
+var _c;
+$RefreshReg$(_c, "HostVanDetail_Pricing");
+
+  $parcel$ReactRefreshHelpers$813c.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react-router":"dXVwI","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["aQL8O","5faqK","g9R30"], "g9R30", "parcelRequire94c2")
 
 //# sourceMappingURL=index.d498c491.js.map
