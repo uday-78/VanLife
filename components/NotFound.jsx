@@ -136,7 +136,7 @@
 
 import React from "react";
 import styled, { keyframes } from "styled-components";
-import { Link } from "react-router"; // Import Link from React Router
+import { Link } from "react-router-dom"; // Import Link from React Router
 
 // Animation for the number 404
 const bounce = keyframes`

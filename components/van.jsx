@@ -1,5 +1,5 @@
-import { Link } from "react-router";
-import { useSearchParams } from "react-router";
+import { Link } from "react-router-dom";
+import { useSearchParams } from "react-router-dom";
 
 export default function Van({id,imageUrl,name,price,type}){
 

@@ -1,8 +1,7 @@
-import react, { useEffect, useState } from "react";
-import { useParams , Link ,useLocation} from "react-router";
+import React, { useEffect, useState } from "react";
+import { useParams, Link, useLocation } from "react-router-dom";
 
-
-export default function VanDetails(){
+export default function VanDetails() {
   const { id } = useParams();
   const location = useLocation();
   const backPath = location.state?.search || "";

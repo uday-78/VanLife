@@ -46,6 +46,11 @@ export async function getVans() {
     return data.vans;
   } catch (err) {
     console.error("Fetch Error:", err);
-    throw err; // Re-throw the error for the component to handle
+    // Make sure we're throwing an object with a message property
+    if (typeof err === 'object' && err.message) {
+      throw err;
+    } else {
+      throw { message: "An unexpected error occurred" };
+    }
   }
 }

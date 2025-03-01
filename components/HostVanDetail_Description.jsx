@@ -1,4 +1,4 @@
-import { useOutletContext } from "react-router";
+import { useOutletContext } from "react-router-dom";
 
 export default function HostVanDetail_Description() {
   const hostVanDetail = useOutletContext();
