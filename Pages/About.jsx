@@ -1,5 +1,4 @@
- import react from "react";
- import { Link } from "react-router";
+ import { Link } from "react-router-dom";
  import img2 from "../assets/images/image2.png"
 
 export default function About(){

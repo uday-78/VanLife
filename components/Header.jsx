@@ -1,4 +1,4 @@
-import { Link ,NavLink } from "react-router";
+import { Link ,NavLink } from "react-router-dom";
 
 export default function Header(){
     const activeClass = `font-bold text-xl underline text-orange-500`;

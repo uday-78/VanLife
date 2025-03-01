@@ -1,5 +1,4 @@
-import react from "react";
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 import image1 from "../assets/images/image1.png";
 
 export default function Home() {
@@ -24,4 +23,3 @@ export default function Home() {
     </div>
   );
 }
-

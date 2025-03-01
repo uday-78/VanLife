@@ -71,11 +71,9 @@
 //     );
 // }
 
-
-
 import React, { useState, useEffect } from "react";
 import Van from "../../components/van";
-import { Link, NavLink, useSearchParams } from "react-router"; // Fixed import
+import { Link, NavLink, useSearchParams } from "react-router-dom"; // Fixed import
 import Skeleton from "../../components/Skeleton";
 import { getVans } from "../../api";
 
@@ -90,31 +88,34 @@ export default function VanList() {
 
   const typeFilter = searchParams.get("type");
 
-  const displayVan = typeFilter
-    ? filterVans.filter(
-        (van) => van.type.toLowerCase() === typeFilter.toLowerCase()
-      )
-    : originalVans;
+  const displayVan =
+    typeFilter && filterVans
+      ? filterVans.filter(
+          (van) => van.type.toLowerCase() === typeFilter.toLowerCase()
+        )
+      : originalVans || [];
 
   const activeClass = "px-2 py-2 rounded-sm transition bg-black text-white";
-  const defaultClass = "px-2 py-2 rounded-sm transition bg-[#FFEAD0] text-black";
+  const defaultClass =
+    "px-2 py-2 rounded-sm transition bg-[#FFEAD0] text-black";
 
-useEffect(() => {
-  async function loadVans() {
-    try {
-      const data = await getVans();
-      setOriginalVans(data);
-      setFilterVans(data);
-    } catch (err) {
-      setError(err); // Set the error message
-      console.error("Error fetching vans:", err);
-    } finally {
-      setIsLoading(false);
+  useEffect(() => {
+    async function loadVans() {
+      setIsLoading(true); // Set loading to true when starting
+      try {
+        const data = await getVans();
+        setOriginalVans(data || []); // Ensure we set an empty array if data is null
+        setFilterVans(data || []);
+      } catch (err) {
+        setError(err);
+        console.error("Error fetching vans:", err);
+      } finally {
+        setIsLoading(false);
+      }
     }
-  }
 
-  loadVans();
-}, []);
+    loadVans();
+  }, []);
 
   const filterType = (givenType) => {
     if (selectedFilter === givenType) {
@@ -155,15 +156,24 @@ useEffect(() => {
   if (IsLoading) return <Skeleton />;
 
   // Show error message if there's an error
- if (error) {
-  console.log("Getting error")
-   return (
-     <p className="text-red-600 font-bold">
-       Error: {error.message || error}{" "}
-       {error.status ? `(Status:            ${error.status})` : ""} 
-     </p>
-   );
- }
+  if (error) {
+    console.log("Getting error", error);
+    return (
+      <div className="container p-8 bg-[#FFF7ED]">
+        <h2 className="text-2xl font-bold mb-4">Error Loading Vans</h2>
+        <p className="text-red-600 font-bold text-xl mb-4">
+          {error.message || "An unknown error occurred"}
+          {error.status ? ` (Status: ${error.status})` : ""}
+        </p>
+        <button
+          onClick={() => window.location.reload()}
+          className="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+        >
+          Try Again
+        </button>
+      </div>
+    );
+  }
 
   return (
     <div className="container bg-[#FFF7ED]">
@@ -205,7 +215,3 @@ useEffect(() => {
     </div>
   );
 }
-
-
-
-
