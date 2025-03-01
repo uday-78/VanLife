@@ -76,9 +76,17 @@ createServer({
 
   routes() {
     this.namespace = "api";
+    this.timing = 3000
 
     this.get("/vans", (schema, request) => {
-      return schema.vans.all();
+       return new Response(400,{},{error:"Error fetching data"})
+        // return new Response(
+        //   400,
+        //   { "Content-Type": "application/json" },
+        //   JSON.stringify({ error: "Error fetching data" })
+        // );
+
+         //return schema.vans.all();
     });
 
     this.get("/vans/:id", (schema, request) => {

@@ -1,5 +1,5 @@
 // import React ,{useState ,useEffect} from "react";
-// import Van from "../components/van";
+// import Van from "../../components/van"
 
 // export default function VanList(){
 
@@ -71,29 +71,50 @@
 //     );
 // }
 
+
+
 import React, { useState, useEffect } from "react";
 import Van from "../../components/van";
+import { Link, NavLink, useSearchParams } from "react-router"; // Fixed import
+import Skeleton from "../../components/Skeleton";
+import { getVans } from "../../api";
 
 export default function VanList() {
   const [originalVans, setOriginalVans] = useState([]);
   const [filterVans, setFilterVans] = useState([]);
   const [selectedFilter, setSelectedFilter] = useState(""); // Track the selected filter
+  const [IsLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState(null); // Error state
 
-  useEffect(() => {
-    async function getVanList() {
-      try {
-        const response = await fetch("/api/vans");
-        const data = await response.json();
-        console.log(data.vans);
-        setOriginalVans(data.vans);
-        setFilterVans(data.vans);
-      } catch (error) {
-        console.error("Failed to fetch vans", error);
-      }
+  const [searchParams, setSearchParams] = useSearchParams();
+
+  const typeFilter = searchParams.get("type");
+
+  const displayVan = typeFilter
+    ? filterVans.filter(
+        (van) => van.type.toLowerCase() === typeFilter.toLowerCase()
+      )
+    : originalVans;
+
+  const activeClass = "px-2 py-2 rounded-sm transition bg-black text-white";
+  const defaultClass = "px-2 py-2 rounded-sm transition bg-[#FFEAD0] text-black";
+
+useEffect(() => {
+  async function loadVans() {
+    try {
+      const data = await getVans();
+      setOriginalVans(data);
+      setFilterVans(data);
+    } catch (err) {
+      setError(err); // Set the error message
+      console.error("Error fetching vans:", err);
+    } finally {
+      setIsLoading(false);
     }
+  }
 
-    getVanList();
-  }, []);
+  loadVans();
+}, []);
 
   const filterType = (givenType) => {
     if (selectedFilter === givenType) {
@@ -110,6 +131,40 @@ export default function VanList() {
     }
   };
 
+  function genNewSearchParamsString(key, value) {
+    const sp = new URLSearchParams(searchParams);
+    if (value === null) {
+      sp.delete(key);
+    } else {
+      sp.set(key, value);
+    }
+
+    return `?${sp.toString()}`;
+  }
+
+  function handleFilterChange(key, value) {
+    setSearchParams((prevParams) => {
+      if (value === null) prevParams.delete(key);
+      else prevParams.set(key, value);
+
+      return prevParams;
+    });
+  }
+
+  // Show skeleton loader while loading
+  if (IsLoading) return <Skeleton />;
+
+  // Show error message if there's an error
+ if (error) {
+  console.log("Getting error")
+   return (
+     <p className="text-red-600 font-bold">
+       Error: {error.message || error}{" "}
+       {error.status ? `(Status:            ${error.status})` : ""} 
+     </p>
+   );
+ }
+
   return (
     <div className="container bg-[#FFF7ED]">
       <div className="VanContainer">
@@ -122,31 +177,27 @@ export default function VanList() {
               {["Simple", "Rugged", "Luxury"].map((type) => (
                 <button
                   key={type}
-                  onClick={() => filterType(type)}
-                  className={`FilterButton px-2 py-2 rounded-sm transition ${
-                    selectedFilter === type
-                      ? "bg-black text-white" // Selected: Black background, White text
-                      : "bg-[#FFEAD0] text-black" // Default: Light background, Black text
-                  }`}
+                  onClick={() => handleFilterChange("type", `${type}`)}
+                  className={typeFilter === type ? activeClass : defaultClass}
                 >
                   {type}
                 </button>
               ))}
             </div>
-            <p
-              onClick={() => {
-                setFilterVans(originalVans);
-                setSelectedFilter(""); // Reset selected filter
-              }}
-              className="clearBtn bg-red-600 text-white px-1.5 py-1.5 rounded-sm cursor-pointer"
-            >
-              Clear Filters
-            </p>
+
+            {typeFilter ? (
+              <button
+                onClick={() => handleFilterChange("type", null)}
+                className="clearBtn bg-red-600 text-white px-1.5 py-1.5 rounded-sm cursor-pointer"
+              >
+                Clear Filters
+              </button>
+            ) : null}
           </div>
         </div>
 
         <div className="VanListContainer p-3 grid grid-cols-2 gap-4">
-          {filterVans.map((van) => (
+          {displayVan.map((van) => (
             <Van key={van.id} {...van} />
           ))}
         </div>
@@ -154,3 +205,7 @@ export default function VanList() {
     </div>
   );
 }
+
+
+
+

@@ -16,6 +16,8 @@ import HostVanDetail from "./components/HostVanDetail";
 import HostVanDetail_Description from "./components/HostVanDetail_Description";
 import HostVanDetail_Photos from "./components/HostVanDetail_Photos";
 import HostVanDetail_Pricing from "./components/HostVanDetail_Pricing";
+import NotFound from "./components/NotFound";
+
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -40,6 +42,7 @@ function App() {
             <Route path="photo" element={<HostVanDetail_Photos/>}/>
             </Route>
           </Route>
+          <Route path="*" element={<NotFound/>} />
         </Route>
       </Routes>
     </BrowserRouter>

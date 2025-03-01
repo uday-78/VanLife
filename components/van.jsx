@@ -1,10 +1,16 @@
 import { Link } from "react-router";
-
+import { useSearchParams } from "react-router";
 
 export default function Van({id,imageUrl,name,price,type}){
+
+  const[searchParams,setSearchParams] = useSearchParams();
+  
     return (
       <div className="container">
-        <Link to={`/vans/${id}`}>
+        <Link 
+        to={`./${id}`}
+        state={{ search: `?${searchParams.toString()}`}}
+        >
           <div className="imageContainer">
             <img src={imageUrl} alt="Van Picture" />
           </div>

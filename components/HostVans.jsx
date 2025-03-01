@@ -21,15 +21,15 @@ export default function HostVans() {
     getAllHostVan();
   }, []);
 
-  return (
+  return ( 
     <div className="flex flex-col items-center">
       {HostVan.map((van) => (
-        <Link to={`/host/vans/${van.id}`} key={van.id} className="block mb-4">
+        <Link to={`${van.id}`} key={van.id} className="block mb-4">
           <div className="HostVanContainer p-3 bg-grey-200 flex gap-4 border">
             <div className="p-3">
               <img
                 className="w-[100px] h-auto"
-                src={van.imageUrl}
+                src={van.imageUrl} 
                 alt={`${van.name} picture`}
               />
             </div>
